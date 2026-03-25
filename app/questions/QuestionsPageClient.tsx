@@ -49,7 +49,7 @@ export default function QuestionsPageClient() {
             Practice with Purpose
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Over 2,000 expertly crafted questions aligned with the GPhC framework.
+            Over 2,000 expertly crafted questions aligned with the MRCP PACES framework.
             Each with detailed explanations to deepen your understanding.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -74,7 +74,7 @@ export default function QuestionsPageClient() {
               Two Parts, One Goal
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Our question bank mirrors the official GPhC assessment structure,
+              Our question bank mirrors the official MRCP PACES assessment structure,
               ensuring you&apos;re prepared for exactly what you&apos;ll face.
             </p>
           </div>

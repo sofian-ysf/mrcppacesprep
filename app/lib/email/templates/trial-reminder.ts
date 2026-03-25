@@ -73,7 +73,7 @@ export function getTrialReminderEmail(userEmail: string, firstName?: string): st
                                                         <tr>
                                                             <td style="text-align: left;">
                                                                 <div class="header-text" style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: #333333; transform: scaleY(0.85); transform-origin: top;">
-                                                                    PreRegExamPrep
+                                                                    MRCPPACESPREP
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -109,7 +109,7 @@ export function getTrialReminderEmail(userEmail: string, firstName?: string): st
                                                                     </p>
 
                                                                     <p style="margin: 0 0 20px 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; color: #333333; line-height: 1.6;">
-                                                                        Preparing for the GPhC exam requires consistent practice. We noticed you haven't logged in recently, and we wanted to remind you that your free trial is still active.
+                                                                        Preparing for the MRCP PACES exam requires consistent practice. We noticed you haven't logged in recently, and we wanted to remind you that your free trial is still active.
                                                                     </p>
 
                                                                     <div style="background-color: #e8e9eb; border-radius: 6px; padding: 20px; margin: 25px 0;">
@@ -128,7 +128,7 @@ export function getTrialReminderEmail(userEmail: string, firstName?: string): st
                                                                     <table class="button_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                                                         <tr>
                                                                             <td style="text-align: left; padding: 10px 0;">
-                                                                                <a href="https://www.preregexamprep.com/questions" target="_blank" style="text-decoration: none; display: inline-block; color: #ffffff; background-color: #000000; border-radius: 4px; width: auto; border: 0; padding: 12px 24px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; text-align: center; mso-border-alt: none; word-break: keep-all;">
+                                                                                <a href="https://www.mrcppacesprep.com/questions" target="_blank" style="text-decoration: none; display: inline-block; color: #ffffff; background-color: #000000; border-radius: 4px; width: auto; border: 0; padding: 12px 24px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; text-align: center; mso-border-alt: none; word-break: keep-all;">
                                                                                     Continue Practising
                                                                                 </a>
                                                                             </td>
@@ -136,7 +136,7 @@ export function getTrialReminderEmail(userEmail: string, firstName?: string): st
                                                                     </table>
 
                                                                     <p style="margin: 25px 0 0 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #666666; line-height: 1.6;">
-                                                                        Questions? Reply to this email or contact us at <a href="mailto:team@preregexamprep.com" style="color: #000000;">team@preregexamprep.com</a>
+                                                                        Questions? Reply to this email or contact us at <a href="mailto:team@mrcppacesprep.com" style="color: #000000;">team@mrcppacesprep.com</a>
                                                                     </p>
                                                                 </div>
                                                             </td>
@@ -164,10 +164,10 @@ export function getTrialReminderEmail(userEmail: string, firstName?: string): st
                                                         <tr>
                                                             <td style="text-align: left;">
                                                                 <div style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #666666;">
-                                                                    <a href="https://www.preregexamprep.com/" target="_blank" style="color: #666666; text-decoration: none;">preregexamprep.com</a>
+                                                                    <a href="https://www.mrcppacesprep.com/" target="_blank" style="color: #666666; text-decoration: none;">mrcppacesprep.com</a>
                                                                 </div>
                                                                 <div style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 12px; color: #999999; margin-top: 10px;">
-                                                                    You're receiving this because you signed up for PreRegExamPrep (${userEmail}).
+                                                                    You're receiving this because you signed up for MRCPPACESPREP (${userEmail}).
                                                                 </div>
                                                             </td>
                                                         </tr>

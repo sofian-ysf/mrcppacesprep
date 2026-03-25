@@ -5,23 +5,23 @@ import StudyGuidesSEO from '@/app/components/seo/StudyGuidesSEO'
 import { RelatedPages } from '@/app/components/seo/RelatedPages'
 
 export const metadata: Metadata = {
-  title: 'GPhC Study Guides 2025 | PDF Downloads | Formula Sheets | £30/month',
-  description: 'Download comprehensive GPhC study guides. PDF guides, formula sheets, mind maps, learning pathways. Created by pharmacists. Updated for 2025 GPhC framework. £30/month.',
+  title: 'MRCP PACES Study Guides 2025 | PDF Downloads | Formula Sheets | £30/month',
+  description: 'Download comprehensive MRCP PACES study guides. PDF guides, formula sheets, mind maps, learning pathways. Created by physicians. Updated for 2025 MRCP PACES framework. £30/month.',
   keywords: [
-    'GPhC study guide', 'GPhC revision notes', 'pre-reg study materials', 'pharmacy exam guide',
-    'GPhC formula sheet', 'pharmacy mind maps', 'GPhC study schedule', 'pharmacy revision resources',
-    'GPhC study plan', 'learning pathway', 'exam preparation guide', 'pharmacy study tips',
-    'GPhC topic guides', 'BNF study guide', 'clinical pharmacy guide'
+    'MRCP PACES study guide', 'MRCP PACES revision notes', 'pre-reg study materials', 'pharmacy exam guide',
+    'MRCP PACES formula sheet', 'pharmacy mind maps', 'MRCP PACES study schedule', 'pharmacy revision resources',
+    'MRCP PACES study plan', 'learning pathway', 'exam preparation guide', 'pharmacy study tips',
+    'MRCP PACES topic guides', 'BNF study guide', 'clinical pharmacy guide'
   ],
   openGraph: {
-    title: 'GPhC Study Guides | PDF Downloads | Formula Sheets | Learning Pathways',
-    description: 'Comprehensive GPhC study guides covering all topics. PDF downloads, formula sheets, mind maps.',
-    url: 'https://www.preregexamprep.com/study-guides',
+    title: 'MRCP PACES Study Guides | PDF Downloads | Formula Sheets | Learning Pathways',
+    description: 'Comprehensive MRCP PACES study guides covering all topics. PDF downloads, formula sheets, mind maps.',
+    url: 'https://www.mrcppacesprep.com/study-guides',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPhC Study Guides | PDF Downloads | Formula Sheets',
-    description: 'Download comprehensive GPhC study guides and formula sheets. Created by pharmacists.'
+    title: 'MRCP PACES Study Guides | PDF Downloads | Formula Sheets',
+    description: 'Download comprehensive MRCP PACES study guides and formula sheets. Created by physicians.'
   },
   alternates: {
     canonical: '/study-guides',
@@ -38,11 +38,11 @@ export default function StudyGuidesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-              Comprehensive Study Guides for Every GPhC Topic
+              Comprehensive Study Guides for Every MRCP PACES Topic
               <span className="block text-gray-600 text-3xl mt-2">Structured Learning Materials Created by Pharmacists</span>
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
-              Master every aspect of the GPhC exam with our comprehensive study guides, formula sheets, mind maps, and structured learning pathways designed for efficient exam preparation.
+              Master every aspect of the MRCP PACES exam with our comprehensive study guides, formula sheets, mind maps, and structured learning pathways designed for efficient exam preparation.
             </p>
             <div className="mt-10 flex gap-4 justify-center">
               <Link
@@ -113,7 +113,7 @@ export default function StudyGuidesPage() {
       <section id="topic-guides" className="px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Study Guides by GPhC Framework Topic
+            Study Guides by MRCP PACES Framework Topic
           </h2>
 
           <StudyGuidesGrid />
@@ -459,9 +459,9 @@ export default function StudyGuidesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
 
@@ -497,7 +497,7 @@ export default function StudyGuidesPage() {
           </div>
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

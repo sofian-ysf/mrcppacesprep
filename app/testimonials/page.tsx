@@ -8,24 +8,24 @@ import FAQSection from '@/app/components/FAQSection'
 
 const testimonialsFAQs = [
   {
-    question: "Do students actually pass using PreRegExamPrep?",
-    answer: "Yes! 94% of our students pass the GPhC exam on their first attempt. We've helped over 29,000 pharmacy students since 2019, with thousands of verified success stories."
+    question: "Do students actually pass using MRCPPACESPREP?",
+    answer: "Yes! 94% of our students pass the MRCP PACES exam on their first attempt. We've helped over 29,000 pharmacy students since 2019, with thousands of verified success stories."
   },
   {
     question: "How long do successful students study?",
     answer: "Most successful students use our platform for 8-12 weeks, practicing 30-50 questions daily. They typically complete 3-5 mock exams in the final weeks before sitting."
   },
   {
-    question: "Is PreRegExamPrep worth the money?",
-    answer: "Our students think so - we have a 4.8/5 rating from over 29,000 users. At £30/month, it's significantly cheaper than retaking the £253 GPhC exam."
+    question: "Is MRCPPACESPREP worth the money?",
+    answer: "Our students think so - we have a 4.8/5 rating from over 29,000 users. At £30/month, it's significantly cheaper than retaking the £253 MRCP PACES exam."
   },
   {
     question: "What do students say about the questions?",
     answer: "Students consistently say our questions are realistic and slightly harder than the actual exam. This extra challenge means they feel confident and prepared on exam day."
   },
   {
-    question: "Can international graduates use PreRegExamPrep?",
-    answer: "Absolutely! Many OSPAP students use our platform. Our questions cover the full GPhC framework, which applies to all candidates regardless of where they qualified."
+    question: "Can international graduates use MRCPPACESPREP?",
+    answer: "Absolutely! Many OSPAP students use our platform. Our questions cover the full MRCP PACES framework, which applies to all candidates regardless of where they qualified."
   }
 ]
 
@@ -45,7 +45,7 @@ const successStories = [
     location: 'London',
     background: 'Community Pharmacy Graduate',
     challenge: 'Failed first attempt with 48% - struggled with pharmaceutical calculations and time management',
-    solution: 'Used PreRegExamPrep for 3 months, focused on calculation practice and took 8 mock exams',
+    solution: 'Used MRCPPACESPREP for 3 months, focused on calculation practice and took 8 mock exams',
     results: {
       firstAttempt: '48%',
       finalScore: '76%',
@@ -98,7 +98,7 @@ const successStories = [
       improvement: 'First attempt pass',
       passStatus: 'Passed first attempt'
     },
-    quote: "I used to spend 5 minutes on simple calculations. After practicing with PreRegExamPrep, I could solve most problems in under 2 minutes.",
+    quote: "I used to spend 5 minutes on simple calculations. After practicing with MRCPPACESPREP, I could solve most problems in under 2 minutes.",
     advice: "Master the calculations early. They're often the difference between pass and fail, and speed comes with practice.",
     category: 'first-time',
     tags: ['calculations', 'speed'],
@@ -211,7 +211,7 @@ export default function TestimonialsPage() {
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
               Real Students, Real Success
-              <span className="block text-gray-600 text-3xl mt-2">Stories of GPhC Exam Achievement</span>
+              <span className="block text-gray-600 text-3xl mt-2">Stories of MRCP PACES Exam Achievement</span>
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
               Discover how thousands of pharmacy graduates have transformed their exam preparation and achieved their professional registration using our platform.
@@ -457,7 +457,7 @@ export default function TestimonialsPage() {
             Share Your Success Story
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Inspire future pharmacists by sharing how you conquered the GPhC exam
+            Inspire future physicians by sharing how you conquered the MRCP PACES exam
           </p>
           <Link
             href="/contact"
@@ -474,9 +474,9 @@ export default function TestimonialsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
 
@@ -512,7 +512,7 @@ export default function TestimonialsPage() {
           </div>
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

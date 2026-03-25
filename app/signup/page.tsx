@@ -164,7 +164,7 @@ function SignupForm() {
     <div className="max-w-md w-full space-y-8">
       <div>
         <Link href="/" className="flex justify-center text-2xl font-bold text-gray-900">
-          PreRegExamPrep
+          MRCPPACESPREP
         </Link>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           Create your account
@@ -400,7 +400,7 @@ function SignupFallback() {
     <div className="max-w-md w-full space-y-8">
       <div>
         <Link href="/" className="flex justify-center text-2xl font-bold text-gray-900">
-          PreRegExamPrep
+          MRCPPACESPREP
         </Link>
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
           Create your account

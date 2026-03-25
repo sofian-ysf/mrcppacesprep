@@ -39,14 +39,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Category Not Found' }
   }
 
-  const title = `${category.name} | GPhC Exam Prep Blog`
+  const title = `${category.name} | MRCP PACES Exam Prep Blog`
   const description = category.description ||
-    `Browse our ${category.name.toLowerCase()} articles for GPhC pre-registration exam preparation tips, strategies, and insights.`
+    `Browse our ${category.name.toLowerCase()} articles for MRCP PACES pre-registration exam preparation tips, strategies, and insights.`
 
   return {
     title,
     description,
-    keywords: `${category.name}, GPhC exam, pharmacy blog, pre-registration, ${slug.replace(/-/g, ' ')}`,
+    keywords: `${category.name}, MRCP PACES exam, pharmacy blog, pre-registration, ${slug.replace(/-/g, ' ')}`,
     openGraph: {
       title,
       description,
@@ -131,13 +131,13 @@ export default async function CategoryPage({ params }: Props) {
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": `${category.name} - GPhC Exam Prep Blog`,
-    "description": category.description || `Browse ${category.name} articles for GPhC exam preparation.`,
-    "url": `https://www.preregexamprep.com/blog/category/${slug}`,
+    "name": `${category.name} - MRCP PACES Exam Prep Blog`,
+    "description": category.description || `Browse ${category.name} articles for MRCP PACES exam preparation.`,
+    "url": `https://www.mrcppacesprep.com/blog/category/${slug}`,
     "isPartOf": {
       "@type": "Blog",
-      "@id": "https://www.preregexamprep.com/blog",
-      "name": "GPhC Exam Prep Blog"
+      "@id": "https://www.mrcppacesprep.com/blog",
+      "name": "MRCP PACES Exam Prep Blog"
     },
     "mainEntity": {
       "@type": "ItemList",
@@ -145,7 +145,7 @@ export default async function CategoryPage({ params }: Props) {
       "itemListElement": (posts || []).slice(0, 10).map((post, index) => ({
         "@type": "ListItem",
         "position": index + 1,
-        "url": `https://www.preregexamprep.com/blog/${post.slug}`,
+        "url": `https://www.mrcppacesprep.com/blog/${post.slug}`,
         "name": post.title
       }))
     }
@@ -160,19 +160,19 @@ export default async function CategoryPage({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.preregexamprep.com"
+        "item": "https://www.mrcppacesprep.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://www.preregexamprep.com/blog"
+        "item": "https://www.mrcppacesprep.com/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": category.name,
-        "item": `https://www.preregexamprep.com/blog/category/${slug}`
+        "item": `https://www.mrcppacesprep.com/blog/category/${slug}`
       }
     ]
   }
@@ -273,7 +273,7 @@ export default async function CategoryPage({ params }: Props) {
         <section className="blog-category-cta">
           <div className="blog-category-cta-content">
             <h2>Ready to Practice?</h2>
-            <p>Put these insights into action with 2,000+ GPhC exam-style questions.</p>
+            <p>Put these insights into action with 2,000+ MRCP PACES exam-style questions.</p>
             <Link href="/try-free" className="blog-cta-primary">
               Try 15 Free Questions
             </Link>

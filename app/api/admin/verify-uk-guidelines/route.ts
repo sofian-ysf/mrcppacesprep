@@ -45,7 +45,7 @@ async function verifyAgainstUKGuidelines(
         content: `You are a UK pharmacy expert with comprehensive knowledge of:
 - British National Formulary (BNF) - current edition
 - NICE guidelines and technology appraisals
-- GPhC standards and requirements
+- MRCP PACES standards and requirements
 - UK Medicines and Healthcare products Regulatory Agency (MHRA) guidance
 - NHS England prescribing guidelines
 - UK-specific drug formulations and brand names

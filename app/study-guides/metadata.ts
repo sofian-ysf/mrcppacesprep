@@ -1,28 +1,28 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'GPhC Study Guides 2026 | Pharmacy Revision Notes | PreRegExamPrep',
-  description: 'Comprehensive GPhC study guides covering all exam topics. BNF-aligned revision notes, clinical pharmacy guides, pharmacy law summaries. Download and study offline.',
+  title: 'MRCP PACES Study Guides 2026 | Medical Revision Notes | MRCPPACESPREP',
+  description: 'Comprehensive MRCP PACES study guides covering all exam topics. Clinical examination guides, medical ethics summaries, communication skills. Download and study offline.',
   keywords: [
-    'GPhC study guide',
-    'GPhC revision notes',
-    'pharmacy study materials',
-    'BNF revision guide',
-    'clinical pharmacy notes',
-    'pharmacy law study guide',
-    'GPhC exam revision',
-    'pre-reg study materials',
+    'MRCP PACES study guide',
+    'MRCP PACES revision notes',
+    'medical study materials',
+    'clinical examination guide',
+    'clinical medicine notes',
+    'medical ethics study guide',
+    'MRCP PACES exam revision',
+    'MRCP study materials',
   ].join(', '),
   openGraph: {
-    title: 'GPhC Study Guides 2026 | Comprehensive Revision Notes',
-    description: 'BNF-aligned study guides covering all GPhC exam topics. Clinical pharmacy, law, calculations.',
-    url: 'https://www.preregexamprep.com/study-guides',
+    title: 'MRCP PACES Study Guides 2026 | Comprehensive Revision Notes',
+    description: 'Clinical examination guides covering all MRCP PACES exam topics. Clinical medicine, ethics, communication skills.',
+    url: 'https://www.mrcppacesprep.com/study-guides',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPhC Study Guides | Revision Notes',
-    description: 'Comprehensive study guides for all GPhC exam topics.',
+    title: 'MRCP PACES Study Guides | Revision Notes',
+    description: 'Comprehensive study guides for all MRCP PACES exam topics.',
   },
   alternates: {
     canonical: '/study-guides',

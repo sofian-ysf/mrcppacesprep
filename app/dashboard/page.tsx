@@ -322,7 +322,7 @@ export default function DashboardPage() {
               Welcome back, {user?.user_metadata?.full_name || user?.email?.split('@')[0] || 'Student'}
             </h1>
             <p className="text-gray-600">
-              Track your progress and continue your GPhC exam preparation.
+              Track your progress and continue your MRCP PACES exam preparation.
             </p>
           </div>
           <Link
@@ -694,7 +694,7 @@ export default function DashboardPage() {
           <div className="lg:col-span-2">
             <div className="bg-white rounded-lg border border-gray-200 p-6">
               <div className="flex items-center justify-between mb-6">
-                <h2 className="text-lg font-semibold text-gray-900">GPhC Exam Preparation</h2>
+                <h2 className="text-lg font-semibold text-gray-900">MRCP PACES Exam Preparation</h2>
               </div>
 
               <div className="grid lg:grid-cols-2 gap-6">

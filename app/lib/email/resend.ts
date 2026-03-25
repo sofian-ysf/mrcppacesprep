@@ -6,9 +6,9 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function sendSubscriptionActiveEmail(userEmail: string) {
   try {
     const { data, error } = await resend.emails.send({
-      from: 'PreRegExamPrep <team@preregexamprep.com>',
+      from: 'MRCPPACESPREP <team@mrcppacesprep.com>',
       to: userEmail,
-      subject: 'Your PreRegExamPrep Subscription is Active!',
+      subject: 'Your MRCPPACESPREP Subscription is Active!',
       html: getSubscriptionActiveEmail(userEmail),
     })
 

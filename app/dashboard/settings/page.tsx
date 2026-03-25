@@ -134,7 +134,7 @@ export default function SettingsPage() {
 
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  When is your GPhC exam?
+                  When is your MRCP PACES exam?
                 </label>
                 <input
                   type="date"

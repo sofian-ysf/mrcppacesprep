@@ -2,13 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'High-Risk Drugs Practice | PreRegExamPrep',
-  description: 'Practice questions on the 11 high-risk drug categories that appear in every GPhC exam. Critical safety knowledge for exam success.',
-  keywords: 'high-risk drugs, GPhC safety questions, anticoagulants, antibiotics, insulins, methotrexate, opiates',
+  title: 'High-Risk Drugs Practice | MRCPPACESPREP',
+  description: 'Practice questions on the 11 high-risk drug categories that appear in every MRCP PACES exam. Critical safety knowledge for exam success.',
+  keywords: 'high-risk drugs, MRCP PACES safety questions, anticoagulants, antibiotics, insulins, methotrexate, opiates',
   openGraph: {
-    title: 'High-Risk Drugs Practice | PreRegExamPrep',
-    description: 'Master critical safety knowledge for the 11 high-risk drug categories required in every GPhC exam.',
-    url: 'https://preregexamprep.com/questions/high-risk-drugs',
+    title: 'High-Risk Drugs Practice | MRCPPACESPREP',
+    description: 'Master critical safety knowledge for the 11 high-risk drug categories required in every MRCP PACES exam.',
+    url: 'https://mrcppacesprep.com/questions/high-risk-drugs',
   },
   alternates: {
     canonical: '/questions/high-risk-drugs',
@@ -57,7 +57,7 @@ export default function HighRiskDrugsPage() {
             High-Risk Drugs
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Master the 11 high-risk drug categories that feature in every GPhC assessment.
+            Master the 11 high-risk drug categories that feature in every MRCP PACES assessment.
             Essential knowledge for patient safety and exam success.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -84,7 +84,7 @@ export default function HighRiskDrugsPage() {
               <div>
                 <h3 className="font-semibold text-gray-900 mb-2">Exam Requirement</h3>
                 <p className="text-gray-600">
-                  Every GPhC assessment includes at least one question from each of these 11 high-risk
+                  Every MRCP PACES assessment includes at least one question from each of these 11 high-risk
                   drug categories. This section is essential for both exam success and clinical practice.
                 </p>
               </div>
@@ -220,9 +220,9 @@ export default function HighRiskDrugsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
             <div>
@@ -253,7 +253,7 @@ export default function HighRiskDrugsPage() {
             </div>
           </div>
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

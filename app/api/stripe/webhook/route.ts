@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
 async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   // Filter: Only process checkouts from this site
   const site = session.metadata?.site
-  if (site !== 'preregexamprep') {
+  if (site !== 'mrcppacesprep') {
     console.log('Ignoring checkout from another site:', site || 'no site identifier')
     return
   }
@@ -235,7 +235,7 @@ async function handleSubscriptionDeleted(subscription: Stripe.Subscription) {
 async function sendDiscordNotification(userEmail: string, planType?: string, price?: string) {
   try {
     const baseUrl = process.env.NODE_ENV === 'production'
-      ? 'https://www.preregexamprep.com'
+      ? 'https://www.mrcppacesprep.com'
       : process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
 
     const planName = planType === '3month' ? '2 Months'

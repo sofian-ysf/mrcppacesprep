@@ -204,7 +204,7 @@ export async function sendEmail(options: {
   threadId?: string;
 }): Promise<{ id: string; threadId: string }> {
   const gmail = getGmailClient();
-  const targetEmail = process.env.GMAIL_TARGET_EMAIL || 'team@preregexamprep.com';
+  const targetEmail = process.env.GMAIL_TARGET_EMAIL || 'team@mrcppacesprep.com';
 
   const { to, subject, body, cc, bcc, inReplyTo, threadId } = options;
 
@@ -280,7 +280,7 @@ export async function createDraft(options: {
   body: string;
 }): Promise<{ id: string; messageId: string }> {
   const gmail = getGmailClient();
-  const targetEmail = process.env.GMAIL_TARGET_EMAIL || 'team@preregexamprep.com';
+  const targetEmail = process.env.GMAIL_TARGET_EMAIL || 'team@mrcppacesprep.com';
 
   const { to, subject, body } = options;
 

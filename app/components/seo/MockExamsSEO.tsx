@@ -5,11 +5,11 @@ import Script from 'next/script';
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "GPhC Mock Exams - Realistic Practice Tests",
-  "description": "Realistic GPhC mock exams with exact timing and format. 110 questions, 2.5 hours. Detailed performance analysis. 94% pass rate.",
+  "name": "MRCP PACES Mock Exams - Realistic Practice Tests",
+  "description": "Realistic MRCP PACES mock exams with exact timing and format. 110 questions, 2.5 hours. Detailed performance analysis. 94% pass rate.",
   "brand": {
     "@type": "Organization",
-    "name": "PreRegExamPrep"
+    "name": "MRCPPACESPREP"
   },
   "category": "Educational Software",
   "offers": {
@@ -35,7 +35,7 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How realistic are the GPhC mock exams?",
+      "name": "How realistic are the MRCP PACES mock exams?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Exact exam format: 110 questions, 2.5 hours. Students report mock scores within ±3% of real exam results."
@@ -75,7 +75,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "How much do GPhC mock exams cost?",
+      "name": "How much do MRCP PACES mock exams cost?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "£30/month includes unlimited mock exams, plus all questions and study materials. No limit on attempts."
@@ -101,11 +101,11 @@ export default function MockExamsSEO() {
       />
 
       <div className="sr-only" aria-hidden="true">
-        <h1>GPhC Mock Exams UK | Realistic Practice Tests | 94% Pass Rate | £30/month</h1>
+        <h1>MRCP PACES Mock Exams UK | Realistic Practice Tests | 94% Pass Rate | £30/month</h1>
         <h2>Exact Exam Format - 110 Questions, 2.5 Hours - Detailed Performance Analysis</h2>
 
         <p>
-          Take realistic GPhC mock exams that match the exact format of the real exam.
+          Take realistic MRCP PACES mock exams that match the exact format of the real exam.
           110 questions in 2.5 hours with detailed performance analysis.
           Students score within ±3% of their real exam results.
           Unlimited attempts included. 94% pass rate. From £30/month.
@@ -121,7 +121,7 @@ export default function MockExamsSEO() {
 
         <h3>Mock Exam Features</h3>
         <ul>
-          <li>Exact GPhC exam timing and format</li>
+          <li>Exact MRCP PACES exam timing and format</li>
           <li>Realistic question distribution by topic</li>
           <li>Instant results with detailed breakdown</li>
           <li>Performance tracking over time</li>
@@ -129,12 +129,12 @@ export default function MockExamsSEO() {
           <li>Explanations for every question</li>
         </ul>
 
-        <h3>GPhC Mock Exams UK Locations</h3>
+        <h3>MRCP PACES Mock Exams UK Locations</h3>
         <ul>
-          <li>GPhC Mock Exam London</li>
+          <li>MRCP PACES Mock Exam London</li>
           <li>Practice Test Manchester</li>
           <li>Mock Exam Birmingham</li>
-          <li>GPhC Practice Leeds</li>
+          <li>MRCP PACES Practice Leeds</li>
           <li>Mock Test Glasgow</li>
           <li>Practice Exam Edinburgh</li>
         </ul>
@@ -152,11 +152,11 @@ export default function MockExamsSEO() {
         </ul>
 
         <p>
-          Keywords: GPhC mock exam, GPhC practice test, pre-reg mock exam, pharmacy mock exam UK,
-          GPhC exam simulation, timed practice test, realistic GPhC exam, GPhC practice papers,
-          GPhC exam format, 110 question mock, 2.5 hour exam practice, GPhC exam timing,
+          Keywords: MRCP PACES mock exam, MRCP PACES practice test, pre-reg mock exam, pharmacy mock exam UK,
+          MRCP PACES exam simulation, timed practice test, realistic MRCP PACES exam, MRCP PACES practice papers,
+          MRCP PACES exam format, 110 question mock, 2.5 hour exam practice, MRCP PACES exam timing,
           mock exam feedback, performance analysis, pass prediction, topic mock exams,
-          calculation practice exam, GPhC mini exam, rapid fire practice
+          calculation practice exam, MRCP PACES mini exam, rapid fire practice
         </p>
       </div>
 

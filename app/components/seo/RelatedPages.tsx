@@ -16,7 +16,7 @@ const PAGE_RELATIONS: Record<string, RelatedPage[]> = {
     { href: '/calculations', title: 'Calculations', description: 'Practice pharmacy calculations' },
   ],
   '/question-bank': [
-    { href: '/gphc-exam-questions', title: 'GPhC Exam Questions', description: 'Learn about question types' },
+    { href: '/gphc-exam-questions', title: 'MRCP PACES Exam Questions', description: 'Learn about question types' },
     { href: '/mock-exams', title: 'Mock Exams', description: 'Take full-length practice tests' },
     { href: '/study-guides', title: 'Study Guides', description: 'Download revision materials' },
   ],
@@ -38,7 +38,7 @@ const PAGE_RELATIONS: Record<string, RelatedPage[]> = {
   '/blog': [
     { href: '/resources', title: 'Resources', description: 'Free study materials' },
     { href: '/faq', title: 'FAQ', description: 'Common questions answered' },
-    { href: '/gphc-exam-questions', title: 'GPhC Exam Questions', description: 'Start practicing' },
+    { href: '/gphc-exam-questions', title: 'MRCP PACES Exam Questions', description: 'Start practicing' },
   ],
   '/resources': [
     { href: '/study-guides', title: 'Study Guides', description: 'Comprehensive revision guides' },
@@ -69,7 +69,7 @@ const PAGE_RELATIONS: Record<string, RelatedPage[]> = {
 
 // Default related pages for any page
 const DEFAULT_RELATED: RelatedPage[] = [
-  { href: '/gphc-exam-questions', title: 'GPhC Exam Questions', description: 'Start your exam preparation' },
+  { href: '/gphc-exam-questions', title: 'MRCP PACES Exam Questions', description: 'Start your exam preparation' },
   { href: '/pricing', title: 'Pricing', description: 'View subscription plans' },
   { href: '/blog', title: 'Blog', description: 'Tips and strategies' },
 ]

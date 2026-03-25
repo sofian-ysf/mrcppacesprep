@@ -5,11 +5,11 @@ import Script from 'next/script';
 const questionBankSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "GPhC Question Bank - 2000+ Practice Questions",
-  "description": "Comprehensive GPhC exam question bank with 2000+ practice questions, detailed explanations, and performance tracking. 94% pass rate.",
+  "name": "MRCP PACES Question Bank - 2000+ Practice Questions",
+  "description": "Comprehensive MRCP PACES exam question bank with 2000+ practice questions, detailed explanations, and performance tracking. 94% pass rate.",
   "brand": {
     "@type": "Organization",
-    "name": "PreRegExamPrep"
+    "name": "MRCPPACESPREP"
   },
   "category": "Educational Software",
   "offers": {
@@ -35,15 +35,15 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How many GPhC practice questions are included?",
+      "name": "How many MRCP PACES practice questions are included?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "2000+ practice questions covering all GPhC framework topics. Questions updated regularly by pharmacists."
+        "text": "2000+ practice questions covering all MRCP PACES framework topics. Questions updated regularly by physicians."
       }
     },
     {
       "@type": "Question",
-      "name": "What topics do the GPhC questions cover?",
+      "name": "What topics do the MRCP PACES questions cover?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Calculations, clinical pharmacy, therapeutics, law & ethics, pharmacology, pharmaceutics, and public health."
@@ -51,10 +51,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Are the questions similar to the real GPhC exam?",
+      "name": "Are the questions similar to the real MRCP PACES exam?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Written by pharmacists who recently passed. SBA, EMQ, and calculation formats. Students say slightly harder."
+        "text": "Yes. Written by physicians who recently passed. SBA, EMQ, and calculation formats. Students say slightly harder."
       }
     },
     {
@@ -87,9 +87,9 @@ const faqSchema = {
 const medicalWebPageSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "GPhC Question Bank - 2000+ Practice Questions | PreRegExamPrep",
-  "description": "Master GPhC exam with 2000+ practice questions. Detailed explanations, performance tracking. 94% pass rate.",
-  "url": "https://www.preregexamprep.com/question-bank",
+  "name": "MRCP PACES Question Bank - 2000+ Practice Questions | MRCPPACESPREP",
+  "description": "Master MRCP PACES exam with 2000+ practice questions. Detailed explanations, performance tracking. 94% pass rate.",
+  "url": "https://www.mrcppacesprep.com/question-bank",
   "inLanguage": "en-GB",
   "about": {
     "@type": "MedicalSpecialty",
@@ -125,17 +125,17 @@ export default function QuestionBankSEO() {
       />
 
       <div className="sr-only" aria-hidden="true">
-        <h1>GPhC Question Bank UK | 2000+ Practice Questions | 94% Pass Rate | £30/month</h1>
+        <h1>MRCP PACES Question Bank UK | 2000+ Practice Questions | 94% Pass Rate | £30/month</h1>
         <h2>Expert Pharmacist-Written Questions with Detailed Explanations - Pass Your Pre-Reg First Time</h2>
 
         <p>
-          Access the UK's most comprehensive GPhC exam question bank with 2000+ practice questions.
-          Written by registered pharmacists who recently passed. Covers all GPhC framework topics.
+          Access the UK's most comprehensive MRCP PACES exam question bank with 2000+ practice questions.
+          Written by registered physicians who recently passed. Covers all MRCP PACES framework topics.
           SBA, EMQ, and calculation question formats. Detailed explanations for every answer.
           Performance analytics to track progress. 94% pass rate. From £30/month.
         </p>
 
-        <h3>GPhC Question Bank Topics</h3>
+        <h3>MRCP PACES Question Bank Topics</h3>
         <ul>
           <li>Pharmaceutical Calculations Questions - 350+ Problems</li>
           <li>Clinical Pharmacy & Therapeutics - 400+ Questions</li>
@@ -152,16 +152,16 @@ export default function QuestionBankSEO() {
           <li>Bookmark and review system</li>
           <li>Adaptive difficulty levels</li>
           <li>Mobile-friendly access</li>
-          <li>Updated for 2025 GPhC framework</li>
+          <li>Updated for 2025 MRCP PACES framework</li>
         </ul>
 
-        <h3>GPhC Practice Questions UK Locations</h3>
+        <h3>MRCP PACES Practice Questions UK Locations</h3>
         <ul>
-          <li>GPhC Practice Questions London</li>
-          <li>GPhC Questions Manchester</li>
-          <li>GPhC Exam Practice Birmingham</li>
+          <li>MRCP PACES Practice Questions London</li>
+          <li>MRCP PACES Questions Manchester</li>
+          <li>MRCP PACES Exam Practice Birmingham</li>
           <li>Pre-Reg Questions Leeds</li>
-          <li>GPhC Practice Glasgow</li>
+          <li>MRCP PACES Practice Glasgow</li>
           <li>Pharmacy Exam Questions Edinburgh</li>
         </ul>
 
@@ -180,12 +180,12 @@ export default function QuestionBankSEO() {
         </ul>
 
         <p>
-          Keywords: GPhC question bank, GPhC practice questions, pre-reg exam questions,
-          pharmacy exam questions UK, GPhC SBA questions, GPhC EMQ practice, clinical pharmacy questions,
+          Keywords: MRCP PACES question bank, MRCP PACES practice questions, pre-reg exam questions,
+          pharmacy exam questions UK, MRCP PACES SBA questions, MRCP PACES EMQ practice, clinical pharmacy questions,
           pharmacy law questions, pharmaceutical calculations practice, pharmacology exam questions,
-          GPhC exam preparation, pre-registration pharmacist questions, pharmacy student revision,
-          BNF questions, drug interaction questions, therapeutics questions, GPhC framework questions,
-          pharmacy MCQ questions, GPhC question bank 2025, best GPhC practice questions
+          MRCP PACES exam preparation, pre-registration physician questions, pharmacy student revision,
+          BNF questions, drug interaction questions, therapeutics questions, MRCP PACES framework questions,
+          pharmacy MCQ questions, MRCP PACES question bank 2025, best MRCP PACES practice questions
         </p>
       </div>
 

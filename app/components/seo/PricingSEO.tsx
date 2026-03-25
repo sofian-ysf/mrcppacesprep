@@ -5,11 +5,11 @@ import Script from 'next/script';
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "GPhC Exam Prep Monthly Subscription",
-  "description": "Complete GPhC exam preparation for £30/month. 2000+ questions, unlimited mock exams, study guides, calculations practice. 94% pass rate. Cancel anytime.",
+  "name": "MRCP PACES Exam Prep Monthly Subscription",
+  "description": "Complete MRCP PACES exam preparation for £30/month. 2000+ questions, unlimited mock exams, study guides, calculations practice. 94% pass rate. Cancel anytime.",
   "brand": {
     "@type": "Organization",
-    "name": "PreRegExamPrep"
+    "name": "MRCPPACESPREP"
   },
   "category": "Educational Software",
   "offers": {
@@ -18,7 +18,7 @@ const productSchema = {
     "priceCurrency": "GBP",
     "availability": "https://schema.org/InStock",
     "priceValidUntil": "2026-12-31",
-    "url": "https://www.preregexamprep.com/pricing"
+    "url": "https://www.mrcppacesprep.com/pricing"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -35,7 +35,7 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How much does GPhC exam prep cost?",
+      "name": "How much does MRCP PACES exam prep cost?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "£30/month with no hidden fees. Full access to everything. Most students subscribe for 3-4 months (£90-120 total)."
@@ -85,11 +85,11 @@ export default function PricingSEO() {
       />
 
       <div className="sr-only" aria-hidden="true">
-        <h1>GPhC Exam Prep Pricing | £30/month | 94% Pass Rate | Cancel Anytime</h1>
-        <h2>Complete GPhC Preparation - 2000+ Questions, Unlimited Mock Exams, Study Guides</h2>
+        <h1>MRCP PACES Exam Prep Pricing | £30/month | 94% Pass Rate | Cancel Anytime</h1>
+        <h2>Complete MRCP PACES Preparation - 2000+ Questions, Unlimited Mock Exams, Study Guides</h2>
 
         <p>
-          Affordable GPhC exam preparation at just £30/month. Complete access to 2000+ practice questions,
+          Affordable MRCP PACES exam preparation at just £30/month. Complete access to 2000+ practice questions,
           unlimited mock exams, pharmaceutical calculations practice, study guides, and progress tracking.
           94% pass rate. 7-day money-back guarantee. Cancel anytime. No hidden fees.
         </p>
@@ -107,8 +107,8 @@ export default function PricingSEO() {
 
         <h3>Value Comparison</h3>
         <ul>
-          <li>GPhC Exam Fee: £237 per attempt</li>
-          <li>PreRegExamPrep: £90-120 total (3-4 months)</li>
+          <li>MRCP PACES Exam Fee: £237 per attempt</li>
+          <li>MRCPPACESPREP: £90-120 total (3-4 months)</li>
           <li>Our Pass Rate: 94% vs 75% national average</li>
           <li>Retake Wait: 6 months if you fail</li>
         </ul>
@@ -124,9 +124,9 @@ export default function PricingSEO() {
         </ul>
 
         <p>
-          Keywords: GPhC exam prep cost, pre-reg exam price, GPhC subscription, pharmacy exam preparation cost,
-          cheap GPhC revision, affordable pharmacy prep, GPhC monthly subscription, exam prep pricing,
-          £30 GPhC prep, cancel anytime, money-back guarantee,
+          Keywords: MRCP PACES exam prep cost, pre-reg exam price, MRCP PACES subscription, pharmacy exam preparation cost,
+          cheap MRCP PACES revision, affordable pharmacy prep, MRCP PACES monthly subscription, exam prep pricing,
+          £30 MRCP PACES prep, cancel anytime, money-back guarantee,
           complete exam preparation, value for money, pass guarantee
         </p>
       </div>

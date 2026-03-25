@@ -2,34 +2,34 @@
 export const faqCategories = [
   {
     id: 'exam-basics',
-    name: 'GPhC Exam Basics',
+    name: 'MRCP PACES Exam Basics',
     questions: [
       {
-        question: 'What is the GPhC pre-registration exam?',
-        answer: 'The GPhC (General Pharmaceutical Council) pre-registration exam is a mandatory assessment that pharmacy graduates in the UK must pass to become registered pharmacists. It tests clinical knowledge, pharmaceutical calculations, and professional practice across all areas of the GPhC framework.'
+        question: 'What is the MRCP PACES pre-registration exam?',
+        answer: 'The MRCP PACES (General Pharmaceutical Council) pre-registration exam is a mandatory assessment that pharmacy graduates in the UK must pass to become registered physicians. It tests clinical knowledge, pharmaceutical calculations, and professional practice across all areas of the MRCP PACES framework.'
       },
       {
-        question: 'What is the GPhC exam format?',
-        answer: 'The GPhC exam consists of 110 questions to be completed in 2.5 hours (150 minutes). It includes single best answer (SBA) questions, extended matching questions (EMQs), and calculation questions. All questions are multiple choice and computer-based.'
+        question: 'What is the MRCP PACES exam format?',
+        answer: 'The MRCP PACES exam consists of 110 questions to be completed in 2.5 hours (150 minutes). It includes single best answer (SBA) questions, extended matching questions (EMQs), and calculation questions. All questions are multiple choice and computer-based.'
       },
       {
-        question: 'What is the GPhC exam pass rate?',
-        answer: 'The overall GPhC exam pass rate typically ranges from 70-80% for first-time candidates, though this varies between sittings. Students who use comprehensive preparation platforms like ours achieve significantly higher pass rates - our students have a 94% first-time pass rate.'
+        question: 'What is the MRCP PACES exam pass rate?',
+        answer: 'The overall MRCP PACES exam pass rate typically ranges from 70-80% for first-time candidates, though this varies between sittings. Students who use comprehensive preparation platforms like ours achieve significantly higher pass rates - our students have a 94% first-time pass rate.'
       },
       {
-        question: 'When is the GPhC exam 2026?',
-        answer: 'The GPhC exam is held twice per year in 2026, typically in June and September. Exact dates are announced by the GPhC several months in advance. Registration opens approximately 3 months before each sitting. Check the official GPhC website for confirmed dates.'
+        question: 'When is the MRCP PACES exam 2026?',
+        answer: 'The MRCP PACES exam is held twice per year in 2026, typically in June and September. Exact dates are announced by the MRCP PACES several months in advance. Registration opens approximately 3 months before each sitting. Check the official MRCP PACES website for confirmed dates.'
       },
       {
-        question: 'How much does the GPhC exam cost?',
-        answer: 'The GPhC exam sitting fee is approximately £237 per attempt. This is separate from any preparation costs. If you fail, you must wait 6 months before the next attempt and pay the fee again, making proper preparation a worthwhile investment.'
+        question: 'How much does the MRCP PACES exam cost?',
+        answer: 'The MRCP PACES exam sitting fee is approximately £237 per attempt. This is separate from any preparation costs. If you fail, you must wait 6 months before the next attempt and pay the fee again, making proper preparation a worthwhile investment.'
       },
       {
-        question: 'What questions are on the GPhC exam?',
-        answer: 'The GPhC exam includes Single Best Answer (SBA) questions, Extended Matching Questions (EMQ), and calculation questions. Topics cover pharmaceutical calculations, clinical pharmacy and therapeutics, pharmacy law and ethics, pharmacology, pharmaceutics, and public health - all aligned with the GPhC framework.'
+        question: 'What questions are on the MRCP PACES exam?',
+        answer: 'The MRCP PACES exam includes Single Best Answer (SBA) questions, Extended Matching Questions (EMQ), and calculation questions. Topics cover pharmaceutical calculations, clinical pharmacy and therapeutics, pharmacy law and ethics, pharmacology, pharmaceutics, and public health - all aligned with the MRCP PACES framework.'
       },
       {
-        question: 'How many people pass the GPhC exam first time?',
+        question: 'How many people pass the MRCP PACES exam first time?',
         answer: 'The national first-time pass rate typically ranges from 70-80%, varying between sittings. With comprehensive preparation using quality practice questions and mock exams, you can significantly increase your chances. Our students achieve a 94% first-time pass rate.'
       }
     ]
@@ -39,11 +39,11 @@ export const faqCategories = [
     name: 'Exam Preparation',
     questions: [
       {
-        question: 'How long should I study for the GPhC exam?',
+        question: 'How long should I study for the MRCP PACES exam?',
         answer: 'We recommend starting your preparation at least 12 weeks (3 months) before your exam date. Most successful students study 2-3 hours daily, combining practice questions, mock exams, and content review. Starting earlier gives you more time to identify and address weak areas.'
       },
       {
-        question: 'What is the best way to prepare for the GPhC exam?',
+        question: 'What is the best way to prepare for the MRCP PACES exam?',
         answer: 'The most effective preparation combines: (1) consistent daily practice with quality questions, (2) realistic mock exams under timed conditions, (3) thorough review of explanations for both correct and incorrect answers, (4) focused work on weak areas identified through analytics, and (5) regular calculation practice. Our platform supports all these activities.'
       },
       {
@@ -69,12 +69,12 @@ export const faqCategories = [
     name: 'Failed Exam / Retake',
     questions: [
       {
-        question: 'What happens if I fail the GPhC exam?',
+        question: 'What happens if I fail the MRCP PACES exam?',
         answer: 'If you fail, you must wait at least 6 months before your next attempt and pay the sitting fee again (approximately £237). You can retake the exam multiple times. Use the waiting period productively to address your weak areas with focused, targeted preparation.'
       },
       {
-        question: 'How many times can you retake the GPhC exam?',
-        answer: 'There is no limit to the number of times you can retake the GPhC exam. However, each attempt requires a 6-month wait and payment of the sitting fee. Comprehensive preparation for your retake is essential to avoid repeated failures.'
+        question: 'How many times can you retake the MRCP PACES exam?',
+        answer: 'There is no limit to the number of times you can retake the MRCP PACES exam. However, each attempt requires a 6-month wait and payment of the sitting fee. Comprehensive preparation for your retake is essential to avoid repeated failures.'
       },
       {
         question: 'How should I prepare differently for a retake?',
@@ -82,7 +82,7 @@ export const faqCategories = [
       },
       {
         question: 'Will I know which questions I got wrong?',
-        answer: 'The GPhC provides your overall score and whether you passed or failed, but does not provide a breakdown of which specific questions you got wrong. However, you may receive general feedback on performance areas. Use this to guide your retake preparation.'
+        answer: 'The MRCP PACES provides your overall score and whether you passed or failed, but does not provide a breakdown of which specific questions you got wrong. However, you may receive general feedback on performance areas. Use this to guide your retake preparation.'
       }
     ]
   },
@@ -91,15 +91,15 @@ export const faqCategories = [
     name: 'International Graduates',
     questions: [
       {
-        question: 'Can international pharmacy graduates take the GPhC exam?',
-        answer: 'Yes, international pharmacy graduates can take the GPhC exam after completing the Overseas Pharmacist Assessment Programme (OSPAP) or having their qualifications recognised by the GPhC. The process involves assessment of qualifications and may require additional training.'
+        question: 'Can international pharmacy graduates take the MRCP PACES exam?',
+        answer: 'Yes, international pharmacy graduates can take the MRCP PACES exam after completing the Overseas Pharmacist Assessment Programme (OSPAP) or having their qualifications recognised by the MRCP PACES. The process involves assessment of qualifications and may require additional training.'
       },
       {
         question: 'What is OSPAP?',
-        answer: 'OSPAP (Overseas Pharmacist Assessment Programme) is a conversion course for pharmacists who qualified outside the UK. It typically takes one year and covers UK pharmacy law, practice, and clinical skills. After completing OSPAP, you can sit the GPhC exam.'
+        answer: 'OSPAP (Overseas Pharmacist Assessment Programme) is a conversion course for physicians who qualified outside the UK. It typically takes one year and covers UK pharmacy law, practice, and clinical skills. After completing OSPAP, you can sit the MRCP PACES exam.'
       },
       {
-        question: 'Is the GPhC exam different for international graduates?',
+        question: 'Is the MRCP PACES exam different for international graduates?',
         answer: 'The exam itself is identical for all candidates. However, international graduates may need additional focus on UK-specific content such as pharmacy law, NHS structures, and UK drug naming conventions. Our platform includes content specifically helpful for international graduates.'
       }
     ]
@@ -109,8 +109,8 @@ export const faqCategories = [
     name: 'Our Platform',
     questions: [
       {
-        question: 'How similar are your questions to the actual GPhC exam?',
-        answer: 'Our questions are written by registered pharmacists who have recently taken the exam. We regularly update our question bank based on student feedback and GPhC framework changes. Many students report our questions are slightly harder than the real exam, which helps them feel more prepared.'
+        question: 'How similar are your questions to the actual MRCP PACES exam?',
+        answer: 'Our questions are written by registered physicians who have recently taken the exam. We regularly update our question bank based on student feedback and MRCP PACES framework changes. Many students report our questions are slightly harder than the real exam, which helps them feel more prepared.'
       },
       {
         question: 'How much does the platform cost?',

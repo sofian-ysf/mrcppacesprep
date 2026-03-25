@@ -2,13 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Support | PreRegExamPrep Help Center',
-  description: 'Get help with PreRegExamPrep. Find answers to common questions, contact support, and access resources for your GPhC exam preparation.',
-  keywords: 'support, help center, PreRegExamPrep, GPhC exam help, customer support',
+  title: 'Support | MRCPPACESPREP Help Center',
+  description: 'Get help with MRCPPACESPREP. Find answers to common questions, contact support, and access resources for your MRCP PACES exam preparation.',
+  keywords: 'support, help center, MRCPPACESPREP, MRCP PACES exam help, customer support',
   openGraph: {
-    title: 'Support | PreRegExamPrep Help Center',
-    description: 'Get help and support for your GPhC exam preparation journey.',
-    url: 'https://preregexamprep.com/support',
+    title: 'Support | MRCPPACESPREP Help Center',
+    description: 'Get help and support for your MRCP PACES exam preparation journey.',
+    url: 'https://mrcppacesprep.com/support',
   },
   alternates: {
     canonical: '/support',
@@ -23,7 +23,7 @@ export default function SupportPage() {
         <div className="bg-white">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Support Center</h1>
-            <p className="text-xl text-gray-600">Get help with your GPhC exam preparation journey</p>
+            <p className="text-xl text-gray-600">Get help with your MRCP PACES exam preparation journey</p>
           </div>
 
           {/* Quick Actions */}
@@ -35,7 +35,7 @@ export default function SupportPage() {
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Frequently Asked Questions</h3>
-              <p className="text-gray-600 mb-4">Find answers to common questions about our platform and the GPhC exam</p>
+              <p className="text-gray-600 mb-4">Find answers to common questions about our platform and the MRCP PACES exam</p>
               <Link href="#faq" className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
                 View FAQs
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,7 +92,7 @@ export default function SupportPage() {
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Details</h3>
                 <div className="space-y-2 text-gray-700">
-                  <p><strong>Email:</strong> team@preregexamprep.com</p>
+                  <p><strong>Email:</strong> team@mrcppacesprep.com</p>
                   <p><strong>Response Time:</strong> Within 24 hours</p>
                   <p><strong>Emergency Support:</strong> Available for premium subscribers</p>
                 </div>
@@ -172,7 +172,7 @@ export default function SupportPage() {
                   </svg>
                 </summary>
                 <p className="mt-4 text-gray-600">
-                  Our questions are written by registered pharmacists who have recently taken the GPhC exam. We regularly update our question bank based on student feedback and current exam trends. Many students report our questions are slightly harder than the actual exam, which helps build confidence.
+                  Our questions are written by registered physicians who have recently taken the MRCP PACES exam. We regularly update our question bank based on student feedback and current exam trends. Many students report our questions are slightly harder than the actual exam, which helps build confidence.
                 </p>
               </details>
 
@@ -220,7 +220,7 @@ export default function SupportPage() {
                   </svg>
                 </summary>
                 <p className="mt-4 text-gray-600">
-                  We update our content monthly based on the latest GPhC guidelines, student feedback, and exam trends. New questions are added regularly, and existing content is reviewed by our team of registered pharmacists to ensure accuracy and relevance.
+                  We update our content monthly based on the latest MRCP PACES guidelines, student feedback, and exam trends. New questions are added regularly, and existing content is reviewed by our team of registered physicians to ensure accuracy and relevance.
                 </p>
               </details>
 
@@ -231,7 +231,7 @@ export default function SupportPage() {
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-xl p-8 text-white text-center">
             <h2 className="text-2xl font-bold mb-4">Still Need Help?</h2>
             <p className="text-gray-300 mb-6">
-              Our dedicated support team is here to help you succeed in your GPhC exam preparation.
+              Our dedicated support team is here to help you succeed in your MRCP PACES exam preparation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -256,9 +256,9 @@ export default function SupportPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
 
@@ -294,7 +294,7 @@ export default function SupportPage() {
           </div>
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

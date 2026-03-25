@@ -5,10 +5,10 @@ import Script from 'next/script';
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
-  "name": "PreRegExamPrep",
-  "description": "UK's leading GPhC pre-registration exam preparation platform. Created by pharmacists for pharmacy students. 94% pass rate. 8,500+ students helped.",
-  "url": "https://www.preregexamprep.com",
-  "logo": "https://www.preregexamprep.com/logo.png",
+  "name": "MRCPPACESPREP",
+  "description": "UK's leading MRCP PACES pre-registration exam preparation platform. Created by physicians for pharmacy students. 94% pass rate. 8,500+ students helped.",
+  "url": "https://www.mrcppacesprep.com",
+  "logo": "https://www.mrcppacesprep.com/logo.png",
   "foundingDate": "2020",
   "areaServed": {
     "@type": "Country",
@@ -29,23 +29,23 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Who created PreRegExamPrep?",
+      "name": "Who created MRCPPACESPREP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Created by qualified pharmacists who recently passed the GPhC exam. We understand the challenges firsthand."
+        "text": "Created by qualified physicians who recently passed the MRCP PACES exam. We understand the challenges firsthand."
       }
     },
     {
       "@type": "Question",
-      "name": "What is PreRegExamPrep's pass rate?",
+      "name": "What is MRCPPACESPREP's pass rate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "94% of our students pass their GPhC exam, compared to 70-80% national average. 96% retake success rate."
+        "text": "94% of our students pass their MRCP PACES exam, compared to 70-80% national average. 96% retake success rate."
       }
     },
     {
       "@type": "Question",
-      "name": "How many students use PreRegExamPrep?",
+      "name": "How many students use MRCPPACESPREP?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "8,500+ pharmacy students have used our platform. Trusted by students from top UK pharmacy schools."
@@ -56,7 +56,7 @@ const faqSchema = {
       "name": "Is the content regularly updated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. All content updated for 2025 GPhC framework. Regular reviews ensure current guidelines and BNF alignment."
+        "text": "Yes. All content updated for 2025 MRCP PACES framework. Regular reviews ensure current guidelines and BNF alignment."
       }
     }
   ]
@@ -79,18 +79,18 @@ export default function AboutSEO() {
       />
 
       <div className="sr-only" aria-hidden="true">
-        <h1>About PreRegExamPrep | UK's Leading GPhC Exam Preparation Platform</h1>
+        <h1>About MRCPPACESPREP | UK's Leading MRCP PACES Exam Preparation Platform</h1>
         <h2>Created by Pharmacists for Pharmacy Students - 94% Pass Rate - 8,500+ Students Helped</h2>
 
         <p>
-          PreRegExamPrep is the UK's leading GPhC pre-registration exam preparation platform.
-          Created by qualified pharmacists who recently passed the exam. 94% pass rate vs 70-80% national average.
+          MRCPPACESPREP is the UK's leading MRCP PACES pre-registration exam preparation platform.
+          Created by qualified physicians who recently passed the exam. 94% pass rate vs 70-80% national average.
           8,500+ pharmacy students helped. Trusted by students from UCL, Manchester, Nottingham, and more.
         </p>
 
         <h3>Our Mission</h3>
         <p>
-          We believe every pharmacy graduate deserves the best chance to pass their GPhC exam first time.
+          We believe every pharmacy graduate deserves the best chance to pass their MRCP PACES exam first time.
           Our mission is to provide comprehensive, high-quality exam preparation that's accessible and effective.
         </p>
 
@@ -112,9 +112,9 @@ export default function AboutSEO() {
         </ul>
 
         <p>
-          Keywords: about PreRegExamPrep, GPhC exam platform, pharmacy exam preparation company,
-          pharmacist-created content, UK pharmacy exam, pre-reg exam platform, trusted exam prep,
-          pharmacy student support, GPhC success rate, pass rate statistics
+          Keywords: about MRCPPACESPREP, MRCP PACES exam platform, pharmacy exam preparation company,
+          physician-created content, UK pharmacy exam, pre-reg exam platform, trusted exam prep,
+          pharmacy student support, MRCP PACES success rate, pass rate statistics
         </p>
       </div>
 

@@ -8,7 +8,7 @@ export const revalidate = 3600
 const LAST_MAJOR_UPDATE = new Date('2026-03-10')
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://www.preregexamprep.com'
+  const baseUrl = 'https://www.mrcppacesprep.com'
 
   // Static pages with realistic lastModified dates
   // Pages that change based on dynamic content will be updated accordingly
@@ -22,7 +22,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Main product pages (content changes with questions/features)
     {
-      url: `${baseUrl}/gphc-exam-questions`,
+      url: `${baseUrl}/mrcp-paces-exam-questions`,
       lastModified: LAST_MAJOR_UPDATE,
       changeFrequency: 'daily',
       priority: 0.9,
@@ -124,13 +124,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     // Additional product/landing pages
     {
-      url: `${baseUrl}/gphc-exam-guide`,
+      url: `${baseUrl}/mrcp-paces-exam-guide`,
       lastModified: LAST_MAJOR_UPDATE,
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/gphc-practice-questions`,
+      url: `${baseUrl}/mrcp-paces-practice-questions`,
       lastModified: LAST_MAJOR_UPDATE,
       changeFrequency: 'weekly',
       priority: 0.8,

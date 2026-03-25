@@ -2,13 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Paediatric Practice Questions | PreRegExamPrep',
-  description: 'Practice paediatric pharmacy questions representing 20% of the GPhC exam. Master child-specific dosing, safety, and clinical considerations.',
-  keywords: 'paediatric pharmacy, children questions, GPhC paediatric, child dosing, pediatric clinical',
+  title: 'Paediatric Practice Questions | MRCPPACESPREP',
+  description: 'Practice paediatric pharmacy questions representing 20% of the MRCP PACES exam. Master child-specific dosing, safety, and clinical considerations.',
+  keywords: 'paediatric pharmacy, children questions, MRCP PACES paediatric, child dosing, pediatric clinical',
   openGraph: {
-    title: 'Paediatric Practice Questions | PreRegExamPrep',
-    description: 'Master paediatric pharmacy with dedicated practice questions covering 20% of the GPhC exam.',
-    url: 'https://preregexamprep.com/questions/paediatric',
+    title: 'Paediatric Practice Questions | MRCPPACESPREP',
+    description: 'Master paediatric pharmacy with dedicated practice questions covering 20% of the MRCP PACES exam.',
+    url: 'https://mrcppacesprep.com/questions/paediatric',
   },
   alternates: {
     canonical: '/questions/paediatric',
@@ -51,13 +51,13 @@ export default function PaediatricPage() {
             Back to Questions
           </Link>
           <p className="text-sm uppercase tracking-widest text-gray-500 mb-4">
-            20% of GPhC Exam
+            20% of MRCP PACES Exam
           </p>
           <h1 className="text-4xl font-semibold text-gray-900 sm:text-5xl mb-6">
             Paediatric Pharmacy
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Approximately 20% of GPhC questions involve paediatric patients.
+            Approximately 20% of MRCP PACES questions involve paediatric patients.
             Master child-specific dosing, safety considerations, and family-centred care.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -243,9 +243,9 @@ export default function PaediatricPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
             <div>
@@ -276,7 +276,7 @@ export default function PaediatricPage() {
             </div>
           </div>
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

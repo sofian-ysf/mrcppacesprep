@@ -69,10 +69,10 @@ interface FAQSectionProps {
 
 | Page | New FAQs | Focus |
 |------|----------|-------|
-| Homepage `/` | 6 | Beginner: "What is GPhC?", "How to start?", "What's included?" |
+| Homepage `/` | 6 | Beginner: "What is MRCP PACES?", "How to start?", "What's included?" |
 | Try Free `/try-free` | 5 | Trial: "Is it free?", "Credit card?", "What's included?" |
-| GPhC Exam Guide `/gphc-exam-guide` | 8 | Exam: "2026 dates?", "Pass mark?", "Question types?" |
-| GPhC Practice Questions `/gphc-practice-questions` | 6 | Practice: "How similar?", "How many?", "Difficulty?" |
+| MRCP PACES Exam Guide `/gphc-exam-guide` | 8 | Exam: "2026 dates?", "Pass mark?", "Question types?" |
+| MRCP PACES Practice Questions `/gphc-practice-questions` | 6 | Practice: "How similar?", "How many?", "Difficulty?" |
 | Testimonials `/testimonials` | 5 | Success: "Do students pass?", "Worth the money?" |
 | Resources `/resources` | 5 | Resources: "Free downloads?", "What formats?" |
 | Help `/help` | 0 (schema only) | Add schema to existing 20+ Q&As |
@@ -87,8 +87,8 @@ interface FAQSectionProps {
 2. **Add schema to /help** - Quick win, existing content
 3. **Homepage** - Highest traffic
 4. **Try Free** - Conversion page
-5. **GPhC Exam Guide** - High search intent
-6. **GPhC Practice Questions** - Product page
+5. **MRCP PACES Exam Guide** - High search intent
+6. **MRCP PACES Practice Questions** - Product page
 7. **Testimonials** - Trust signals
 8. **Resources** - Support page
 

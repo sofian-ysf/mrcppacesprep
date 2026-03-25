@@ -19,23 +19,23 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 
 export const metadata: Metadata = {
-  title: 'GPhC Calculation Questions 2025 | 350+ Problems | Step-by-Step Solutions',
-  description: 'Master pharmaceutical calculations for the 2025 GPhC exam. 350+ problems with step-by-step solutions. Dosage, dilutions, IV rates, alligation. 72% score improvement.',
+  title: 'MRCP PACES Calculation Questions 2025 | 350+ Problems | Step-by-Step Solutions',
+  description: 'Master pharmaceutical calculations for the 2025 MRCP PACES exam. 350+ problems with step-by-step solutions. Dosage, dilutions, IV rates, alligation. 72% score improvement.',
   keywords: [
-    'GPhC calculations', 'pharmaceutical calculations', 'dosage calculations', 'dilution calculations',
+    'MRCP PACES calculations', 'pharmaceutical calculations', 'dosage calculations', 'dilution calculations',
     'concentration calculations', 'IV flow rate', 'infusion rate calculations', 'pharmacy math',
     'alligation method', 'unit conversions pharmacy', 'bioavailability calculations',
     'calculation formulas', 'step-by-step solutions', 'calculation shortcuts', 'timed calculations'
   ],
   openGraph: {
-    title: 'GPhC Calculation Questions 2025 | 350+ Problems | Step-by-Step',
-    description: 'Master pharmaceutical calculations for the 2025 GPhC exam. 350+ problems with step-by-step solutions.',
-    url: 'https://www.preregexamprep.com/calculations',
+    title: 'MRCP PACES Calculation Questions 2025 | 350+ Problems | Step-by-Step',
+    description: 'Master pharmaceutical calculations for the 2025 MRCP PACES exam. 350+ problems with step-by-step solutions.',
+    url: 'https://www.mrcppacesprep.com/calculations',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPhC Calculation Questions 2025 | 350+ Problems',
-    description: '350+ pharmaceutical calculation problems with step-by-step solutions. Master GPhC calculations for 2025.'
+    title: 'MRCP PACES Calculation Questions 2025 | 350+ Problems',
+    description: '350+ pharmaceutical calculation problems with step-by-step solutions. Master MRCP PACES calculations for 2025.'
   },
   alternates: {
     canonical: '/calculations',
@@ -45,8 +45,8 @@ export const metadata: Metadata = {
 const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
-  "name": "How to Solve GPhC Pharmaceutical Calculations",
-  "description": "Learn how to solve pharmaceutical calculations for the GPhC exam using our proven 4-step method.",
+  "name": "How to Solve MRCP PACES Pharmaceutical Calculations",
+  "description": "Learn how to solve pharmaceutical calculations for the MRCP PACES exam using our proven 4-step method.",
   "step": [
     { "@type": "HowToStep", "position": 1, "name": "Identify what you know", "text": "Start by identifying all the values given in the problem." },
     { "@type": "HowToStep", "position": 2, "name": "Calculate total dose needed", "text": "Use the formula: Total dose = Weight × Dose per kg." },
@@ -126,7 +126,7 @@ export default function CalculationsPage() {
         <section className="px-5 py-12 md:px-6 md:py-20 lg:px-8 border-t border-gray-100">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">
-              Calculations are the #1 reason students fail the GPhC exam
+              Calculations are the #1 reason students fail the MRCP PACES exam
             </h2>
             <p className="text-base md:text-lg text-gray-600 mb-8">
               Unit conversion errors, decimal mistakes, and time pressure cause even prepared students to lose marks. Our structured approach fixes this.
@@ -356,7 +356,7 @@ export default function CalculationsPage() {
               Less Than the Cost of One Resit
             </h2>
             <p className="text-gray-600 mb-8">
-              The GPhC exam costs £237. Our complete calculation practice costs a fraction of that.
+              The MRCP PACES exam costs £237. Our complete calculation practice costs a fraction of that.
             </p>
 
             <div className="pill-card p-6 md:p-8 max-w-md mx-auto">
@@ -451,9 +451,9 @@ export default function CalculationsPage() {
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
               <div className="col-span-2 md:col-span-1">
-                <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+                <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  The UK&apos;s leading platform for GPhC Pre-Registration exam preparation.
+                  The UK&apos;s leading platform for MRCP PACES Pre-Registration exam preparation.
                 </p>
               </div>
 
@@ -489,7 +489,7 @@ export default function CalculationsPage() {
             </div>
 
             <div className="mt-10 md:mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-              <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+              <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
               <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
             </div>
           </div>

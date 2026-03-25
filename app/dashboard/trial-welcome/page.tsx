@@ -137,7 +137,7 @@ export default function TrialWelcomePage() {
                 Welcome to Your 7-Day Trial!
               </h1>
               <p className="text-lg text-gray-600 mb-8">
-                You have access to <span className="font-semibold text-black">100 clinical questions</span> to help you prepare for the GPhC exam.
+                You have access to <span className="font-semibold text-black">100 clinical questions</span> to help you prepare for the MRCP PACES exam.
               </p>
 
               <div className="bg-gray-50 rounded-xl p-6 mb-8">

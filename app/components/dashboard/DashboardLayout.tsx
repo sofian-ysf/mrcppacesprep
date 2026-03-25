@@ -86,8 +86,8 @@ export default function DashboardLayout({
             {/* Left - Logo & Nav */}
             <div className="flex items-center space-x-8">
               <Link href="/" className="flex items-center space-x-2">
-                <Image src="/logo.png" alt="PreRegExamPrep" width={28} height={28} className="rounded" />
-                <span className="font-semibold text-gray-900">PreRegExamPrep</span>
+                <Image src="/logo.png" alt="MRCPPACESPREP" width={28} height={28} className="rounded" />
+                <span className="font-semibold text-gray-900">MRCPPACESPREP</span>
               </Link>
               <nav className="hidden md:flex items-center space-x-1">
                 {navLinks.map(link => (

@@ -5,11 +5,11 @@ import Script from 'next/script';
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "GPhC Pharmaceutical Calculations Practice",
+  "name": "MRCP PACES Pharmaceutical Calculations Practice",
   "description": "Master pharmaceutical calculations with 350+ problems and step-by-step solutions. Dosage, dilutions, IV rates. 72% average score improvement.",
   "brand": {
     "@type": "Organization",
-    "name": "PreRegExamPrep"
+    "name": "MRCPPACESPREP"
   },
   "category": "Educational Software",
   "offers": {
@@ -101,11 +101,11 @@ export default function CalculationsSEO() {
       />
 
       <div className="sr-only" aria-hidden="true">
-        <h1>GPhC Pharmaceutical Calculations Practice | 350+ Problems | Step-by-Step Solutions | £30/month</h1>
+        <h1>MRCP PACES Pharmaceutical Calculations Practice | 350+ Problems | Step-by-Step Solutions | £30/month</h1>
         <h2>Master Dosage, Dilutions, IV Rates - 72% Average Score Improvement</h2>
 
         <p>
-          Master pharmaceutical calculations for the GPhC exam with 350+ practice problems.
+          Master pharmaceutical calculations for the MRCP PACES exam with 350+ practice problems.
           Step-by-step solutions for every problem. Covers dosage, dilutions, concentrations,
           IV flow rates, alligation, and business calculations. Speed challenges included.
           Formula reference sheet. 72% average score improvement. From £30/month.
@@ -145,10 +145,10 @@ export default function CalculationsSEO() {
         </ul>
 
         <p>
-          Keywords: GPhC calculations, pharmaceutical calculations, pharmacy math, dosage calculations,
+          Keywords: MRCP PACES calculations, pharmaceutical calculations, pharmacy math, dosage calculations,
           dilution calculations, concentration calculations, IV flow rate, infusion rate calculations,
           alligation method, unit conversions pharmacy, bioavailability calculations, pharmacy business calculations,
-          GPhC calculation practice, step-by-step solutions, calculation formulas, pharmacy formulas,
+          MRCP PACES calculation practice, step-by-step solutions, calculation formulas, pharmacy formulas,
           pre-reg calculations, calculation shortcuts, timed calculations, speed challenge
         </p>
       </div>

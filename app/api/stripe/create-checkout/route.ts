@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
     }
 
     const baseUrl = process.env.NODE_ENV === 'production'
-      ? 'https://www.preregexamprep.com'
+      ? 'https://www.mrcppacesprep.com'
       : process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
 
     // Create Stripe Checkout Session for ONE-TIME payment
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
       cancel_url: `${baseUrl}/pricing?cancelled=true`,
       customer_email: user.email,
       metadata: {
-        site: 'preregexamprep', // Site identifier to filter webhooks
+        site: 'mrcppacesprep', // Site identifier to filter webhooks
         user_id: user.id,
         user_email: user.email || '',
         plan_type: planType,

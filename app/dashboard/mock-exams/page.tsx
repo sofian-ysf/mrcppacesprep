@@ -40,7 +40,7 @@ const mockExams: MockExam[] = [
   {
     id: 'full-exam-1',
     name: 'Full-Length Practice Exam',
-    description: 'Complete 110-question exam in 2.5 hours - exactly like the real GPhC exam',
+    description: 'Complete 110-question exam in 2.5 hours - exactly like the real MRCP PACES exam',
     duration: 150,
     questionCount: 110,
     type: 'full'

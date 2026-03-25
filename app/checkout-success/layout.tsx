@@ -1,8 +1,8 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Payment Successful | GPhC Exam Prep',
-  description: 'Your payment was successful. Welcome to GPhC Exam Prep - start your exam preparation journey now.',
+  title: 'Payment Successful | MRCP PACES Exam Prep',
+  description: 'Your payment was successful. Welcome to MRCP PACES Exam Prep - start your exam preparation journey now.',
   robots: {
     index: false,
     follow: false,

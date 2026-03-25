@@ -21,23 +21,23 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 
 export const metadata: Metadata = {
-  title: 'GPhC Question Bank 2025 | 2000+ Practice Questions | 94% Pass Rate',
-  description: 'Master your 2025 GPhC exam with 2000+ practice questions. SBA, EMQ & calculations. Detailed explanations, progress tracking. 94% pass rate.',
+  title: 'MRCP PACES Question Bank 2025 | 2000+ Practice Questions | 94% Pass Rate',
+  description: 'Master your 2025 MRCP PACES exam with 2000+ practice questions. SBA, EMQ & calculations. Detailed explanations, progress tracking. 94% pass rate.',
   keywords: [
-    'GPhC question bank', 'GPhC practice questions', 'pre-reg exam questions', 'pharmacy exam questions UK',
-    'GPhC SBA questions', 'GPhC EMQ practice', 'clinical pharmacy questions', 'pharmacy law questions',
-    'pharmaceutical calculations practice', 'pharmacology exam questions', 'GPhC exam preparation',
-    'pre-registration pharmacist questions', 'BNF questions', 'GPhC question bank 2025'
+    'MRCP PACES question bank', 'MRCP PACES practice questions', 'pre-reg exam questions', 'pharmacy exam questions UK',
+    'MRCP PACES SBA questions', 'MRCP PACES EMQ practice', 'clinical pharmacy questions', 'pharmacy law questions',
+    'pharmaceutical calculations practice', 'pharmacology exam questions', 'MRCP PACES exam preparation',
+    'pre-registration physician questions', 'BNF questions', 'MRCP PACES question bank 2025'
   ],
   openGraph: {
-    title: 'GPhC Question Bank | 2000+ Questions | 94% Pass Rate | £25',
-    description: 'Master GPhC exam with 2000+ practice questions. Detailed explanations, progress tracking. 94% pass rate.',
-    url: 'https://www.preregexamprep.com/question-bank',
+    title: 'MRCP PACES Question Bank | 2000+ Questions | 94% Pass Rate | £25',
+    description: 'Master MRCP PACES exam with 2000+ practice questions. Detailed explanations, progress tracking. 94% pass rate.',
+    url: 'https://www.mrcppacesprep.com/question-bank',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPhC Question Bank | 2000+ Questions | 94% Pass Rate',
-    description: '2000+ GPhC practice questions with detailed explanations. 94% pass rate. Start practicing today!'
+    title: 'MRCP PACES Question Bank | 2000+ Questions | 94% Pass Rate',
+    description: '2000+ MRCP PACES practice questions with detailed explanations. 94% pass rate. Start practicing today!'
   },
   alternates: {
     canonical: '/question-bank',
@@ -67,12 +67,12 @@ export default function QuestionBankPage() {
               </div>
 
               <h1 className="mb-5 md:mb-6 text-[28px] leading-tight font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
-                2,000+ GPhC Practice
+                2,000+ MRCP PACES Practice
                 <span className="block">Questions</span>
               </h1>
 
               <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-base leading-relaxed text-gray-600 md:text-lg lg:text-xl">
-                Exam-style questions with detailed explanations. Written by qualified pharmacists. 94% of our students pass on their first attempt.
+                Exam-style questions with detailed explanations. Written by qualified physicians. 94% of our students pass on their first attempt.
               </p>
 
               <div className="flex flex-col gap-3 md:flex-row md:gap-4 md:justify-center">
@@ -118,7 +118,7 @@ export default function QuestionBankPage() {
           <div className="mx-auto max-w-7xl">
             <div className="text-center mb-10 md:mb-12">
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
-                Every GPhC Topic Covered
+                Every MRCP PACES Topic Covered
               </h2>
               <p className="mt-3 text-gray-600">Questions across all framework areas</p>
             </div>
@@ -329,7 +329,7 @@ export default function QuestionBankPage() {
               Less Than the Cost of One Resit
             </h2>
             <p className="text-gray-600 mb-8">
-              The GPhC exam costs £237. Full access to our question bank costs a fraction of that.
+              The MRCP PACES exam costs £237. Full access to our question bank costs a fraction of that.
             </p>
 
             <div className="pill-card p-6 md:p-8 max-w-md mx-auto">
@@ -424,9 +424,9 @@ export default function QuestionBankPage() {
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
               <div className="col-span-2 md:col-span-1">
-                <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+                <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  The UK&apos;s leading platform for GPhC Pre-Registration exam preparation.
+                  The UK&apos;s leading platform for MRCP PACES Pre-Registration exam preparation.
                 </p>
               </div>
 
@@ -462,7 +462,7 @@ export default function QuestionBankPage() {
             </div>
 
             <div className="mt-10 md:mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-              <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+              <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
               <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
             </div>
           </div>

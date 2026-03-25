@@ -81,7 +81,7 @@ export default function TryFreePage() {
     return (
       <div className="min-h-screen bg-[#fbfaf4] flex flex-col">
         <header className="bg-white border-b border-gray-200 px-4 py-3">
-          <Link href="/" className="text-lg font-semibold text-gray-900">PreRegExamPrep</Link>
+          <Link href="/" className="text-lg font-semibold text-gray-900">MRCPPACESPREP</Link>
         </header>
 
         <main className="flex-1 overflow-y-auto">
@@ -146,7 +146,7 @@ export default function TryFreePage() {
     <div className="h-screen flex flex-col bg-[#fbfaf4] overflow-hidden">
       {/* Mobile Header */}
       <header className="lg:hidden bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between flex-shrink-0">
-        <Link href="/" className="text-lg font-semibold text-gray-900">PreRegExamPrep</Link>
+        <Link href="/" className="text-lg font-semibold text-gray-900">MRCPPACESPREP</Link>
         <button
           onClick={() => setShowMobileProgress(!showMobileProgress)}
           className="flex items-center gap-2 text-sm text-gray-600 bg-gray-100 px-3 py-1.5 rounded-full"
@@ -190,7 +190,7 @@ export default function TryFreePage() {
         {/* Desktop Sidebar */}
         <aside className="hidden lg:flex w-64 bg-white border-r border-gray-200 flex-col flex-shrink-0">
           <div className="p-4 border-b border-gray-100">
-            <Link href="/" className="text-lg font-semibold text-gray-900">PreRegExamPrep</Link>
+            <Link href="/" className="text-lg font-semibold text-gray-900">MRCPPACESPREP</Link>
           </div>
 
           <div className="p-4 border-b border-gray-100">

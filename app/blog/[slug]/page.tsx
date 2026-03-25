@@ -147,39 +147,39 @@ export default async function BlogPostPage({ params }: Props) {
     "author": {
       "@type": "Person",
       "name": post.author_name || "Alex Jensing, MPharm",
-      "jobTitle": "GPhC Registered Pharmacist",
-      "description": "Qualified pharmacist with expertise in GPhC exam preparation and pharmaceutical education",
+      "jobTitle": "MRCP PACES Registered Pharmacist",
+      "description": "Qualified physician with expertise in MRCP PACES exam preparation and pharmaceutical education",
       "worksFor": {
         "@type": "Organization",
-        "name": "PreRegExamPrep",
-        "url": "https://www.preregexamprep.com"
+        "name": "MRCPPACESPREP",
+        "url": "https://www.mrcppacesprep.com"
       }
     },
     "publisher": {
       "@type": "Organization",
-      "name": "PreRegExamPrep",
-      "url": "https://www.preregexamprep.com",
+      "name": "MRCPPACESPREP",
+      "url": "https://www.mrcppacesprep.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.preregexamprep.com/logo.png"
+        "url": "https://www.mrcppacesprep.com/logo.png"
       },
-      "description": "UK's leading GPhC pre-registration exam preparation platform with 94% pass rate"
+      "description": "UK's leading MRCP PACES pre-registration exam preparation platform with 94% pass rate"
     },
     "datePublished": post.published_at,
     "dateModified": post.updated_at,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://www.preregexamprep.com/blog/${post.slug}`
+      "@id": `https://www.mrcppacesprep.com/blog/${post.slug}`
     },
     "isPartOf": {
       "@type": "Blog",
-      "@id": "https://www.preregexamprep.com/blog",
-      "name": "GPhC Exam Prep Blog",
-      "description": "Expert advice, study tips, and resources for GPhC pre-registration exam success"
+      "@id": "https://www.mrcppacesprep.com/blog",
+      "name": "MRCP PACES Exam Prep Blog",
+      "description": "Expert advice, study tips, and resources for MRCP PACES pre-registration exam success"
     },
     "about": {
       "@type": "Thing",
-      "name": "GPhC Pre-Registration Exam",
+      "name": "MRCP PACES Pre-Registration Exam",
       "description": "The General Pharmaceutical Council examination for pharmacy registration in the UK"
     },
     ...(post.featured_image && { "image": post.featured_image }),
@@ -194,19 +194,19 @@ export default async function BlogPostPage({ params }: Props) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://www.preregexamprep.com"
+        "item": "https://www.mrcppacesprep.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://www.preregexamprep.com/blog"
+        "item": "https://www.mrcppacesprep.com/blog"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": post.title,
-        "item": `https://www.preregexamprep.com/blog/${post.slug}`
+        "item": `https://www.mrcppacesprep.com/blog/${post.slug}`
       }
     ]
   }
@@ -256,7 +256,7 @@ export default async function BlogPostPage({ params }: Props) {
   })()
 
   // Share URL
-  const shareUrl = `https://www.preregexamprep.com/blog/${slug}`
+  const shareUrl = `https://www.mrcppacesprep.com/blog/${slug}`
   const svgIndex = generateSVGIndex(slug)
 
   return (
@@ -374,7 +374,7 @@ export default async function BlogPostPage({ params }: Props) {
 
           {/* Internal Links Section - Before CTA */}
           <div className="blog-internal-links">
-            <h3>Continue Your GPhC Prep</h3>
+            <h3>Continue Your MRCP PACES Prep</h3>
             <div className="internal-links-grid">
               <Link href="/question-bank" className="internal-link-card">
                 <span className="internal-link-icon">📝</span>
@@ -397,7 +397,7 @@ export default async function BlogPostPage({ params }: Props) {
           {/* CTA Section - After Content */}
           <div className="blog-cta-section">
             <div className="blog-cta-badge">Start Practicing Today</div>
-            <h2 className="blog-cta-title">Ready to Pass Your GPhC Exam?</h2>
+            <h2 className="blog-cta-title">Ready to Pass Your MRCP PACES Exam?</h2>
             <p className="blog-cta-description">
               Put this knowledge into practice with 2,000+ exam-style questions.
               94% of our students pass on their first attempt.

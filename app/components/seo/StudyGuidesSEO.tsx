@@ -5,11 +5,11 @@ import Script from 'next/script';
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "GPhC Study Guides - Comprehensive Learning Materials",
-  "description": "Download comprehensive GPhC study guides. PDF guides, formula sheets, mind maps, structured learning pathways. Created by pharmacists.",
+  "name": "MRCP PACES Study Guides - Comprehensive Learning Materials",
+  "description": "Download comprehensive MRCP PACES study guides. PDF guides, formula sheets, mind maps, structured learning pathways. Created by physicians.",
   "brand": {
     "@type": "Organization",
-    "name": "PreRegExamPrep"
+    "name": "MRCPPACESPREP"
   },
   "category": "Educational Materials",
   "offers": {
@@ -38,7 +38,7 @@ const faqSchema = {
       "name": "What study guides are included?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Topic guides for all GPhC framework areas, formula sheets, mind maps, quick reference cards, and study pathways."
+        "text": "Topic guides for all MRCP PACES framework areas, formula sheets, mind maps, quick reference cards, and study pathways."
       }
     },
     {
@@ -54,7 +54,7 @@ const faqSchema = {
       "name": "Are study guides updated regularly?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Content updated for 2025 GPhC framework. Regular reviews ensure alignment with latest guidelines and BNF."
+        "text": "Content updated for 2025 MRCP PACES framework. Regular reviews ensure alignment with latest guidelines and BNF."
       }
     },
     {
@@ -70,7 +70,7 @@ const faqSchema = {
       "name": "Who created the study guides?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "All materials created by qualified pharmacists with recent GPhC exam experience. Expert-verified content."
+        "text": "All materials created by qualified physicians with recent MRCP PACES exam experience. Expert-verified content."
       }
     },
     {
@@ -101,14 +101,14 @@ export default function StudyGuidesSEO() {
       />
 
       <div className="sr-only" aria-hidden="true">
-        <h1>GPhC Study Guides UK | PDF Downloads | Formula Sheets | Learning Pathways | £30/month</h1>
-        <h2>Comprehensive Study Materials Created by Pharmacists - All GPhC Topics Covered</h2>
+        <h1>MRCP PACES Study Guides UK | PDF Downloads | Formula Sheets | Learning Pathways | £30/month</h1>
+        <h2>Comprehensive Study Materials Created by Pharmacists - All MRCP PACES Topics Covered</h2>
 
         <p>
-          Download comprehensive GPhC study guides covering all exam topics.
+          Download comprehensive MRCP PACES study guides covering all exam topics.
           PDF guides, formula sheets, mind maps, and quick reference cards.
           Structured learning pathways for 8-week, 4-week, and 2-week preparation.
-          Created by qualified pharmacists. Updated for 2025 GPhC framework. From £30/month.
+          Created by qualified physicians. Updated for 2025 MRCP PACES framework. From £30/month.
         </p>
 
         <h3>Study Guide Topics</h3>
@@ -151,10 +151,10 @@ export default function StudyGuidesSEO() {
         </ul>
 
         <p>
-          Keywords: GPhC study guide, GPhC revision notes, pre-reg study materials, pharmacy exam guide,
-          GPhC formula sheet, pharmacy mind maps, GPhC study schedule, pharmacy revision resources,
-          GPhC study plan, learning pathway, study pathway, exam preparation guide, pharmacy study tips,
-          GPhC topic guides, BNF study guide, clinical pharmacy guide, pharmacy law guide,
+          Keywords: MRCP PACES study guide, MRCP PACES revision notes, pre-reg study materials, pharmacy exam guide,
+          MRCP PACES formula sheet, pharmacy mind maps, MRCP PACES study schedule, pharmacy revision resources,
+          MRCP PACES study plan, learning pathway, study pathway, exam preparation guide, pharmacy study tips,
+          MRCP PACES topic guides, BNF study guide, clinical pharmacy guide, pharmacy law guide,
           pharmacology revision, pharmaceutics guide, public health pharmacy
         </p>
       </div>

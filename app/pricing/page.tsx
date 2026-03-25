@@ -11,11 +11,11 @@ import { getStoredGclid } from '@/app/components/GclidCapture'
 const allFeatures = [
   {
     name: '2,000+ Practice Questions',
-    description: 'Comprehensive question bank covering all GPhC exam topics, written by registered pharmacists',
+    description: 'Comprehensive question bank covering all MRCP PACES exam topics, written by registered physicians',
   },
   {
     name: 'Unlimited Mock Exams',
-    description: 'Realistic timed exams matching the actual GPhC format with instant results',
+    description: 'Realistic timed exams matching the actual MRCP PACES format with instant results',
   },
   {
     name: 'Calculations Practice',
@@ -148,11 +148,11 @@ export default function PricingPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "GPhC Exam Prep Access",
-    "description": "Complete access to GPhC pre-registration exam preparation platform including 2000+ practice questions, unlimited mock exams, detailed explanations, and progress tracking",
+    "name": "MRCP PACES Exam Prep Access",
+    "description": "Complete access to MRCP PACES pre-registration exam preparation platform including 2000+ practice questions, unlimited mock exams, detailed explanations, and progress tracking",
     "brand": {
       "@type": "Organization",
-      "name": "PreRegExamPrep"
+      "name": "MRCPPACESPREP"
     },
     "offers": {
       "@type": "AggregateOffer",
@@ -162,7 +162,7 @@ export default function PricingPage() {
       "offerCount": "3",
       "availability": "https://schema.org/InStock",
       "priceValidUntil": "2026-12-31",
-      "url": "https://www.preregexamprep.com/pricing"
+      "url": "https://www.mrcppacesprep.com/pricing"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -340,7 +340,7 @@ export default function PricingPage() {
             <div className="grid gap-8 md:grid-cols-3">
               <div className="text-center">
                 <div className="text-4xl font-bold text-gray-900 mb-2">£237</div>
-                <div className="text-gray-600 mb-2">GPhC Exam Sitting Fee</div>
+                <div className="text-gray-600 mb-2">MRCP PACES Exam Sitting Fee</div>
                 <p className="text-sm text-gray-500">Per attempt, plus 6-month wait if you fail</p>
               </div>
               <div className="text-center">
@@ -426,9 +426,9 @@ export default function PricingPage() {
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-8 md:grid-cols-4">
               <div>
-                <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+                <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
                 <p className="text-sm text-gray-600">
-                  The UK's leading platform for GPhC Pre-Registration exam preparation.
+                  The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
                 </p>
               </div>
 
@@ -463,7 +463,7 @@ export default function PricingPage() {
             </div>
 
             <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-              <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+              <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
               <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
             </div>
           </div>

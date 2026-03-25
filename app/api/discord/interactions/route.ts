@@ -186,7 +186,7 @@ async function processCommandAsync(
  * Get help message with all available commands
  */
 function getHelpMessage(): string {
-  return `# PreRegExamPrep Discord Bot
+  return `# MRCPPACESPREP Discord Bot
 
 ## Email Commands
 \`/email inbox\` - Show recent emails
@@ -206,5 +206,5 @@ function getHelpMessage(): string {
 
 ## Tips
 - DM me directly for natural language conversations
-- I can help with emails, calendar, and general questions about PreRegExamPrep`;
+- I can help with emails, calendar, and general questions about MRCPPACESPREP`;
 }

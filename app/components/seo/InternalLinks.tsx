@@ -9,7 +9,7 @@ interface InternalLink {
 }
 
 const PRODUCT_LINKS: InternalLink[] = [
-  { href: '/gphc-exam-questions', label: 'GPhC Exam Questions', description: 'Practice with 2000+ exam questions' },
+  { href: '/gphc-exam-questions', label: 'MRCP PACES Exam Questions', description: 'Practice with 2000+ exam questions' },
   { href: '/question-bank', label: 'Question Bank', description: 'Access our complete question database' },
   { href: '/mock-exams', label: 'Mock Exams', description: 'Simulate real exam conditions' },
   { href: '/calculations', label: 'Calculations', description: 'Practice pharmacy calculations' },

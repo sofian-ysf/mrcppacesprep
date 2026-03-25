@@ -5,11 +5,11 @@ import Script from 'next/script';
 const aggregateReviewSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "PreRegExamPrep GPhC Exam Preparation",
-  "description": "GPhC exam preparation platform with real success stories. 94% pass rate. Read testimonials from pharmacy students who passed their exam.",
+  "name": "MRCPPACESPREP MRCP PACES Exam Preparation",
+  "description": "MRCP PACES exam preparation platform with real success stories. 94% pass rate. Read testimonials from pharmacy students who passed their exam.",
   "brand": {
     "@type": "Organization",
-    "name": "PreRegExamPrep"
+    "name": "MRCPPACESPREP"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -30,7 +30,7 @@ const aggregateReviewSchema = {
         "ratingValue": "5",
         "bestRating": "5"
       },
-      "reviewBody": "Failed first attempt with 48%, passed with 76% after using PreRegExamPrep. The calculation practice was a game-changer."
+      "reviewBody": "Failed first attempt with 48%, passed with 76% after using MRCPPACESPREP. The calculation practice was a game-changer."
     },
     {
       "@type": "Review",
@@ -67,7 +67,7 @@ const faqSchema = {
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is PreRegExamPrep's pass rate?",
+      "name": "What is MRCPPACESPREP's pass rate?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "94% overall pass rate. 89% first-time pass rate. 96% retake success rate. Compare to 70-80% national average."
@@ -83,7 +83,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "Do students who failed before pass with PreRegExamPrep?",
+      "name": "Do students who failed before pass with MRCPPACESPREP?",
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Yes! 96% of students who previously failed pass after using our platform. Many improve by 20-30%."
@@ -117,11 +117,11 @@ export default function TestimonialsSEO() {
       />
 
       <div className="sr-only" aria-hidden="true">
-        <h1>GPhC Exam Success Stories | 94% Pass Rate | Real Student Testimonials</h1>
-        <h2>Read How 8,500+ Pharmacy Students Passed Their GPhC Exam with PreRegExamPrep</h2>
+        <h1>MRCP PACES Exam Success Stories | 94% Pass Rate | Real Student Testimonials</h1>
+        <h2>Read How 8,500+ Pharmacy Students Passed Their MRCP PACES Exam with MRCPPACESPREP</h2>
 
         <p>
-          Read real success stories from pharmacy students who passed their GPhC exam using PreRegExamPrep.
+          Read real success stories from pharmacy students who passed their MRCP PACES exam using MRCPPACESPREP.
           94% pass rate. 23% average score improvement. 96% retake success rate.
           Stories from first-time passers and students who overcame previous failures.
         </p>
@@ -147,7 +147,7 @@ export default function TestimonialsSEO() {
         <h4>Popular Testimonial Searches</h4>
         <ul>
           <li>gphc exam success stories</li>
-          <li>preregexamprep reviews</li>
+          <li>mrcppacesprep reviews</li>
           <li>gphc pass rate</li>
           <li>pharmacy exam testimonials</li>
           <li>pre-reg exam results</li>
@@ -155,9 +155,9 @@ export default function TestimonialsSEO() {
         </ul>
 
         <p>
-          Keywords: GPhC success stories, PreRegExamPrep reviews, GPhC testimonials, pass rate,
+          Keywords: MRCP PACES success stories, MRCPPACESPREP reviews, MRCP PACES testimonials, pass rate,
           pharmacy exam success, pre-reg exam results, student reviews, exam preparation reviews,
-          passed GPhC exam, GPhC exam improvement, retake success, calculation improvement,
+          passed MRCP PACES exam, MRCP PACES exam improvement, retake success, calculation improvement,
           anxiety management, time management, first time pass, exam confidence
         </p>
       </div>

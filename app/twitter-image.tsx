@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
 
-export const alt = 'GPhC Exam Prep - Pass Your Pre-Reg Exam First Time'
+export const alt = 'MRCP PACES Exam Prep - Pass Your Pre-Reg Exam First Time'
 export const size = {
   width: 1200,
   height: 600,
@@ -54,7 +54,7 @@ export default async function Image() {
               color: 'white',
             }}
           >
-            GPhC Exam Prep
+            MRCP PACES Exam Prep
           </span>
         </div>
 
@@ -121,7 +121,7 @@ export default async function Image() {
             color: '#64748b',
           }}
         >
-          www.preregexamprep.com
+          www.mrcppacesprep.com
         </div>
       </div>
     ),

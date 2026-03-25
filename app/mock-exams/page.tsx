@@ -18,23 +18,23 @@ import {
 } from '@phosphor-icons/react/dist/ssr'
 
 export const metadata: Metadata = {
-  title: 'GPhC Mock Exams 2025 | Realistic Practice Tests | 94% Pass Rate | £30/month',
-  description: 'Take realistic GPhC mock exams. 110 questions, 2.5 hours, exact exam format. Detailed performance analysis. ±3% accuracy vs real exam. Unlimited attempts. £30/month.',
+  title: 'MRCP PACES Mock Exams 2025 | Realistic Practice Tests | 94% Pass Rate | £30/month',
+  description: 'Take realistic MRCP PACES mock exams. 110 questions, 2.5 hours, exact exam format. Detailed performance analysis. ±3% accuracy vs real exam. Unlimited attempts. £30/month.',
   keywords: [
-    'GPhC mock exams', 'GPhC practice test', 'pre-reg mock exam', 'pharmacy mock exam UK',
-    'GPhC exam simulation', 'timed practice test', 'realistic GPhC exam', 'GPhC practice papers',
-    'GPhC exam format', '110 question mock', '2.5 hour exam practice', 'GPhC exam timing',
+    'MRCP PACES mock exams', 'MRCP PACES practice test', 'pre-reg mock exam', 'pharmacy mock exam UK',
+    'MRCP PACES exam simulation', 'timed practice test', 'realistic MRCP PACES exam', 'MRCP PACES practice papers',
+    'MRCP PACES exam format', '110 question mock', '2.5 hour exam practice', 'MRCP PACES exam timing',
     'mock exam feedback', 'performance analysis', 'pass prediction', 'topic mock exams'
   ],
   openGraph: {
-    title: 'GPhC Mock Exams | Realistic Practice Tests | 94% Pass Rate',
-    description: 'Realistic GPhC mock exams with exact timing. 110 questions, 2.5 hours. ±3% accuracy vs real exam.',
-    url: 'https://www.preregexamprep.com/mock-exams',
+    title: 'MRCP PACES Mock Exams | Realistic Practice Tests | 94% Pass Rate',
+    description: 'Realistic MRCP PACES mock exams with exact timing. 110 questions, 2.5 hours. ±3% accuracy vs real exam.',
+    url: 'https://www.mrcppacesprep.com/mock-exams',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPhC Mock Exams | Realistic Practice Tests | 94% Pass Rate',
-    description: 'Take unlimited GPhC mock exams. Exact exam format. Detailed performance analysis.'
+    title: 'MRCP PACES Mock Exams | Realistic Practice Tests | 94% Pass Rate',
+    description: 'Take unlimited MRCP PACES mock exams. Exact exam format. Detailed performance analysis.'
   },
   alternates: {
     canonical: '/mock-exams',
@@ -55,12 +55,12 @@ export default function MockExamsPage() {
               </div>
 
               <h1 className="mb-5 md:mb-6 text-[28px] leading-tight font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
-                Simulate the Real GPhC
+                Simulate the Real MRCP PACES
                 <span className="block">Exam Experience</span>
               </h1>
 
               <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-base leading-relaxed text-gray-600 md:text-lg lg:text-xl">
-                Practice under real exam conditions with comprehensive mock exams. Get detailed feedback and build confidence for your GPhC examination.
+                Practice under real exam conditions with comprehensive mock exams. Get detailed feedback and build confidence for your MRCP PACES examination.
               </p>
 
               {/* Mobile-first buttons with proper touch targets (min 44px height) */}
@@ -148,7 +148,7 @@ export default function MockExamsPage() {
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3">Full-Length Practice Exams</h3>
                 <p className="text-gray-600 text-base leading-relaxed mb-5">
-                  Complete 110-question exams in 2.5 hours, exactly matching the real GPhC exam format.
+                  Complete 110-question exams in 2.5 hours, exactly matching the real MRCP PACES exam format.
                 </p>
                 <ul className="space-y-3 mb-6">
                   {['110 questions in 150 minutes', 'Realistic question distribution', 'Complete performance analysis', 'Pass/fail prediction'].map((item, i) => (
@@ -235,7 +235,7 @@ export default function MockExamsPage() {
               {/* Features List */}
               <div className="space-y-6">
                 {[
-                  { icon: Timer, title: 'Exact Timing & Format', desc: 'Experience the real exam pressure with exact 2.5-hour timing and interface that matches the actual GPhC exam.' },
+                  { icon: Timer, title: 'Exact Timing & Format', desc: 'Experience the real exam pressure with exact 2.5-hour timing and interface that matches the actual MRCP PACES exam.' },
                   { icon: ChartLine, title: 'Realistic Question Distribution', desc: 'Questions distributed across topics exactly as in the real exam, with the correct balance of subjects.' },
                   { icon: Users, title: 'Performance Benchmarking', desc: 'Compare your performance against thousands of other students. Know where you stand before the real exam.' },
                   { icon: Target, title: 'Instant Result Analysis', desc: 'Get immediate feedback with detailed breakdowns by topic, question type, and difficulty level.' },
@@ -466,9 +466,9 @@ export default function MockExamsPage() {
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-8 grid-cols-2 md:grid-cols-4">
               <div className="col-span-2 md:col-span-1">
-                <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+                <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  The UK&apos;s leading platform for GPhC Pre-Registration exam preparation.
+                  The UK&apos;s leading platform for MRCP PACES Pre-Registration exam preparation.
                 </p>
               </div>
 
@@ -504,7 +504,7 @@ export default function MockExamsPage() {
             </div>
 
             <div className="mt-10 md:mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-              <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+              <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
               <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
             </div>
           </div>

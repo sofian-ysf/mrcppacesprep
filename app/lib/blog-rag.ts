@@ -78,7 +78,7 @@ export async function buildBlogContext(
 
   if (!content) {
     // If no content, try semantic search with the topic
-    const searchQuery = `${topic} pharmacy GPhC exam preparation UK`
+    const searchQuery = `${topic} pharmacy MRCP PACES exam preparation UK`
     const chunks = await searchBlogResources(supabase, categoryId, searchQuery, 15)
     content = chunks.map(c => c.content).join('\n\n---\n\n')
   }

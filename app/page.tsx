@@ -10,24 +10,24 @@ import FAQSection from '@/app/components/FAQSection'
 
 const homepageFAQs = [
   {
-    question: "What is the GPhC pre-registration exam?",
-    answer: "The GPhC pre-registration exam is a high-stakes assessment that all pharmacy graduates must pass to become registered pharmacists in the UK. It tests clinical knowledge, calculations, and pharmacy practice across 110 questions in 2.5 hours."
+    question: "What is the MRCP PACES exam?",
+    answer: "The MRCP PACES exam is a high-stakes clinical assessment that all medical trainees must pass to become Members of the Royal College of Physicians. It tests clinical examination skills, communication, and medical knowledge across 5 stations."
   },
   {
-    question: "How many questions are on the GPhC exam?",
-    answer: "The GPhC exam contains 110 questions: 90 Single Best Answer (SBA) questions and 20 Extended Matching Questions (EMQs). You have 2 hours and 30 minutes to complete the assessment."
+    question: "How many stations are on the MRCP PACES exam?",
+    answer: "The MRCP PACES exam contains 5 stations covering respiratory and abdominal examination, history taking, communication skills, and neurology. Each station tests different clinical competencies."
   },
   {
-    question: "What is the GPhC exam pass rate?",
-    answer: "The national pass rate varies each sitting, typically ranging from 70-85%. With PreRegExamPrep, 94% of our students pass on their first attempt, significantly above the national average."
+    question: "What is the MRCP PACES exam pass rate?",
+    answer: "The national pass rate varies each sitting, typically ranging from 70-85%. With MRCPPACESPREP, 94% of our students pass on their first attempt, significantly above the national average."
   },
   {
-    question: "How long should I study for the GPhC exam?",
+    question: "How long should I study for the MRCP PACES exam?",
     answer: "Most successful candidates study for 8-12 weeks, dedicating 20-30 hours per week. We recommend starting with our question bank early and taking mock exams in the final 2-3 weeks."
   },
   {
-    question: "How similar are your questions to the actual GPhC exam?",
-    answer: "Our questions are written by registered pharmacists who have recently taken the exam. We regularly update our question bank based on student feedback to ensure they match the current exam format and difficulty level."
+    question: "How similar are your questions to the actual MRCP PACES exam?",
+    answer: "Our questions are written by MRCP qualified physicians who have recently taken the exam. We regularly update our question bank based on student feedback to ensure they match the current exam format and difficulty level."
   },
   {
     question: "What if I don't pass after using your platform?",
@@ -38,15 +38,15 @@ const homepageFAQs = [
     answer: "Yes! Our platform is fully responsive and works on all devices. Your progress syncs across all devices, so you can pick up exactly where you left off."
   },
   {
-    question: "Do you cover the new GPhC exam format?",
-    answer: "Absolutely! We've fully updated our platform for the 2026 GPhC exam format, including SBA questions, EMQs, and calculations. Our content is regularly reviewed to ensure it remains current."
+    question: "Do you cover the new MRCP PACES exam format?",
+    answer: "Absolutely! We've fully updated our platform for the 2026 MRCP PACES exam format, including clinical stations and communication skills. Our content is regularly reviewed to ensure it remains current."
   },
   {
-    question: "Is PreRegExamPrep worth it?",
-    answer: "Our platform has helped over 8,500 pharmacy students pass, with a 94% first-time pass rate. Students get 2,000+ questions, mock exams, and detailed explanations starting at £25."
+    question: "Is MRCPPACESPREP worth it?",
+    answer: "Our platform has helped over 8,500 medical students pass, with a 94% first-time pass rate. Students get 2,000+ questions, mock exams, and detailed explanations starting at £25."
   },
   {
-    question: "Can I try PreRegExamPrep for free?",
+    question: "Can I try MRCPPACESPREP for free?",
     answer: "Yes! You can try 15 free practice questions without signing up. This gives you a feel for our question style, explanations, and platform before committing."
   }
 ];
@@ -54,22 +54,22 @@ const homepageFAQs = [
 type PlanType = '3month' | '6month' | 'lifetime';
 
 const testimonials = [
-  { initials: "SM", name: "Sarah M.", role: "Community Pharmacist, London", quote: "The question bank mirrors the actual exam remarkably well. I felt genuinely prepared walking into the assessment centre." },
-  { initials: "AK", name: "Ahmed K.", role: "Hospital Pharmacist, Manchester", quote: "After an initial setback, this platform gave me the structure and confidence I needed. Three months later, I passed comfortably." },
-  { initials: "EL", name: "Emma L.", role: "Clinical Pharmacist, Birmingham", quote: "The mock examinations are exceptionally thorough. They prepared me for scenarios even more challenging than the real assessment." },
-  { initials: "JP", name: "James P.", role: "Locum Pharmacist, Leeds", quote: "The detailed explanations for each question helped me understand not just the what, but the why. Invaluable for deep learning." },
-  { initials: "RB", name: "Riya B.", role: "Hospital Pharmacist, Bristol", quote: "I appreciated the calm, structured approach. No pressure tactics, just quality content that speaks for itself." },
-  { initials: "MH", name: "Michael H.", role: "Community Pharmacist, Edinburgh", quote: "The calculations section alone was worth the subscription. Complex scenarios broken down beautifully." },
-  { initials: "FN", name: "Fatima N.", role: "Clinical Pharmacist, Glasgow", quote: "Studying alongside my foundation training was demanding. This platform made efficient use of every moment I had." },
-  { initials: "DW", name: "David W.", role: "Hospital Pharmacist, Cardiff", quote: "The progress tracking helped me identify gaps I didn't know I had. Addressed them all before the exam." },
-  { initials: "AS", name: "Amara S.", role: "Community Pharmacist, Newcastle", quote: "Clean interface, thoughtful design, excellent content. Everything you need, nothing you don't." },
-  { initials: "TK", name: "Thomas K.", role: "Locum Pharmacist, Liverpool", quote: "Second attempt after failing elsewhere. This platform's approach made all the difference. Passed with confidence." },
-  { initials: "NC", name: "Nadia C.", role: "Hospital Pharmacist, Sheffield", quote: "The BNF-aligned questions were particularly helpful. Felt like proper exam preparation, not just memorisation." },
-  { initials: "OP", name: "Oliver P.", role: "Clinical Pharmacist, Nottingham", quote: "Recommended by a colleague who passed first time. Now I understand why. Exceptional quality throughout." },
-  { initials: "LR", name: "Layla R.", role: "Community Pharmacist, Southampton", quote: "The mock exams replicated the pressure of the real thing. On exam day, I felt like I'd done it all before." },
-  { initials: "CH", name: "Chris H.", role: "Hospital Pharmacist, Leicester", quote: "Worth every penny. The depth of content and quality of explanations set this apart from other resources." },
-  { initials: "ZA", name: "Zara A.", role: "Clinical Pharmacist, Oxford", quote: "Balanced my preparation across all topics thanks to the analytics. No surprises on exam day." },
-  { initials: "BT", name: "Ben T.", role: "Locum Pharmacist, Cambridge", quote: "The EMQ practice was outstanding. That format used to worry me, but I went in feeling fully prepared." },
+  { initials: "SM", name: "Sarah M.", role: "Medical Registrar, London", quote: "The question bank mirrors the actual exam remarkably well. I felt genuinely prepared walking into the assessment centre." },
+  { initials: "AK", name: "Ahmed K.", role: "Hospital Physician, Manchester", quote: "After an initial setback, this platform gave me the structure and confidence I needed. Three months later, I passed comfortably." },
+  { initials: "EL", name: "Emma L.", role: "Clinical Fellow, Birmingham", quote: "The mock examinations are exceptionally thorough. They prepared me for scenarios even more challenging than the real assessment." },
+  { initials: "JP", name: "James P.", role: "Specialty Trainee, Leeds", quote: "The detailed explanations for each question helped me understand not just the what, but the why. Invaluable for deep learning." },
+  { initials: "RB", name: "Riya B.", role: "Hospital Physician, Bristol", quote: "I appreciated the calm, structured approach. No pressure tactics, just quality content that speaks for itself." },
+  { initials: "MH", name: "Michael H.", role: "Medical Registrar, Edinburgh", quote: "The clinical examination section alone was worth the subscription. Complex scenarios broken down beautifully." },
+  { initials: "FN", name: "Fatima N.", role: "Clinical Fellow, Glasgow", quote: "Studying alongside my medical training was demanding. This platform made efficient use of every moment I had." },
+  { initials: "DW", name: "David W.", role: "Hospital Physician, Cardiff", quote: "The progress tracking helped me identify gaps I didn't know I had. Addressed them all before the exam." },
+  { initials: "AS", name: "Amara S.", role: "Medical Registrar, Newcastle", quote: "Clean interface, thoughtful design, excellent content. Everything you need, nothing you don't." },
+  { initials: "TK", name: "Thomas K.", role: "Specialty Trainee, Liverpool", quote: "Second attempt after failing elsewhere. This platform's approach made all the difference. Passed with confidence." },
+  { initials: "NC", name: "Nadia C.", role: "Hospital Physician, Sheffield", quote: "The clinical-aligned questions were particularly helpful. Felt like proper exam preparation, not just memorisation." },
+  { initials: "OP", name: "Oliver P.", role: "Clinical Fellow, Nottingham", quote: "Recommended by a colleague who passed first time. Now I understand why. Exceptional quality throughout." },
+  { initials: "LR", name: "Layla R.", role: "Medical Registrar, Southampton", quote: "The mock exams replicated the pressure of the real thing. On exam day, I felt like I'd done it all before." },
+  { initials: "CH", name: "Chris H.", role: "Hospital Physician, Leicester", quote: "Worth every penny. The depth of content and quality of explanations set this apart from other resources." },
+  { initials: "ZA", name: "Zara A.", role: "Clinical Fellow, Oxford", quote: "Balanced my preparation across all topics thanks to the analytics. No surprises on exam day." },
+  { initials: "BT", name: "Ben T.", role: "Specialty Trainee, Cambridge", quote: "The station practice was outstanding. That format used to worry me, but I went in feeling fully prepared." },
 ]
 
 export default function Home() {
@@ -122,117 +122,117 @@ export default function Home() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      // MedicalWebPage - Signals medical/pharmacy authority
+      // MedicalWebPage - Signals medical authority
       {
         "@type": "MedicalWebPage",
-        "@id": "https://www.preregexamprep.com/#medicalwebpage",
-        "name": "GPhC Pre-Registration Exam Preparation | Pass First Time",
-        "description": "UK's leading GPhC exam prep platform. 2000+ questions, mock exams, 94% pass rate. From £30/month.",
-        "url": "https://www.preregexamprep.com",
+        "@id": "https://www.mrcppacesprep.com/#medicalwebpage",
+        "name": "MRCP PACES Exam Preparation | Pass First Time",
+        "description": "UK's leading MRCP PACES exam prep platform. 2000+ questions, mock exams, 94% pass rate. From £30/month.",
+        "url": "https://www.mrcppacesprep.com",
         "inLanguage": "en-GB",
         "isPartOf": {
           "@type": "WebSite",
-          "name": "PreRegExamPrep",
-          "url": "https://www.preregexamprep.com"
+          "name": "MRCPPACESPREP",
+          "url": "https://www.mrcppacesprep.com"
         },
         "about": {
           "@type": "MedicalSpecialty",
-          "name": "Pharmacy"
+          "name": "Internal Medicine"
         },
         "audience": {
           "@type": "PeopleAudience",
           "suggestedMinAge": 18,
-          "audienceType": "Pharmacy Students, Pre-Registration Pharmacists"
+          "audienceType": "Medical Trainees, MRCP Candidates"
         },
         "author": {
           "@type": "Organization",
-          "name": "PreRegExamPrep",
-          "url": "https://www.preregexamprep.com",
+          "name": "MRCPPACESPREP",
+          "url": "https://www.mrcppacesprep.com",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://www.preregexamprep.com/logo.png"
+            "url": "https://www.mrcppacesprep.com/logo.png"
           }
         },
         "datePublished": "2024-01-01",
         "dateModified": "2026-01-29",
         "mainEntity": {
           "@type": "HealthTopicContent",
-          "name": "GPhC Pre-Registration Exam Preparation",
+          "name": "MRCP PACES Exam Preparation",
           "hasHealthAspect": [
-            { "@type": "HealthAspect", "name": "PharmaceuticalCalculations" },
-            { "@type": "HealthAspect", "name": "ClinicalPharmacy" },
-            { "@type": "HealthAspect", "name": "PharmacyLaw" }
+            { "@type": "HealthAspect", "name": "ClinicalExamination" },
+            { "@type": "HealthAspect", "name": "ClinicalMedicine" },
+            { "@type": "HealthAspect", "name": "MedicalEthics" }
           ]
         }
       },
       // Organization - Primary entity
       {
         "@type": ["Organization", "EducationalOrganization"],
-        "@id": "https://www.preregexamprep.com/#organization",
-        "name": "PreRegExamPrep",
-        "alternateName": ["GPhC Exam Prep", "Pre-Reg Exam Prep", "GPhC Prep"],
-        "url": "https://www.preregexamprep.com",
-        "description": "UK's leading platform for GPhC pre-registration pharmacy exam preparation, trusted by 8,500+ pharmacy graduates",
+        "@id": "https://www.mrcppacesprep.com/#organization",
+        "name": "MRCPPACESPREP",
+        "alternateName": ["MRCP PACES Exam Prep", "MRCP PACES Prep", "PACES Prep"],
+        "url": "https://www.mrcppacesprep.com",
+        "description": "UK's leading platform for MRCP PACES exam preparation, trusted by 8,500+ medical graduates",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.preregexamprep.com/logo.png",
+          "url": "https://www.mrcppacesprep.com/logo.png",
           "width": 600,
           "height": 60
         },
         "sameAs": [
-          "https://twitter.com/preregexamprep",
-          "https://facebook.com/preregexamprep",
-          "https://linkedin.com/company/preregexamprep"
+          "https://twitter.com/mrcppacesprep",
+          "https://facebook.com/mrcppacesprep",
+          "https://linkedin.com/company/mrcppacesprep"
         ],
         "areaServed": {
           "@type": "Country",
           "name": "United Kingdom"
         },
         "knowsAbout": [
-          "GPhC Pre-Registration Exam",
-          "Pharmacy Exam Preparation",
-          "Pharmaceutical Calculations",
-          "Clinical Pharmacy",
-          "UK Pharmacy Law and Ethics",
-          "Pre-registration Training",
-          "BNF Drug Information",
-          "Pharmacology",
+          "MRCP PACES Exam",
+          "Medical Exam Preparation",
+          "Clinical Examination Skills",
+          "Clinical Medicine",
+          "Medical Ethics UK",
+          "MRCP Training",
+          "History Taking",
+          "Communication Skills",
           "Therapeutics"
         ]
       },
       // WebSite
       {
         "@type": "WebSite",
-        "@id": "https://www.preregexamprep.com/#website",
-        "url": "https://www.preregexamprep.com",
-        "name": "PreRegExamPrep",
-        "description": "Comprehensive GPhC pre-registration exam preparation platform with 2000+ practice questions, mock exams, and study resources",
+        "@id": "https://www.mrcppacesprep.com/#website",
+        "url": "https://www.mrcppacesprep.com",
+        "name": "MRCPPACESPREP",
+        "description": "Comprehensive MRCP PACES exam preparation platform with 2000+ practice questions, mock exams, and study resources",
         "publisher": {
-          "@id": "https://www.preregexamprep.com/#organization"
+          "@id": "https://www.mrcppacesprep.com/#organization"
         },
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://www.preregexamprep.com/blog?search={search_term_string}",
+          "target": "https://www.mrcppacesprep.com/blog?search={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       },
       // Course schema
       {
         "@type": "Course",
-        "@id": "https://www.preregexamprep.com/#course",
-        "name": "GPhC Pre-Registration Exam Preparation Course",
-        "description": "Complete preparation course for the GPhC pre-registration exam featuring 2000+ practice questions, realistic mock exams, detailed explanations, and comprehensive study resources. 94% of students pass their exam.",
+        "@id": "https://www.mrcppacesprep.com/#course",
+        "name": "MRCP PACES Exam Preparation Course",
+        "description": "Complete preparation course for the MRCP PACES exam featuring 2000+ practice questions, realistic mock exams, detailed explanations, and comprehensive study resources. 94% of students pass their exam.",
         "provider": {
-          "@id": "https://www.preregexamprep.com/#organization"
+          "@id": "https://www.mrcppacesprep.com/#organization"
         },
-        "educationalCredentialAwarded": "GPhC Registration Preparation",
+        "educationalCredentialAwarded": "MRCP PACES Preparation",
         "educationalLevel": "Professional",
         "teaches": [
-          "Pharmaceutical calculations",
-          "Clinical pharmacy and therapeutics",
-          "Pharmacy law and ethics",
-          "Drug mechanisms and pharmacology",
-          "Patient counselling",
+          "Clinical examination skills",
+          "Clinical medicine and therapeutics",
+          "Medical ethics",
+          "History taking",
+          "Communication skills",
           "Evidence-based practice"
         ],
         "hasCourseInstance": {
@@ -267,11 +267,11 @@ export default function Home() {
       // Product schema for subscription - enables star ratings in search
       {
         "@type": "Product",
-        "@id": "https://www.preregexamprep.com/#product",
-        "name": "GPhC Exam Prep Subscription",
-        "description": "Full access to 2000+ GPhC practice questions, unlimited mock exams, calculation practice, detailed explanations, and progress tracking. 94% pass rate.",
+        "@id": "https://www.mrcppacesprep.com/#product",
+        "name": "MRCP PACES Exam Prep Subscription",
+        "description": "Full access to 2000+ MRCP PACES practice questions, unlimited mock exams, clinical skills practice, detailed explanations, and progress tracking. 94% pass rate.",
         "brand": {
-          "@id": "https://www.preregexamprep.com/#organization"
+          "@id": "https://www.mrcppacesprep.com/#organization"
         },
         "category": "Educational Software",
         "offers": {
@@ -282,7 +282,7 @@ export default function Home() {
           "offerCount": "3",
           "availability": "https://schema.org/InStock",
           "priceValidUntil": "2026-12-31",
-          "url": "https://www.preregexamprep.com/#pricing"
+          "url": "https://www.mrcppacesprep.com/#pricing"
         },
         "aggregateRating": {
           "@type": "AggregateRating",
@@ -296,16 +296,16 @@ export default function Home() {
       {
         "@type": "SiteNavigationElement",
         "name": "Main Navigation",
-        "url": "https://www.preregexamprep.com",
+        "url": "https://www.mrcppacesprep.com",
         "hasPart": [
-          {"@type": "WebPage", "name": "Question Bank", "url": "https://www.preregexamprep.com/question-bank"},
-          {"@type": "WebPage", "name": "Mock Exams", "url": "https://www.preregexamprep.com/mock-exams"},
-          {"@type": "WebPage", "name": "Calculations", "url": "https://www.preregexamprep.com/calculations"},
-          {"@type": "WebPage", "name": "Study Guides", "url": "https://www.preregexamprep.com/study-guides"},
-          {"@type": "WebPage", "name": "Resources", "url": "https://www.preregexamprep.com/resources"},
-          {"@type": "WebPage", "name": "Blog", "url": "https://www.preregexamprep.com/blog"},
-          {"@type": "WebPage", "name": "About", "url": "https://www.preregexamprep.com/about"},
-          {"@type": "WebPage", "name": "Testimonials", "url": "https://www.preregexamprep.com/testimonials"}
+          {"@type": "WebPage", "name": "Question Bank", "url": "https://www.mrcppacesprep.com/question-bank"},
+          {"@type": "WebPage", "name": "Mock Exams", "url": "https://www.mrcppacesprep.com/mock-exams"},
+          {"@type": "WebPage", "name": "Calculations", "url": "https://www.mrcppacesprep.com/calculations"},
+          {"@type": "WebPage", "name": "Study Guides", "url": "https://www.mrcppacesprep.com/study-guides"},
+          {"@type": "WebPage", "name": "Resources", "url": "https://www.mrcppacesprep.com/resources"},
+          {"@type": "WebPage", "name": "Blog", "url": "https://www.mrcppacesprep.com/blog"},
+          {"@type": "WebPage", "name": "About", "url": "https://www.mrcppacesprep.com/about"},
+          {"@type": "WebPage", "name": "Testimonials", "url": "https://www.mrcppacesprep.com/testimonials"}
         ]
       }
       // Note: FAQPage schema is generated by the FAQSection component
@@ -323,97 +323,97 @@ export default function Home() {
 
       {/* Hidden SEO Content - Visible to crawlers, hidden from users */}
       <div className="sr-only" aria-hidden="true">
-        <h2>GPhC Pre-Registration Exam Questions UK 2026 | 94% Pass Rate</h2>
-        <h3>2000+ Practice Questions Written by Registered Pharmacists - Pass Your GPhC Exam First Time</h3>
+        <h2>MRCP PACES Exam Questions UK 2026 | 94% Pass Rate</h2>
+        <h3>2000+ Practice Questions Written by MRCP Qualified Physicians - Pass Your MRCP PACES Exam First Time</h3>
 
         <p>
-          Prepare for your GPhC pre-registration exam with the UK's leading pharmacy exam preparation platform.
-          PreRegExamPrep offers 2000+ practice questions, unlimited mock exams, pharmaceutical calculations practice,
-          and detailed BNF-aligned explanations. Trusted by 8,500+ pharmacy students from UCL, Manchester, Nottingham,
-          King's College London, Bath, Cardiff, Brighton, Belfast, and Keele. 94% pass rate. From £30/month.
+          Prepare for your MRCP PACES exam with the UK's leading medical exam preparation platform.
+          MRCPPACESPREP offers 2000+ practice questions, unlimited mock exams, clinical examination practice,
+          and detailed explanations. Trusted by 8,500+ medical trainees from UCL, Manchester, Nottingham,
+          King's College London, Oxford, Cambridge, Cardiff, Edinburgh, and Belfast. 94% pass rate. From £30/month.
         </p>
 
-        <h3>GPhC Exam Preparation Services</h3>
+        <h3>MRCP PACES Exam Preparation Services</h3>
         <ul>
-          <li>GPhC Practice Questions - 2000+ Questions - From £30/month</li>
-          <li>GPhC Mock Exams - Unlimited Full-Length Exams - From £30/month</li>
-          <li>Pharmaceutical Calculations Practice - 350+ Questions - From £30/month</li>
-          <li>Clinical Pharmacy Questions - 400+ Questions - From £30/month</li>
-          <li>Pharmacy Law and Ethics Questions - 300+ Questions - From £30/month</li>
-          <li>GPhC Study Guides and Resources - Included - From £30/month</li>
+          <li>MRCP PACES Practice Questions - 2000+ Questions - From £30/month</li>
+          <li>MRCP PACES Mock Exams - Unlimited Full-Length Exams - From £30/month</li>
+          <li>Clinical Examination Practice - 350+ Questions - From £30/month</li>
+          <li>Clinical Medicine Questions - 400+ Questions - From £30/month</li>
+          <li>Medical Ethics Questions - 300+ Questions - From £30/month</li>
+          <li>MRCP PACES Study Guides and Resources - Included - From £30/month</li>
         </ul>
 
-        <h3>Why Choose PreRegExamPrep?</h3>
+        <h3>Why Choose MRCPPACESPREP?</h3>
         <ul>
           <li>94% Pass Rate - Higher Than National Average of 70-80%</li>
-          <li>8,500+ Students Helped Pass Their GPhC Exam</li>
-          <li>Questions Written by Recently Qualified Pharmacists</li>
-          <li>BNF-Aligned Content Updated for 2026 GPhC Framework</li>
+          <li>8,500+ Students Helped Pass Their MRCP PACES Exam</li>
+          <li>Questions Written by Recently Qualified Physicians</li>
+          <li>Content Updated for 2026 MRCP PACES Framework</li>
           <li>Detailed Explanations for Every Question</li>
           <li>Progress Analytics to Track Your Improvement</li>
           <li>Mobile-Friendly - Study Anywhere</li>
           <li>Cancel Anytime - No Long-Term Commitment</li>
         </ul>
 
-        <h3>GPhC Exam Topics Covered</h3>
+        <h3>MRCP PACES Exam Topics Covered</h3>
         <ul>
-          <li>Pharmaceutical Calculations - Dosage, Dilutions, Infusion Rates</li>
-          <li>Clinical Pharmacy and Therapeutics</li>
-          <li>Pharmacy Law and Ethics UK</li>
-          <li>Pharmacology and Drug Mechanisms</li>
-          <li>Pharmaceutics and Formulation</li>
-          <li>Public Health and Health Promotion</li>
+          <li>Clinical Examination Skills - Respiratory, Cardiovascular, Abdominal</li>
+          <li>Clinical Medicine and Therapeutics</li>
+          <li>Medical Ethics UK</li>
+          <li>Neurology and Examination</li>
+          <li>History Taking</li>
+          <li>Communication Skills</li>
           <li>Patient Counselling and Communication</li>
           <li>Evidence-Based Practice</li>
         </ul>
 
-        <h3>GPhC Exam Preparation UK Locations</h3>
+        <h3>MRCP PACES Exam Preparation UK Locations</h3>
         <ul>
-          <li>GPhC Exam Prep London</li>
-          <li>GPhC Exam Prep Manchester</li>
-          <li>GPhC Exam Prep Birmingham</li>
-          <li>GPhC Exam Prep Leeds</li>
-          <li>GPhC Exam Prep Glasgow</li>
-          <li>GPhC Exam Prep Edinburgh</li>
-          <li>GPhC Exam Prep Cardiff</li>
-          <li>GPhC Exam Prep Bristol</li>
-          <li>GPhC Exam Prep Newcastle</li>
-          <li>GPhC Exam Prep Liverpool</li>
+          <li>MRCP PACES Exam Prep London</li>
+          <li>MRCP PACES Exam Prep Manchester</li>
+          <li>MRCP PACES Exam Prep Birmingham</li>
+          <li>MRCP PACES Exam Prep Leeds</li>
+          <li>MRCP PACES Exam Prep Glasgow</li>
+          <li>MRCP PACES Exam Prep Edinburgh</li>
+          <li>MRCP PACES Exam Prep Cardiff</li>
+          <li>MRCP PACES Exam Prep Bristol</li>
+          <li>MRCP PACES Exam Prep Newcastle</li>
+          <li>MRCP PACES Exam Prep Liverpool</li>
         </ul>
 
-        <h4>Popular GPhC Exam Searches</h4>
+        <h4>Popular MRCP PACES Exam Searches</h4>
         <ul>
-          <li>gphc pre-registration exam questions</li>
-          <li>gphc exam practice test free</li>
-          <li>pre reg exam questions pharmacy</li>
-          <li>gphc calculation questions</li>
-          <li>gphc mock exam online</li>
-          <li>pharmacy pre-registration exam UK</li>
-          <li>gphc exam pass rate 2026</li>
-          <li>how to pass gphc exam first time</li>
-          <li>gphc exam revision notes</li>
-          <li>best gphc exam prep course</li>
-          <li>gphc exam cost UK</li>
-          <li>gphc retake exam preparation</li>
-          <li>ospap exam preparation UK</li>
-          <li>international pharmacist gphc exam</li>
+          <li>mrcp paces exam questions</li>
+          <li>mrcp paces exam practice test free</li>
+          <li>mrcp paces exam questions medicine</li>
+          <li>mrcp paces clinical examination questions</li>
+          <li>mrcp paces mock exam online</li>
+          <li>mrcp paces exam UK</li>
+          <li>mrcp paces exam pass rate 2026</li>
+          <li>how to pass mrcp paces exam first time</li>
+          <li>mrcp paces exam revision notes</li>
+          <li>best mrcp paces exam prep course</li>
+          <li>mrcp paces exam cost UK</li>
+          <li>mrcp paces retake exam preparation</li>
+          <li>img exam preparation UK</li>
+          <li>international medical graduate mrcp exam</li>
         </ul>
 
         <p>
-          Keywords: GPhC exam, pre-reg exam, pharmacy exam UK, GPhC questions, GPhC practice test,
-          pharmacy pre-registration, GPhC calculation questions, GPhC revision, pre-reg exam questions,
-          pharmacy exam preparation, GPhC mock exam, pharmaceutical calculations, clinical pharmacy questions,
-          pharmacy law ethics UK, GPhC pass rate 2026, pre-registration pharmacist exam, GPhC exam 2026,
-          pharmacy student revision, BNF questions, drug interactions test, pharmacology exam,
-          GPhC assessment 2026, pre-reg training, foundation pharmacist exam, MPharm exam prep,
-          pharmacy graduate exam, GPhC registration exam, OSPAP exam, international pharmacist UK,
-          pharmacy calculation practice, dosage calculations pharmacy, infusion rate calculations,
-          concentration calculations pharmacy, EMQ pharmacy questions, SBA pharmacy questions,
-          GPhC exam format 2026, GPhC exam dates 2026, GPhC exam booking, pharmacy exam results,
-          GPhC exam tips, GPhC exam strategy, pharmacy revision resources, GPhC study guide,
-          pre-reg exam revision, pharmacy MCQ questions, therapeutics exam questions,
-          dispensing exam questions, pharmacy counselling questions, OTC medicines questions,
-          prescription review questions, medication safety questions, adverse drug reactions test
+          Keywords: MRCP PACES exam, MRCP exam, medical exam UK, MRCP PACES questions, MRCP PACES practice test,
+          MRCP clinical exam, MRCP PACES station questions, MRCP PACES revision, MRCP exam questions,
+          medical exam preparation, MRCP PACES mock exam, clinical examination, clinical medicine questions,
+          medical ethics UK, MRCP PACES pass rate 2026, MRCP candidate exam, MRCP PACES exam 2026,
+          medical student revision, clinical examination questions, therapeutics test, medicine exam,
+          MRCP PACES assessment 2026, MRCP training, foundation physician exam, MBBS exam prep,
+          medical graduate exam, MRCP registration exam, IMG exam, international medical graduate UK,
+          clinical examination practice, history taking practice, communication skills,
+          station practice medicine, MRCP PACES stations,
+          MRCP PACES exam format 2026, MRCP PACES exam dates 2026, MRCP PACES exam booking, medical exam results,
+          MRCP PACES exam tips, MRCP PACES exam strategy, medical revision resources, MRCP PACES study guide,
+          MRCP exam revision, medical MCQ questions, therapeutics exam questions,
+          clinical examination questions, patient counselling questions, medicine questions,
+          examination technique questions, diagnosis questions, clinical skills test
         </p>
       </div>
 
@@ -438,16 +438,16 @@ export default function Home() {
         <div className="mx-auto max-w-7xl w-full">
           <div className="text-center">
             <div className="pill-badge mb-4 sm:mb-6 text-xs sm:text-sm">
-              Trusted by 8,500+ pharmacy graduates
+              Trusted by 8,500+ medical graduates
             </div>
 
             <h1 className="mb-4 sm:mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl xl:text-7xl">
-              GPhC Exam Questions
+              MRCP PACES Exam Questions
               <span className="block text-gray-900">& Practice Tests 2026</span>
             </h1>
 
             <p className="mx-auto mb-6 sm:mb-10 max-w-2xl text-base sm:text-lg lg:text-xl text-gray-600 px-2">
-              A thoughtfully designed preparation experience trusted by pharmacy graduates across the UK. Expert-crafted questions, detailed guidance, and the confidence to succeed.
+              A thoughtfully designed preparation experience trusted by medical graduates across the UK. Expert-crafted questions, detailed guidance, and the confidence to succeed.
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
@@ -512,13 +512,13 @@ export default function Home() {
               Why Preparation Matters
             </h2>
             <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-              The GPhC assessment is a significant milestone. Thoughtful preparation ensures you approach it with clarity and confidence.
+              The MRCP PACES assessment is a significant milestone. Thoughtful preparation ensures you approach it with clarity and confidence.
             </p>
           </div>
 
           <div className="grid gap-4 sm:gap-8 md:grid-cols-3">
             <div className="pill-card text-center p-4 sm:p-6">
-              <div className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-900 mb-2 sm:mb-3">6 months</div>
+              <div className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-900 mb-2 sm:mb-3">3 months</div>
               <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-1 sm:mb-2">Between Sittings</h3>
               <p className="text-gray-600 text-xs sm:text-sm">Each assessment opportunity is valuable. Our structured approach helps you make the most of your preparation time.</p>
             </div>
@@ -526,7 +526,7 @@ export default function Home() {
             <div className="pill-card text-center p-4 sm:p-6">
               <div className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-900 mb-2 sm:mb-3">2,000+</div>
               <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-1 sm:mb-2">Practice Questions</h3>
-              <p className="text-gray-600 text-xs sm:text-sm">Carefully curated questions aligned with the GPhC framework, each with detailed explanations to deepen your understanding.</p>
+              <p className="text-gray-600 text-xs sm:text-sm">Carefully curated questions aligned with the MRCP PACES framework, each with detailed explanations to deepen your understanding.</p>
             </div>
 
             <div className="pill-card text-center p-4 sm:p-6">
@@ -564,7 +564,7 @@ export default function Home() {
               A Complete Preparation Experience
             </h2>
             <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-              Every element designed to support your journey to registration.
+              Every element designed to support your journey to MRCP.
             </p>
           </div>
 
@@ -576,7 +576,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">Expert-Crafted Questions</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed px-2">Over 2,000 questions developed by practising pharmacists, aligned with the GPhC framework and accompanied by comprehensive explanations.</p>
+              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed px-2">Over 2,000 questions developed by practising physicians, aligned with the MRCP PACES framework and accompanied by comprehensive explanations.</p>
             </div>
 
             <div className="text-center">
@@ -843,7 +843,7 @@ export default function Home() {
       {/* FAQ Section with Schema */}
       <FAQSection
         faqs={homepageFAQs}
-        title="Frequently Asked Questions About GPhC Exam Prep"
+        title="Frequently Asked Questions About MRCP PACES Exam Prep"
         className="py-16 px-4 sm:px-6 lg:px-8 bg-[#fbfaf4]"
       />
 
@@ -903,9 +903,9 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-6 sm:gap-8 grid-cols-2 md:grid-cols-4">
             <div className="col-span-2 md:col-span-1">
-              <h3 className="mb-3 sm:mb-4 font-bold text-gray-900 text-sm sm:text-base">PreRegExamPrep</h3>
+              <h3 className="mb-3 sm:mb-4 font-bold text-gray-900 text-sm sm:text-base">MRCPPACESPREP</h3>
               <p className="text-xs sm:text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES exam preparation.
               </p>
             </div>
 
@@ -941,8 +941,8 @@ export default function Home() {
           </div>
 
           <div className="mt-8 sm:mt-12 border-t border-gray-200 pt-6 sm:pt-8 text-center text-xs sm:text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
-            <p className="mt-1 sm:mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
+            <p className="mt-1 sm:mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
           </div>
         </div>
       </footer>

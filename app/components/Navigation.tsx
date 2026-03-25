@@ -65,8 +65,8 @@ export default function Navigation() {
         <div className="pill-nav-container">
           <div className="pill-nav-left">
             <Link href="/" className="pill-nav-logo">
-              <Image src="/logo.png" alt="PreRegExamPrep" width={28} height={28} className="rounded" />
-              <span>PreRegExamPrep</span>
+              <Image src="/logo.png" alt="MRCPPACESPREP" width={28} height={28} className="rounded" />
+              <span>MRCPPACESPREP</span>
             </Link>
           </div>
           <div className="pill-nav-right">
@@ -88,8 +88,8 @@ export default function Navigation() {
           {/* Left Pill - Logo + Nav Items */}
           <div className={`pill-nav-left ${isScrolled ? 'frosted' : ''}`}>
             <Link href="/" className="pill-nav-logo">
-              <Image src="/logo.png" alt="PreRegExamPrep" width={28} height={28} className="rounded" />
-              <span>PreRegExamPrep</span>
+              <Image src="/logo.png" alt="MRCPPACESPREP" width={28} height={28} className="rounded" />
+              <span>MRCPPACESPREP</span>
             </Link>
 
             {user ? (
@@ -176,8 +176,8 @@ export default function Navigation() {
       <div className={`pill-mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
         <div className="pill-mobile-header">
           <Link href="/" className="pill-mobile-logo" onClick={closeMobileMenu}>
-            <Image src="/logo.png" alt="PreRegExamPrep" width={28} height={28} className="rounded" />
-            <span>PreRegExamPrep</span>
+            <Image src="/logo.png" alt="MRCPPACESPREP" width={28} height={28} className="rounded" />
+            <span>MRCPPACESPREP</span>
           </Link>
           <button className="pill-mobile-close" onClick={toggleMobileMenu}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

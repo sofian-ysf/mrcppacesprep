@@ -50,7 +50,7 @@ export async function POST(request: NextRequest) {
       embeds: [
         {
           title: embedTitle,
-          description: message || `${embedIcon} User activity detected for GPhC Exam Prep!`,
+          description: message || `${embedIcon} User activity detected for MRCP PACES Exam Prep!`,
           color: embedColor,
           fields: [
             {
@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
             }
           ],
           footer: {
-            text: "PreRegExamPrep Notifications"
+            text: "MRCPPACESPREP Notifications"
           }
         }
       ]

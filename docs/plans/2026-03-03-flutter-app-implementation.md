@@ -1,8 +1,8 @@
-# PreRegExamPrep Flutter App Implementation Plan
+# MRCPPACESPREP Flutter App Implementation Plan
 
 > **For Claude:** REQUIRED SUB-SKILL: Use superpowers:executing-plans to implement this plan task-by-task.
 
-**Goal:** Build a native iOS Flutter app for PreRegExamPrep with full offline support, allowing paying subscribers to study GPhC exam questions, flashcards, and mock exams.
+**Goal:** Build a native iOS Flutter app for MRCPPACESPREP with full offline support, allowing paying subscribers to study MRCP PACES exam questions, flashcards, and mock exams.
 
 **Architecture:** Feature-first with Riverpod state management and Drift (SQLite) for offline storage. Each feature is self-contained with its own data layer, providers, and UI. Sync service manages bidirectional data synchronization with Supabase.
 
@@ -21,8 +21,8 @@
 
 Run:
 ```bash
-cd /Users/sofianyoussef/Desktop/Other\ Projects/preregexamprep
-flutter create flutter_app --org com.preregexamprep --platforms ios
+cd /Users/sofianyoussef/Desktop/Other\ Projects/mrcppacesprep
+flutter create flutter_app --org com.mrcppacesprep --platforms ios
 ```
 Expected: New Flutter project created with iOS support
 
@@ -37,7 +37,7 @@ Expected: No critical issues, iOS target available
 **Step 3: Commit**
 
 ```bash
-cd /Users/sofianyoussef/Desktop/Other\ Projects/preregexamprep
+cd /Users/sofianyoussef/Desktop/Other\ Projects/mrcppacesprep
 git add flutter_app/
 git commit -m "feat(flutter): initialize Flutter project for iOS"
 ```
@@ -54,8 +54,8 @@ git commit -m "feat(flutter): initialize Flutter project for iOS"
 Replace contents of `flutter_app/pubspec.yaml`:
 
 ```yaml
-name: preregexamprep
-description: GPhC Exam Preparation App
+name: mrcppacesprep
+description: MRCP PACES Exam Preparation App
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -146,7 +146,7 @@ flutter:
 
 Run:
 ```bash
-cd /Users/sofianyoussef/Desktop/Other\ Projects/preregexamprep/flutter_app
+cd /Users/sofianyoussef/Desktop/Other\ Projects/mrcppacesprep/flutter_app
 flutter pub get
 ```
 Expected: All dependencies resolved successfully
@@ -171,7 +171,7 @@ git commit -m "feat(flutter): add project dependencies"
 
 Run:
 ```bash
-cd /Users/sofianyoussef/Desktop/Other\ Projects/preregexamprep/flutter_app
+cd /Users/sofianyoussef/Desktop/Other\ Projects/mrcppacesprep/flutter_app
 mkdir -p assets/fonts/Poppins assets/images assets/icons
 touch assets/images/.gitkeep assets/icons/.gitkeep
 
@@ -244,8 +244,8 @@ Create `flutter_app/lib/core/constants/strings.dart`:
 
 ```dart
 abstract class AppStrings {
-  static const appName = 'PreRegExamPrep';
-  static const tagline = 'Ace your GPhC exam with 2000+ practice questions';
+  static const appName = 'MRCPPACESPREP';
+  static const tagline = 'Ace your MRCP PACES exam with 2000+ practice questions';
 
   // Auth
   static const signIn = 'Sign In';
@@ -1262,7 +1262,7 @@ class AppDatabase extends _$AppDatabase {
 LazyDatabase _openConnection() {
   return LazyDatabase(() async {
     final dbFolder = await getApplicationDocumentsDirectory();
-    final file = File(p.join(dbFolder.path, 'preregexamprep.sqlite'));
+    final file = File(p.join(dbFolder.path, 'mrcppacesprep.sqlite'));
     return NativeDatabase.createInBackground(file);
   });
 }
@@ -1284,7 +1284,7 @@ export 'sync_status.dart';
 
 Run:
 ```bash
-cd /Users/sofianyoussef/Desktop/Other\ Projects/preregexamprep/flutter_app
+cd /Users/sofianyoussef/Desktop/Other\ Projects/mrcppacesprep/flutter_app
 dart run build_runner build --delete-conflicting-outputs
 ```
 Expected: database.g.dart generated
@@ -1584,15 +1584,15 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/theme/app_theme.dart';
 import 'core/router/app_router.dart';
 
-class PreRegExamPrepApp extends ConsumerWidget {
-  const PreRegExamPrepApp({super.key});
+class MRCPPACESPREPApp extends ConsumerWidget {
+  const MRCPPACESPREPApp({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final router = ref.watch(routerProvider);
 
     return MaterialApp.router(
-      title: 'PreRegExamPrep',
+      title: 'MRCPPACESPREP',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       routerConfig: router,
@@ -1635,7 +1635,7 @@ void main() async {
 
   runApp(
     const ProviderScope(
-      child: PreRegExamPrepApp(),
+      child: MRCPPACESPREPApp(),
     ),
   );
 }
@@ -1745,7 +1745,7 @@ export 'subscription_model.dart';
 
 Run:
 ```bash
-cd /Users/sofianyoussef/Desktop/Other\ Projects/preregexamprep/flutter_app
+cd /Users/sofianyoussef/Desktop/Other\ Projects/mrcppacesprep/flutter_app
 dart run build_runner build --delete-conflicting-outputs
 ```
 

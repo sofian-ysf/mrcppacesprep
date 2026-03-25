@@ -586,7 +586,7 @@ export default function QuestionBankPracticePage() {
               </h1>
               <p className="text-gray-600 mb-6">
                 {bankType === 'clinical'
-                  ? 'Practice with comprehensive questions covering all areas of clinical pharmacy and GPhC framework topics.'
+                  ? 'Practice with comprehensive questions covering all areas of clinical pharmacy and MRCP PACES framework topics.'
                   : 'Master essential pharmacy calculations including dosage, concentrations, IV flow rates, and more.'
                 }
               </p>

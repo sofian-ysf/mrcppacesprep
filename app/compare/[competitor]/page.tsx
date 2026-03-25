@@ -16,21 +16,21 @@ const competitors: Record<string, {
 }> = {
   'passmedicine': {
     name: 'PassMedicine',
-    fullName: 'PassMedicine GPhC Prep',
-    description: 'PassMedicine offers question banks for various medical exams including GPhC preparation.',
+    fullName: 'PassMedicine MRCP PACES Prep',
+    description: 'PassMedicine offers question banks for various medical exams including MRCP PACES preparation.',
     features: {
-      'GPhC-Specific Questions': { us: '2,000+ questions written by UK pharmacists', them: 'Mixed medical/pharmacy content' },
+      'MRCP PACES-Specific Questions': { us: '2,000+ questions written by UK physicians', them: 'Mixed medical/pharmacy content' },
       'Mock Exams': { us: 'Unlimited full-length mock exams', them: 'Limited mock exam functionality' },
       'Calculations Practice': { us: '350+ calculation questions with step-by-step solutions', them: 'Basic calculation coverage' },
       'Progress Tracking': { us: 'Detailed analytics and weak area identification', them: 'Basic progress tracking' },
       'Mobile Access': { us: 'Fully responsive, works on all devices', them: 'Web-based access' },
-      'Content Updates': { us: 'Updated for 2026 GPhC framework', them: 'Periodic updates' },
+      'Content Updates': { us: 'Updated for 2026 MRCP PACES framework', them: 'Periodic updates' },
     },
     pricing: { us: 'From 25 GBP one-time payment', them: 'Subscription-based' },
     faqs: [
-      { question: 'Is PreRegExamPrep better than PassMedicine for GPhC?', answer: 'PreRegExamPrep is purpose-built for the GPhC exam with 2,000+ UK pharmacist-written questions, while PassMedicine covers multiple medical exams. For GPhC-specific preparation, our focused approach and 94% pass rate speak to our effectiveness.' },
-      { question: 'Which has more GPhC practice questions?', answer: 'PreRegExamPrep has 2,000+ questions specifically written for the GPhC exam by registered UK pharmacists. All questions are aligned with the 2026 GPhC framework.' },
-      { question: 'Do both platforms offer mock exams?', answer: 'Yes, both offer mock exams. PreRegExamPrep provides unlimited full-length mock exams that simulate the real exam environment with 110 questions in 2.5 hours.' },
+      { question: 'Is MRCPPACESPREP better than PassMedicine for MRCP PACES?', answer: 'MRCPPACESPREP is purpose-built for the MRCP PACES exam with 2,000+ UK physician-written questions, while PassMedicine covers multiple medical exams. For MRCP PACES-specific preparation, our focused approach and 94% pass rate speak to our effectiveness.' },
+      { question: 'Which has more MRCP PACES practice questions?', answer: 'MRCPPACESPREP has 2,000+ questions specifically written for the MRCP PACES exam by registered UK physicians. All questions are aligned with the 2026 MRCP PACES framework.' },
+      { question: 'Do both platforms offer mock exams?', answer: 'Yes, both offer mock exams. MRCPPACESPREP provides unlimited full-length mock exams that simulate the real exam environment with 110 questions in 2.5 hours.' },
     ]
   },
   'pharmatutor': {
@@ -38,24 +38,24 @@ const competitors: Record<string, {
     fullName: 'PharmaTutor Pharmacy Revision',
     description: 'PharmaTutor provides pharmacy study materials and revision resources.',
     features: {
-      'Question Bank Size': { us: '2,000+ GPhC questions', them: 'Smaller question bank' },
+      'Question Bank Size': { us: '2,000+ MRCP PACES questions', them: 'Smaller question bank' },
       'Exam Simulation': { us: 'Full mock exam experience', them: 'Question practice only' },
-      'Expert Authors': { us: 'Written by recently passed pharmacists', them: 'Various contributors' },
+      'Expert Authors': { us: 'Written by recently passed physicians', them: 'Various contributors' },
       'Detailed Explanations': { us: 'Every question has detailed rationale', them: 'Basic explanations' },
       'Student Success Rate': { us: '94% first-time pass rate', them: 'Not published' },
       'Support': { us: 'Email support included', them: 'Limited support' },
     },
     pricing: { us: 'From 25 GBP one-time payment', them: 'Varies by package' },
     faqs: [
-      { question: 'How does PreRegExamPrep compare to PharmaTutor?', answer: 'PreRegExamPrep focuses exclusively on GPhC exam preparation with 2,000+ questions, unlimited mock exams, and a 94% pass rate. Our content is written by pharmacists who recently passed the exam.' },
-      { question: 'Which platform has better GPhC pass rates?', answer: 'PreRegExamPrep has a documented 94% first-time pass rate, significantly above the national average of 70-85%.' },
-      { question: 'Is PreRegExamPrep worth the investment over free resources?', answer: 'Free resources can supplement your study, but PreRegExamPrep provides structured exam-style practice, realistic mock exams, and detailed explanations that significantly improve pass rates.' },
+      { question: 'How does MRCPPACESPREP compare to PharmaTutor?', answer: 'MRCPPACESPREP focuses exclusively on MRCP PACES exam preparation with 2,000+ questions, unlimited mock exams, and a 94% pass rate. Our content is written by physicians who recently passed the exam.' },
+      { question: 'Which platform has better MRCP PACES pass rates?', answer: 'MRCPPACESPREP has a documented 94% first-time pass rate, significantly above the national average of 70-85%.' },
+      { question: 'Is MRCPPACESPREP worth the investment over free resources?', answer: 'Free resources can supplement your study, but MRCPPACESPREP provides structured exam-style practice, realistic mock exams, and detailed explanations that significantly improve pass rates.' },
     ]
   },
   'gphc-vs-naplex': {
     name: 'NAPLEX',
-    fullName: 'GPhC vs NAPLEX Exam Comparison',
-    description: 'Comparing the UK GPhC exam with the US NAPLEX pharmacy licensing exam.',
+    fullName: 'MRCP PACES vs NAPLEX Exam Comparison',
+    description: 'Comparing the UK MRCP PACES exam with the US NAPLEX pharmacy licensing exam.',
     features: {
       'Location': { us: 'United Kingdom', them: 'United States' },
       'Question Count': { us: '110 questions', them: '180 questions' },
@@ -66,9 +66,9 @@ const competitors: Record<string, {
     },
     pricing: { us: '253 GBP exam fee', them: '545 USD exam fee (approx)' },
     faqs: [
-      { question: 'Can I practice in the UK with a NAPLEX qualification?', answer: 'No, you need to pass the GPhC exam to practice in the UK. US pharmacists must complete the OSPAP programme and pass the GPhC assessment.' },
-      { question: 'Which exam is harder - GPhC or NAPLEX?', answer: 'Both exams are rigorous. The GPhC focuses on UK-specific practice including NHS guidelines, while NAPLEX tests US pharmacy law and practice. Difficulty is subjective based on your training.' },
-      { question: 'How do I prepare for the GPhC as an international graduate?', answer: 'International graduates should complete OSPAP, then use PreRegExamPrep to practice with UK-specific questions covering BNF, NHS, and UK pharmacy law.' },
+      { question: 'Can I practice in the UK with a NAPLEX qualification?', answer: 'No, you need to pass the MRCP PACES exam to practice in the UK. US physicians must complete the OSPAP programme and pass the MRCP PACES assessment.' },
+      { question: 'Which exam is harder - MRCP PACES or NAPLEX?', answer: 'Both exams are rigorous. The MRCP PACES focuses on UK-specific practice including NHS guidelines, while NAPLEX tests US pharmacy law and practice. Difficulty is subjective based on your training.' },
+      { question: 'How do I prepare for the MRCP PACES as an international graduate?', answer: 'International graduates should complete OSPAP, then use MRCPPACESPREP to practice with UK-specific questions covering BNF, NHS, and UK pharmacy law.' },
     ]
   }
 }
@@ -83,34 +83,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!data) {
     return {
-      title: 'Compare GPhC Exam Prep Platforms',
+      title: 'Compare MRCP PACES Exam Prep Platforms',
     }
   }
 
   const isExamComparison = competitor === 'gphc-vs-naplex'
   const title = isExamComparison
-    ? 'GPhC vs NAPLEX: Complete Exam Comparison 2026'
-    : 'PreRegExamPrep vs ' + data.name + ': GPhC Exam Prep Comparison 2026'
+    ? 'MRCP PACES vs NAPLEX: Complete Exam Comparison 2026'
+    : 'MRCPPACESPREP vs ' + data.name + ': MRCP PACES Exam Prep Comparison 2026'
 
   const description = isExamComparison
-    ? 'Compare the UK GPhC exam with the US NAPLEX. See differences in format, questions, duration, and pass rates for both pharmacy licensing exams.'
-    : 'Compare PreRegExamPrep with ' + data.name + ' for GPhC exam preparation. See features, pricing, and student success rates side by side.'
+    ? 'Compare the UK MRCP PACES exam with the US NAPLEX. See differences in format, questions, duration, and pass rates for both pharmacy licensing exams.'
+    : 'Compare MRCPPACESPREP with ' + data.name + ' for MRCP PACES exam preparation. See features, pricing, and student success rates side by side.'
 
   return {
     title,
     description,
     keywords: [
-      'GPhC exam prep comparison',
-      'PreRegExamPrep vs ' + data.name,
+      'MRCP PACES exam prep comparison',
+      'MRCPPACESPREP vs ' + data.name,
       data.name + ' alternative',
-      'best GPhC exam prep',
-      'GPhC question bank comparison',
+      'best MRCP PACES exam prep',
+      'MRCP PACES question bank comparison',
       'pharmacy exam prep UK'
     ],
     openGraph: {
       title,
       description,
-      url: 'https://www.preregexamprep.com/compare/' + competitor,
+      url: 'https://www.mrcppacesprep.com/compare/' + competitor,
     },
     alternates: {
       canonical: '/compare/' + competitor,
@@ -134,8 +134,8 @@ export default async function ComparePage({ params }: Props) {
 
   const isExamComparison = competitor === 'gphc-vs-naplex'
   const title = isExamComparison
-    ? 'GPhC vs NAPLEX: UK vs US Pharmacy Exam Comparison'
-    : 'PreRegExamPrep vs ' + data.name
+    ? 'MRCP PACES vs NAPLEX: UK vs US Pharmacy Exam Comparison'
+    : 'MRCPPACESPREP vs ' + data.name
 
   // Generate comparison schema
   const comparisonSchema = {
@@ -143,15 +143,15 @@ export default async function ComparePage({ params }: Props) {
     "@type": "WebPage",
     "name": title,
     "description": data.description,
-    "url": 'https://www.preregexamprep.com/compare/' + competitor,
+    "url": 'https://www.mrcppacesprep.com/compare/' + competitor,
     "mainEntity": {
       "@type": "ItemList",
-      "name": isExamComparison ? 'GPhC vs NAPLEX Comparison' : 'PreRegExamPrep vs ' + data.name + ' Comparison',
+      "name": isExamComparison ? 'MRCP PACES vs NAPLEX Comparison' : 'MRCPPACESPREP vs ' + data.name + ' Comparison',
       "itemListElement": Object.entries(data.features).map(([feature, values], index) => ({
         "@type": "ListItem",
         "position": index + 1,
         "name": feature,
-        "description": (isExamComparison ? 'GPhC' : 'PreRegExamPrep') + ': ' + values.us + '. ' + data.name + ': ' + values.them
+        "description": (isExamComparison ? 'MRCP PACES' : 'MRCPPACESPREP') + ': ' + values.us + '. ' + data.name + ': ' + values.them
       }))
     }
   }
@@ -187,7 +187,7 @@ export default async function ComparePage({ params }: Props) {
                 <tr className="bg-gray-50">
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b">Feature</th>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b bg-green-50">
-                    {isExamComparison ? 'GPhC (UK)' : 'PreRegExamPrep'}
+                    {isExamComparison ? 'MRCP PACES (UK)' : 'MRCPPACESPREP'}
                   </th>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 border-b">
                     {data.name}
@@ -216,8 +216,8 @@ export default async function ComparePage({ params }: Props) {
             <div className="bg-[#fbfaf4] rounded-lg p-6 sm:p-8 mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Verdict</h2>
               <p className="text-gray-700 mb-6">
-                While {data.name} offers valuable resources, PreRegExamPrep is purpose-built for the GPhC exam with
-                2,000+ questions written by UK pharmacists who recently passed the exam. Our 94% first-time pass rate,
+                While {data.name} offers valuable resources, MRCPPACESPREP is purpose-built for the MRCP PACES exam with
+                2,000+ questions written by UK physicians who recently passed the exam. Our 94% first-time pass rate,
                 unlimited mock exams, and detailed explanations make us the preferred choice for serious candidates.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -225,7 +225,7 @@ export default async function ComparePage({ params }: Props) {
                   href="/pricing"
                   className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-colors"
                 >
-                  Get Started with PreRegExamPrep
+                  Get Started with MRCPPACESPREP
                 </Link>
                 <Link
                   href="/try-free"
@@ -258,7 +258,7 @@ export default async function ComparePage({ params }: Props) {
                     className="block p-4 border border-gray-200 rounded-lg hover:border-gray-400 transition-colors"
                   >
                     <span className="font-medium text-gray-900">
-                      {key === 'gphc-vs-naplex' ? 'GPhC vs NAPLEX' : 'vs ' + comp.name}
+                      {key === 'gphc-vs-naplex' ? 'MRCP PACES vs NAPLEX' : 'vs ' + comp.name}
                     </span>
                     <span className="block text-sm text-gray-600 mt-1">Compare features and pricing</span>
                   </Link>

@@ -15,7 +15,7 @@ const resourcesFAQs = [
   },
   {
     question: "Are resources updated for 2026?",
-    answer: "Yes! All resources are updated annually to reflect the latest GPhC framework, BNF changes, and NICE guidelines. Last update: January 2026."
+    answer: "Yes! All resources are updated annually to reflect the latest MRCP PACES framework, BNF changes, and NICE guidelines. Last update: January 2026."
   },
   {
     question: "What topics do study guides cover?",
@@ -28,23 +28,23 @@ const resourcesFAQs = [
 ]
 
 export const metadata: Metadata = {
-  title: 'GPhC Exam Resources 2025 | Study Guides | Formula Sheets | £30/month',
-  description: 'Comprehensive GPhC exam resources. Calculation guides, clinical references, BNF summaries, formula sheets. Created by pharmacists. 94% pass rate. £30/month.',
+  title: 'MRCP PACES Exam Resources 2025 | Study Guides | Formula Sheets | £30/month',
+  description: 'Comprehensive MRCP PACES exam resources. Calculation guides, clinical references, BNF summaries, formula sheets. Created by physicians. 94% pass rate. £30/month.',
   keywords: [
-    'GPhC exam resources', 'GPhC study materials', 'pharmacy calculation guide', 'GPhC formula sheet',
-    'pre-reg exam resources', 'pharmacy revision notes', 'BNF summary guide', 'GPhC exam tips',
-    'clinical pharmacy reference', 'pharmacy law summary', 'drug interaction guide', 'GPhC exam strategy',
+    'MRCP PACES exam resources', 'MRCP PACES study materials', 'pharmacy calculation guide', 'MRCP PACES formula sheet',
+    'pre-reg exam resources', 'pharmacy revision notes', 'BNF summary guide', 'MRCP PACES exam tips',
+    'clinical pharmacy reference', 'pharmacy law summary', 'drug interaction guide', 'MRCP PACES exam strategy',
     'pharmacy study guides UK', 'pre-registration resources', 'exam preparation materials'
   ],
   openGraph: {
-    title: 'GPhC Exam Resources | Study Guides | Formula Sheets | £30/month',
-    description: 'Comprehensive GPhC study resources. Calculation guides, clinical references, formula sheets. Created by pharmacists.',
-    url: 'https://www.preregexamprep.com/resources',
+    title: 'MRCP PACES Exam Resources | Study Guides | Formula Sheets | £30/month',
+    description: 'Comprehensive MRCP PACES study resources. Calculation guides, clinical references, formula sheets. Created by physicians.',
+    url: 'https://www.mrcppacesprep.com/resources',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPhC Exam Resources | Study Guides | Formula Sheets',
-    description: 'Comprehensive GPhC exam resources created by pharmacists. 94% pass rate.'
+    title: 'MRCP PACES Exam Resources | Study Guides | Formula Sheets',
+    description: 'Comprehensive MRCP PACES exam resources created by physicians. 94% pass rate.'
   },
   alternates: {
     canonical: '/resources',
@@ -62,7 +62,7 @@ export default function ResourcesPage() {
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
               Study Resources & Guides
-              <span className="block text-gray-600 text-3xl mt-2">Everything You Need to Pass Your GPhC Exam</span>
+              <span className="block text-gray-600 text-3xl mt-2">Everything You Need to Pass Your MRCP PACES Exam</span>
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
               Access comprehensive study materials, calculation guides, clinical references, and proven exam strategies to maximize your chances of success.
@@ -196,7 +196,7 @@ export default function ResourcesPage() {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">Mock Exams</h3>
-              <p className="text-gray-600 mb-4">Timed practice exams that simulate the real GPhC exam experience</p>
+              <p className="text-gray-600 mb-4">Timed practice exams that simulate the real MRCP PACES exam experience</p>
               <Link href="/signup" className="text-gray-900 font-semibold hover:underline">
                 Take Mock Exam →
               </Link>
@@ -329,9 +329,9 @@ export default function ResourcesPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
 
@@ -367,7 +367,7 @@ export default function ResourcesPage() {
           </div>
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

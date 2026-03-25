@@ -49,7 +49,7 @@ const guides = [
     items: [
       'Medicines Act and regulatory framework',
       'Controlled drugs classifications and requirements',
-      'Professional standards and GPhC guidelines',
+      'Professional standards and MRCP PACES guidelines',
       'Ethical decision-making models',
       'Data protection and patient confidentiality',
     ],

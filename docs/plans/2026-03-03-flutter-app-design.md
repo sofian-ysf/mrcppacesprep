@@ -1,11 +1,11 @@
-# PreRegExamPrep Flutter App Design
+# MRCPPACESPREP Flutter App Design
 
 **Date:** 2026-03-03
 **Status:** Approved
 
 ## Overview
 
-Native iOS Flutter app for PreRegExamPrep, providing full offline access to the GPhC exam preparation platform for paying subscribers.
+Native iOS Flutter app for MRCPPACESPREP, providing full offline access to the MRCP PACES exam preparation platform for paying subscribers.
 
 ## Requirements
 

@@ -2,13 +2,13 @@ import { Metadata } from 'next'
 import { generateFAQSchema } from './faqData'
 
 export const metadata: Metadata = {
-  title: 'GPhC Exam FAQ 2026 | Pass Rates, Exam Format & Study Tips',
-  description: 'Get answers to 25+ GPhC exam questions. Learn about exam dates, fees (£237), pass rates (70-80%), format (110 questions), and preparation tips from our 94% pass rate experts.',
-  keywords: 'GPhC exam FAQ, pre-reg exam questions, GPhC exam pass rate, pharmacy exam format, GPhC retake, how to prepare for GPhC exam, GPhC exam topics, GPhC exam 2026',
+  title: 'MRCP PACES Exam FAQ 2026 | Pass Rates, Exam Format & Study Tips',
+  description: 'Get answers to 25+ MRCP PACES exam questions. Learn about exam dates, fees (£237), pass rates (70-80%), format (110 questions), and preparation tips from our 94% pass rate experts.',
+  keywords: 'MRCP PACES exam FAQ, pre-reg exam questions, MRCP PACES exam pass rate, pharmacy exam format, MRCP PACES retake, how to prepare for MRCP PACES exam, MRCP PACES exam topics, MRCP PACES exam 2026',
   openGraph: {
-    title: 'GPhC Exam FAQ 2026 | Pass Rates, Exam Format & Study Tips',
-    description: 'Everything you need to know about the GPhC pre-registration exam. Pass rates, format, fees, and expert preparation tips.',
-    url: 'https://www.preregexamprep.com/faq',
+    title: 'MRCP PACES Exam FAQ 2026 | Pass Rates, Exam Format & Study Tips',
+    description: 'Everything you need to know about the MRCP PACES pre-registration exam. Pass rates, format, fees, and expert preparation tips.',
+    url: 'https://www.mrcppacesprep.com/faq',
     type: 'website',
   },
   alternates: {

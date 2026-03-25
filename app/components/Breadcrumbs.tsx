@@ -25,7 +25,7 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `https://www.preregexamprep.com${item.href}`
+      "item": `https://www.mrcppacesprep.com${item.href}`
     }))
   }
 
@@ -89,7 +89,7 @@ export function generateBreadcrumbSchema(items: BreadcrumbItem[]) {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      "item": `https://www.preregexamprep.com${item.href}`
+      "item": `https://www.mrcppacesprep.com${item.href}`
     }))
   }
 }

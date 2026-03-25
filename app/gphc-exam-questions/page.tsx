@@ -1,44 +1,44 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Script from 'next/script'
-import GPhCExamQuestionsSEO from '@/app/components/seo/GPhCExamQuestionsSEO'
+import MRCP PACESExamQuestionsSEO from '@/app/components/seo/MRCP PACESExamQuestionsSEO'
 import { RelatedPages } from '@/app/components/seo/RelatedPages'
 
 export const metadata: Metadata = {
-  title: 'GPhC Exam Questions 2026 | 2000+ Practice Questions | 94% Pass Rate',
-  description: '2000+ GPhC exam practice questions for 2026 with detailed explanations. SBA, EMQ & calculations. 94% pass rate. 8,500+ students. Start preparing today.',
+  title: 'MRCP PACES Exam Questions 2026 | 2000+ Practice Questions | 94% Pass Rate',
+  description: '2000+ MRCP PACES exam practice questions for 2026 with detailed explanations. SBA, EMQ & calculations. 94% pass rate. 8,500+ students. Start preparing today.',
   keywords: [
-    'GPhC exam questions', 'GPhC practice questions', 'GPhC exam questions 2026', 'GPhC past papers',
-    'GPhC MCQ questions', 'pre-reg exam questions', 'pharmacy exam questions UK', 'GPhC SBA questions',
-    'GPhC EMQ questions', 'GPhC calculation questions', 'GPhC questions free', 'GPhC practice test',
-    'pharmacy pre-registration questions', 'GPhC question bank', 'GPhC exam preparation',
+    'MRCP PACES exam questions', 'MRCP PACES practice questions', 'MRCP PACES exam questions 2026', 'MRCP PACES past papers',
+    'MRCP PACES MCQ questions', 'pre-reg exam questions', 'pharmacy exam questions UK', 'MRCP PACES SBA questions',
+    'MRCP PACES EMQ questions', 'MRCP PACES calculation questions', 'MRCP PACES questions free', 'MRCP PACES practice test',
+    'pharmacy pre-registration questions', 'MRCP PACES question bank', 'MRCP PACES exam preparation',
     'clinical pharmacy questions', 'pharmacy law questions UK', 'pharmacology exam questions'
   ],
   openGraph: {
-    title: 'GPhC Exam Questions 2026 | 2000+ Practice Questions | 94% Pass Rate',
-    description: '2000+ GPhC exam practice questions for 2026 with detailed explanations. SBA, EMQ & calculations. 94% pass rate.',
-    url: 'https://www.preregexamprep.com/gphc-exam-questions',
+    title: 'MRCP PACES Exam Questions 2026 | 2000+ Practice Questions | 94% Pass Rate',
+    description: '2000+ MRCP PACES exam practice questions for 2026 with detailed explanations. SBA, EMQ & calculations. 94% pass rate.',
+    url: 'https://www.mrcppacesprep.com/gphc-exam-questions',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPhC Exam Questions | 2000+ Practice Questions | 94% Pass Rate',
-    description: '2000+ GPhC practice questions with detailed explanations. 94% pass rate. Start preparing today!'
+    title: 'MRCP PACES Exam Questions | 2000+ Practice Questions | 94% Pass Rate',
+    description: '2000+ MRCP PACES practice questions with detailed explanations. 94% pass rate. Start preparing today!'
   },
   alternates: {
     canonical: '/gphc-exam-questions',
   },
 }
 
-export default function GPhCExamQuestionsPage() {
+export default function MRCP PACESExamQuestionsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "GPhC Exam Questions",
-    "description": "Practice with 2000+ GPhC exam questions with detailed explanations",
-    "url": "https://www.preregexamprep.com/gphc-exam-questions",
+    "name": "MRCP PACES Exam Questions",
+    "description": "Practice with 2000+ MRCP PACES exam questions with detailed explanations",
+    "url": "https://www.mrcppacesprep.com/gphc-exam-questions",
     "mainEntity": {
       "@type": "ItemList",
-      "name": "GPhC Exam Question Categories",
+      "name": "MRCP PACES Exam Question Categories",
       "numberOfItems": 10,
       "itemListElement": [
         {
@@ -77,7 +77,7 @@ export default function GPhCExamQuestionsPage() {
 
   return (
     <>
-      <GPhCExamQuestionsSEO />
+      <MRCP PACESExamQuestionsSEO />
       <Script
         id="gphc-questions-json-ld"
         type="application/ld+json"
@@ -91,7 +91,7 @@ export default function GPhCExamQuestionsPage() {
           <div className="mx-auto max-w-7xl">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                GPhC Exam Questions Bank
+                MRCP PACES Exam Questions Bank
                 <span className="block text-gray-600 text-3xl mt-2">2000+ Practice Questions with Detailed Answers</span>
               </h1>
               <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
@@ -143,7 +143,7 @@ export default function GPhCExamQuestionsPage() {
         <section id="topics" className="px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Question Categories Aligned with GPhC Framework
+              Question Categories Aligned with MRCP PACES Framework
             </h2>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -269,7 +269,7 @@ export default function GPhCExamQuestionsPage() {
         <section className="bg-gray-900 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Start Practicing GPhC Exam Questions Today
+              Start Practicing MRCP PACES Exam Questions Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of students who passed their exam using our question bank
@@ -287,7 +287,7 @@ export default function GPhCExamQuestionsPage() {
         {/* Footer */}
         <footer className="border-t border-gray-200 bg-white px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
           </div>
         </footer>
       </div>

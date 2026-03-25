@@ -55,7 +55,7 @@ export default function TopBanner() {
   return (
     <div className="top-banner">
       <div className="flex items-center justify-center gap-2 px-10">
-        <span className="hidden sm:inline">Try 15 free GPhC practice questions with detailed explanations</span>
+        <span className="hidden sm:inline">Try 15 free MRCP PACES practice questions with detailed explanations</span>
         <span className="sm:hidden">Try 15 free questions</span>
         <Link
           href="/try-free"

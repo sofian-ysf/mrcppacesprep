@@ -225,15 +225,15 @@ export default function CRMUsersPage() {
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
   <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-    <h2 style="color: #333; margin-bottom: 20px;">PreRegExamPrep</h2>
+    <h2 style="color: #333; margin-bottom: 20px;">MRCPPACESPREP</h2>
     <div style="font-size: 14px;">
       ${styledBody}
     </div>
     <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0 20px 0;">
     <p style="font-size: 12px; color: #666; margin: 0;">
-      You're receiving this email because you signed up for PreRegExamPrep.<br>
-      <a href="https://www.preregexamprep.com/unsubscribe?email=user@example.com" style="color: #666;">Unsubscribe</a> |
-      <a href="https://www.preregexamprep.com" style="color: #666;">Visit our website</a>
+      You're receiving this email because you signed up for MRCPPACESPREP.<br>
+      <a href="https://www.mrcppacesprep.com/unsubscribe?email=user@example.com" style="color: #666;">Unsubscribe</a> |
+      <a href="https://www.mrcppacesprep.com" style="color: #666;">Visit our website</a>
     </p>
   </div>
 </body>

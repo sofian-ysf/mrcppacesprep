@@ -1,28 +1,28 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'GPhC Practice Questions 2026 | 2000+ Questions | PreRegExamPrep',
-  description: 'Access 2000+ GPhC practice questions written by registered pharmacists. SBA and EMQ format, detailed explanations, BNF-aligned content. 94% pass rate.',
+  title: 'MRCP PACES Practice Questions 2026 | 2000+ Questions | MRCPPACESPREP',
+  description: 'Access 2000+ MRCP PACES practice questions written by qualified physicians. Clinical station format, detailed explanations, exam-aligned content. 94% pass rate.',
   keywords: [
-    'GPhC practice questions',
-    'GPhC questions',
-    'GPhC SBA questions',
-    'GPhC EMQ practice',
-    'pharmacy MCQ questions',
-    'GPhC question bank',
-    'pre-reg exam questions',
-    'pharmacy practice questions UK',
+    'MRCP PACES practice questions',
+    'MRCP PACES questions',
+    'MRCP PACES station questions',
+    'MRCP PACES practice',
+    'medical MCQ questions',
+    'MRCP PACES question bank',
+    'MRCP exam questions',
+    'medical practice questions UK',
   ].join(', '),
   openGraph: {
-    title: 'GPhC Practice Questions 2026 | 2000+ Expert Questions',
-    description: '2000+ GPhC practice questions written by pharmacists. SBA & EMQ format with detailed explanations.',
-    url: 'https://www.preregexamprep.com/question-bank',
+    title: 'MRCP PACES Practice Questions 2026 | 2000+ Expert Questions',
+    description: '2000+ MRCP PACES practice questions written by physicians. Clinical station format with detailed explanations.',
+    url: 'https://www.mrcppacesprep.com/question-bank',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPhC Practice Questions | 2000+ Questions',
-    description: '2000+ GPhC questions by registered pharmacists. 94% pass rate.',
+    title: 'MRCP PACES Practice Questions | 2000+ Questions',
+    description: '2000+ MRCP PACES questions by qualified physicians. 94% pass rate.',
   },
   alternates: {
     canonical: '/question-bank',

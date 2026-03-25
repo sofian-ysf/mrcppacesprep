@@ -1,7 +1,7 @@
 {
-  "name": "GPhC Pre-Reg Exam Prep",
-  "short_name": "GPhC Prep",
-  "description": "Comprehensive GPhC pre-registration exam preparation with 2000+ practice questions",
+  "name": "MRCP PACES Exam Prep",
+  "short_name": "MRCP PACES Prep",
+  "description": "Comprehensive MRCP PACES exam preparation with 2000+ practice questions",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

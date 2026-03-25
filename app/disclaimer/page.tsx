@@ -2,13 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Disclaimer | PreRegExamPrep',
-  description: 'Important disclaimers and legal information about PreRegExamPrep GPhC exam preparation platform. Read our educational disclaimers and limitations.',
-  keywords: 'disclaimer, legal notice, PreRegExamPrep, GPhC exam preparation, educational platform',
+  title: 'Disclaimer | MRCPPACESPREP',
+  description: 'Important disclaimers and legal information about MRCPPACESPREP MRCP PACES exam preparation platform. Read our educational disclaimers and limitations.',
+  keywords: 'disclaimer, legal notice, MRCPPACESPREP, MRCP PACES exam preparation, educational platform',
   openGraph: {
-    title: 'Disclaimer | PreRegExamPrep',
-    description: 'Important legal disclaimers about our GPhC exam preparation platform.',
-    url: 'https://preregexamprep.com/disclaimer',
+    title: 'Disclaimer | MRCPPACESPREP',
+    description: 'Important legal disclaimers about our MRCP PACES exam preparation platform.',
+    url: 'https://mrcppacesprep.com/disclaimer',
   },
   alternates: {
     canonical: '/disclaimer',
@@ -30,7 +30,7 @@ export default function DisclaimerPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. General Disclaimer</h2>
               <p className="text-gray-700 mb-4">
-                The information contained on PreRegExamPrep ("we," "our," or "us") is for general educational and informational purposes only. While we strive to provide accurate and up-to-date content, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on our platform.
+                The information contained on MRCPPACESPREP ("we," "our," or "us") is for general educational and informational purposes only. While we strive to provide accurate and up-to-date content, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability of the information, products, services, or related graphics contained on our platform.
               </p>
               <p className="text-gray-700 mb-4">
                 Any reliance you place on such information is therefore strictly at your own risk. In no event will we be liable for any loss or damage including, without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of our platform.
@@ -40,11 +40,11 @@ export default function DisclaimerPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Educational Purpose Only</h2>
               <p className="text-gray-700 mb-4">
-                PreRegExamPrep is an educational platform designed to assist pharmacy students in preparing for the General Pharmaceutical Council (GPhC) pre-registration examination. Our content is intended for educational purposes only and should not be considered as:
+                MRCPPACESPREP is an educational platform designed to assist pharmacy students in preparing for the General Pharmaceutical Council (MRCP PACES) pre-registration examination. Our content is intended for educational purposes only and should not be considered as:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>A guarantee of examination success or passing scores</li>
-                <li>Official GPhC examination content or materials</li>
+                <li>Official MRCP PACES examination content or materials</li>
                 <li>Professional medical, pharmaceutical, or legal advice</li>
                 <li>A substitute for official study materials or guidance</li>
                 <li>A replacement for practical pharmacy training or experience</li>
@@ -52,26 +52,26 @@ export default function DisclaimerPage() {
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">3. No Affiliation with GPhC</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">3. No Affiliation with MRCP PACES</h2>
               <p className="text-gray-700 mb-4">
-                <strong>Important Notice:</strong> PreRegExamPrep is not affiliated with, endorsed by, or officially connected to the General Pharmaceutical Council (GPhC) in any way. We are an independent educational platform created to assist students in their exam preparation.
+                <strong>Important Notice:</strong> MRCPPACESPREP is not affiliated with, endorsed by, or officially connected to the General Pharmaceutical Council (MRCP PACES) in any way. We are an independent educational platform created to assist students in their exam preparation.
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
-                <li>We are not an official GPhC training provider</li>
-                <li>Our questions and materials are not official GPhC content</li>
-                <li>We do not represent or speak for the GPhC</li>
-                <li>GPhC has not reviewed or approved our content</li>
-                <li>Any reference to GPhC is for identification purposes only</li>
+                <li>We are not an official MRCP PACES training provider</li>
+                <li>Our questions and materials are not official MRCP PACES content</li>
+                <li>We do not represent or speak for the MRCP PACES</li>
+                <li>MRCP PACES has not reviewed or approved our content</li>
+                <li>Any reference to MRCP PACES is for identification purposes only</li>
               </ul>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">4. No Guarantee of Success</h2>
               <p className="text-gray-700 mb-4">
-                While our platform is designed to help students prepare for the GPhC pre-registration examination, we cannot and do not guarantee:
+                While our platform is designed to help students prepare for the MRCP PACES pre-registration examination, we cannot and do not guarantee:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
-                <li>That you will pass the GPhC examination</li>
+                <li>That you will pass the MRCP PACES examination</li>
                 <li>Any specific score or performance outcome</li>
                 <li>That our content will appear on the actual examination</li>
                 <li>Employment or career advancement opportunities</li>
@@ -95,7 +95,7 @@ export default function DisclaimerPage() {
                 <li>We reserve the right to modify content without notice</li>
               </ul>
               <p className="text-gray-700 mb-4">
-                Students are encouraged to consult official GPhC resources, current pharmaceutical references, and other authoritative sources in addition to using our platform.
+                Students are encouraged to consult official MRCP PACES resources, current pharmaceutical references, and other authoritative sources in addition to using our platform.
               </p>
             </section>
 
@@ -166,7 +166,7 @@ export default function DisclaimerPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Limitation of Liability</h2>
               <p className="text-gray-700 mb-4">
-                To the maximum extent permitted by law, PreRegExamPrep, its owners, employees, agents, and affiliates shall not be liable for:
+                To the maximum extent permitted by law, MRCPPACESPREP, its owners, employees, agents, and affiliates shall not be liable for:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>Any direct, indirect, incidental, special, or consequential damages</li>
@@ -183,9 +183,9 @@ export default function DisclaimerPage() {
                 Users are responsible for:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
-                <li>Verifying their eligibility to take the GPhC examination</li>
+                <li>Verifying their eligibility to take the MRCP PACES examination</li>
                 <li>Understanding current examination requirements and procedures</li>
-                <li>Consulting official GPhC resources and guidelines</li>
+                <li>Consulting official MRCP PACES resources and guidelines</li>
                 <li>Making informed decisions about their study preparation</li>
                 <li>Seeking additional support or resources as needed</li>
                 <li>Maintaining appropriate study habits and time management</li>
@@ -212,8 +212,8 @@ export default function DisclaimerPage() {
                 If you have any questions or concerns about this disclaimer, please contact us:
               </p>
               <div className="bg-[#fbfaf4] p-4 rounded-lg">
-                <p className="text-gray-700 mb-2"><strong>Email:</strong> team@preregexamprep.com</p>
-                <p className="text-gray-700 mb-2"><strong>Address:</strong> PreRegExamPrep, London, United Kingdom</p>
+                <p className="text-gray-700 mb-2"><strong>Email:</strong> team@mrcppacesprep.com</p>
+                <p className="text-gray-700 mb-2"><strong>Address:</strong> MRCPPACESPREP, London, United Kingdom</p>
                 <p className="text-gray-700"><strong>Response Time:</strong> We aim to respond to all inquiries within 3 business days</p>
               </div>
             </section>
@@ -230,8 +230,8 @@ export default function DisclaimerPage() {
                   <h3 className="text-sm font-medium text-yellow-800">Important Reminder</h3>
                   <div className="mt-2 text-sm text-yellow-700">
                     <p>
-                      PreRegExamPrep is an independent educational platform and is not affiliated with or endorsed by the General Pharmaceutical Council (GPhC).
-                      Always consult official GPhC resources for the most current examination information and requirements.
+                      MRCPPACESPREP is an independent educational platform and is not affiliated with or endorsed by the General Pharmaceutical Council (MRCP PACES).
+                      Always consult official MRCP PACES resources for the most current examination information and requirements.
                     </p>
                   </div>
                 </div>
@@ -246,9 +246,9 @@ export default function DisclaimerPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
 
@@ -284,7 +284,7 @@ export default function DisclaimerPage() {
           </div>
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

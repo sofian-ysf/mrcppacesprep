@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { createClient } from '@/app/lib/supabase/server'
 
 export async function GET() {
-  const baseUrl = 'https://www.preregexamprep.com'
+  const baseUrl = 'https://www.mrcppacesprep.com'
 
   try {
     const supabase = await createClient()
@@ -24,7 +24,7 @@ export async function GET() {
       const description = escapeXml(post.meta_description || post.excerpt || '')
       const pubDate = new Date(post.published_at).toUTCString()
       const link = `${baseUrl}/blog/${post.slug}`
-      const author = escapeXml(post.author_name || 'PreRegExamPrep Team')
+      const author = escapeXml(post.author_name || 'MRCPPACESPREP Team')
 
       return `    <item>
       <title>${title}</title>
@@ -32,7 +32,7 @@ export async function GET() {
       <description>${description}</description>
       <pubDate>${pubDate}</pubDate>
       <guid isPermaLink="true">${link}</guid>
-      <author>contact@preregexamprep.com (${author})</author>
+      <author>contact@mrcppacesprep.com (${author})</author>
     </item>`
     }).join('\n') || ''
 
@@ -43,18 +43,18 @@ export async function GET() {
     const rss = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>PreRegExamPrep Blog - GPhC Exam Preparation</title>
+    <title>MRCPPACESPREP Blog - MRCP PACES Exam Preparation</title>
     <link>${baseUrl}/blog</link>
-    <description>Expert pharmacy insights, study tips, and career guidance for GPhC pre-registration exam preparation. Stay updated with the latest exam strategies and pharmacy news.</description>
+    <description>Expert medical insights, study tips, and career guidance for MRCP PACES exam preparation. Stay updated with the latest exam strategies and medical news.</description>
     <language>en-gb</language>
     <lastBuildDate>${lastBuildDate}</lastBuildDate>
     <atom:link href="${baseUrl}/feed.xml" rel="self" type="application/rss+xml"/>
-    <copyright>Copyright ${new Date().getFullYear()} PreRegExamPrep. All rights reserved.</copyright>
-    <managingEditor>contact@preregexamprep.com (PreRegExamPrep Team)</managingEditor>
-    <webMaster>contact@preregexamprep.com (PreRegExamPrep Team)</webMaster>
+    <copyright>Copyright ${new Date().getFullYear()} MRCPPACESPREP. All rights reserved.</copyright>
+    <managingEditor>contact@mrcppacesprep.com (MRCPPACESPREP Team)</managingEditor>
+    <webMaster>contact@mrcppacesprep.com (MRCPPACESPREP Team)</webMaster>
     <image>
       <url>${baseUrl}/logo.png</url>
-      <title>PreRegExamPrep Blog</title>
+      <title>MRCPPACESPREP Blog</title>
       <link>${baseUrl}/blog</link>
     </image>
 ${rssItems}

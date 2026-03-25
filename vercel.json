@@ -5,10 +5,10 @@
       "has": [
         {
           "type": "host",
-          "value": "preregexamprep.com"
+          "value": "mrcppacesprep.com"
         }
       ],
-      "destination": "https://www.preregexamprep.com/:path*",
+      "destination": "https://www.mrcppacesprep.com/:path*",
       "permanent": true
     }
   ],

@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server'
 async function sendDiscordNotification(userEmail: string, userName: string, isNewUser: boolean) {
   try {
     const baseUrl = process.env.NODE_ENV === 'production'
-      ? 'https://preregexamprep.vercel.app'  // Update this to your production URL
+      ? 'https://mrcppacesprep.vercel.app'  // Update this to your production URL
       : process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
 
     await fetch(`${baseUrl}/api/discord/notify`, {

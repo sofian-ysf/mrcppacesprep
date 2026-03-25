@@ -204,7 +204,7 @@ export async function POST(request: NextRequest) {
 
         switch (emailType) {
           case 'trial_reminder':
-            subject = 'Continue Your GPhC Exam Preparation'
+            subject = 'Continue Your MRCP PACES Exam Preparation'
             htmlContent = getTrialReminderEmail(targetUser.email, firstName)
             break
           case 'trial_expiring':
@@ -212,7 +212,7 @@ export async function POST(request: NextRequest) {
             htmlContent = getTrialExpiringEmail(targetUser.email, (targetUser as { days_remaining?: number }).days_remaining || 0, firstName)
             break
           case 'win_back':
-            subject = 'We Miss You! Come Back to PreRegExamPrep'
+            subject = 'We Miss You! Come Back to MRCPPACESPREP'
             htmlContent = getWinBackEmail(targetUser.email, firstName)
             break
           case 'custom':
@@ -255,15 +255,15 @@ export async function POST(request: NextRequest) {
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
   <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-    <h2 style="color: #333; margin-bottom: 20px;">PreRegExamPrep</h2>
+    <h2 style="color: #333; margin-bottom: 20px;">MRCPPACESPREP</h2>
     <div style="font-size: 14px;">
       ${styledBody}
     </div>
     <hr style="border: none; border-top: 1px solid #eee; margin: 30px 0 20px 0;">
     <p style="font-size: 12px; color: #666; margin: 0;">
-      You're receiving this email because you signed up for PreRegExamPrep.<br>
-      <a href="https://www.preregexamprep.com/unsubscribe?email=${encodeURIComponent(targetUser.email)}" style="color: #666;">Unsubscribe</a> |
-      <a href="https://www.preregexamprep.com" style="color: #666;">Visit our website</a>
+      You're receiving this email because you signed up for MRCPPACESPREP.<br>
+      <a href="https://www.mrcppacesprep.com/unsubscribe?email=${encodeURIComponent(targetUser.email)}" style="color: #666;">Unsubscribe</a> |
+      <a href="https://www.mrcppacesprep.com" style="color: #666;">Visit our website</a>
     </p>
   </div>
 </body>
@@ -273,10 +273,10 @@ export async function POST(request: NextRequest) {
             throw new Error('Invalid email type')
         }
 
-        const unsubscribeUrl = `https://www.preregexamprep.com/unsubscribe?email=${encodeURIComponent(targetUser.email)}`
+        const unsubscribeUrl = `https://www.mrcppacesprep.com/unsubscribe?email=${encodeURIComponent(targetUser.email)}`
 
         const { error: sendError } = await resend.emails.send({
-          from: 'PreRegExamPrep <team@preregexamprep.com>',
+          from: 'MRCPPACESPREP <team@mrcppacesprep.com>',
           to: targetUser.email,
           subject,
           html: htmlContent,

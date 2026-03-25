@@ -71,7 +71,7 @@ export async function generateSBABatch(
     messages: [
       {
         role: 'system',
-        content: `You are an expert GPhC (General Pharmaceutical Council) exam question writer for UK pharmacy pre-registration exams.
+        content: `You are an expert MRCP PACES (General Pharmaceutical Council) exam question writer for UK pharmacy pre-registration exams.
 
 Your task is to create high-quality Single Best Answer (SBA) questions that:
 - Are clinically relevant and reflect real pharmacy practice in the UK
@@ -179,11 +179,11 @@ export async function generateCalculationBatch(
     messages: [
       {
         role: 'system',
-        content: `You are an expert GPhC exam question writer specializing in pharmaceutical calculations.
+        content: `You are an expert MRCP PACES exam question writer specializing in pharmaceutical calculations.
 
 Your task is to create realistic calculation questions that:
 - Use clinically relevant scenarios (real drug names, realistic doses)
-- Require the type of calculations pharmacists do in practice
+- Require the type of calculations physicians do in practice
 - Have clear, unambiguous correct answers
 - Include step-by-step solutions in the explanation
 - Use appropriate units and conversions
@@ -275,7 +275,7 @@ export async function generateEMQBatch(
     messages: [
       {
         role: 'system',
-        content: `You are an expert GPhC exam question writer specializing in Extended Matching Questions (EMQs).
+        content: `You are an expert MRCP PACES exam question writer specializing in Extended Matching Questions (EMQs).
 
 EMQ format:
 - A theme/title describing the topic
@@ -390,7 +390,7 @@ export async function generateStructuredExplanation(
     messages: [
       {
         role: 'system',
-        content: `You are an expert pharmacy educator creating detailed, structured explanations for GPhC pre-registration exam questions.
+        content: `You are an expert pharmacy educator creating detailed, structured explanations for MRCP PACES pre-registration exam questions.
 
 Your explanations should be:
 - Educational and memorable
@@ -511,27 +511,27 @@ export async function generateBlogPost(
 ): Promise<GeneratedBlogPost> {
   const keywordsStr = targetKeywords.length > 0
     ? targetKeywords.join(', ')
-    : `${topic}, GPhC exam, pharmacy pre-registration, UK pharmacy`
+    : `${topic}, MRCP PACES exam, pharmacy pre-registration, UK pharmacy`
 
   const response = await openai.chat.completions.create({
     model: 'gpt-4-turbo-preview',
     messages: [
       {
         role: 'system',
-        content: `You are Alex Jensing, MPharm, a GPhC-registered pharmacist with 8+ years of experience including hospital, community, and education roles. You write authoritative, deeply practical content for UK pharmacy pre-registration students preparing for the GPhC assessment.
+        content: `You are Alex Jensing, MPharm, a MRCP PACES-registered physician with 8+ years of experience including hospital, community, and education roles. You write authoritative, deeply practical content for UK pharmacy pre-registration students preparing for the MRCP PACES assessment.
 
 CRITICAL CONTENT QUALITY REQUIREMENTS:
 
 1. DEMONSTRATE REAL EXPERTISE:
    - Include SPECIFIC drug names, dosages, and clinical scenarios (e.g., "When dispensing methotrexate 2.5mg tablets, always verify...")
-   - Reference EXACT BNF sections, NICE guidelines by code (e.g., "NICE NG28"), GPhC standards
+   - Reference EXACT BNF sections, NICE guidelines by code (e.g., "NICE NG28"), MRCP PACES standards
    - Share realistic pharmacy scenarios you'd encounter in practice
    - Include common student mistakes and how to avoid them
 
 2. PROVIDE UNIQUE, ORIGINAL VALUE:
    - Add insights that generic AI content wouldn't know (exam patterns, common pitfalls, real-world tips)
    - Include specific memory techniques, mnemonics, or study strategies
-   - Reference current 2025-2026 GPhC assessment format changes where relevant
+   - Reference current 2025-2026 MRCP PACES assessment format changes where relevant
    - Add "Pro Tips" boxes with insider advice
 
 3. WRITE LIKE A HUMAN EXPERT, NOT AI:
@@ -579,7 +579,7 @@ Return a JSON object in this EXACT format:
   "slug": "keyword-rich-url-slug",
   "excerpt": "Hook with primary keyword + what reader will learn (150-160 chars)",
   "content": "Full markdown with ## H2, ### H3, **bold terms**, numbered lists, and specific examples throughout",
-  "meta_title": "Primary Keyword | Secondary Keyword | PreRegExamPrep (50-60 chars)",
+  "meta_title": "Primary Keyword | Secondary Keyword | MRCPPACESPREP (50-60 chars)",
   "meta_description": "Action verb + benefit + keyword. End with CTA like 'Start practicing today.' (150-155 chars)",
   "meta_keywords": ["exact match keyword", "long-tail variation 1", "long-tail variation 2", "related term", "question keyword"],
   "tags": ["specific topic tag", "exam section tag", "difficulty tag"],
@@ -589,7 +589,7 @@ Return a JSON object in this EXACT format:
     {"question": "Another real student question?", "answer": "Detailed answer with BNF reference or clinical scenario..."}
   ],
   "internal_linking_suggestions": [
-    {"topic": "Related GPhC topic", "targetPage": "/question-bank"},
+    {"topic": "Related MRCP PACES topic", "targetPage": "/question-bank"},
     {"topic": "Calculation practice area", "targetPage": "/calculations"},
     {"topic": "Mock exam section", "targetPage": "/mock-exams"}
   ],
@@ -601,12 +601,12 @@ Return a JSON object in this EXACT format:
     "author": {
       "@type": "Person",
       "name": "Alex Jensing, MPharm",
-      "jobTitle": "GPhC Registered Pharmacist"
+      "jobTitle": "MRCP PACES Registered Pharmacist"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "PreRegExamPrep",
-      "url": "https://www.preregexamprep.com"
+      "name": "MRCPPACESPREP",
+      "url": "https://www.mrcppacesprep.com"
     },
     "mainEntityOfPage": {
       "@type": "WebPage"
@@ -784,14 +784,14 @@ export async function suggestBlogTopics(
     messages: [
       {
         role: 'system',
-        content: `You are an SEO content strategist specializing in pharmacy education and GPhC exam preparation for UK pharmacy students.
+        content: `You are an SEO content strategist specializing in pharmacy education and MRCP PACES exam preparation for UK pharmacy students.
 
 Your task is to suggest compelling, SEO-friendly blog topics that:
 - Target long-tail keywords pharmacy students search for
 - Address real pain points and questions students have
 - Have good search volume potential
 - Are unique and not commonly covered by competitors
-- Are relevant to the GPhC pre-registration exam`
+- Are relevant to the MRCP PACES pre-registration exam`
       },
       {
         role: 'user',
@@ -864,7 +864,7 @@ export async function evaluateQuestionDifficulty(
 
   const typeSpecificCriteria = {
     calculation: `
-CALCULATION DIFFICULTY CRITERIA (UK GPhC Pre-reg Exam):
+CALCULATION DIFFICULTY CRITERIA (UK MRCP PACES Pre-reg Exam):
 - EASY: Single-step calculations with no conversions. Examples:
   * "Take 200mg daily for 14 days" = 14 tablets (just counting)
   * Simple multiplication or division with whole numbers
@@ -882,7 +882,7 @@ CALCULATION DIFFICULTY CRITERIA (UK GPhC Pre-reg Exam):
   * Calculations requiring clinical judgment about rounding`,
 
     sba: `
-SBA DIFFICULTY CRITERIA (UK GPhC Pre-reg Exam):
+SBA DIFFICULTY CRITERIA (UK MRCP PACES Pre-reg Exam):
 - EASY: Direct recall of well-known facts. Examples:
   * "What is the mechanism of action of metformin?"
   * Basic drug classifications
@@ -899,7 +899,7 @@ SBA DIFFICULTY CRITERIA (UK GPhC Pre-reg Exam):
   * Scenarios requiring knowledge of multiple guidelines`,
 
     emq: `
-EMQ DIFFICULTY CRITERIA (UK GPhC Pre-reg Exam):
+EMQ DIFFICULTY CRITERIA (UK MRCP PACES Pre-reg Exam):
 - EASY: Clear-cut scenarios with obvious answer mapping
 - MEDIUM: Scenarios requiring differentiation between similar options
 - HARD: Complex scenarios where multiple options could seem correct`
@@ -910,7 +910,7 @@ EMQ DIFFICULTY CRITERIA (UK GPhC Pre-reg Exam):
     messages: [
       {
         role: 'system',
-        content: `You are an expert GPhC exam assessor evaluating question difficulty.
+        content: `You are an expert MRCP PACES exam assessor evaluating question difficulty.
 Your task is to objectively assess whether a question's difficulty rating is accurate.
 Be STRICT - many questions are incorrectly rated as harder than they actually are.
 

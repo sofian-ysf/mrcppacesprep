@@ -5,23 +5,23 @@ import { RelatedPages } from '@/app/components/seo/RelatedPages'
 import FAQSection from '@/app/components/FAQSection'
 
 export const metadata: Metadata = {
-  title: 'GPhC Exam Guide 2026 | Format, Dates, Tips & How to Pass',
-  description: 'Complete GPhC exam guide for 2026. Learn about exam format, dates, fees, pass rates, topics covered, and how to prepare effectively. Expert tips from pharmacists.',
+  title: 'MRCP PACES Exam Guide 2026 | Format, Dates, Tips & How to Pass',
+  description: 'Complete MRCP PACES exam guide for 2026. Learn about exam format, dates, fees, pass rates, topics covered, and how to prepare effectively. Expert tips from physicians.',
   keywords: [
-    'GPhC exam', 'GPhC exam guide', 'GPhC exam 2026', 'GPhC exam format',
-    'GPhC exam dates', 'GPhC exam tips', 'how to pass GPhC exam',
-    'GPhC exam topics', 'GPhC exam pass rate', 'pre-registration exam UK',
-    'pharmacy exam guide', 'GPhC assessment'
+    'MRCP PACES exam', 'MRCP PACES exam guide', 'MRCP PACES exam 2026', 'MRCP PACES exam format',
+    'MRCP PACES exam dates', 'MRCP PACES exam tips', 'how to pass MRCP PACES exam',
+    'MRCP PACES exam topics', 'MRCP PACES exam pass rate', 'pre-registration exam UK',
+    'pharmacy exam guide', 'MRCP PACES assessment'
   ],
   openGraph: {
-    title: 'GPhC Exam Guide 2026 | Complete Preparation Guide',
-    description: 'Everything you need to know about the GPhC exam. Format, dates, topics, and expert preparation tips.',
-    url: 'https://www.preregexamprep.com/gphc-exam-guide',
+    title: 'MRCP PACES Exam Guide 2026 | Complete Preparation Guide',
+    description: 'Everything you need to know about the MRCP PACES exam. Format, dates, topics, and expert preparation tips.',
+    url: 'https://www.mrcppacesprep.com/gphc-exam-guide',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPhC Exam Guide 2026 | How to Pass First Time',
-    description: 'Complete guide to the GPhC exam. Learn the format, topics, and preparation strategies.'
+    title: 'MRCP PACES Exam Guide 2026 | How to Pass First Time',
+    description: 'Complete guide to the MRCP PACES exam. Learn the format, topics, and preparation strategies.'
   },
   alternates: {
     canonical: '/gphc-exam-guide',
@@ -30,55 +30,55 @@ export const metadata: Metadata = {
 
 const examGuideFAQs = [
   {
-    question: "When is the GPhC exam in 2026?",
-    answer: "The GPhC exam runs twice yearly, typically in June and September. The June 2026 sitting registration opens in April 2026. Check the GPhC website for exact dates."
+    question: "When is the MRCP PACES exam in 2026?",
+    answer: "The MRCP PACES exam runs twice yearly, typically in June and September. The June 2026 sitting registration opens in April 2026. Check the MRCP PACES website for exact dates."
   },
   {
-    question: "What is the GPhC exam pass mark?",
+    question: "What is the MRCP PACES exam pass mark?",
     answer: "The pass mark is set using the Angoff method and varies each sitting, typically around 65-70%. You need to meet the standard for both calculation and non-calculation sections."
   },
   {
-    question: "What question types are on the GPhC exam?",
+    question: "What question types are on the MRCP PACES exam?",
     answer: "The exam has 90 Single Best Answer (SBA) questions and 20 Extended Matching Questions (EMQs). Topics include calculations, therapeutics, clinical pharmacy, law, and pharmaceutics."
   },
   {
-    question: "How do I register for the GPhC exam?",
-    answer: "Register through the GPhC online portal during the registration window. You'll need to pay the £253 exam fee and provide proof of pre-registration training completion."
+    question: "How do I register for the MRCP PACES exam?",
+    answer: "Register through the MRCP PACES online portal during the registration window. You'll need to pay the £253 exam fee and provide proof of pre-registration training completion."
   },
   {
-    question: "Can I use a calculator in the GPhC exam?",
+    question: "Can I use a calculator in the MRCP PACES exam?",
     answer: "Yes, a basic on-screen calculator is provided for calculation questions. You cannot bring your own calculator. Practice with our calculation questions to build speed."
   },
   {
-    question: "What happens if I fail the GPhC exam?",
+    question: "What happens if I fail the MRCP PACES exam?",
     answer: "You can retake the exam at the next sitting. There's no limit on attempts, but you'll need to pay the exam fee each time. Most retake candidates pass with focused preparation."
   },
   {
-    question: "How long are GPhC exam results valid?",
+    question: "How long are MRCP PACES exam results valid?",
     answer: "Once you pass, your result doesn't expire. However, you must complete your pre-registration training and apply for registration within a reasonable timeframe."
   },
   {
-    question: "What ID do I need for the GPhC exam?",
+    question: "What ID do I need for the MRCP PACES exam?",
     answer: "Bring valid photo ID (passport or UK driving licence) that matches your registration name exactly. Arrive 30 minutes early to allow time for check-in."
   }
 ];
 
-export default function GPhCExamGuidePage() {
+export default function MRCP PACESExamGuidePage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Complete GPhC Exam Guide 2026: Format, Dates & How to Pass",
-    "description": "Everything you need to know about the GPhC pre-registration exam in 2026. Expert tips, preparation strategies, and resources to help you pass first time.",
+    "headline": "Complete MRCP PACES Exam Guide 2026: Format, Dates & How to Pass",
+    "description": "Everything you need to know about the MRCP PACES pre-registration exam in 2026. Expert tips, preparation strategies, and resources to help you pass first time.",
     "author": {
       "@type": "Organization",
-      "name": "PreRegExamPrep"
+      "name": "MRCPPACESPREP"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "PreRegExamPrep",
+      "name": "MRCPPACESPREP",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.preregexamprep.com/logo.png"
+        "url": "https://www.mrcppacesprep.com/logo.png"
       }
     },
     "datePublished": "2024-01-01",
@@ -100,10 +100,10 @@ export default function GPhCExamGuidePage() {
           <div className="mx-auto max-w-4xl">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                Complete GPhC Exam Guide 2026
+                Complete MRCP PACES Exam Guide 2026
               </h1>
               <p className="mt-6 text-xl text-gray-600">
-                Everything you need to know about the GPhC pre-registration exam. Format, dates, topics, and expert strategies to help you pass first time.
+                Everything you need to know about the MRCP PACES pre-registration exam. Format, dates, topics, and expert strategies to help you pass first time.
               </p>
               <div className="mt-8 flex justify-center gap-4 flex-wrap">
                 <Link href="#format" className="text-blue-600 hover:underline">Exam Format</Link>
@@ -145,22 +145,22 @@ export default function GPhCExamGuidePage() {
         {/* Main Content */}
         <article className="px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl prose prose-lg">
-            {/* What is the GPhC Exam */}
+            {/* What is the MRCP PACES Exam */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">What is the GPhC Exam?</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">What is the MRCP PACES Exam?</h2>
               <p className="text-gray-600 mb-4">
-                The GPhC (General Pharmaceutical Council) pre-registration exam is a mandatory assessment for pharmacy graduates in the UK who want to become registered pharmacists. It tests your clinical knowledge, pharmaceutical calculations, and understanding of pharmacy law and ethics.
+                The MRCP PACES (General Pharmaceutical Council) pre-registration exam is a mandatory assessment for pharmacy graduates in the UK who want to become registered physicians. It tests your clinical knowledge, pharmaceutical calculations, and understanding of pharmacy law and ethics.
               </p>
               <p className="text-gray-600">
-                The exam is computer-based and typically held twice a year. You must pass this exam to complete your pre-registration training and register with the GPhC as a pharmacist.
+                The exam is computer-based and typically held twice a year. You must pass this exam to complete your pre-registration training and register with the MRCP PACES as a physician.
               </p>
             </section>
 
             {/* Exam Format */}
             <section id="format" className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">GPhC Exam Format</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">MRCP PACES Exam Format</h2>
               <p className="text-gray-600 mb-6">
-                The GPhC exam consists of 110 questions to be completed in 2.5 hours (150 minutes). The exam includes three question types:
+                The MRCP PACES exam consists of 110 questions to be completed in 2.5 hours (150 minutes). The exam includes three question types:
               </p>
 
               <div className="space-y-4 mb-6">
@@ -181,18 +181,18 @@ export default function GPhCExamGuidePage() {
 
             {/* Exam Dates */}
             <section id="dates" className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">GPhC Exam Dates 2026</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">MRCP PACES Exam Dates 2026</h2>
               <p className="text-gray-600 mb-4">
-                The GPhC exam is typically held twice per year. The 2026 exam dates are:
+                The MRCP PACES exam is typically held twice per year. The 2026 exam dates are:
               </p>
               <div className="bg-blue-50 rounded-lg p-4 mb-4">
                 <ul className="list-disc list-inside text-gray-700 space-y-2">
-                  <li><strong>June 2026</strong> - Exact dates announced by GPhC</li>
-                  <li><strong>September 2026</strong> - Exact dates announced by GPhC</li>
+                  <li><strong>June 2026</strong> - Exact dates announced by MRCP PACES</li>
+                  <li><strong>September 2026</strong> - Exact dates announced by MRCP PACES</li>
                 </ul>
               </div>
               <p className="text-gray-600">
-                Registration opens approximately 3 months before each sitting. Check the official GPhC website for confirmed dates and registration deadlines.
+                Registration opens approximately 3 months before each sitting. Check the official MRCP PACES website for confirmed dates and registration deadlines.
               </p>
             </section>
 
@@ -200,7 +200,7 @@ export default function GPhCExamGuidePage() {
             <section id="topics" className="mb-16">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">What Topics Are Covered?</h2>
               <p className="text-gray-600 mb-6">
-                The GPhC exam covers all areas of the GPhC framework for initial education and training:
+                The MRCP PACES exam covers all areas of the MRCP PACES framework for initial education and training:
               </p>
 
               <div className="grid gap-4 md:grid-cols-2">
@@ -233,7 +233,7 @@ export default function GPhCExamGuidePage() {
 
             {/* How to Prepare */}
             <section id="preparation" className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Prepare for the GPhC Exam</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Prepare for the MRCP PACES Exam</h2>
 
               <h3 className="font-bold text-gray-900 mb-3 mt-6">1. Start Early</h3>
               <p className="text-gray-600 mb-4">
@@ -263,20 +263,20 @@ export default function GPhCExamGuidePage() {
 
             {/* Pass Rate */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">GPhC Exam Pass Rate</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">MRCP PACES Exam Pass Rate</h2>
               <p className="text-gray-600 mb-4">
-                The national GPhC exam pass rate typically ranges from 70-80% for first-time candidates, though this varies between sittings. With proper preparation, you can significantly increase your chances of passing.
+                The national MRCP PACES exam pass rate typically ranges from 70-80% for first-time candidates, though this varies between sittings. With proper preparation, you can significantly increase your chances of passing.
               </p>
               <div className="bg-green-50 rounded-lg p-4">
                 <p className="text-green-800">
-                  <strong>PreRegExamPrep students achieve a 94% pass rate</strong> - significantly higher than the national average. This is because our platform provides comprehensive coverage and realistic practice.
+                  <strong>MRCPPACESPREP students achieve a 94% pass rate</strong> - significantly higher than the national average. This is because our platform provides comprehensive coverage and realistic practice.
                 </p>
               </div>
             </section>
 
             {/* What Happens If You Fail */}
             <section className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">What If I Fail the GPhC Exam?</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">What If I Fail the MRCP PACES Exam?</h2>
               <p className="text-gray-600 mb-4">
                 If you don't pass, you can retake the exam. However:
               </p>
@@ -296,7 +296,7 @@ export default function GPhCExamGuidePage() {
         <section className="bg-gray-900 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to Start Your GPhC Exam Preparation?
+              Ready to Start Your MRCP PACES Exam Preparation?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join 8,500+ students who passed their exam with our platform
@@ -316,7 +316,7 @@ export default function GPhCExamGuidePage() {
           <div className="mx-auto max-w-3xl">
             <FAQSection
               faqs={examGuideFAQs}
-              title="GPhC Exam 2026 - Frequently Asked Questions"
+              title="MRCP PACES Exam 2026 - Frequently Asked Questions"
             />
           </div>
         </section>
@@ -331,7 +331,7 @@ export default function GPhCExamGuidePage() {
         {/* Footer */}
         <footer className="border-t border-gray-200 bg-white px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </footer>

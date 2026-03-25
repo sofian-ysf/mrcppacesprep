@@ -77,7 +77,7 @@ const helpTopics = [
       },
       {
         question: 'Are the mock exams exactly like the real exam?',
-        answer: 'Yes, our mocks use the same timing (2.5 hours), question count (110), format, and difficulty distribution as the actual GPhC exam.'
+        answer: 'Yes, our mocks use the same timing (2.5 hours), question count (110), format, and difficulty distribution as the actual MRCP PACES exam.'
       },
       {
         question: 'Can I retake mock exams?',
@@ -149,7 +149,7 @@ const helpTopics = [
     ),
     questions: [
       {
-        question: 'How long should I study for the GPhC exam?',
+        question: 'How long should I study for the MRCP PACES exam?',
         answer: 'Most successful students study for 8-12 weeks, spending 20-30 hours per week. Start with foundation topics, then progress to practice questions and mock exams.'
       },
       {
@@ -217,7 +217,7 @@ export default function HelpPage() {
               <span className="block text-gray-600 text-3xl mt-2">Get the Support You Need</span>
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
-              Find answers to common questions, learn how to use our platform effectively, and get expert study advice from qualified pharmacists.
+              Find answers to common questions, learn how to use our platform effectively, and get expert study advice from qualified physicians.
             </p>
 
             {/* Search Bar */}
@@ -388,7 +388,7 @@ export default function HelpPage() {
               <div className="ml-4">
                 <h3 className="text-xl font-bold text-red-900 mb-2">Exam Emergency Support</h3>
                 <p className="text-red-800 mb-4">
-                  Taking your GPhC exam within 48 hours? We provide priority support for urgent questions about our platform, study strategies, or last-minute technical issues.
+                  Taking your MRCP PACES exam within 48 hours? We provide priority support for urgent questions about our platform, study strategies, or last-minute technical issues.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -415,9 +415,9 @@ export default function HelpPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
 
@@ -453,7 +453,7 @@ export default function HelpPage() {
           </div>
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

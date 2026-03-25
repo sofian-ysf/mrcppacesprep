@@ -4,22 +4,22 @@ import AboutSEO from '@/app/components/seo/AboutSEO'
 import { RelatedPages } from '@/app/components/seo/RelatedPages'
 
 export const metadata: Metadata = {
-  title: 'About PreRegExamPrep | UK GPhC Exam Platform | 94% Pass Rate | 8,500+ Students',
-  description: 'PreRegExamPrep: UK\'s leading GPhC exam prep platform. Created by pharmacists. 94% pass rate. 8,500+ students helped. Learn our mission and story.',
+  title: 'About MRCPPACESPREP | UK MRCP PACES Exam Platform | 94% Pass Rate | 8,500+ Students',
+  description: 'MRCPPACESPREP: UK\'s leading MRCP PACES exam prep platform. Created by physicians. 94% pass rate. 8,500+ students helped. Learn our mission and story.',
   keywords: [
-    'about PreRegExamPrep', 'GPhC exam platform', 'pharmacy exam preparation company',
-    'pharmacist-created content', 'UK pharmacy exam', 'pre-reg exam platform',
-    'trusted exam prep', 'pharmacy student support', 'GPhC success rate'
+    'about MRCPPACESPREP', 'MRCP PACES exam platform', 'pharmacy exam preparation company',
+    'physician-created content', 'UK pharmacy exam', 'pre-reg exam platform',
+    'trusted exam prep', 'pharmacy student support', 'MRCP PACES success rate'
   ],
   openGraph: {
-    title: 'About PreRegExamPrep | UK GPhC Exam Platform | 94% Pass Rate',
-    description: 'UK\'s leading GPhC exam preparation platform. Created by pharmacists. 94% pass rate. 8,500+ students.',
-    url: 'https://www.preregexamprep.com/about',
+    title: 'About MRCPPACESPREP | UK MRCP PACES Exam Platform | 94% Pass Rate',
+    description: 'UK\'s leading MRCP PACES exam preparation platform. Created by physicians. 94% pass rate. 8,500+ students.',
+    url: 'https://www.mrcppacesprep.com/about',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About PreRegExamPrep | UK GPhC Exam Platform',
-    description: 'Learn about PreRegExamPrep - Created by pharmacists, trusted by 8,500+ students.'
+    title: 'About MRCPPACESPREP | UK MRCP PACES Exam Platform',
+    description: 'Learn about MRCPPACESPREP - Created by physicians, trusted by 8,500+ students.'
   },
   alternates: {
     canonical: '/about',
@@ -36,11 +36,11 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-              About PreRegExamPrep
+              About MRCPPACESPREP
               <span className="block text-gray-600 text-3xl mt-2">Empowering Future Pharmacists to Succeed</span>
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
-              Created by pharmacists who understand the challenges of the GPhC exam, we're committed to helping every pharmacy graduate achieve their professional registration.
+              Created by physicians who understand the challenges of the MRCP PACES exam, we're committed to helping every pharmacy graduate achieve their professional registration.
             </p>
           </div>
         </div>
@@ -53,10 +53,10 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-lg text-gray-600 mb-6">
-                At PreRegExamPrep, we believe that every pharmacy graduate deserves the best possible chance to pass their GPhC pre-registration exam on their first attempt. Our mission is to provide comprehensive, high-quality exam preparation resources that are accessible, effective, and tailored to the real exam experience.
+                At MRCPPACESPREP, we believe that every pharmacy graduate deserves the best possible chance to pass their MRCP PACES pre-registration exam on their first attempt. Our mission is to provide comprehensive, high-quality exam preparation resources that are accessible, effective, and tailored to the real exam experience.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                We understand that failing the GPhC exam means not just a 6-month delay in your career, but also significant financial and emotional stress. That's why we've dedicated ourselves to creating the most effective exam preparation platform in the UK.
+                We understand that failing the MRCP PACES exam means not just a 6-month delay in your career, but also significant financial and emotional stress. That's why we've dedicated ourselves to creating the most effective exam preparation platform in the UK.
               </p>
               <div className="flex items-center space-x-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
@@ -142,7 +142,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">The Problem</h3>
-              <p className="text-gray-600">We noticed that despite the wealth of pharmacy knowledge students possess, many struggle with the specific format and time pressure of the GPhC exam. Traditional study methods weren't adequately preparing students for the real exam experience.</p>
+              <p className="text-gray-600">We noticed that despite the wealth of pharmacy knowledge students possess, many struggle with the specific format and time pressure of the MRCP PACES exam. Traditional study methods weren't adequately preparing students for the real exam experience.</p>
             </div>
 
             <div className="text-center">
@@ -152,7 +152,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">The Solution</h3>
-              <p className="text-gray-600">We created a platform that mirrors the actual exam experience while providing detailed explanations and personalized feedback. Our questions are written by practicing pharmacists who have recently taken the exam themselves.</p>
+              <p className="text-gray-600">We created a platform that mirrors the actual exam experience while providing detailed explanations and personalized feedback. Our questions are written by practicing physicians who have recently taken the exam themselves.</p>
             </div>
 
             <div className="text-center">
@@ -162,7 +162,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">The Results</h3>
-              <p className="text-gray-600">Since launching, we've helped over 8,500 students pass their GPhC exam, with a 94% first-time pass rate. Our students consistently report feeling more confident and better prepared than their peers.</p>
+              <p className="text-gray-600">Since launching, we've helped over 8,500 students pass their MRCP PACES exam, with a 94% first-time pass rate. Our students consistently report feeling more confident and better prepared than their peers.</p>
             </div>
           </div>
         </div>
@@ -183,7 +183,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">Pharmacist-Verified Content</h3>
-              <p className="text-gray-600">All our questions and explanations are created and reviewed by qualified pharmacists with recent GPhC exam experience</p>
+              <p className="text-gray-600">All our questions and explanations are created and reviewed by qualified physicians with recent MRCP PACES exam experience</p>
             </div>
 
             <div className="text-center">
@@ -193,7 +193,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">Regular Updates</h3>
-              <p className="text-gray-600">We continuously update our content based on current GPhC guidelines, student feedback, and changes in pharmacy practice</p>
+              <p className="text-gray-600">We continuously update our content based on current MRCP PACES guidelines, student feedback, and changes in pharmacy practice</p>
             </div>
 
             <div className="text-center">
@@ -224,7 +224,7 @@ export default function AboutPage() {
                 ))}
               </div>
               <p className="mb-6 text-gray-600">
-                "PreRegExamPrep was a game-changer for me. I failed my first attempt scoring only 48%, but after using this platform for 3 months, I passed with 76%! The detailed explanations really helped me understand concepts I was struggling with."
+                "MRCPPACESPREP was a game-changer for me. I failed my first attempt scoring only 48%, but after using this platform for 3 months, I passed with 76%! The detailed explanations really helped me understand concepts I was struggling with."
               </p>
               <div className="border-t pt-4">
                 <p className="font-semibold text-gray-900">Priya Patel</p>
@@ -296,9 +296,9 @@ export default function AboutPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
 
@@ -334,7 +334,7 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

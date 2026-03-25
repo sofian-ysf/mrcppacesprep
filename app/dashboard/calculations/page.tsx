@@ -298,7 +298,7 @@ export default function CalculationsPracticePage() {
                 <span className="text-sm text-gray-500">{totalAvailableQuestions} total questions</span>
               </div>
               <p className="text-gray-600 mb-6">
-                Master the most challenging part of the GPhC exam with step-by-step calculation practice.
+                Master the most challenging part of the MRCP PACES exam with step-by-step calculation practice.
               </p>
 
               {/* Category Overview */}

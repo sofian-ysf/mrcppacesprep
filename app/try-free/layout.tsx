@@ -1,26 +1,26 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Try Free GPhC Practice Questions | No Sign-Up Required',
-  description: 'Practice 15 free GPhC exam questions with detailed explanations. 5 calculations + 10 clinical questions. Interactive practice with study tips. No account needed.',
+  title: 'Try Free MRCP PACES Practice Questions | No Sign-Up Required',
+  description: 'Practice 15 free MRCP PACES exam questions with detailed explanations. 5 calculations + 10 clinical questions. Interactive practice with study tips. No account needed.',
   keywords: [
-    'free GPhC questions',
-    'GPhC practice test',
+    'free MRCP PACES questions',
+    'MRCP PACES practice test',
     'pharmacy exam demo',
     'free calculation questions',
-    'GPhC trial',
+    'MRCP PACES trial',
     'pharmacy practice questions free',
     'pre-registration exam sample'
   ],
   openGraph: {
-    title: 'Try 15 Free GPhC Practice Questions',
+    title: 'Try 15 Free MRCP PACES Practice Questions',
     description: 'Interactive practice with detailed explanations. No sign-up required.',
-    url: 'https://www.preregexamprep.com/try-free',
+    url: 'https://www.mrcppacesprep.com/try-free',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Try 15 Free GPhC Practice Questions',
+    title: 'Try 15 Free MRCP PACES Practice Questions',
     description: 'Interactive practice with detailed explanations. No sign-up required.',
   },
   alternates: {

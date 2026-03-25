@@ -1,5 +1,5 @@
 const INDEXNOW_KEY = '8a10754b7a51a7b60b26ee723f619dd2'
-const SITE_HOST = 'www.preregexamprep.com'
+const SITE_HOST = 'www.mrcppacesprep.com'
 const BASE_URL = `https://${SITE_HOST}`
 
 /**

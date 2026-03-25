@@ -66,12 +66,12 @@ git commit -m "feat: add FAQPage schema to help page (22 FAQs)"
 - Modify: `/app/page.tsx`
 
 **FAQ Content (6 questions):**
-1. What is the GPhC pre-registration exam?
-2. How many questions are on the GPhC exam?
-3. What is the GPhC exam pass rate?
-4. How long should I study for the GPhC exam?
-5. Is PreRegExamPrep worth it?
-6. Can I try PreRegExamPrep for free?
+1. What is the MRCP PACES pre-registration exam?
+2. How many questions are on the MRCP PACES exam?
+3. What is the MRCP PACES exam pass rate?
+4. How long should I study for the MRCP PACES exam?
+5. Is MRCPPACESPREP worth it?
+6. Can I try MRCPPACESPREP for free?
 
 **Steps:**
 1. Import FAQSection component
@@ -106,36 +106,36 @@ git commit -m "feat: add FAQ section to try-free page (5 FAQs)"
 
 ---
 
-## Task 5: Add FAQs to GPhC Exam Guide Page
+## Task 5: Add FAQs to MRCP PACES Exam Guide Page
 
 **Files:**
 - Modify: `/app/gphc-exam-guide/page.tsx`
 
 **FAQ Content (8 questions):**
-1. When is the GPhC exam in 2026?
-2. What is the GPhC exam pass mark?
-3. What question types are on the GPhC exam?
-4. How do I register for the GPhC exam?
-5. Can I use a calculator in the GPhC exam?
-6. What happens if I fail the GPhC exam?
-7. How long are GPhC exam results valid?
-8. What ID do I need for the GPhC exam?
+1. When is the MRCP PACES exam in 2026?
+2. What is the MRCP PACES exam pass mark?
+3. What question types are on the MRCP PACES exam?
+4. How do I register for the MRCP PACES exam?
+5. Can I use a calculator in the MRCP PACES exam?
+6. What happens if I fail the MRCP PACES exam?
+7. How long are MRCP PACES exam results valid?
+8. What ID do I need for the MRCP PACES exam?
 
 **Steps:** Import, add data, add component, test, commit
 
 ```bash
-git commit -m "feat: add FAQ section to GPhC exam guide (8 FAQs)"
+git commit -m "feat: add FAQ section to MRCP PACES exam guide (8 FAQs)"
 ```
 
 ---
 
-## Task 6: Add FAQs to GPhC Practice Questions Page
+## Task 6: Add FAQs to MRCP PACES Practice Questions Page
 
 **Files:**
 - Modify: `/app/gphc-practice-questions/page.tsx`
 
 **FAQ Content (6 questions):**
-1. How similar are your questions to the real GPhC exam?
+1. How similar are your questions to the real MRCP PACES exam?
 2. How many practice questions do you have?
 3. What difficulty levels are the questions?
 4. Do practice questions have explanations?
@@ -156,11 +156,11 @@ git commit -m "feat: add FAQ section to practice questions page (6 FAQs)"
 - Modify: `/app/testimonials/page.tsx`
 
 **FAQ Content (5 questions):**
-1. Do students actually pass using PreRegExamPrep?
+1. Do students actually pass using MRCPPACESPREP?
 2. How long do successful students study?
-3. Is PreRegExamPrep worth the money?
+3. Is MRCPPACESPREP worth the money?
 4. What do students say about the questions?
-5. Can international graduates use PreRegExamPrep?
+5. Can international graduates use MRCPPACESPREP?
 
 **Steps:** Import, add data, add component, test, commit
 

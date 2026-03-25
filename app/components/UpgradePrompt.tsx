@@ -82,7 +82,7 @@ function getPersonalizedMessage(trial: TrialInfo | null | undefined, reason: str
     case 'calculation_blocked':
       return {
         title: 'Unlock Calculation Questions',
-        message: 'Pharmaceutical calculations are essential for the GPhC exam. Subscribe to access 500+ calculation problems with step-by-step solutions.'
+        message: 'Pharmaceutical calculations are essential for the MRCP PACES exam. Subscribe to access 500+ calculation problems with step-by-step solutions.'
       }
     default:
       if (trial && trial.questionsRemaining > 0) {
@@ -93,7 +93,7 @@ function getPersonalizedMessage(trial: TrialInfo | null | undefined, reason: str
       }
       return {
         title: 'Unlock Full Access',
-        message: 'Subscribe to practice questions, take mock exams, and track your progress towards GPhC exam success.'
+        message: 'Subscribe to practice questions, take mock exams, and track your progress towards MRCP PACES exam success.'
       }
   }
 }

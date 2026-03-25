@@ -2,13 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | PreRegExamPrep',
-  description: 'PreRegExamPrep privacy policy. Learn how we collect, use, and protect your personal information on our GPhC exam preparation platform.',
-  keywords: 'privacy policy, data protection, PreRegExamPrep, GPhC exam prep',
+  title: 'Privacy Policy | MRCPPACESPREP',
+  description: 'MRCPPACESPREP privacy policy. Learn how we collect, use, and protect your personal information on our MRCP PACES exam preparation platform.',
+  keywords: 'privacy policy, data protection, MRCPPACESPREP, MRCP PACES exam prep',
   openGraph: {
-    title: 'Privacy Policy | PreRegExamPrep',
+    title: 'Privacy Policy | MRCPPACESPREP',
     description: 'Learn how we protect your privacy and handle your data.',
-    url: 'https://preregexamprep.com/privacy',
+    url: 'https://mrcppacesprep.com/privacy',
   },
   alternates: {
     canonical: '/privacy',
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-700 mb-4">
-                Welcome to PreRegExamPrep ("we," "our," or "us"). We are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our GPhC pre-registration exam preparation platform.
+                Welcome to MRCPPACESPREP ("we," "our," or "us"). We are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our MRCP PACES pre-registration exam preparation platform.
               </p>
               <p className="text-gray-700 mb-4">
                 By using our services, you agree to the collection and use of information in accordance with this policy.
@@ -163,8 +163,8 @@ export default function PrivacyPage() {
                 If you have any questions about this Privacy Policy or our data practices, please contact us at:
               </p>
               <div className="bg-[#fbfaf4] p-4 rounded-lg">
-                <p className="text-gray-700 mb-2"><strong>Email:</strong> team@preregexamprep.com</p>
-                <p className="text-gray-700 mb-2"><strong>Address:</strong> PreRegExamPrep, London, United Kingdom</p>
+                <p className="text-gray-700 mb-2"><strong>Email:</strong> team@mrcppacesprep.com</p>
+                <p className="text-gray-700 mb-2"><strong>Address:</strong> MRCPPACESPREP, London, United Kingdom</p>
                 <p className="text-gray-700"><strong>Response Time:</strong> We aim to respond to all privacy inquiries within 7 business days</p>
               </div>
             </section>
@@ -177,9 +177,9 @@ export default function PrivacyPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
 
@@ -215,7 +215,7 @@ export default function PrivacyPage() {
           </div>
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

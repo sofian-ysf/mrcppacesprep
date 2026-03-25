@@ -5,23 +5,23 @@ import { RelatedPages } from '@/app/components/seo/RelatedPages'
 import FAQSection from '@/app/components/FAQSection'
 
 export const metadata: Metadata = {
-  title: 'GPhC Practice Questions 2026 | 2000+ Questions | 94% Pass Rate',
-  description: 'Practice GPhC exam questions online. 2000+ questions with detailed answers. SBA, EMQ & calculations. 94% pass rate. Start preparing today.',
+  title: 'MRCP PACES Practice Questions 2026 | 2000+ Questions | 94% Pass Rate',
+  description: 'Practice MRCP PACES exam questions online. 2000+ questions with detailed answers. SBA, EMQ & calculations. 94% pass rate. Start preparing today.',
   keywords: [
-    'GPhC practice questions', 'GPhC exam practice', 'pharmacy practice questions UK',
-    'pre-reg practice questions', 'GPhC mock questions', 'pharmacy exam practice',
-    'GPhC practice test online', 'GPhC questions 2026', 'GPhC revision questions',
+    'MRCP PACES practice questions', 'MRCP PACES exam practice', 'pharmacy practice questions UK',
+    'pre-reg practice questions', 'MRCP PACES mock questions', 'pharmacy exam practice',
+    'MRCP PACES practice test online', 'MRCP PACES questions 2026', 'MRCP PACES revision questions',
     'pharmaceutical calculations practice', 'clinical pharmacy questions practice'
   ],
   openGraph: {
-    title: 'GPhC Practice Questions 2026 | 2000+ Questions | 94% Pass Rate',
-    description: 'Practice GPhC exam questions online. 2000+ questions with detailed answers. Start preparing today.',
-    url: 'https://www.preregexamprep.com/gphc-practice-questions',
+    title: 'MRCP PACES Practice Questions 2026 | 2000+ Questions | 94% Pass Rate',
+    description: 'Practice MRCP PACES exam questions online. 2000+ questions with detailed answers. Start preparing today.',
+    url: 'https://www.mrcppacesprep.com/gphc-practice-questions',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPhC Practice Questions 2026 | 94% Pass Rate',
-    description: '2000+ GPhC practice questions. Start preparing today!'
+    title: 'MRCP PACES Practice Questions 2026 | 94% Pass Rate',
+    description: '2000+ MRCP PACES practice questions. Start preparing today!'
   },
   alternates: {
     canonical: '/gphc-practice-questions',
@@ -30,12 +30,12 @@ export const metadata: Metadata = {
 
 const practiceQuestionsFAQs = [
   {
-    question: "How similar are your questions to the real GPhC exam?",
-    answer: "Very similar. Our questions are written by recently-qualified pharmacists using the GPhC framework. Students often say our questions are slightly harder, which better prepares them."
+    question: "How similar are your questions to the real MRCP PACES exam?",
+    answer: "Very similar. Our questions are written by recently-qualified physicians using the MRCP PACES framework. Students often say our questions are slightly harder, which better prepares them."
   },
   {
     question: "How many practice questions do you have?",
-    answer: "Over 2,000 questions across all GPhC topics: calculations (350+), clinical pharmacy (400+), therapeutics (400+), law & ethics (300+), pharmacology (350+), and more."
+    answer: "Over 2,000 questions across all MRCP PACES topics: calculations (350+), clinical pharmacy (400+), therapeutics (400+), law & ethics (300+), pharmacology (350+), and more."
   },
   {
     question: "What difficulty levels are the questions?",
@@ -55,25 +55,25 @@ const practiceQuestionsFAQs = [
   }
 ]
 
-export default function GPhCPracticeQuestionsPage() {
+export default function MRCP PACESPracticeQuestionsPage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How many GPhC practice questions do you have?",
+        "name": "How many MRCP PACES practice questions do you have?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We have over 2000 GPhC practice questions covering all exam topics including calculations, clinical pharmacy, law and ethics, pharmaceutics, and pharmacology."
+          "text": "We have over 2000 MRCP PACES practice questions covering all exam topics including calculations, clinical pharmacy, law and ethics, pharmaceutics, and pharmacology."
         }
       },
       {
         "@type": "Question",
-        "name": "Are your practice questions similar to the real GPhC exam?",
+        "name": "Are your practice questions similar to the real MRCP PACES exam?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, our questions are written by registered pharmacists who have recently passed the exam. Many students report our questions are slightly harder than the actual exam, helping them feel more prepared."
+          "text": "Yes, our questions are written by registered physicians who have recently passed the exam. Many students report our questions are slightly harder than the actual exam, helping them feel more prepared."
         }
       },
       {
@@ -81,7 +81,7 @@ export default function GPhCPracticeQuestionsPage() {
         "name": "What question formats are included?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We include all GPhC exam formats: Single Best Answer (SBA) questions, Extended Matching Questions (EMQ), and pharmaceutical calculation questions."
+          "text": "We include all MRCP PACES exam formats: Single Best Answer (SBA) questions, Extended Matching Questions (EMQ), and pharmaceutical calculation questions."
         }
       }
     ]
@@ -102,11 +102,11 @@ export default function GPhCPracticeQuestionsPage() {
           <div className="mx-auto max-w-7xl">
             <div className="text-center">
               <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-                GPhC Practice Questions 2026
+                MRCP PACES Practice Questions 2026
                 <span className="block text-gray-600 text-3xl mt-2">2000+ Questions with Detailed Explanations</span>
               </h1>
               <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
-                Practice with exam-style questions written by pharmacists who recently passed. Get instant feedback, track your progress, and build confidence for exam day.
+                Practice with exam-style questions written by physicians who recently passed. Get instant feedback, track your progress, and build confidence for exam day.
               </p>
               <div className="mt-10 flex gap-4 justify-center flex-col sm:flex-row">
                 <Link
@@ -154,7 +154,7 @@ export default function GPhCPracticeQuestionsPage() {
         <section id="question-types" className="px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              Practice All GPhC Question Formats
+              Practice All MRCP PACES Question Formats
             </h2>
 
             <div className="grid gap-8 md:grid-cols-3">
@@ -165,7 +165,7 @@ export default function GPhCPracticeQuestionsPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Single Best Answer (SBA)</h3>
-                <p className="text-gray-600 mb-4">Choose the single best answer from 5 options. The most common format in the GPhC exam.</p>
+                <p className="text-gray-600 mb-4">Choose the single best answer from 5 options. The most common format in the MRCP PACES exam.</p>
                 <span className="text-sm text-blue-600 font-semibold">1,200+ questions available</span>
               </div>
 
@@ -198,7 +198,7 @@ export default function GPhCPracticeQuestionsPage() {
         <section className="bg-[#fbfaf4] px-4 py-20 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl">
             <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-              GPhC Practice Questions by Topic
+              MRCP PACES Practice Questions by Topic
             </h2>
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -239,7 +239,7 @@ export default function GPhCPracticeQuestionsPage() {
         {/* FAQ Section */}
         <FAQSection
           faqs={practiceQuestionsFAQs}
-          title="GPhC Practice Questions - FAQ"
+          title="MRCP PACES Practice Questions - FAQ"
           className="py-16 px-4 sm:px-6 lg:px-8 bg-white"
           disableSchema={true}
         />
@@ -255,7 +255,7 @@ export default function GPhCPracticeQuestionsPage() {
         <section className="bg-gray-900 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Start Practicing GPhC Questions Today
+              Start Practicing MRCP PACES Questions Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join 8,500+ students who passed their exam
@@ -273,7 +273,7 @@ export default function GPhCPracticeQuestionsPage() {
         {/* Footer */}
         <footer className="border-t border-gray-200 bg-white px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </footer>

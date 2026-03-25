@@ -49,7 +49,7 @@ const explanations = [
         C: "Sitagliptin requires dose reduction: 50mg if eGFR 30-45, 25mg if eGFR <30.",
         D: "Empagliflozin requires monitoring as its glucose-lowering efficacy is reduced at lower eGFR levels."
       },
-      exam_tip: "For GPhC questions about diabetes medications, always consider renal function. If the question mentions 'which requires monitoring', think about ALL drugs requiring renal assessment.",
+      exam_tip: "For MRCP PACES questions about diabetes medications, always consider renal function. If the question mentions 'which requires monitoring', think about ALL drugs requiring renal assessment.",
       related_topics: ["diabetes-management", "renal-dosing", "metformin-safety"]
     }
   },

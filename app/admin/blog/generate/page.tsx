@@ -245,7 +245,7 @@ export default function BlogGeneratePage() {
               type="text"
               value={topic}
               onChange={(e) => setTopic(e.target.value)}
-              placeholder="e.g., How to Pass Your GPhC Pre-Registration Exam First Time"
+              placeholder="e.g., How to Pass Your MRCP PACES Pre-Registration Exam First Time"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
             />
             <p className="text-xs text-gray-500 mt-1">
@@ -288,7 +288,7 @@ export default function BlogGeneratePage() {
               type="text"
               value={targetKeywords}
               onChange={(e) => setTargetKeywords(e.target.value)}
-              placeholder="e.g., GPhC exam tips, pharmacy revision, pre-reg exam"
+              placeholder="e.g., MRCP PACES exam tips, pharmacy revision, pre-reg exam"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
             />
             <p className="text-xs text-gray-500 mt-1">

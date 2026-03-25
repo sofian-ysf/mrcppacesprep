@@ -248,7 +248,7 @@ export const demoQuestions: DemoQuestion[] = [
         'B': 'Trimethoprim inhibits CYP2C9 and can increase INR by 50-100%, risking serious bleeding.',
         'D': 'Co-amoxiclav disrupts gut flora affecting vitamin K synthesis and has moderate interaction potential.'
       },
-      exam_tip: 'Warfarin interactions are a GPhC favourite. Know which drugs inhibit CYP2C9 (S-warfarin) and CYP1A2/3A4 (R-warfarin).',
+      exam_tip: 'Warfarin interactions are a MRCP PACES favourite. Know which drugs inhibit CYP2C9 (S-warfarin) and CYP1A2/3A4 (R-warfarin).',
       study_tip: 'Mnemonic for warfarin potentiators: "SICKFACES.COM" - Sulfonamides, Isoniazid, Cimetidine, Ketoconazole, Fluconazole, Amiodarone, Ciprofloxacin, Erythromycin, SSRIs, Co-trimoxazole, Omeprazole, Metronidazole'
     }
   },

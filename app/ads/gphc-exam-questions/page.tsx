@@ -2,15 +2,15 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'GPhC Exam Questions 2026 | 94% Pass Rate',
-  description: 'Practice 2000+ GPhC exam questions. 94% pass rate. SBA, EMQ & calculations with detailed explanations.',
+  title: 'MRCP PACES Exam Questions 2026 | 94% Pass Rate',
+  description: 'Practice 2000+ MRCP PACES exam questions. 94% pass rate. SBA, EMQ & calculations with detailed explanations.',
   robots: {
     index: false, // Don't index ad landing pages
     follow: false,
   },
 }
 
-export default function AdsGPhCExamQuestionsPage() {
+export default function AdsMRCP PACESExamQuestionsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Simplified Hero - No Navigation */}
@@ -25,10 +25,10 @@ export default function AdsGPhCExamQuestionsPage() {
           </div>
 
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            GPhC Exam Questions 2026
+            MRCP PACES Exam Questions 2026
           </h1>
           <p className="mt-6 text-xl text-gray-600">
-            2,000+ practice questions written by pharmacists. SBA, EMQ, and calculations with detailed explanations.
+            2,000+ practice questions written by physicians. SBA, EMQ, and calculations with detailed explanations.
           </p>
 
           {/* CTA */}
@@ -129,7 +129,7 @@ export default function AdsGPhCExamQuestionsPage() {
             Start Practicing Today
           </h2>
           <p className="text-gray-300 mb-8">
-            Join 8,500+ students who passed their GPhC exam
+            Join 8,500+ students who passed their MRCP PACES exam
           </p>
           <Link
             href="/signup"

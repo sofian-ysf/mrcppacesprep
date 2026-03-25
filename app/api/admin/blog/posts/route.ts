@@ -116,7 +116,7 @@ export async function POST(request: NextRequest) {
         excerpt: postData.excerpt || '',
         content: postData.content,
         featured_image: postData.featured_image,
-        author_name: postData.author_name || 'PreRegExamPrep Team',
+        author_name: postData.author_name || 'MRCPPACESPREP Team',
         author_title: postData.author_title,
         read_time_minutes: postData.read_time_minutes || 5,
         tags: postData.tags || [],

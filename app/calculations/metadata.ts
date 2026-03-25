@@ -1,28 +1,28 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'GPhC Calculation Questions 2026 | Pharmaceutical Calculations Practice',
-  description: 'Master pharmaceutical calculations for your GPhC exam. 350+ calculation questions covering dosage, dilutions, infusion rates, concentrations. Step-by-step solutions.',
+  title: 'MRCP PACES Clinical Calculations 2026 | Medical Calculations Practice',
+  description: 'Master clinical calculations for your MRCP PACES exam. 350+ calculation questions covering dosage, drug calculations, infusion rates. Step-by-step solutions.',
   keywords: [
-    'GPhC calculation questions',
-    'pharmaceutical calculations practice',
-    'pharmacy dosage calculations',
+    'MRCP PACES calculation questions',
+    'medical calculations practice',
+    'clinical dosage calculations',
     'infusion rate calculations',
-    'concentration calculations pharmacy',
-    'GPhC maths questions',
-    'pharmacy calculation practice UK',
-    'dilution calculations pharmacy',
+    'drug calculations medical',
+    'MRCP PACES maths questions',
+    'medical calculation practice UK',
+    'clinical calculations medicine',
   ].join(', '),
   openGraph: {
-    title: 'GPhC Calculation Questions 2026 | Practice Pharmaceutical Calculations',
-    description: '350+ pharmaceutical calculation questions with step-by-step solutions. Master dosage, dilutions, and infusion rates.',
-    url: 'https://www.preregexamprep.com/calculations',
+    title: 'MRCP PACES Clinical Calculations 2026 | Practice Medical Calculations',
+    description: '350+ medical calculation questions with step-by-step solutions. Master dosage, drug calculations, and infusion rates.',
+    url: 'https://www.mrcppacesprep.com/calculations',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GPhC Calculation Questions | Pharmaceutical Calculations',
-    description: '350+ calculation questions with step-by-step solutions. Pass your GPhC exam.',
+    title: 'MRCP PACES Calculation Questions | Medical Calculations',
+    description: '350+ calculation questions with step-by-step solutions. Pass your MRCP PACES exam.',
   },
   alternates: {
     canonical: '/calculations',

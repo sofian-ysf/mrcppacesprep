@@ -77,7 +77,7 @@ export function getTrialExpiringEmail(userEmail: string, daysRemaining: number, 
                                                         <tr>
                                                             <td style="text-align: left;">
                                                                 <div class="header-text" style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: #333333; transform: scaleY(0.85); transform-origin: top;">
-                                                                    PreRegExamPrep
+                                                                    MRCPPACESPREP
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -120,7 +120,7 @@ export function getTrialExpiringEmail(userEmail: string, daysRemaining: number, 
                                                                     </p>
 
                                                                     <p style="margin: 0 0 20px 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; color: #333333; line-height: 1.6;">
-                                                                        Your free trial of PreRegExamPrep is coming to an end. Subscribe now to maintain access to all our GPhC exam preparation resources.
+                                                                        Your free trial of MRCPPACESPREP is coming to an end. Subscribe now to maintain access to all our MRCP PACES exam preparation resources.
                                                                     </p>
 
                                                                     <div style="background-color: #e8e9eb; border-radius: 6px; padding: 20px; margin: 25px 0;">
@@ -129,7 +129,7 @@ export function getTrialExpiringEmail(userEmail: string, daysRemaining: number, 
                                                                         </p>
                                                                         <ul style="margin: 0; padding-left: 20px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #555555; line-height: 1.8;">
                                                                             <li>Unlimited access to 2000+ practice questions</li>
-                                                                            <li>Full mock exams simulating the real GPhC assessment</li>
+                                                                            <li>Full mock exams simulating the real MRCP PACES assessment</li>
                                                                             <li>Detailed explanations for every question</li>
                                                                             <li>Performance tracking and analytics</li>
                                                                             <li>Study guides and resources</li>
@@ -140,7 +140,7 @@ export function getTrialExpiringEmail(userEmail: string, daysRemaining: number, 
                                                                     <table class="button_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                                                         <tr>
                                                                             <td style="text-align: left; padding: 10px 0;">
-                                                                                <a href="https://www.preregexamprep.com/pricing" target="_blank" style="text-decoration: none; display: inline-block; color: #ffffff; background-color: #000000; border-radius: 4px; width: auto; border: 0; padding: 12px 24px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; text-align: center; mso-border-alt: none; word-break: keep-all;">
+                                                                                <a href="https://www.mrcppacesprep.com/pricing" target="_blank" style="text-decoration: none; display: inline-block; color: #ffffff; background-color: #000000; border-radius: 4px; width: auto; border: 0; padding: 12px 24px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; text-align: center; mso-border-alt: none; word-break: keep-all;">
                                                                                     Subscribe Now
                                                                                 </a>
                                                                             </td>
@@ -154,7 +154,7 @@ export function getTrialExpiringEmail(userEmail: string, daysRemaining: number, 
                                                                     </div>
 
                                                                     <p style="margin: 25px 0 0 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #666666; line-height: 1.6;">
-                                                                        Questions? Reply to this email or contact us at <a href="mailto:team@preregexamprep.com" style="color: #000000;">team@preregexamprep.com</a>
+                                                                        Questions? Reply to this email or contact us at <a href="mailto:team@mrcppacesprep.com" style="color: #000000;">team@mrcppacesprep.com</a>
                                                                     </p>
                                                                 </div>
                                                             </td>
@@ -182,10 +182,10 @@ export function getTrialExpiringEmail(userEmail: string, daysRemaining: number, 
                                                         <tr>
                                                             <td style="text-align: left;">
                                                                 <div style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #666666;">
-                                                                    <a href="https://www.preregexamprep.com/" target="_blank" style="color: #666666; text-decoration: none;">preregexamprep.com</a>
+                                                                    <a href="https://www.mrcppacesprep.com/" target="_blank" style="color: #666666; text-decoration: none;">mrcppacesprep.com</a>
                                                                 </div>
                                                                 <div style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 12px; color: #999999; margin-top: 10px;">
-                                                                    You're receiving this because you signed up for PreRegExamPrep.
+                                                                    You're receiving this because you signed up for MRCPPACESPREP.
                                                                 </div>
                                                             </td>
                                                         </tr>

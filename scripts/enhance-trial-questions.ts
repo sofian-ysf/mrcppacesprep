@@ -77,7 +77,7 @@ async function generateStructuredExplanation(
     messages: [
       {
         role: 'system',
-        content: `You are an expert pharmacy educator creating detailed, structured explanations for GPhC pre-registration exam questions.
+        content: `You are an expert pharmacy educator creating detailed, structured explanations for MRCP PACES pre-registration exam questions.
 
 Your explanations should be:
 - Educational and memorable

@@ -5,11 +5,11 @@ import Script from 'next/script';
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "GPhC Exam Study Resources",
-  "description": "Comprehensive GPhC exam study resources including guides, formula sheets, clinical references, and exam strategies. Created by pharmacists.",
+  "name": "MRCP PACES Exam Study Resources",
+  "description": "Comprehensive MRCP PACES exam study resources including guides, formula sheets, clinical references, and exam strategies. Created by physicians.",
   "brand": {
     "@type": "Organization",
-    "name": "PreRegExamPrep"
+    "name": "MRCPPACESPREP"
   },
   "category": "Educational Materials",
   "offers": {
@@ -54,7 +54,7 @@ const faqSchema = {
       "name": "Who created the study resources?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "All materials created by qualified pharmacists with recent GPhC exam experience. Expert-verified content."
+        "text": "All materials created by qualified physicians with recent MRCP PACES exam experience. Expert-verified content."
       }
     },
     {
@@ -62,7 +62,7 @@ const faqSchema = {
       "name": "Are resources updated regularly?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Content updated for 2025 GPhC framework. Regular reviews ensure alignment with current BNF and guidelines."
+        "text": "Yes. Content updated for 2025 MRCP PACES framework. Regular reviews ensure alignment with current BNF and guidelines."
       }
     },
     {
@@ -93,13 +93,13 @@ export default function ResourcesSEO() {
       />
 
       <div className="sr-only" aria-hidden="true">
-        <h1>GPhC Exam Resources UK | Study Guides | Formula Sheets | £30/month</h1>
+        <h1>MRCP PACES Exam Resources UK | Study Guides | Formula Sheets | £30/month</h1>
         <h2>Comprehensive Study Materials Created by Pharmacists - Pass Your Pre-Reg First Time</h2>
 
         <p>
-          Access comprehensive GPhC exam study resources including calculation guides, clinical references,
-          BNF summaries, formula sheets, and proven exam strategies. Created by qualified pharmacists.
-          Updated for 2025 GPhC framework. 94% pass rate. From £30/month.
+          Access comprehensive MRCP PACES exam study resources including calculation guides, clinical references,
+          BNF summaries, formula sheets, and proven exam strategies. Created by qualified physicians.
+          Updated for 2025 MRCP PACES framework. 94% pass rate. From £30/month.
         </p>
 
         <h3>Study Resources Available</h3>
@@ -119,14 +119,14 @@ export default function ResourcesSEO() {
           <li>Mobile-friendly access</li>
           <li>Regular content updates</li>
           <li>BNF-aligned information</li>
-          <li>Created by pharmacists</li>
+          <li>Created by physicians</li>
         </ul>
 
-        <h3>GPhC Resources UK Locations</h3>
+        <h3>MRCP PACES Resources UK Locations</h3>
         <ul>
-          <li>GPhC Resources London</li>
+          <li>MRCP PACES Resources London</li>
           <li>Pharmacy Study Materials Manchester</li>
-          <li>GPhC Guides Birmingham</li>
+          <li>MRCP PACES Guides Birmingham</li>
           <li>Pre-Reg Resources Leeds</li>
           <li>Pharmacy Resources Glasgow</li>
         </ul>
@@ -144,9 +144,9 @@ export default function ResourcesSEO() {
         </ul>
 
         <p>
-          Keywords: GPhC exam resources, GPhC study materials, pharmacy calculation guide, GPhC formula sheet,
-          pre-reg exam resources, pharmacy revision notes, BNF summary guide, GPhC exam tips,
-          clinical pharmacy reference, pharmacy law summary, drug interaction guide, GPhC exam strategy,
+          Keywords: MRCP PACES exam resources, MRCP PACES study materials, pharmacy calculation guide, MRCP PACES formula sheet,
+          pre-reg exam resources, pharmacy revision notes, BNF summary guide, MRCP PACES exam tips,
+          clinical pharmacy reference, pharmacy law summary, drug interaction guide, MRCP PACES exam strategy,
           pharmacy study guides UK, pre-registration resources, exam preparation materials
         </p>
       </div>

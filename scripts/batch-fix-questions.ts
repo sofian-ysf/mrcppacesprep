@@ -60,7 +60,7 @@ async function evaluateDifficulty(
     max_tokens: 1000,
     messages: [{
       role: 'user',
-      content: `You are an expert GPhC exam assessor. Evaluate this UK pharmacy pre-registration exam question's difficulty.
+      content: `You are an expert MRCP PACES exam assessor. Evaluate this UK pharmacy pre-registration exam question's difficulty.
 
 DIFFICULTY CRITERIA:
 
@@ -220,7 +220,7 @@ async function generateStructuredExplanation(
     max_tokens: 2000,
     messages: [{
       role: 'user',
-      content: `You are an expert UK pharmacy educator creating detailed explanations for GPhC pre-registration exam questions.
+      content: `You are an expert UK pharmacy educator creating detailed explanations for MRCP PACES pre-registration exam questions.
 
 CATEGORY: ${categoryName}
 QUESTION TYPE: ${questionType}
@@ -364,7 +364,7 @@ async function verifyUKGuidelines(
 Your knowledge includes:
 - British National Formulary (BNF) - current edition 2025-2026
 - NICE guidelines and technology appraisals
-- GPhC standards and requirements
+- MRCP PACES standards and requirements
 - MHRA guidance
 - UK-specific drug formulations and brand names
 - Controlled Drugs schedules (UK)
@@ -509,7 +509,7 @@ async function main() {
   const limit = parseInt(args[1]) || 50
 
   console.log('╔════════════════════════════════════════════════════════════╗')
-  console.log('║     PreRegExamPrep - Question Quality Improvement          ║')
+  console.log('║     MRCPPACESPREP - Question Quality Improvement          ║')
   console.log('║     Using Claude Opus 4.6 (Most Capable Model)             ║')
   console.log('╚════════════════════════════════════════════════════════════╝')
 

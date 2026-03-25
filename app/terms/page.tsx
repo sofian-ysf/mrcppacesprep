@@ -2,13 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | PreRegExamPrep',
-  description: 'Terms of service for PreRegExamPrep. Read our terms and conditions for using our GPhC exam preparation platform.',
-  keywords: 'terms of service, terms and conditions, PreRegExamPrep, GPhC exam prep',
+  title: 'Terms of Service | MRCPPACESPREP',
+  description: 'Terms of service for MRCPPACESPREP. Read our terms and conditions for using our MRCP PACES exam preparation platform.',
+  keywords: 'terms of service, terms and conditions, MRCPPACESPREP, MRCP PACES exam prep',
   openGraph: {
-    title: 'Terms of Service | PreRegExamPrep',
-    description: 'Terms and conditions for using our GPhC exam preparation platform.',
-    url: 'https://preregexamprep.com/terms',
+    title: 'Terms of Service | MRCPPACESPREP',
+    description: 'Terms and conditions for using our MRCP PACES exam preparation platform.',
+    url: 'https://mrcppacesprep.com/terms',
   },
   alternates: {
     canonical: '/terms',
@@ -30,17 +30,17 @@ export default function TermsPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Agreement to Terms</h2>
               <p className="text-gray-700 mb-4">
-                By accessing and using PreRegExamPrep ("we," "our," or "us"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                By accessing and using MRCPPACESPREP ("we," "our," or "us"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
               <p className="text-gray-700 mb-4">
-                These Terms of Service govern your use of our GPhC pre-registration exam preparation platform, including all content, services, and products available at or through the website.
+                These Terms of Service govern your use of our MRCP PACES pre-registration exam preparation platform, including all content, services, and products available at or through the website.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Description of Service</h2>
               <p className="text-gray-700 mb-4">
-                PreRegExamPrep provides an online educational platform designed to help pharmacy students prepare for the General Pharmaceutical Council (GPhC) pre-registration examination. Our services include:
+                MRCPPACESPREP provides an online educational platform designed to help pharmacy students prepare for the General Pharmaceutical Council (MRCP PACES) pre-registration examination. Our services include:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>Practice questions and mock examinations</li>
@@ -96,7 +96,7 @@ export default function TermsPage() {
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">5.1 Permitted Use</h3>
               <p className="text-gray-700 mb-4">
-                You may use our platform solely for personal, non-commercial educational purposes to prepare for the GPhC pre-registration examination.
+                You may use our platform solely for personal, non-commercial educational purposes to prepare for the MRCP PACES pre-registration examination.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">5.2 Prohibited Activities</h3>
@@ -118,7 +118,7 @@ export default function TermsPage() {
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">6.1 Our Content</h3>
               <p className="text-gray-700 mb-4">
-                All content on our platform, including but not limited to text, graphics, logos, images, questions, explanations, and software, is the property of PreRegExamPrep or its content suppliers and is protected by copyright, trademark, and other intellectual property laws.
+                All content on our platform, including but not limited to text, graphics, logos, images, questions, explanations, and software, is the property of MRCPPACESPREP or its content suppliers and is protected by copyright, trademark, and other intellectual property laws.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">6.2 Limited License</h3>
@@ -151,7 +151,7 @@ export default function TermsPage() {
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">8.1 Educational Purpose Only</h3>
               <p className="text-gray-700 mb-4">
-                Our platform is designed for educational purposes only. We do not guarantee that using our service will result in passing the GPhC examination. Success depends on individual effort, study habits, and other factors beyond our control.
+                Our platform is designed for educational purposes only. We do not guarantee that using our service will result in passing the MRCP PACES examination. Success depends on individual effort, study habits, and other factors beyond our control.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">8.2 No Warranties</h3>
@@ -161,7 +161,7 @@ export default function TermsPage() {
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">8.3 Limitation of Liability</h3>
               <p className="text-gray-700 mb-4">
-                To the maximum extent permitted by law, PreRegExamPrep shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or other intangible losses.
+                To the maximum extent permitted by law, MRCPPACESPREP shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or other intangible losses.
               </p>
             </section>
 
@@ -204,8 +204,8 @@ export default function TermsPage() {
                 If you have any questions about these Terms of Service, please contact us at:
               </p>
               <div className="bg-[#fbfaf4] p-4 rounded-lg">
-                <p className="text-gray-700 mb-2"><strong>Email:</strong> team@preregexamprep.com</p>
-                <p className="text-gray-700 mb-2"><strong>Address:</strong> PreRegExamPrep, London, United Kingdom</p>
+                <p className="text-gray-700 mb-2"><strong>Email:</strong> team@mrcppacesprep.com</p>
+                <p className="text-gray-700 mb-2"><strong>Address:</strong> MRCPPACESPREP, London, United Kingdom</p>
                 <p className="text-gray-700"><strong>Response Time:</strong> We aim to respond to all inquiries within 3 business days</p>
               </div>
             </section>
@@ -218,9 +218,9 @@ export default function TermsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
 
@@ -256,7 +256,7 @@ export default function TermsPage() {
           </div>
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

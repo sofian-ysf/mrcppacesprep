@@ -72,7 +72,7 @@ export function getSubscriptionActiveEmail(userEmail: string): string {
                                                         <tr>
                                                             <td style="text-align: left;">
                                                                 <div class="header-text" style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: #333333; transform: scaleY(0.85); transform-origin: top;">
-                                                                    PreRegExamPrep
+                                                                    MRCPPACESPREP
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -106,7 +106,7 @@ export function getSubscriptionActiveEmail(userEmail: string): string {
                                                                     </h2>
 
                                                                     <p style="margin: 0 0 20px 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; color: #333333; line-height: 1.6;">
-                                                                        Thank you for subscribing to PreRegExamPrep. You now have full access to all our GPhC exam preparation resources.
+                                                                        Thank you for subscribing to MRCPPACESPREP. You now have full access to all our MRCP PACES exam preparation resources.
                                                                     </p>
 
                                                                     <!-- What's included -->
@@ -116,7 +116,7 @@ export function getSubscriptionActiveEmail(userEmail: string): string {
                                                                         </p>
                                                                         <ul style="margin: 0; padding-left: 20px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #555555; line-height: 1.8;">
                                                                             <li>2000+ practice questions with detailed explanations</li>
-                                                                            <li>Full mock exams simulating the real GPhC assessment</li>
+                                                                            <li>Full mock exams simulating the real MRCP PACES assessment</li>
                                                                             <li>Pharmaceutical calculations practice</li>
                                                                             <li>Performance tracking and analytics</li>
                                                                             <li>Study guides and resources</li>
@@ -128,12 +128,12 @@ export function getSubscriptionActiveEmail(userEmail: string): string {
                                                                         <tr>
                                                                             <td style="text-align: left; padding: 10px 0;">
                                                                                 <!--[if mso]>
-                                                                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.preregexamprep.com/questions" style="height:44px;width:180px;v-text-anchor:middle;" arcsize="9%" stroke="false" fillcolor="#000000">
+                                                                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.mrcppacesprep.com/questions" style="height:44px;width:180px;v-text-anchor:middle;" arcsize="9%" stroke="false" fillcolor="#000000">
                                                                                     <w:anchorlock/>
                                                                                     <v:textbox inset="0px,0px,0px,0px">
                                                                                         <center style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px">
                                                                                 <![endif]-->
-                                                                                <a href="https://www.preregexamprep.com/questions" target="_blank" style="text-decoration: none; display: inline-block; color: #ffffff; background-color: #000000; border-radius: 4px; width: auto; border: 0; padding: 12px 24px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; text-align: center; mso-border-alt: none; word-break: keep-all;">
+                                                                                <a href="https://www.mrcppacesprep.com/questions" target="_blank" style="text-decoration: none; display: inline-block; color: #ffffff; background-color: #000000; border-radius: 4px; width: auto; border: 0; padding: 12px 24px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; text-align: center; mso-border-alt: none; word-break: keep-all;">
                                                                                     Start Practising
                                                                                 </a>
                                                                                 <!--[if mso]>
@@ -157,7 +157,7 @@ export function getSubscriptionActiveEmail(userEmail: string): string {
 
                                                                     <!-- Help notice -->
                                                                     <p style="margin: 25px 0 0 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #666666; line-height: 1.6;">
-                                                                        Need help? Reply to this email or contact us at <a href="mailto:team@preregexamprep.com" style="color: #000000;">team@preregexamprep.com</a>
+                                                                        Need help? Reply to this email or contact us at <a href="mailto:team@mrcppacesprep.com" style="color: #000000;">team@mrcppacesprep.com</a>
                                                                     </p>
                                                                 </div>
                                                             </td>
@@ -185,10 +185,10 @@ export function getSubscriptionActiveEmail(userEmail: string): string {
                                                         <tr>
                                                             <td style="text-align: left;">
                                                                 <div style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #666666;">
-                                                                    <a href="https://www.preregexamprep.com/" target="_blank" style="color: #666666; text-decoration: none;">preregexamprep.com</a>
+                                                                    <a href="https://www.mrcppacesprep.com/" target="_blank" style="color: #666666; text-decoration: none;">mrcppacesprep.com</a>
                                                                 </div>
                                                                 <div style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 12px; color: #999999; margin-top: 10px;">
-                                                                    You're receiving this because you subscribed to PreRegExamPrep.
+                                                                    You're receiving this because you subscribed to MRCPPACESPREP.
                                                                 </div>
                                                             </td>
                                                         </tr>

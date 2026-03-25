@@ -2,13 +2,13 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Pharmacy Calculations Practice - Part 1 | PreRegExamPrep',
-  description: 'Practice pharmaceutical calculations for GPhC Part 1. Master all 12 calculation types with step-by-step solutions and exam-style questions.',
-  keywords: 'GPhC calculations, pharmacy calculations, Part 1 practice, dosage calculations, pharmaceutical math',
+  title: 'Pharmacy Calculations Practice - Part 1 | MRCPPACESPREP',
+  description: 'Practice pharmaceutical calculations for MRCP PACES Part 1. Master all 12 calculation types with step-by-step solutions and exam-style questions.',
+  keywords: 'MRCP PACES calculations, pharmacy calculations, Part 1 practice, dosage calculations, pharmaceutical math',
   openGraph: {
-    title: 'Pharmacy Calculations Practice - Part 1 | PreRegExamPrep',
-    description: 'Master pharmaceutical calculations with comprehensive practice across all 12 GPhC calculation types.',
-    url: 'https://preregexamprep.com/questions/calculations',
+    title: 'Pharmacy Calculations Practice - Part 1 | MRCPPACESPREP',
+    description: 'Master pharmaceutical calculations with comprehensive practice across all 12 MRCP PACES calculation types.',
+    url: 'https://mrcppacesprep.com/questions/calculations',
   },
   alternates: {
     canonical: '/questions/calculations',
@@ -49,7 +49,7 @@ export default function CalculationsPracticePage() {
             Pharmaceutical Calculations
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
-            Master all 12 calculation types required for the GPhC Part 1 assessment.
+            Master all 12 calculation types required for the MRCP PACES Part 1 assessment.
             Each exam includes at least one question from each category.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
@@ -94,7 +94,7 @@ export default function CalculationsPracticePage() {
               Calculation Types
             </h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-              Every GPhC Part 1 assessment includes questions from each of these calculation categories.
+              Every MRCP PACES Part 1 assessment includes questions from each of these calculation categories.
             </p>
           </div>
 
@@ -226,9 +226,9 @@ export default function CalculationsPracticePage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
             <div>
@@ -259,7 +259,7 @@ export default function CalculationsPracticePage() {
             </div>
           </div>
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

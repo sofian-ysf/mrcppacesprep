@@ -18,8 +18,8 @@ const nextConfig: NextConfig = {
       // Redirect non-www to www for canonical URL consistency
       {
         source: '/:path*',
-        has: [{ type: 'host', value: 'preregexamprep.com' }],
-        destination: 'https://www.preregexamprep.com/:path*',
+        has: [{ type: 'host', value: 'mrcppacesprep.com' }],
+        destination: 'https://www.mrcppacesprep.com/:path*',
         permanent: true,
       },
       // Redirect old URLs to new canonical URLs

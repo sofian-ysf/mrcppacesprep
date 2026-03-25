@@ -73,7 +73,7 @@ export function getWinBackEmail(userEmail: string, firstName?: string): string {
                                                         <tr>
                                                             <td style="text-align: left;">
                                                                 <div class="header-text" style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 24px; font-weight: 700; color: #333333; transform: scaleY(0.85); transform-origin: top;">
-                                                                    PreRegExamPrep
+                                                                    MRCPPACESPREP
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -109,7 +109,7 @@ export function getWinBackEmail(userEmail: string, firstName?: string): string {
                                                                     </p>
 
                                                                     <p style="margin: 0 0 20px 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; color: #333333; line-height: 1.6;">
-                                                                        We noticed your free trial has ended, and we wanted to reach out. Preparing for the GPhC exam is a journey, and we're here to help you succeed.
+                                                                        We noticed your free trial has ended, and we wanted to reach out. Preparing for the MRCP PACES exam is a journey, and we're here to help you succeed.
                                                                     </p>
 
                                                                     <p style="margin: 0 0 20px 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; color: #333333; line-height: 1.6;">
@@ -121,7 +121,7 @@ export function getWinBackEmail(userEmail: string, firstName?: string): string {
                                                                             What's waiting for you
                                                                         </p>
                                                                         <ul style="margin: 0; padding-left: 20px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #555555; line-height: 1.8;">
-                                                                            <li>2000+ practice questions covering all GPhC exam topics</li>
+                                                                            <li>2000+ practice questions covering all MRCP PACES exam topics</li>
                                                                             <li>Full-length mock exams with realistic timing</li>
                                                                             <li>Detailed explanations to help you understand every concept</li>
                                                                             <li>Performance analytics to track your progress</li>
@@ -133,7 +133,7 @@ export function getWinBackEmail(userEmail: string, firstName?: string): string {
                                                                     <table class="button_block" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
                                                                         <tr>
                                                                             <td style="text-align: left; padding: 10px 0;">
-                                                                                <a href="https://www.preregexamprep.com/pricing" target="_blank" style="text-decoration: none; display: inline-block; color: #ffffff; background-color: #000000; border-radius: 4px; width: auto; border: 0; padding: 12px 24px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; text-align: center; mso-border-alt: none; word-break: keep-all;">
+                                                                                <a href="https://www.mrcppacesprep.com/pricing" target="_blank" style="text-decoration: none; display: inline-block; color: #ffffff; background-color: #000000; border-radius: 4px; width: auto; border: 0; padding: 12px 24px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; text-align: center; mso-border-alt: none; word-break: keep-all;">
                                                                                     Subscribe Now
                                                                                 </a>
                                                                             </td>
@@ -141,7 +141,7 @@ export function getWinBackEmail(userEmail: string, firstName?: string): string {
                                                                     </table>
 
                                                                     <p style="margin: 20px 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #666666; line-height: 1.6;">
-                                                                        Your GPhC exam success is our priority. We believe in our platform and know it can help you pass with confidence.
+                                                                        Your MRCP PACES exam success is our priority. We believe in our platform and know it can help you pass with confidence.
                                                                     </p>
 
                                                                     <div style="border-top: 1px solid #d1d3d6; margin-top: 25px; padding-top: 20px;">
@@ -151,7 +151,7 @@ export function getWinBackEmail(userEmail: string, firstName?: string): string {
                                                                     </div>
 
                                                                     <p style="margin: 25px 0 0 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #666666; line-height: 1.6;">
-                                                                        Questions? Reply to this email or contact us at <a href="mailto:team@preregexamprep.com" style="color: #000000;">team@preregexamprep.com</a>
+                                                                        Questions? Reply to this email or contact us at <a href="mailto:team@mrcppacesprep.com" style="color: #000000;">team@mrcppacesprep.com</a>
                                                                     </p>
                                                                 </div>
                                                             </td>
@@ -179,10 +179,10 @@ export function getWinBackEmail(userEmail: string, firstName?: string): string {
                                                         <tr>
                                                             <td style="text-align: left;">
                                                                 <div style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #666666;">
-                                                                    <a href="https://www.preregexamprep.com/" target="_blank" style="color: #666666; text-decoration: none;">preregexamprep.com</a>
+                                                                    <a href="https://www.mrcppacesprep.com/" target="_blank" style="color: #666666; text-decoration: none;">mrcppacesprep.com</a>
                                                                 </div>
                                                                 <div style="font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 12px; color: #999999; margin-top: 10px;">
-                                                                    You're receiving this because you signed up for PreRegExamPrep.
+                                                                    You're receiving this because you signed up for MRCPPACESPREP.
                                                                 </div>
                                                             </td>
                                                         </tr>

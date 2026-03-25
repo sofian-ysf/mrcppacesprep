@@ -49,7 +49,7 @@ export default function ContactPage() {
               <span className="block text-gray-600 text-3xl mt-2">We're Here to Help You Succeed</span>
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
-              Have questions about your exam preparation? Need technical support? Our team of pharmacists and support specialists are here to help.
+              Have questions about your exam preparation? Need technical support? Our team of physicians and support specialists are here to help.
             </p>
             <div className="mt-8 flex justify-center items-center space-x-6 text-sm text-gray-600">
               <div className="flex items-center">
@@ -62,7 +62,7 @@ export default function ContactPage() {
                 <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                Expert support from pharmacists
+                Expert support from physicians
               </div>
             </div>
           </div>
@@ -208,7 +208,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">Email Support</h3>
-                    <p className="text-gray-600 mt-1">team@preregexamprep.com</p>
+                    <p className="text-gray-600 mt-1">team@mrcppacesprep.com</p>
                     <p className="text-sm text-gray-500 mt-1">Response within 24 hours</p>
                   </div>
                 </div>
@@ -300,7 +300,7 @@ export default function ContactPage() {
                 </svg>
               </summary>
               <p className="mt-4 text-gray-600">
-                Absolutely! Our support team includes qualified pharmacists who can help explain concepts, provide additional resources, and guide you through challenging topics. However, we cannot provide specific exam questions or answers from actual GPhC exams.
+                Absolutely! Our support team includes qualified physicians who can help explain concepts, provide additional resources, and guide you through challenging topics. However, we cannot provide specific exam questions or answers from actual MRCP PACES exams.
               </p>
             </details>
 
@@ -336,9 +336,9 @@ export default function ContactPage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-4">
             <div>
-              <h3 className="mb-4 font-bold text-gray-900">PreRegExamPrep</h3>
+              <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for GPhC Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
               </p>
             </div>
 
@@ -374,7 +374,7 @@ export default function ContactPage() {
           </div>
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-            <p>© 2024 PreRegExamPrep. All rights reserved.</p>
+            <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
             <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
           </div>
         </div>

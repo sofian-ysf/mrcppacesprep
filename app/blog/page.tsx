@@ -5,12 +5,12 @@ import ArticleSVG from './ArticleSVG'
 import './blog-styles.css'
 
 export const metadata: Metadata = {
-  title: 'Pharmacy Blog | Study Tips & Career Advice | GPhC Exam Prep',
-  description: 'Expert pharmacy insights, study tips, and career guidance for GPhC pre-registration exam preparation. Stay updated with the latest exam strategies and pharmacy updates.',
-  keywords: 'GPhC exam blog, pharmacy study tips, pre-registration advice, pharmacy career guidance, exam strategies',
+  title: 'Pharmacy Blog | Study Tips & Career Advice | MRCP PACES Exam Prep',
+  description: 'Expert pharmacy insights, study tips, and career guidance for MRCP PACES pre-registration exam preparation. Stay updated with the latest exam strategies and pharmacy updates.',
+  keywords: 'MRCP PACES exam blog, pharmacy study tips, pre-registration advice, pharmacy career guidance, exam strategies',
   openGraph: {
-    title: 'Pharmacy Blog | Study Tips & Career Advice | GPhC Exam Prep',
-    description: 'Expert pharmacy insights, study tips, and career guidance for GPhC pre-registration exam preparation.',
+    title: 'Pharmacy Blog | Study Tips & Career Advice | MRCP PACES Exam Prep',
+    description: 'Expert pharmacy insights, study tips, and career guidance for MRCP PACES pre-registration exam preparation.',
     type: 'website',
   },
   alternates: {
@@ -94,16 +94,16 @@ export default async function BlogPage() {
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "GPhC Exam Preparation Blog",
-    "description": "Expert pharmacy insights, study tips, and career guidance for GPhC pre-registration exam preparation.",
-    "url": "https://www.preregexamprep.com/blog",
+    "name": "MRCP PACES Exam Preparation Blog",
+    "description": "Expert pharmacy insights, study tips, and career guidance for MRCP PACES pre-registration exam preparation.",
+    "url": "https://www.mrcppacesprep.com/blog",
     "mainEntity": {
       "@type": "ItemList",
       "numberOfItems": posts.length,
       "itemListElement": posts.slice(0, 10).map((post, index) => ({
         "@type": "ListItem",
         "position": index + 1,
-        "url": `https://www.preregexamprep.com/blog/${post.slug}`,
+        "url": `https://www.mrcppacesprep.com/blog/${post.slug}`,
         "name": post.title
       }))
     }

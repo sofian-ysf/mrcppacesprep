@@ -40,7 +40,7 @@ export interface ReadinessOutput {
   recommendations: string[]
 }
 
-// Category weights for GPhC exam (approximate importance)
+// Category weights for MRCP PACES exam (approximate importance)
 const CATEGORY_WEIGHTS: Record<string, number> = {
   'clinical-pharmacy': 1.2,
   'pharmacology': 1.2,
