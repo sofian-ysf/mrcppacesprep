@@ -149,15 +149,15 @@ function SignupForm() {
   }
 
   const planNames: Record<string, string> = {
-    '3month': '2 Months Access',
-    '6month': '6 Months Access',
-    'lifetime': 'Lifetime Access',
+    '3month': 'Standard (3 Months)',
+    '6month': 'Plus (6 Months)',
+    '12month': 'Premium (12 Months)',
   }
 
   const planPrices: Record<string, string> = {
-    '3month': '£25',
-    '6month': '£40',
-    'lifetime': '£70',
+    '3month': '£75',
+    '6month': '£135',
+    '12month': '£215',
   }
 
   return (

@@ -43,7 +43,7 @@ const homepageFAQs = [
   },
   {
     question: "Is MRCPPACESPREP worth it?",
-    answer: "Our platform has helped over 8,500 medical students pass, with a 94% first-time pass rate. Students get 2,000+ questions, mock exams, and detailed explanations starting at £25."
+    answer: "Our platform has helped over 8,500 medical students pass, with a 94% first-time pass rate. Students get 2,000+ questions, mock exams, and detailed explanations starting at £75."
   },
   {
     question: "Can I try MRCPPACESPREP for free?",
@@ -51,7 +51,7 @@ const homepageFAQs = [
   }
 ];
 
-type PlanType = '3month' | '6month' | 'lifetime';
+type PlanType = '3month' | '6month' | '12month';
 
 const testimonials = [
   { initials: "SM", name: "Sarah M.", role: "Medical Registrar, London", quote: "The question bank mirrors the actual exam remarkably well. I felt genuinely prepared walking into the assessment centre." },
@@ -244,14 +244,14 @@ export default function Home() {
         },
         "offers": {
           "@type": "Offer",
-          "price": "30",
+          "price": "75",
           "priceCurrency": "GBP",
           "priceSpecification": {
             "@type": "UnitPriceSpecification",
-            "price": "30",
+            "price": "75",
             "priceCurrency": "GBP",
-            "billingDuration": "P1M",
-            "unitText": "month"
+            "billingDuration": "P3M",
+            "unitText": "3 months"
           },
           "availability": "https://schema.org/InStock",
           "priceValidUntil": "2026-12-31"
@@ -276,8 +276,8 @@ export default function Home() {
         "category": "Educational Software",
         "offers": {
           "@type": "AggregateOffer",
-          "lowPrice": "30",
-          "highPrice": "90",
+          "lowPrice": "75",
+          "highPrice": "215",
           "priceCurrency": "GBP",
           "offerCount": "3",
           "availability": "https://schema.org/InStock",
@@ -330,17 +330,17 @@ export default function Home() {
           Prepare for your MRCP PACES exam with the UK's leading medical exam preparation platform.
           MRCPPACESPREP offers 2000+ practice questions, unlimited mock exams, clinical examination practice,
           and detailed explanations. Trusted by 8,500+ medical trainees from UCL, Manchester, Nottingham,
-          King's College London, Oxford, Cambridge, Cardiff, Edinburgh, and Belfast. 94% pass rate. From £30/month.
+          King's College London, Oxford, Cambridge, Cardiff, Edinburgh, and Belfast. 94% pass rate. From £75/3 months.
         </p>
 
         <h3>MRCP PACES Exam Preparation Services</h3>
         <ul>
-          <li>MRCP PACES Practice Questions - 2000+ Questions - From £30/month</li>
-          <li>MRCP PACES Mock Exams - Unlimited Full-Length Exams - From £30/month</li>
-          <li>Clinical Examination Practice - 350+ Questions - From £30/month</li>
-          <li>Clinical Medicine Questions - 400+ Questions - From £30/month</li>
-          <li>Medical Ethics Questions - 300+ Questions - From £30/month</li>
-          <li>MRCP PACES Study Guides and Resources - Included - From £30/month</li>
+          <li>MRCP PACES Practice Questions - 2000+ Questions - From £75/3 months</li>
+          <li>MRCP PACES Mock Exams - Unlimited Full-Length Exams - From £75/3 months</li>
+          <li>Clinical Examination Practice - 350+ Questions - From £75/3 months</li>
+          <li>Clinical Medicine Questions - 400+ Questions - From £75/3 months</li>
+          <li>Medical Ethics Questions - 300+ Questions - From £75/3 months</li>
+          <li>MRCP PACES Study Guides and Resources - Included - From £75/3 months</li>
         </ul>
 
         <h3>Why Choose MRCPPACESPREP?</h3>
@@ -707,14 +707,14 @@ export default function Home() {
           </div>
 
           <div className="grid gap-4 sm:gap-6 md:grid-cols-3 max-w-4xl mx-auto">
-            {/* 2 Months Plan */}
+            {/* Standard Plan - 3 Months */}
             <div className="pill-card transition-all p-4 sm:p-6">
               <div className="text-center pb-4 sm:pb-6 border-b border-gray-100">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">2 Months</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">Standard</h3>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-3xl sm:text-4xl font-light text-gray-900">£25</span>
+                  <span className="text-3xl sm:text-4xl font-light text-gray-900">£75</span>
                 </div>
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-500">Great for focused prep</p>
+                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-500">3 months access</p>
               </div>
 
               <div className="py-4 sm:py-6 space-y-2 sm:space-y-3">
@@ -722,19 +722,19 @@ export default function Home() {
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 text-xs sm:text-sm">2,000+ practice questions</span>
+                  <span className="text-gray-700 text-xs sm:text-sm">Full access to all content</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 text-xs sm:text-sm">Unlimited mock exams</span>
+                  <span className="text-gray-700 text-xs sm:text-sm">PACES station practice</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 text-xs sm:text-sm">Detailed explanations</span>
+                  <span className="text-gray-700 text-xs sm:text-sm">Progress tracking</span>
                 </div>
               </div>
 
@@ -743,11 +743,11 @@ export default function Home() {
                 disabled={isLoading}
                 className="w-full py-2.5 sm:py-3 border-2 border-gray-900 text-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-colors text-center text-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {loadingPlan === '3month' ? 'Processing...' : 'Get 2 Months'}
+                {loadingPlan === '3month' ? 'Processing...' : 'Get Standard'}
               </button>
             </div>
 
-            {/* 6 Months Plan - Most Popular */}
+            {/* Plus Plan - 6 Months - Most Popular */}
             <div className="pill-card relative transition-all ring-2 ring-green-500 p-4 sm:p-6">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                 <span className="inline-flex items-center rounded-full bg-green-500 px-2.5 sm:px-3 py-0.5 sm:py-1 text-[10px] sm:text-xs font-semibold text-white">
@@ -756,11 +756,11 @@ export default function Home() {
               </div>
 
               <div className="text-center pb-4 sm:pb-6 border-b border-gray-100">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">6 Months</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">Plus</h3>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-3xl sm:text-4xl font-light text-gray-900">£40</span>
+                  <span className="text-3xl sm:text-4xl font-light text-gray-900">£135</span>
                 </div>
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-500">Comprehensive study</p>
+                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-500">6 months access</p>
               </div>
 
               <div className="py-4 sm:py-6 space-y-2 sm:space-y-3">
@@ -768,19 +768,19 @@ export default function Home() {
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 text-xs sm:text-sm">2,000+ practice questions</span>
+                  <span className="text-gray-700 text-xs sm:text-sm">Everything in Standard</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 text-xs sm:text-sm">Unlimited mock exams</span>
+                  <span className="text-gray-700 text-xs sm:text-sm">6 months access</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 text-xs sm:text-sm">Detailed explanations</span>
+                  <span className="text-gray-700 text-xs sm:text-sm">Best value for exam prep</span>
                 </div>
               </div>
 
@@ -789,18 +789,18 @@ export default function Home() {
                 disabled={isLoading}
                 className="w-full py-2.5 sm:py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors text-center text-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {loadingPlan === '6month' ? 'Processing...' : 'Get 6 Months'}
+                {loadingPlan === '6month' ? 'Processing...' : 'Get Plus'}
               </button>
             </div>
 
-            {/* Lifetime Plan */}
+            {/* Premium Plan - 12 Months */}
             <div className="pill-card transition-all p-4 sm:p-6">
               <div className="text-center pb-4 sm:pb-6 border-b border-gray-100">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">Lifetime</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">Premium</h3>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-3xl sm:text-4xl font-light text-gray-900">£70</span>
+                  <span className="text-3xl sm:text-4xl font-light text-gray-900">£215</span>
                 </div>
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-500">Best value - access forever</p>
+                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-500">12 months access</p>
               </div>
 
               <div className="py-4 sm:py-6 space-y-2 sm:space-y-3">
@@ -808,28 +808,28 @@ export default function Home() {
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 text-xs sm:text-sm">2,000+ practice questions</span>
+                  <span className="text-gray-700 text-xs sm:text-sm">Everything in Plus</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 text-xs sm:text-sm">Unlimited mock exams</span>
+                  <span className="text-gray-700 text-xs sm:text-sm">Full year access</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-gray-700 text-xs sm:text-sm">Detailed explanations</span>
+                  <span className="text-gray-700 text-xs sm:text-sm">Retake coverage</span>
                 </div>
               </div>
 
               <button
-                onClick={() => handleCheckout('lifetime')}
+                onClick={() => handleCheckout('12month')}
                 disabled={isLoading}
                 className="w-full py-2.5 sm:py-3 border-2 border-gray-900 text-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-colors text-center text-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {loadingPlan === 'lifetime' ? 'Processing...' : 'Get Lifetime Access'}
+                {loadingPlan === '12month' ? 'Processing...' : 'Get Premium'}
               </button>
             </div>
           </div>

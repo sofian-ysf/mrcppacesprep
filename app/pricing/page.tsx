@@ -59,31 +59,31 @@ const allFeatures = [
   },
 ]
 
-type PlanType = '3month' | '6month' | 'lifetime'
+type PlanType = '3month' | '6month' | '12month'
 
 const plans = [
   {
     id: '3month' as PlanType,
-    name: '2 Months',
-    price: 25,
-    period: 'one-time',
+    name: 'Standard',
+    price: 75,
+    period: '3 months',
     description: 'Great for focused exam prep',
     popular: false,
   },
   {
     id: '6month' as PlanType,
-    name: '6 Months',
-    price: 40,
-    period: 'one-time',
-    description: 'Most popular for comprehensive study',
+    name: 'Plus',
+    price: 135,
+    period: '6 months',
+    description: 'Best value for exam prep',
     popular: true,
   },
   {
-    id: 'lifetime' as PlanType,
-    name: 'Lifetime',
-    price: 70,
-    period: 'one-time',
-    description: 'Best value - access forever',
+    id: '12month' as PlanType,
+    name: 'Premium',
+    price: 215,
+    period: '12 months',
+    description: 'Full year access with retake coverage',
     popular: false,
   },
 ]
@@ -91,7 +91,7 @@ const plans = [
 const faqs = [
   {
     question: 'How long do I have access after purchase?',
-    answer: 'Your access depends on your plan: 2 months, 6 months, or lifetime. All plans are one-time payments with no recurring charges.',
+    answer: 'Your access depends on your plan: 3 months (Standard), 6 months (Plus), or 12 months (Premium). All plans are one-time payments with no recurring charges.',
   },
   {
     question: 'What payment methods do you accept?',
@@ -156,8 +156,8 @@ export default function PricingPage() {
     },
     "offers": {
       "@type": "AggregateOffer",
-      "lowPrice": "25",
-      "highPrice": "70",
+      "lowPrice": "75",
+      "highPrice": "215",
       "priceCurrency": "GBP",
       "offerCount": "3",
       "availability": "https://schema.org/InStock",
@@ -344,7 +344,7 @@ export default function PricingPage() {
                 <p className="text-sm text-gray-500">Per attempt, plus 6-month wait if you fail</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">£25-70</div>
+                <div className="text-4xl font-bold text-green-600 mb-2">£75-215</div>
                 <div className="text-gray-600 mb-2">Our Prep Cost</div>
                 <p className="text-sm text-gray-500">One-time payment for comprehensive preparation</p>
               </div>

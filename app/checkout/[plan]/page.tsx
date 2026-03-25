@@ -6,13 +6,13 @@ import { useAuth } from '@/app/contexts/AuthContext'
 import Link from 'next/link'
 import { getStoredGclid } from '@/app/components/GclidCapture'
 
-const validPlans = ['3month', '6month', 'lifetime'] as const
+const validPlans = ['3month', '6month', '12month'] as const
 type PlanType = typeof validPlans[number]
 
 const planNames: Record<PlanType, string> = {
-  '3month': '2 Months',
-  '6month': '6 Months',
-  'lifetime': 'Lifetime',
+  '3month': 'Standard (3 Months)',
+  '6month': 'Plus (6 Months)',
+  '12month': 'Premium (12 Months)',
 }
 
 export default function CheckoutPage() {

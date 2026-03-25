@@ -24,54 +24,52 @@ export const stripe = new Proxy({} as Stripe, {
 })
 
 // Plan types
-export type PlanType = '3month' | '6month' | 'lifetime'
+export type PlanType = '3month' | '6month' | '12month'
 
 // Plan configurations - One-time payments
-export const PLANS = {
+export const PLANS: Record<PlanType, {
+  name: string
+  price: number
+  duration_months: number
+  stripe_price_id: string
+  features: string[]
+}> = {
   '3month': {
-    name: '2 Months Access',
-    price: 25,
-    duration_months: 2,
-    stripe_price_id: process.env.STRIPE_3MONTH_PRICE_ID || '',
+    name: 'Standard',
+    price: 75,
+    duration_months: 3,
+    stripe_price_id: process.env.STRIPE_PRICE_3MONTH || '',
     features: [
-      '2,000+ practice questions',
-      'Unlimited mock exams',
-      'Calculations practice',
-      'Detailed explanations',
-      'Progress tracking',
-      'Mobile access',
-    ],
+      'Full access to all content',
+      'Spot diagnosis flashcards',
+      'PACES station practice',
+      'High yield SBAs',
+      'Progress tracking'
+    ]
   },
   '6month': {
-    name: '6 Months Access',
-    price: 40,
+    name: 'Plus',
+    price: 135,
     duration_months: 6,
-    stripe_price_id: process.env.STRIPE_6MONTH_PRICE_ID || '',
+    stripe_price_id: process.env.STRIPE_PRICE_6MONTH || '',
     features: [
-      '2,000+ practice questions',
-      'Unlimited mock exams',
-      'Calculations practice',
-      'Detailed explanations',
-      'Progress tracking',
-      'Mobile access',
-    ],
+      'Everything in Standard',
+      '6 months access',
+      'Best value for exam prep'
+    ]
   },
-  'lifetime': {
-    name: 'Lifetime Access',
-    price: 70,
-    duration_months: null, // null = forever
-    stripe_price_id: process.env.STRIPE_LIFETIME_PRICE_ID || '',
+  '12month': {
+    name: 'Premium',
+    price: 215,
+    duration_months: 12,
+    stripe_price_id: process.env.STRIPE_PRICE_12MONTH || '',
     features: [
-      '2,000+ practice questions',
-      'Unlimited mock exams',
-      'Calculations practice',
-      'Detailed explanations',
-      'Progress tracking',
-      'Mobile access',
-      'Access forever',
-    ],
-  },
-} as const
+      'Everything in Plus',
+      'Full year access',
+      'Retake coverage'
+    ]
+  }
+}
 
 // Helper to get plan by type
 export function getPlan(planType: PlanType) {
@@ -79,11 +77,8 @@ export function getPlan(planType: PlanType) {
 }
 
 // Calculate access expiry date based on plan
-export function calculateAccessExpiry(planType: PlanType): Date | null {
+export function calculateAccessExpiry(planType: PlanType): Date {
   const plan = PLANS[planType]
-  if (plan.duration_months === null) {
-    return null // Lifetime = no expiry
-  }
   const expiry = new Date()
   expiry.setMonth(expiry.getMonth() + plan.duration_months)
   return expiry
@@ -91,5 +86,5 @@ export function calculateAccessExpiry(planType: PlanType): Date | null {
 
 // Legacy exports for backward compatibility
 export const SUBSCRIPTION = PLANS['6month']
-export const ANNUAL_SUBSCRIPTION = PLANS['lifetime']
+export const ANNUAL_SUBSCRIPTION = PLANS['12month']
 export type PackageType = PlanType | 'monthly' | 'annual' | 'standard' | 'premium' | 'ultimate'

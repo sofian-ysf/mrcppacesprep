@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     // Validate plan type
     if (!planType || !PLANS[planType]) {
       return NextResponse.json(
-        { error: 'Invalid plan type. Must be one of: 3month, 6month, lifetime' },
+        { error: 'Invalid plan type. Must be one of: 3month, 6month, 12month' },
         { status: 400 }
       )
     }
@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
         plan_type: planType,
         plan_name: selectedPlan.name,
         plan_price: selectedPlan.price.toString(),
-        duration_months: selectedPlan.duration_months?.toString() || 'lifetime',
+        duration_months: selectedPlan.duration_months.toString(),
         ...(gclid && { gclid }), // Include gclid for offline conversion tracking
       },
     })
