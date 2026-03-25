@@ -60,15 +60,15 @@ export default function SupportPage() {
               </button>
             </div>
 
-            <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 text-center">
-              <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-6 text-center">
+              <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Email Support</h3>
               <p className="text-gray-600 mb-4">Send us a detailed message and we'll respond within 24 hours</p>
-              <Link href="/contact" className="inline-flex items-center text-purple-600 hover:text-purple-800 font-medium">
+              <Link href="/contact" className="inline-flex items-center text-gray-800 hover:text-gray-900 font-medium">
                 Send Email
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -126,8 +126,8 @@ export default function SupportPage() {
                 <p className="text-gray-600">Begin with your personalized study plan</p>
               </div>
               <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-purple-600">4</span>
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-gray-800">4</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Track Progress</h3>
                 <p className="text-gray-600">Monitor your improvement with detailed analytics</p>

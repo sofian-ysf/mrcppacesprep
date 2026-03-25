@@ -181,14 +181,14 @@ export default function MRCP PACESPracticeQuestionsPage() {
               </div>
 
               <div className="pill-card text-center">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
-                  <svg className="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+                  <svg className="h-8 w-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Calculations</h3>
                 <p className="text-gray-600 mb-4">Solve pharmaceutical calculations with step-by-step solutions.</p>
-                <span className="text-sm text-purple-600 font-semibold">350+ questions available</span>
+                <span className="text-sm text-gray-800 font-semibold">350+ questions available</span>
               </div>
             </div>
           </div>

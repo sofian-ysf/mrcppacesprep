@@ -287,16 +287,16 @@ export default function QuestionEditor({ question, onSave, saving, saveStatus }:
 
         {/* Exam Tip */}
         <div>
-          <label className="block text-sm font-medium text-purple-700 mb-2">
-            📚 Exam Tip
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Exam Tip
           </label>
-          <div className="p-3 bg-purple-50 rounded-lg border border-purple-200">
+          <div className="p-3 bg-gray-50 rounded-lg border border-gray-200">
             <textarea
               value={structured.exam_tip}
               onChange={(e) => updateStructured('exam_tip', e.target.value)}
               rows={2}
               placeholder="Exam-specific advice or common pitfalls..."
-              className="w-full px-3 py-2 border border-purple-200 rounded-lg text-sm focus:ring-2 focus:ring-purple-500 focus:border-purple-500 bg-white"
+              className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-gray-500 focus:border-gray-500 bg-white"
             />
           </div>
         </div>

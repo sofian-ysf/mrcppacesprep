@@ -8,10 +8,10 @@ interface CalculationPreviewProps {
 
 export default function CalculationPreview({ className = '' }: CalculationPreviewProps) {
   return (
-    <div className={`bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl border border-purple-200 p-6 ${className}`}>
+    <div className={`bg-gradient-to-r from-gray-50 to-blue-50 rounded-xl border border-gray-200 p-6 ${className}`}>
       <div className="flex items-start gap-4">
-        <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-          <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0">
+          <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
           </svg>
         </div>
@@ -19,7 +19,7 @@ export default function CalculationPreview({ className = '' }: CalculationPrevie
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-2">
             <h3 className="text-lg font-semibold text-gray-900">Calculation Questions</h3>
-            <span className="px-2 py-0.5 bg-purple-100 text-purple-700 text-xs font-medium rounded-full">
+            <span className="px-2 py-0.5 bg-gray-100 text-gray-700 text-xs font-medium rounded-full">
               Premium
             </span>
           </div>
@@ -36,7 +36,7 @@ export default function CalculationPreview({ className = '' }: CalculationPrevie
                 A patient requires 500 mL of 0.9% sodium chloride solution over 4 hours. Calculate the drip rate in drops per minute if the giving set delivers 20 drops per mL.
               </p>
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="flex items-center gap-2 text-purple-600">
+                <div className="flex items-center gap-2 text-gray-800">
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                   </svg>
@@ -70,7 +70,7 @@ export default function CalculationPreview({ className = '' }: CalculationPrevie
 
           <Link
             href="/pricing"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-lg font-medium hover:bg-purple-700 transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg font-medium hover:bg-gray-900 transition-colors"
           >
             Unlock Calculations
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -88,8 +88,8 @@ export default function StudyGuidesPage() {
               <p className="text-sm text-gray-600">Mind maps and diagrams for complex topics</p>
             </div>
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">
-                <svg className="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gray-100">
+                <svg className="h-6 w-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
                 </svg>
               </div>
@@ -195,31 +195,31 @@ export default function StudyGuidesPage() {
 
             <div className="bg-white rounded-xl p-8 shadow-sm">
               <div className="text-center mb-6">
-                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
-                  <span className="text-2xl font-bold text-purple-600">3</span>
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+                  <span className="text-2xl font-bold text-gray-800">3</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Rapid Review Pathway</h3>
                 <p className="text-gray-600 mt-2">1-2 weeks before exam</p>
               </div>
               <div className="space-y-4">
-                <div className="border-l-4 border-purple-500 pl-4">
+                <div className="border-l-4 border-gray-800 pl-4">
                   <h4 className="font-semibold text-gray-900">Days 1-3: Formula Review</h4>
                   <p className="text-sm text-gray-600">Memorize all essential formulas and quick references</p>
                 </div>
-                <div className="border-l-4 border-purple-500 pl-4">
+                <div className="border-l-4 border-gray-800 pl-4">
                   <h4 className="font-semibold text-gray-900">Days 4-7: Key Facts</h4>
                   <p className="text-sm text-gray-600">Review high-yield facts and common exam traps</p>
                 </div>
-                <div className="border-l-4 border-purple-500 pl-4">
+                <div className="border-l-4 border-gray-800 pl-4">
                   <h4 className="font-semibold text-gray-900">Days 8-10: Mock Exams</h4>
                   <p className="text-sm text-gray-600">Take timed practice exams and identify final gaps</p>
                 </div>
-                <div className="border-l-4 border-purple-500 pl-4">
+                <div className="border-l-4 border-gray-800 pl-4">
                   <h4 className="font-semibold text-gray-900">Days 11-14: Final Polish</h4>
                   <p className="text-sm text-gray-600">Light review and confidence building exercises</p>
                 </div>
               </div>
-              <Link href="/pricing" className="block mt-6 text-center rounded-lg bg-purple-600 px-6 py-3 font-semibold text-white hover:bg-purple-700 transition-colors">
+              <Link href="/pricing" className="block mt-6 text-center rounded-lg bg-gray-800 px-6 py-3 font-semibold text-white hover:bg-gray-900 transition-colors">
                 Get Started Today
               </Link>
             </div>
@@ -256,8 +256,8 @@ export default function StudyGuidesPage() {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
-                <svg className="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+                <svg className="h-8 w-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                 </svg>
               </div>
@@ -341,10 +341,10 @@ export default function StudyGuidesPage() {
                   </ul>
                 </div>
 
-                <div className="bg-white rounded-lg p-4 border-l-4 border-purple-500">
+                <div className="bg-white rounded-lg p-4 border-l-4 border-gray-800">
                   <div className="flex justify-between items-center mb-2">
                     <h4 className="font-semibold text-gray-900">Week 5-6: Application</h4>
-                    <span className="text-sm text-purple-600">25 hours/week</span>
+                    <span className="text-sm text-gray-800">25 hours/week</span>
                   </div>
                   <ul className="text-sm text-gray-600 space-y-1">
                     <li>• Complete Law & Ethics guide</li>

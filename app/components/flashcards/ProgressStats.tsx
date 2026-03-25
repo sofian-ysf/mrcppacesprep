@@ -23,7 +23,7 @@ export default function ProgressStats({ stats }: ProgressStatsProps) {
       </div>
       <div className="text-center">
         <p className="text-xs text-gray-500 mb-1">Today</p>
-        <p className="text-2xl font-bold text-purple-600">{stats.reviewsToday}</p>
+        <p className="text-2xl font-bold text-gray-800">{stats.reviewsToday}</p>
       </div>
     </div>
   )

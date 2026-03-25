@@ -90,8 +90,8 @@ export default function AboutPage() {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-purple-100 mt-1">
-                    <div className="h-2 w-2 rounded-full bg-purple-600"></div>
+                  <div className="flex h-6 w-6 items-center justify-center rounded-full bg-gray-100 mt-1">
+                    <div className="h-2 w-2 rounded-full bg-gray-800"></div>
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Support</h4>
@@ -156,8 +156,8 @@ export default function AboutPage() {
             </div>
 
             <div className="text-center">
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-purple-100">
-                <svg className="h-8 w-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gray-100">
+                <svg className="h-8 w-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>

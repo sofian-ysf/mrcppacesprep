@@ -249,7 +249,7 @@ export default function TryFreePage() {
               <div className="px-4 py-3 border-b border-gray-100 flex items-center justify-between flex-wrap gap-2">
                 <div className="flex items-center gap-2">
                   <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${
-                    currentQuestion.type === 'calculation' ? 'bg-blue-100 text-blue-700' : 'bg-purple-100 text-purple-700'
+                    currentQuestion.type === 'calculation' ? 'bg-blue-100 text-blue-700' : 'bg-gray-100 text-gray-700'
                   }`}>
                     {currentQuestion.type === 'calculation' ? 'Calc' : 'Clinical'}
                   </span>
@@ -385,9 +385,9 @@ export default function TryFreePage() {
                     </div>
                   )}
 
-                  <div className="px-4 py-3 bg-purple-50 border-b border-gray-100">
-                    <h4 className="font-medium text-purple-900 text-sm mb-1">Exam Tip</h4>
-                    <p className="text-sm text-purple-800">{currentQuestion.explanation.exam_tip}</p>
+                  <div className="px-4 py-3 bg-gray-50 border-b border-gray-100">
+                    <h4 className="font-medium text-gray-900 text-sm mb-1">Exam Tip</h4>
+                    <p className="text-sm text-gray-800">{currentQuestion.explanation.exam_tip}</p>
                   </div>
 
                   <div className="px-4 py-3 bg-green-50">

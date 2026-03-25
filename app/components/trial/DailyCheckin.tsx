@@ -45,7 +45,7 @@ export default function DailyCheckin({ className = '' }: DailyCheckinProps) {
   const questionsLeft = Math.max(0, checkinData.daily_goal - checkinData.today_questions)
 
   return (
-    <div className={`bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200 p-6 ${className}`}>
+    <div className={`bg-gradient-to-r from-blue-50 to-gray-50 rounded-xl border border-blue-200 p-6 ${className}`}>
       <button
         onClick={() => setDismissed(true)}
         className="absolute top-4 right-4 text-gray-400 hover:text-gray-600"

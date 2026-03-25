@@ -165,8 +165,8 @@ export default function CRMDashboardPage() {
               <p className="text-sm font-medium text-gray-500">Emails This Week</p>
               <p className="text-3xl font-bold text-gray-900 mt-1">{stats?.emailsSentThisWeek || 0}</p>
             </div>
-            <div className="h-12 w-12 bg-purple-100 rounded-full flex items-center justify-center">
-              <svg className="h-6 w-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="h-12 w-12 bg-gray-100 rounded-full flex items-center justify-center">
+              <svg className="h-6 w-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>

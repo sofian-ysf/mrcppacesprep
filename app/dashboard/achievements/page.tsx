@@ -203,7 +203,7 @@ export default function AchievementsPage() {
                   <div className={`w-12 h-12 rounded-full flex items-center justify-center ${
                     achievement.isEarned
                       ? achievement.rarity === 'legendary' ? 'bg-yellow-100' :
-                        achievement.rarity === 'epic' ? 'bg-purple-100' :
+                        achievement.rarity === 'epic' ? 'bg-gray-100' :
                         achievement.rarity === 'rare' ? 'bg-blue-100' : 'bg-gray-100'
                       : 'bg-gray-200'
                   }`}>
@@ -224,7 +224,7 @@ export default function AchievementsPage() {
                       </h3>
                       <span className={`text-xs px-2 py-0.5 rounded-full ${
                         achievement.rarity === 'legendary' ? 'bg-yellow-200 text-yellow-800' :
-                        achievement.rarity === 'epic' ? 'bg-purple-200 text-purple-800' :
+                        achievement.rarity === 'epic' ? 'bg-gray-200 text-gray-800' :
                         achievement.rarity === 'rare' ? 'bg-blue-200 text-blue-800' :
                         'bg-gray-200 text-gray-700'
                       }`}>

@@ -205,7 +205,7 @@ export function getRecommendationColor(color: string): { bg: string; text: strin
     red: { bg: 'bg-red-50', text: 'text-red-600', border: 'border-red-200' },
     yellow: { bg: 'bg-yellow-50', text: 'text-yellow-600', border: 'border-yellow-200' },
     green: { bg: 'bg-green-50', text: 'text-green-600', border: 'border-green-200' },
-    purple: { bg: 'bg-purple-50', text: 'text-purple-600', border: 'border-purple-200' }
+    purple: { bg: 'bg-gray-50', text: 'text-gray-800', border: 'border-gray-200' }
   }
   return colors[color] || colors.blue
 }

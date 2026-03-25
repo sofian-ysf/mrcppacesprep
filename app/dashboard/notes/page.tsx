@@ -214,7 +214,7 @@ export default function NotesPage() {
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-2">
                     {note.question_id ? (
-                      <span className="text-xs px-2 py-1 bg-purple-100 text-purple-700 rounded-full">Question</span>
+                      <span className="text-xs px-2 py-1 bg-gray-100 text-gray-700 rounded-full">Question</span>
                     ) : (
                       <span className="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded-full">Flashcard</span>
                     )}

@@ -172,7 +172,7 @@ export function getAchievementIconColor(rarity: string): string {
     case 'legendary':
       return 'text-yellow-500'
     case 'epic':
-      return 'text-purple-500'
+      return 'text-gray-700'
     case 'rare':
       return 'text-blue-500'
     default:
@@ -188,7 +188,7 @@ export function getAchievementBgColor(rarity: string): string {
     case 'legendary':
       return 'bg-gradient-to-br from-yellow-50 to-orange-50 border-yellow-200'
     case 'epic':
-      return 'bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200'
+      return 'bg-gradient-to-br from-gray-50 to-gray-100 border-gray-200'
     case 'rare':
       return 'bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200'
     default:

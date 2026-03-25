@@ -37,7 +37,7 @@ export default function AchievementToast({
       case 'legendary':
         return 'from-yellow-500 to-orange-500'
       case 'epic':
-        return 'from-purple-500 to-pink-500'
+        return 'from-gray-700 to-gray-900'
       case 'rare':
         return 'from-blue-500 to-cyan-500'
       default:
