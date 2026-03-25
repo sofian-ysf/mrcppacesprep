@@ -3,35 +3,20 @@
 import { useEffect, useState } from 'react'
 import { useAuth } from '@/app/contexts/AuthContext'
 import Link from 'next/link'
-import TrialBanner from './TrialBanner'
-
-interface TrialInfo {
-  questionsUsed: number
-  questionsRemaining: number
-  daysRemaining: number
-  expiresAt: string
-  isExpired: boolean
-  isExhausted: boolean
-  status: string
-}
 
 interface AccessControlProps {
   children: React.ReactNode
-  showTrialBanner?: boolean
 }
 
-export default function AccessControl({ children, showTrialBanner = true }: AccessControlProps) {
+export default function AccessControl({ children }: AccessControlProps) {
   const { user, loading: authLoading } = useAuth()
   const [hasAccess, setHasAccess] = useState<boolean | null>(null)
-  const [accessType, setAccessType] = useState<'trial' | 'subscription' | 'none'>('none')
-  const [trialInfo, setTrialInfo] = useState<TrialInfo | null>(null)
   const [checking, setChecking] = useState(true)
 
   useEffect(() => {
     async function checkAccess() {
       if (!user) {
         setHasAccess(false)
-        setAccessType('none')
         setChecking(false)
         return
       }
@@ -41,12 +26,9 @@ export default function AccessControl({ children, showTrialBanner = true }: Acce
         const data = await response.json()
 
         setHasAccess(data.hasAccess)
-        setAccessType(data.accessType || 'none')
-        setTrialInfo(data.trial || null)
       } catch (error) {
         console.error('Failed to check access:', error)
         setHasAccess(false)
-        setAccessType('none')
       } finally {
         setChecking(false)
       }
@@ -94,12 +76,8 @@ export default function AccessControl({ children, showTrialBanner = true }: Acce
     )
   }
 
-  // No active subscription AND no active trial
+  // No active subscription
   if (hasAccess === false) {
-    // Check if trial expired or exhausted
-    const isTrialExpired = trialInfo?.isExpired
-    const isTrialExhausted = trialInfo?.isExhausted
-
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <div className="text-center max-w-lg">
@@ -109,29 +87,10 @@ export default function AccessControl({ children, showTrialBanner = true }: Acce
             </svg>
           </div>
 
-          {/* Trial-specific messaging */}
-          {isTrialExhausted ? (
-            <>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">You've Used All 100 Trial Questions</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Great progress! Subscribe now to continue your exam preparation with unlimited questions and full access to calculations.
-              </p>
-            </>
-          ) : isTrialExpired ? (
-            <>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Your 7-Day Free Trial Has Ended</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Subscribe to continue practicing with unlimited questions, mock exams, and full access to calculation questions.
-              </p>
-            </>
-          ) : (
-            <>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Subscribe to Access This Content</h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Get unlimited access to our comprehensive question bank, mock exams, and study materials.
-              </p>
-            </>
-          )}
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Subscribe to Access This Content</h2>
+          <p className="text-lg text-gray-600 mb-8">
+            Get unlimited access to our comprehensive question bank, mock exams, and study materials.
+          </p>
 
           {/* Single Subscription Card */}
           <div className="bg-white rounded-xl border-2 border-gray-900 p-8 mb-8 relative">
@@ -178,21 +137,6 @@ export default function AccessControl({ children, showTrialBanner = true }: Acce
     )
   }
 
-  // Has access - show content (with optional trial banner for trial users)
-  return (
-    <>
-      {showTrialBanner && accessType === 'trial' && trialInfo && (
-        <div className="fixed top-[104px] left-0 right-0 z-30 bg-white border-b border-gray-200 px-4 py-2">
-          <div className="max-w-7xl mx-auto">
-            <TrialBanner
-              questionsUsed={trialInfo.questionsUsed}
-              questionsRemaining={trialInfo.questionsRemaining}
-              daysRemaining={trialInfo.daysRemaining}
-            />
-          </div>
-        </div>
-      )}
-      {children}
-    </>
-  )
+  // Has access - show content
+  return <>{children}</>
 }

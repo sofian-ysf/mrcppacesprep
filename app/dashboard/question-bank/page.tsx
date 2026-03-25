@@ -6,14 +6,13 @@ import { useEffect, useState } from 'react'
 import { QuestionCategory } from '@/app/types/questions'
 import { useSubscription } from '@/app/hooks/useSubscription'
 import UpgradePrompt from '@/app/components/UpgradePrompt'
-import TrialBanner from '@/app/components/TrialBanner'
 import { getSmartPracticeRecommendation, getWeakCategories, type CategoryPerformance, type SmartPracticeRecommendation } from '@/app/lib/adaptive/prioritizer'
 import { DashboardLayout } from '@/app/components/dashboard'
 
 type BankType = 'clinical' | 'calculation'
 
 export default function QuestionBankPracticePage() {
-  const { hasAccess, loading, isLoggedIn, isOnTrial, trial } = useSubscription()
+  const { hasAccess, loading, isLoggedIn } = useSubscription()
   const router = useRouter()
   const [categories, setCategories] = useState<QuestionCategory[]>([])
   const [totals, setTotals] = useState<{ all: number; clinical: number; calculation: number }>({ all: 0, clinical: 0, calculation: 0 })
@@ -290,22 +289,12 @@ export default function QuestionBankPracticePage() {
     )
   }
 
-  // Determine upgrade reason based on context
-  const getUpgradeReason = (): 'trial_exhausted' | 'trial_expired' | 'calculation_blocked' | 'general' => {
-    if (trial?.isExhausted) return 'trial_exhausted'
-    if (trial?.isExpired) return 'trial_expired'
-    if (isOnTrial && bankType === 'calculation') return 'calculation_blocked'
-    return 'general'
-  }
-
   return (
     <>
       <UpgradePrompt
         isOpen={showUpgradePrompt}
         onClose={() => setShowUpgradePrompt(false)}
         isLoggedIn={isLoggedIn}
-        trial={trial}
-        reason={getUpgradeReason()}
       />
       <DashboardLayout
         breadcrumbs={[
@@ -322,15 +311,8 @@ export default function QuestionBankPracticePage() {
           {
             label: `Calculation Questions`,
             value: 'calculation',
-            onClick: () => {
-              if (isOnTrial) {
-                setShowUpgradePrompt(true)
-              } else {
-                setBankType('calculation')
-              }
-            },
-            badge: String(totals.calculation),
-            locked: isOnTrial
+            onClick: () => setBankType('calculation'),
+            badge: String(totals.calculation)
           }
         ]}
         activeTab={bankType}
@@ -338,18 +320,6 @@ export default function QuestionBankPracticePage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Filter Sidebar - Left Side */}
           <div className="lg:col-span-1">
-            {/* Trial Status Card */}
-            {isOnTrial && trial && (
-              <div className="mb-6">
-                <TrialBanner
-                  questionsUsed={trial.questionsUsed}
-                  questionsRemaining={trial.questionsRemaining}
-                  daysRemaining={trial.daysRemaining}
-                  onUpgrade={() => setShowUpgradePrompt(true)}
-                />
-              </div>
-            )}
-
             <div className="bg-white rounded-lg border border-gray-200 p-6">
               <h2 className="text-lg font-semibold text-gray-900 mb-6">Practice Filters</h2>
 

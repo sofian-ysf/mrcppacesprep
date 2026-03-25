@@ -37,7 +37,7 @@ export default function DashboardLayout({
   statsBar
 }: DashboardLayoutProps) {
   const { user, signOut } = useAuth()
-  const { accessType } = useSubscription()
+  const { hasAccess } = useSubscription()
   const pathname = usePathname()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [subscribing, setSubscribing] = useState(false)
@@ -108,7 +108,7 @@ export default function DashboardLayout({
 
             {/* Right - User (Desktop) */}
             <div className="hidden md:flex items-center space-x-3">
-              {accessType !== 'subscription' && (
+              {!hasAccess && (
                 <button
                   onClick={handleSubscribe}
                   disabled={subscribing}
@@ -169,7 +169,7 @@ export default function DashboardLayout({
                 <div className="px-3 py-2 text-sm text-gray-600">
                   {user?.user_metadata?.full_name || user?.email?.split('@')[0]}
                 </div>
-                {accessType !== 'subscription' && (
+                {!hasAccess && (
                   <button
                     onClick={() => { handleSubscribe(); setMobileMenuOpen(false) }}
                     disabled={subscribing}

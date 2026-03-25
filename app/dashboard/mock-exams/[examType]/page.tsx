@@ -30,7 +30,7 @@ export default function MockExamSession() {
   const params = useParams()
   const router = useRouter()
   const { user, loading: authLoading, signOut } = useAuth()
-  const { accessType } = useSubscription()
+  const { hasAccess } = useSubscription()
   const examType = params.examType as string
 
   // State
@@ -453,7 +453,7 @@ export default function MockExamSession() {
                 {/* Right - User (Desktop) */}
                 <div className="hidden md:flex items-center space-x-3">
                   {/* Subscribe button for non-subscribed users */}
-                  {accessType !== 'subscription' && (
+                  {!hasAccess && (
                     <button
                       onClick={handleSubscribe}
                       disabled={subscribing}
@@ -531,7 +531,7 @@ export default function MockExamSession() {
                       {user?.user_metadata?.full_name || user?.email?.split('@')[0]}
                     </div>
                     {/* Subscribe button for non-subscribed users (mobile) */}
-                    {accessType !== 'subscription' && (
+                    {!hasAccess && (
                       <button
                         onClick={() => {
                           handleSubscribe()

@@ -7,7 +7,6 @@ import { useSubscription } from '@/app/hooks/useSubscription'
 import { useEffect, useState } from 'react'
 import { calculateReadiness, getDaysUntilExam, formatDaysUntilExam, getUrgencyColor } from '@/app/lib/readiness/calculator'
 import { type Recommendation, getRecommendationColor } from '@/app/lib/recommendations/engine'
-import { DailyCheckin, TrialProgressCard, TrialAchievements } from '@/app/components/trial'
 import { DashboardLayout } from '@/app/components/dashboard'
 
 interface UserStats {
@@ -50,11 +49,10 @@ interface DailyProgress {
 export default function DashboardPage() {
   const router = useRouter()
   const { user, loading, signOut } = useAuth()
-  const { accessType, isOnTrial, trial } = useSubscription()
+  const { hasAccess } = useSubscription()
   const [managingSubscription, setManagingSubscription] = useState(false)
   const [subscriptionError, setSubscriptionError] = useState<string | null>(null)
   const [statsLoading, setStatsLoading] = useState(true)
-  const [trialOnboardingChecked, setTrialOnboardingChecked] = useState(false)
   const [userStats, setUserStats] = useState<UserStats>({
     questionsCompleted: 0,
     correctAnswers: 0,
@@ -100,29 +98,6 @@ export default function DashboardPage() {
       fetchAllData()
     }
   }, [user])
-
-  // Check trial onboarding status and redirect if needed
-  useEffect(() => {
-    const checkTrialOnboarding = async () => {
-      if (!isOnTrial || !user || trialOnboardingChecked) return
-
-      try {
-        const res = await fetch('/api/trial/onboarding')
-        if (res.ok) {
-          const data = await res.json()
-          if (!data.onboarding_completed) {
-            router.push('/dashboard/trial-welcome')
-            return
-          }
-        }
-      } catch (error) {
-        console.error('Error checking trial onboarding:', error)
-      }
-      setTrialOnboardingChecked(true)
-    }
-
-    checkTrialOnboarding()
-  }, [isOnTrial, user, router, trialOnboardingChecked])
 
   const fetchAllData = async () => {
     setStatsLoading(true)
@@ -336,22 +311,6 @@ export default function DashboardPage() {
             Start Questions
           </Link>
         </div>
-
-        {/* Trial User Section */}
-        {isOnTrial && trial && (
-          <div className="mb-8 space-y-4">
-            {/* Daily Check-in */}
-            <DailyCheckin />
-
-            {/* Trial Progress and Achievements Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-              <div className="lg:col-span-2">
-                <TrialProgressCard />
-              </div>
-              <TrialAchievements compact />
-            </div>
-          </div>
-        )}
 
         {/* Exam Countdown & Readiness Section */}
         {userSettings.exam_date ? (
@@ -895,7 +854,7 @@ export default function DashboardPage() {
               <div className="mt-6 pt-6 border-t border-gray-200">
                 <h3 className="text-sm font-semibold text-gray-900 mb-3">Subscription</h3>
 
-                {accessType === 'subscription' ? (
+                {hasAccess ? (
                   // Subscribed users: Show manage button
                   <>
                     <button
@@ -929,20 +888,13 @@ export default function DashboardPage() {
                     )}
                   </>
                 ) : (
-                  // Trial/non-subscribed users: Show subscribe button
-                  <>
-                    <Link
-                      href="/pricing"
-                      className="w-full pill-btn pill-btn-primary pill-btn-sm block text-center"
-                    >
-                      Subscribe Now
-                    </Link>
-                    {isOnTrial && trial && (
-                      <p className="mt-2 text-xs text-gray-500">
-                        {trial.daysRemaining} days left in free trial
-                      </p>
-                    )}
-                  </>
+                  // Non-subscribed users: Show subscribe button
+                  <Link
+                    href="/pricing"
+                    className="w-full pill-btn pill-btn-primary pill-btn-sm block text-center"
+                  >
+                    Subscribe Now
+                  </Link>
                 )}
               </div>
             </div>

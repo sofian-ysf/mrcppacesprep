@@ -17,7 +17,7 @@ import { getStoredGclid } from '@/app/components/GclidCapture'
 
 function PracticeContent() {
   const { user, loading: authLoading, signOut } = useAuth()
-  const { accessType, trial } = useSubscription()
+  const { hasAccess } = useSubscription()
   const router = useRouter()
   const searchParams = useSearchParams()
 
@@ -470,7 +470,7 @@ function PracticeContent() {
     const accuracy = answers.length > 0 ? Math.round((correctCount / answers.length) * 100) : 0
 
     return (
-      <AccessControl showTrialBanner={false}>
+      <AccessControl>
         <div className="min-h-screen bg-[#fbfaf4]">
           {/* Fixed Header with Navbar */}
           <div className="fixed top-0 left-0 right-0 z-40 bg-white border-b border-gray-200">
@@ -504,7 +504,7 @@ function PracticeContent() {
                 {/* Right - User (Desktop) */}
                 <div className="hidden md:flex items-center space-x-3">
                   {/* Subscribe button for non-subscribed users */}
-                  {accessType !== 'subscription' && (
+                  {!hasAccess && (
                     <button
                       onClick={handleSubscribe}
                       disabled={subscribing}
@@ -582,7 +582,7 @@ function PracticeContent() {
                       {user?.user_metadata?.full_name || user?.email?.split('@')[0]}
                     </div>
                     {/* Subscribe button for non-subscribed users (mobile) */}
-                    {accessType !== 'subscription' && (
+                    {!hasAccess && (
                       <button
                         onClick={() => {
                           handleSubscribe()
@@ -751,7 +751,7 @@ function PracticeContent() {
 
   // Practice view
   return (
-    <AccessControl showTrialBanner={false}>
+    <AccessControl>
       <div className="min-h-screen bg-[#fbfaf4]">
         {/* Exit Confirmation Modal */}
         <ExitConfirmationModal />
@@ -784,7 +784,7 @@ function PracticeContent() {
               {/* Right - User (Desktop) */}
               <div className="hidden md:flex items-center space-x-3">
                 {/* Subscribe button for non-subscribed users */}
-                {accessType !== 'subscription' && (
+                {!hasAccess && (
                   <button
                     onClick={handleSubscribe}
                     disabled={subscribing}
@@ -863,7 +863,7 @@ function PracticeContent() {
                     {user?.user_metadata?.full_name || user?.email?.split('@')[0]}
                   </div>
                   {/* Subscribe button for non-subscribed users (mobile) */}
-                  {accessType !== 'subscription' && (
+                  {!hasAccess && (
                     <button
                       onClick={() => {
                         handleSubscribe()
@@ -900,12 +900,6 @@ function PracticeContent() {
                   <span className="text-gray-900">Practice</span>
                 </div>
                 <div className="flex items-center gap-4">
-                  {/* Trial info - compact inline display */}
-                  {accessType === 'trial' && trial && (
-                    <span className="text-xs text-gray-500">
-                      <span className="font-medium text-gray-700">{trial.questionsRemaining}</span> questions left
-                    </span>
-                  )}
                   <button
                     onClick={() => {
                       setPendingNavigation(null)
