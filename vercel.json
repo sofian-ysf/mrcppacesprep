@@ -1,0 +1,33 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "preregexamprep.com"
+        }
+      ],
+      "destination": "https://www.preregexamprep.com/:path*",
+      "permanent": true
+    }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/generate-blog",
+      "schedule": "0 6 * * *"
+    },
+    {
+      "path": "/api/cron/generate-blog",
+      "schedule": "0 11 * * *"
+    },
+    {
+      "path": "/api/cron/generate-blog",
+      "schedule": "0 16 * * *"
+    },
+    {
+      "path": "/api/cron/generate-blog",
+      "schedule": "0 21 * * *"
+    }
+  ]
+}

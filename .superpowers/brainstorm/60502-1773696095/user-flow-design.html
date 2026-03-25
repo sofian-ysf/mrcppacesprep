@@ -1,0 +1,132 @@
+<h2>Section 1: User Flow Design</h2>
+<p class="subtitle">Authentication and checkout flow for package selection</p>
+
+<div class="section">
+  <h3>Flow A: Package Selection (Unauthenticated User)</h3>
+  <div class="mockup">
+    <div class="mockup-header">User clicks "Get Started" on any package</div>
+    <div class="mockup-body" style="padding: 20px; font-family: monospace; font-size: 14px; line-height: 2;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 4px;">1</span>
+        <span>User on <code>/pricing</code> clicks "Get Started" on Premium ($499)</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 4px;">2</span>
+        <span>Redirect → <code>/auth/signup?plan=premium</code></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #10b981; color: white; padding: 4px 12px; border-radius: 4px;">3a</span>
+        <span>User signs up (name, email, password only)</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px; padding-left: 40px; border-left: 2px solid #6b7280;">
+        <span style="background: #f59e0b; color: white; padding: 4px 12px; border-radius: 4px;">3b</span>
+        <span>OR clicks "Already have account? <strong>Log in</strong>" → <code>/auth/signin?plan=premium</code></span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 4px;">4</span>
+        <span>After successful auth → Create Stripe checkout session</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 4px;">5</span>
+        <span>Immediate redirect → Stripe Hosted Checkout</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #10b981; color: white; padding: 4px 12px; border-radius: 4px;">6</span>
+        <span>Payment success → <code>/payment/success</code> → Dashboard</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Flow B: Direct Signup (No Package Selected)</h3>
+  <div class="mockup">
+    <div class="mockup-header">User clicks generic "Get Started" or goes directly to signup</div>
+    <div class="mockup-body" style="padding: 20px; font-family: monospace; font-size: 14px; line-height: 2;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 4px;">1</span>
+        <span>User on landing page clicks "Get Started" (no plan param)</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 4px;">2</span>
+        <span>Redirect → <code>/pricing</code> (see packages first)</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 4px;">3</span>
+        <span>User selects package → Flow A continues</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Flow C: Authenticated User Selects Package</h3>
+  <div class="mockup">
+    <div class="mockup-header">Already logged-in user clicks package</div>
+    <div class="mockup-body" style="padding: 20px; font-family: monospace; font-size: 14px; line-height: 2;">
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 4px;">1</span>
+        <span>User on <code>/pricing</code> clicks "Get Started" on Complete ($999)</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 4px;">2</span>
+        <span>Create Stripe checkout session immediately</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+        <span style="background: #3b82f6; color: white; padding: 4px 12px; border-radius: 4px;">3</span>
+        <span>Redirect → Stripe Hosted Checkout</span>
+      </div>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <span style="background: #10b981; color: white; padding: 4px 12px; border-radius: 4px;">4</span>
+        <span>Payment success → <code>/payment/success</code> → Dashboard</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h3>Key Implementation Changes</h3>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <div class="pros-cons">
+      <div class="pros">
+        <h4>Files to Modify</h4>
+        <ul>
+          <li><code>/auth/signup/page.tsx</code> - Simplify form, handle plan param</li>
+          <li><code>/auth/signin/page.tsx</code> - Add plan param handling</li>
+          <li><code>/pricing/page.tsx</code> - Update button onClick handlers</li>
+          <li><code>/api/stripe/create-checkout</code> - Direct checkout creation</li>
+          <li>All "Get Started" buttons site-wide</li>
+        </ul>
+      </div>
+    </div>
+    <div class="pros-cons">
+      <div class="cons">
+        <h4>Removed</h4>
+        <ul>
+          <li>Medical school field from signup</li>
+          <li>Graduation year field from signup</li>
+          <li>Specialty field from signup</li>
+          <li>Intermediate checkout page</li>
+          <li>PaymentModal component</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="approve" onclick="toggleSelect(this)">
+    <div class="letter">✓</div>
+    <div class="content">
+      <h3>Approve Section 1</h3>
+      <p>User flow design looks good, proceed to Section 2</p>
+    </div>
+  </div>
+  <div class="option" data-choice="revise" onclick="toggleSelect(this)">
+    <div class="letter">✎</div>
+    <div class="content">
+      <h3>Request Changes</h3>
+      <p>I have feedback or changes for this section</p>
+    </div>
+  </div>
+</div>

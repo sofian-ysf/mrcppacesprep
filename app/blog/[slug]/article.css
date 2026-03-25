@@ -1,0 +1,763 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap');
+
+/* Article Detail Page */
+.blog-detail-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fbfaf4;
+  color: #1a1a1a;
+}
+
+/* Navigation */
+.blog-detail-nav {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 35px 50px 0 50px;
+}
+
+.nav-back-link {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  color: #1a1a1a;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-back-link:hover {
+  opacity: 0.7;
+}
+
+/* Featured SVG/Image Container */
+.blog-detail-header-image {
+  width: 90%;
+  max-width: 1400px;
+  margin: 40px auto 0;
+  height: 320px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-detail-header-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-detail-header-image .article-svg-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Content */
+.blog-detail-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 40px 100px;
+  width: 100%;
+}
+
+.blog-detail-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Meta Section */
+.blog-detail-meta {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+.blog-detail-meta-info {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.blog-detail-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.blog-detail-meta-label {
+  font-family: "Inter", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #666666;
+  font-size: 12px;
+}
+
+.blog-detail-meta-value {
+  font-family: "Inter", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+/* Social Share Buttons */
+.blog-detail-social-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.blog-detail-social-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.blog-detail-social-button:hover {
+  background-color: #f0f0f0;
+  border-color: #d0d0d0;
+}
+
+.blog-detail-social-button svg {
+  width: 18px;
+  height: 18px;
+  fill: #1a1a1a;
+}
+
+/* Title */
+.blog-detail-title {
+  font-family: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 42px;
+  line-height: 1.3;
+  margin: 0;
+  transform: scaleX(1.15);
+  transform-origin: center;
+}
+
+/* Body Content */
+.blog-detail-body {
+  margin-bottom: 60px;
+}
+
+.blog-content {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  color: #4a4a4a;
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+
+.blog-content p {
+  margin: 0 0 24px 0;
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin: 40px 0 20px 0;
+}
+
+.blog-content h2 {
+  font-size: 32px;
+}
+
+.blog-content h3 {
+  font-size: 26px;
+}
+
+.blog-content h4 {
+  font-size: 22px;
+}
+
+.blog-content a {
+  color: #1a1a1a;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.blog-content a:hover {
+  opacity: 0.7;
+}
+
+.blog-content ul,
+.blog-content ol {
+  margin: 0 0 24px 0;
+  padding-left: 30px;
+  list-style-position: outside;
+}
+
+/* Prevent nested lists from adding more indentation */
+.blog-content ul ul,
+.blog-content ul ol,
+.blog-content ol ul,
+.blog-content ol ol {
+  padding-left: 20px;
+  margin: 8px 0;
+}
+
+.blog-content li {
+  margin-bottom: 12px;
+  padding-left: 0;
+}
+
+.blog-content li > ul,
+.blog-content li > ol {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.blog-content blockquote {
+  margin: 30px 0;
+  padding: 20px 30px;
+  border-left: 4px solid #1a1a1a;
+  background-color: #f5f5f5;
+  font-style: italic;
+}
+
+.blog-content strong {
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Tags Section */
+.blog-tags-section {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.blog-tags-section h3 {
+  font-family: "Inter", Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #666666;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.blog-tag {
+  font-family: "Inter", Helvetica, sans-serif;
+  font-size: 14px;
+  color: #4a4a4a;
+  background-color: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.blog-tag-link {
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.blog-tag-link:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Internal Links Section */
+.blog-internal-links {
+  margin-top: 50px;
+  padding: 30px;
+  background-color: #f8f8f6;
+  border-radius: 12px;
+}
+
+.blog-internal-links h3 {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #1a1a1a;
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+
+.internal-links-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.internal-link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.internal-link-card:hover {
+  border-color: #1a1a1a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.internal-link-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.internal-link-text {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.internal-link-desc {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #666666;
+  text-align: center;
+}
+
+/* Blog CTA Section */
+.blog-cta-section {
+  margin-top: 50px;
+  padding: 40px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  border-radius: 16px;
+  text-align: center;
+}
+
+.blog-cta-badge {
+  display: inline-block;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1a1a1a;
+  background-color: #f0f0f0;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+.blog-cta-title {
+  font-family: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.blog-cta-description {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #b0b0b0;
+  margin: 0 0 28px 0;
+  line-height: 1.6;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog-cta-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.blog-cta-primary {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.blog-cta-primary:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-1px);
+}
+
+.blog-cta-secondary {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 1px solid #555555;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.blog-cta-secondary:hover {
+  border-color: #888888;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.blog-cta-subtext {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #777777;
+  margin: 0;
+}
+
+/* FAQ Section */
+.faq-section {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.faq-section h2 {
+  font-family: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: #1a1a1a;
+  margin: 0 0 30px 0;
+  text-align: center;
+  transform: scaleX(1.15);
+}
+
+.faq-item {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.faq-item h3 {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #1a1a1a;
+  margin: 0 0 12px 0;
+}
+
+.faq-item p {
+  font-family: "Inter", Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Footer */
+.blog-detail-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.back-link {
+  font-family: "Inter", Helvetica, sans-serif;
+  font-weight: 400;
+  color: #1a1a1a;
+  font-size: 16px;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.back-link:hover {
+  opacity: 0.7;
+}
+
+/* Related Posts */
+.related-posts-section {
+  background-color: #f5f5f0;
+  padding: 60px 40px;
+  margin-top: 60px;
+}
+
+.related-posts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.related-posts-section h2 {
+  font-family: "Archivo", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #1a1a1a;
+  margin: 0 0 30px 0;
+  text-align: center;
+  transform: scaleX(1.15);
+}
+
+.related-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.related-post-card {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+.related-post-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.related-post-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.related-post-title {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .blog-detail-nav {
+    padding: 25px 30px 0 30px;
+  }
+
+  .blog-detail-header-image {
+    width: 92%;
+    margin: 30px auto 0;
+    height: 280px;
+  }
+
+  .blog-detail-content {
+    padding: 24px 30px 80px;
+  }
+
+  .blog-detail-title {
+    font-size: 36px;
+  }
+
+  .related-posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .blog-detail-nav {
+    padding: 20px 24px 0 24px;
+  }
+
+  .blog-detail-header-image {
+    width: 92%;
+    margin: 24px auto 0;
+    height: 240px;
+  }
+
+  .blog-detail-content {
+    padding: 24px 24px 80px;
+  }
+
+  .blog-detail-header {
+    margin-bottom: 30px;
+  }
+
+  .blog-detail-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .blog-detail-meta-info {
+    gap: 30px;
+  }
+
+  .blog-detail-title {
+    font-size: 32px;
+  }
+
+  .blog-detail-body {
+    margin-bottom: 50px;
+  }
+
+  .blog-content {
+    font-size: 17px;
+  }
+
+  .blog-content h2 {
+    font-size: 26px;
+  }
+
+  .blog-content h3 {
+    font-size: 22px;
+  }
+
+  .blog-internal-links {
+    padding: 24px 20px;
+  }
+
+  .internal-links-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .internal-link-card {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .internal-link-icon {
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .internal-link-text {
+    text-align: left;
+  }
+
+  .internal-link-desc {
+    text-align: left;
+  }
+
+  .blog-cta-section {
+    padding: 30px 24px;
+  }
+
+  .blog-cta-title {
+    font-size: 24px;
+  }
+
+  .blog-cta-description {
+    font-size: 15px;
+  }
+
+  .blog-cta-buttons {
+    flex-direction: column;
+  }
+
+  .blog-cta-primary,
+  .blog-cta-secondary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .related-posts-section {
+    padding: 40px 24px;
+  }
+
+  .related-posts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .blog-detail-nav {
+    padding: 16px 20px 0 20px;
+  }
+
+  .blog-detail-header-image {
+    width: 90%;
+    margin: 20px auto 0;
+    height: 200px;
+    border-radius: 12px;
+  }
+
+  .blog-detail-content {
+    padding: 20px 20px 60px;
+  }
+
+  .blog-detail-meta {
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 24px;
+  }
+
+  .blog-detail-meta-info {
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .blog-detail-title {
+    font-size: 26px;
+  }
+
+  .blog-content {
+    font-size: 16px;
+  }
+
+  .blog-content h2 {
+    font-size: 24px;
+  }
+
+  .blog-content h3 {
+    font-size: 20px;
+  }
+
+  .faq-section h2 {
+    font-size: 24px;
+  }
+
+  .related-posts-section {
+    padding: 30px 20px;
+  }
+}

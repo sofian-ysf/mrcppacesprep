@@ -1,0 +1,996 @@
+[dotenv@17.3.1] injecting env (20) from .env.local -- tip: ⚙️  write to custom object with { processEnv: myObject }
+
+╔══════════════════════════════════════════════════════════════╗
+║  AUTOMATIC QUESTION FIXER - RUNS UNTIL COMPLETE              ║
+║  Model: claude-sonnet-4-6                            ║
+║  Concurrency: 8 parallel requests                            ║
+╚══════════════════════════════════════════════════════════════╝
+
+
+============================================================
+TASK: DIFFICULTY RE-EVALUATION
+============================================================
+
+Processing batch of 50 questions...
+Progress: 50 total processed
+
+📊 Current Stats:
+   Difficulty: 50 processed, 0 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 100 total processed
+
+📊 Current Stats:
+   Difficulty: 97 processed, 27 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 150 total processed
+
+📊 Current Stats:
+   Difficulty: 149 processed, 76 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 200 total processed
+
+📊 Current Stats:
+   Difficulty: 199 processed, 125 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 250 total processed
+
+📊 Current Stats:
+   Difficulty: 250 processed, 171 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 300 total processed
+
+📊 Current Stats:
+   Difficulty: 298 processed, 213 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 350 total processed
+
+📊 Current Stats:
+   Difficulty: 348 processed, 259 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 400 total processed
+
+📊 Current Stats:
+   Difficulty: 400 processed, 302 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 450 total processed
+
+📊 Current Stats:
+   Difficulty: 449 processed, 351 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 500 total processed
+
+📊 Current Stats:
+   Difficulty: 500 processed, 398 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 550 total processed
+
+📊 Current Stats:
+   Difficulty: 549 processed, 434 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 600 total processed
+
+📊 Current Stats:
+   Difficulty: 600 processed, 477 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 650 total processed
+
+📊 Current Stats:
+   Difficulty: 648 processed, 523 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 700 total processed
+
+📊 Current Stats:
+   Difficulty: 695 processed, 569 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 750 total processed
+
+📊 Current Stats:
+   Difficulty: 750 processed, 622 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 48 questions...
+Progress: 798 total processed
+
+📊 Current Stats:
+   Difficulty: 788 processed, 655 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 6 questions...
+Progress: 804 total processed
+
+📊 Current Stats:
+   Difficulty: 802 processed, 669 changed
+   Explanations: 0 generated
+   UK Verification: 0 accurate, 0 issues found
+
+✅ DIFFICULTY RE-EVALUATION complete! No more questions.
+
+============================================================
+TASK: STRUCTURED EXPLANATION GENERATION
+============================================================
+
+Processing batch of 50 questions...
+Progress: 50 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 50 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 100 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 100 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 150 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 150 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 200 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 200 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 250 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 250 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 300 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 300 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 350 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 350 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 400 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 400 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 450 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 450 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 500 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 500 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 550 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 550 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 600 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 600 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 650 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 650 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 700 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 700 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 750 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 750 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 800 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 800 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 850 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 850 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 900 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 900 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 950 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 950 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1000 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1000 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1050 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1050 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1100 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1100 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1150 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1150 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1200 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1200 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1250 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1250 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1300 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1300 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1350 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1350 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1400 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1400 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1450 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1449 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1500 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1498 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1550 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1547 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1600 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1595 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1650 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1643 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 25 questions...
+Progress: 1675 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1667 generated
+   UK Verification: 0 accurate, 0 issues found
+
+
+Processing batch of 1 questions...
+Progress: 1676 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 0 accurate, 0 issues found
+
+✅ STRUCTURED EXPLANATION GENERATION complete! No more questions.
+
+============================================================
+TASK: UK GUIDELINES VERIFICATION
+============================================================
+
+Processing batch of 50 questions...
+Progress: 50 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 33 accurate, 14 issues found
+
+
+Processing batch of 50 questions...
+Progress: 100 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 69 accurate, 28 issues found
+
+
+Processing batch of 50 questions...
+Progress: 150 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 103 accurate, 46 issues found
+
+
+Processing batch of 50 questions...
+Progress: 200 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 136 accurate, 47 issues found
+
+
+Processing batch of 50 questions...
+Progress: 250 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 174 accurate, 71 issues found
+
+
+Processing batch of 50 questions...
+Progress: 300 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 205 accurate, 77 issues found
+
+
+Processing batch of 50 questions...
+Progress: 350 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 234 accurate, 99 issues found
+
+
+Processing batch of 50 questions...
+Progress: 400 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 268 accurate, 129 issues found
+
+
+Processing batch of 50 questions...
+Progress: 450 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 298 accurate, 147 issues found
+
+
+Processing batch of 50 questions...
+Progress: 500 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 332 accurate, 161 issues found
+
+
+Processing batch of 50 questions...
+Progress: 550 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 360 accurate, 182 issues found
+
+
+Processing batch of 50 questions...
+Progress: 600 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 388 accurate, 208 issues found
+
+
+Processing batch of 50 questions...
+Progress: 650 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 419 accurate, 228 issues found
+
+
+Processing batch of 50 questions...
+Progress: 700 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 450 accurate, 243 issues found
+
+
+Processing batch of 50 questions...
+Progress: 750 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 475 accurate, 268 issues found
+
+
+Processing batch of 50 questions...
+Progress: 800 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 505 accurate, 287 issues found
+
+
+Processing batch of 50 questions...
+Progress: 850 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 537 accurate, 303 issues found
+
+
+Processing batch of 50 questions...
+Progress: 900 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 564 accurate, 326 issues found
+
+
+Processing batch of 50 questions...
+Progress: 950 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 598 accurate, 344 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1000 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 625 accurate, 364 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1050 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 657 accurate, 381 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1100 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 682 accurate, 383 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1150 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 716 accurate, 424 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1200 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 745 accurate, 439 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1250 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 771 accurate, 458 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1300 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 804 accurate, 485 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1350 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 827 accurate, 509 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1400 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 847 accurate, 543 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1450 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 870 accurate, 543 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1500 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 907 accurate, 571 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1550 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 946 accurate, 589 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1600 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 975 accurate, 592 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1650 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1009 accurate, 614 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1700 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1055 accurate, 633 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1750 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1088 accurate, 646 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1800 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1111 accurate, 651 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1850 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1141 accurate, 675 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1900 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1161 accurate, 697 issues found
+
+
+Processing batch of 50 questions...
+Progress: 1950 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1183 accurate, 735 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2000 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1217 accurate, 744 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2050 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1243 accurate, 764 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2100 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1270 accurate, 778 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2150 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1305 accurate, 800 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2200 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1343 accurate, 830 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2250 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1372 accurate, 833 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2300 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1408 accurate, 857 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2350 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1444 accurate, 876 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2400 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1480 accurate, 878 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2450 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1516 accurate, 892 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2500 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1551 accurate, 914 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2550 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1577 accurate, 929 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2600 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1608 accurate, 944 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2650 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1640 accurate, 960 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2700 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1656 accurate, 964 issues found
+
+
+Processing batch of 50 questions...
+Progress: 2750 total processed
+
+📊 Current Stats:
+   Difficulty: 804 processed, 671 changed
+   Explanations: 1668 generated
+   UK Verification: 1663 accurate, 968 issues found
+
+✅ UK GUIDELINES VERIFICATION complete! No more questions.
+
+╔══════════════════════════════════════════════════════════════╗
+║  ✅ ALL TASKS COMPLETE!                                       ║
+╠══════════════════════════════════════════════════════════════╣
+║  Total time: 194 minutes                                      ║
+║  Difficulties changed: 671                                 ║
+║  Explanations generated: 1668                              ║
+║  UK Issues found: 968                                      ║
+╚══════════════════════════════════════════════════════════════╝
+
