@@ -5,29 +5,37 @@ import { useAuth } from '@/app/contexts/AuthContext'
 import { useEffect, useState } from 'react'
 import { DashboardLayout } from '@/app/components/dashboard'
 
+interface ModuleStats {
+  viewed: number
+  completed: number
+  answered?: number
+  correct?: number
+  accuracy?: number
+}
+
+interface WeakArea {
+  category: string
+  accuracy: number
+  total: number
+}
+
 interface ProgressData {
   overall: {
-    totalAnswered: number
-    correctAnswers: number
-    accuracy: number
-    totalTimeSeconds: number
+    totalStudyTimeSeconds: number
+    currentStreak: number
+    contentCompleted: number
+    lastActivityAt: string | null
   }
-  recent: {
-    totalAnswered: number
-    correctAnswers: number
-    accuracy: number
+  modules: {
+    spotDiagnosis: ModuleStats
+    stations: ModuleStats
+    differentials: ModuleStats
+    sba: ModuleStats & { answered: number; correct: number; accuracy: number }
+    checklists: ModuleStats
   }
-  byCategory: {
-    name: string
-    slug: string
-    type: string
-    total: number
-    correct: number
-    accuracy: number
-  }[]
-  byDifficulty: Record<string, { total: number; correct: number; accuracy: number }>
-  byType: Record<string, { total: number; correct: number; accuracy: number }>
-  dailyActivity: { date: string; total: number; correct: number }[]
+  weakAreas: WeakArea[]
+  recommendations: string[]
+  dailyActivity: { date: string; total: number }[]
 }
 
 export default function ProgressPage() {
@@ -39,7 +47,7 @@ export default function ProgressPage() {
   useEffect(() => {
     async function fetchProgress() {
       try {
-        const res = await fetch('/api/user/progress')
+        const res = await fetch('/api/progress')
         if (!res.ok) throw new Error('Failed to fetch progress')
         const data = await res.json()
         setProgress(data)
@@ -119,11 +127,11 @@ export default function ProgressPage() {
         { label: 'Progress' }
       ]}
     >
-      {/* Page Title with Start Questions CTA */}
+      {/* Page Title */}
       <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h1 className="text-2xl font-semibold text-gray-900">Your Progress</h1>
-          <p className="text-gray-600 mt-1">Track your performance and identify areas for improvement</p>
+          <p className="text-gray-600 mt-1">Track your MRCP PACES preparation</p>
         </div>
         <Link
           href="/dashboard/sba"
@@ -133,27 +141,32 @@ export default function ProgressPage() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          Start Questions
+          Continue Studying
         </Link>
       </div>
 
-      {/* Overall Stats */}
+      {/* Overall Stats Card */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <div className="bg-white rounded-lg border border-gray-200 p-6">
-          <p className="text-sm text-gray-600 mb-1">Total Questions</p>
-          <p className="text-3xl font-bold text-gray-900">{progress?.overall.totalAnswered || 0}</p>
+          <p className="text-sm text-gray-600 mb-1">Total Study Time</p>
+          <p className="text-3xl font-bold text-gray-900">
+            {formatTime(progress?.overall.totalStudyTimeSeconds || 0)}
+          </p>
         </div>
         <div className="bg-white rounded-lg border border-gray-200 p-6">
-          <p className="text-sm text-gray-600 mb-1">Overall Accuracy</p>
-          <p className="text-3xl font-bold text-gray-900">{progress?.overall.accuracy || 0}%</p>
+          <p className="text-sm text-gray-600 mb-1">Current Streak</p>
+          <div className="flex items-center gap-2">
+            <p className="text-3xl font-bold text-gray-900">{progress?.overall.currentStreak || 0}</p>
+            <span className="text-xl">days</span>
+          </div>
         </div>
         <div className="bg-white rounded-lg border border-gray-200 p-6">
-          <p className="text-sm text-gray-600 mb-1">Correct Answers</p>
-          <p className="text-3xl font-bold text-gray-900">{progress?.overall.correctAnswers || 0}</p>
+          <p className="text-sm text-gray-600 mb-1">Content Completed</p>
+          <p className="text-3xl font-bold text-gray-900">{progress?.overall.contentCompleted || 0}</p>
         </div>
         <div className="bg-white rounded-lg border border-gray-200 p-6">
-          <p className="text-sm text-gray-600 mb-1">Time Spent</p>
-          <p className="text-3xl font-bold text-gray-900">{formatTime(progress?.overall.totalTimeSeconds || 0)}</p>
+          <p className="text-sm text-gray-600 mb-1">SBA Accuracy</p>
+          <p className="text-3xl font-bold text-gray-900">{progress?.modules.sba.accuracy || 0}%</p>
         </div>
       </div>
 
@@ -170,7 +183,7 @@ export default function ProgressPage() {
                       <div
                         className="w-full max-w-[40px] bg-black rounded-t transition-all"
                         style={{ height: `${(day.total / maxDaily) * 100}%`, minHeight: '8px' }}
-                        title={`${day.total} questions, ${day.correct} correct`}
+                        title={`${day.total} activities`}
                       ></div>
                     ) : (
                       <div className="w-full max-w-[40px] bg-gray-100 rounded h-2"></div>
@@ -188,153 +201,179 @@ export default function ProgressPage() {
           )}
         </div>
 
-        {/* This Week Summary */}
+        {/* Study Recommendations */}
         <div className="bg-white rounded-lg border border-gray-200 p-6">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">This Week</h2>
-          <div className="space-y-4">
-            <div>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-600">Questions</span>
-                <span className="font-medium text-gray-900">{progress?.recent.totalAnswered || 0}</span>
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Recommendations</h2>
+          {progress?.recommendations && progress.recommendations.length > 0 ? (
+            <ul className="space-y-3">
+              {progress.recommendations.map((rec, index) => (
+                <li key={index} className="flex items-start gap-2 text-sm text-gray-700">
+                  <svg className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                  <span>{rec}</span>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="text-center py-4 text-gray-500">
+              <p>Start studying to get personalized recommendations!</p>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Per-Module Breakdown */}
+      <div className="bg-white rounded-lg border border-gray-200 p-6 mb-8">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Module Progress</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {/* Spot Diagnosis */}
+          <Link href="/dashboard/spot-diagnosis" className="block border border-gray-100 rounded-lg p-4 hover:border-gray-300 transition-colors">
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-purple-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-sm font-medium text-gray-900">Spot Diagnosis</h3>
               </div>
             </div>
-            <div>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-600">Correct</span>
-                <span className="font-medium text-gray-900">{progress?.recent.correctAnswers || 0}</span>
+            <p className="text-2xl font-bold text-gray-900">
+              {progress?.modules.spotDiagnosis.viewed || 0}
+            </p>
+            <p className="text-xs text-gray-500">cards reviewed</p>
+          </Link>
+
+          {/* Stations */}
+          <Link href="/dashboard/stations" className="block border border-gray-100 rounded-lg p-4 hover:border-gray-300 transition-colors">
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                </div>
+                <h3 className="text-sm font-medium text-gray-900">Stations</h3>
               </div>
             </div>
-            <div>
-              <div className="flex justify-between text-sm mb-1">
-                <span className="text-gray-600">Accuracy</span>
-                <span className="font-medium text-gray-900">{progress?.recent.accuracy || 0}%</span>
+            <p className="text-2xl font-bold text-gray-900">
+              {progress?.modules.stations.completed || 0}
+            </p>
+            <p className="text-xs text-gray-500">scenarios practiced</p>
+          </Link>
+
+          {/* Differentials */}
+          <Link href="/dashboard/differentials" className="block border border-gray-100 rounded-lg p-4 hover:border-gray-300 transition-colors">
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                </div>
+                <h3 className="text-sm font-medium text-gray-900">Differentials</h3>
               </div>
-              <div className="w-full bg-gray-200 rounded-full h-2">
+            </div>
+            <p className="text-2xl font-bold text-gray-900">
+              {progress?.modules.differentials.viewed || 0}
+            </p>
+            <p className="text-xs text-gray-500">flashcards reviewed</p>
+          </Link>
+
+          {/* SBAs */}
+          <Link href="/dashboard/sba" className="block border border-gray-100 rounded-lg p-4 hover:border-gray-300 transition-colors">
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-amber-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-sm font-medium text-gray-900">SBAs</h3>
+              </div>
+            </div>
+            <div className="flex items-baseline gap-2">
+              <p className="text-2xl font-bold text-gray-900">
+                {progress?.modules.sba.answered || 0}
+              </p>
+              <p className="text-sm text-gray-600">answered</p>
+            </div>
+            <div className="flex items-center gap-2 mt-1">
+              <div className="flex-1 bg-gray-200 rounded-full h-2">
                 <div
-                  className="bg-black h-2 rounded-full transition-all"
-                  style={{ width: `${progress?.recent.accuracy || 0}%` }}
+                  className={`h-2 rounded-full transition-all ${
+                    (progress?.modules.sba.accuracy || 0) >= 70 ? 'bg-green-500' :
+                    (progress?.modules.sba.accuracy || 0) >= 50 ? 'bg-yellow-500' :
+                    'bg-red-500'
+                  }`}
+                  style={{ width: `${progress?.modules.sba.accuracy || 0}%` }}
                 ></div>
               </div>
+              <span className="text-sm font-medium text-gray-900">
+                {progress?.modules.sba.accuracy || 0}%
+              </span>
             </div>
-          </div>
+          </Link>
+
+          {/* Checklists */}
+          <Link href="/dashboard/checklists" className="block border border-gray-100 rounded-lg p-4 hover:border-gray-300 transition-colors">
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center">
+                  <svg className="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                </div>
+                <h3 className="text-sm font-medium text-gray-900">Checklists</h3>
+              </div>
+            </div>
+            <p className="text-2xl font-bold text-gray-900">
+              {progress?.modules.checklists.completed || 0}
+            </p>
+            <p className="text-xs text-gray-500">completed</p>
+          </Link>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-        {/* By Difficulty */}
-        <div className="bg-white rounded-lg border border-gray-200 p-6">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">By Difficulty</h2>
-          <div className="space-y-4">
-            {['Easy', 'Medium', 'Hard'].map((difficulty) => {
-              const stats = progress?.byDifficulty[difficulty]
-              return (
-                <div key={difficulty}>
-                  <div className="flex items-center justify-between mb-1">
-                    <div className="flex items-center gap-2">
-                      <span className={`text-xs px-2 py-0.5 rounded-full ${
-                        difficulty === 'Easy' ? 'bg-green-100 text-green-800' :
-                        difficulty === 'Medium' ? 'bg-yellow-100 text-yellow-800' :
-                        'bg-red-100 text-red-800'
-                      }`}>
-                        {difficulty}
-                      </span>
-                      <span className="text-sm text-gray-600">
-                        {stats?.correct || 0}/{stats?.total || 0} correct
-                      </span>
-                    </div>
-                    <span className="text-sm font-medium text-gray-900">{stats?.accuracy || 0}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
+      {/* Weak Areas */}
+      {progress?.weakAreas && progress.weakAreas.length > 0 && (
+        <div className="bg-white rounded-lg border border-gray-200 p-6 mb-8">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Areas to Improve</h2>
+          <p className="text-sm text-gray-600 mb-4">Categories with less than 70% accuracy in SBAs</p>
+          <div className="space-y-3">
+            {progress.weakAreas.map((area, index) => (
+              <div key={index} className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className={`w-2 h-2 rounded-full ${
+                    area.accuracy < 40 ? 'bg-red-500' :
+                    area.accuracy < 60 ? 'bg-orange-500' :
+                    'bg-yellow-500'
+                  }`}></div>
+                  <span className="text-sm text-gray-900">{area.category}</span>
+                  <span className="text-xs text-gray-500">({area.total} questions)</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-24 bg-gray-200 rounded-full h-2">
                     <div
-                      className={`h-2 rounded-full transition-all ${
-                        difficulty === 'Easy' ? 'bg-green-500' :
-                        difficulty === 'Medium' ? 'bg-yellow-500' :
-                        'bg-red-500'
+                      className={`h-2 rounded-full ${
+                        area.accuracy < 40 ? 'bg-red-500' :
+                        area.accuracy < 60 ? 'bg-orange-500' :
+                        'bg-yellow-500'
                       }`}
-                      style={{ width: `${stats?.accuracy || 0}%` }}
+                      style={{ width: `${area.accuracy}%` }}
                     ></div>
                   </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-
-        {/* By Question Type */}
-        <div className="bg-white rounded-lg border border-gray-200 p-6">
-          <h2 className="text-lg font-semibold text-gray-900 mb-4">By Question Type</h2>
-          <div className="space-y-4">
-            {[
-              { key: 'sba', label: 'Single Best Answer' },
-              { key: 'emq', label: 'Extended Matching' },
-              { key: 'calculation', label: 'Calculations' }
-            ].map(({ key, label }) => {
-              const stats = progress?.byType[key]
-              return (
-                <div key={key}>
-                  <div className="flex items-center justify-between mb-1">
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm text-gray-900">{label}</span>
-                      <span className="text-xs text-gray-500">
-                        ({stats?.correct || 0}/{stats?.total || 0})
-                      </span>
-                    </div>
-                    <span className="text-sm font-medium text-gray-900">{stats?.accuracy || 0}%</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div
-                      className="bg-black h-2 rounded-full transition-all"
-                      style={{ width: `${stats?.accuracy || 0}%` }}
-                    ></div>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </div>
-
-      {/* By Category */}
-      <div className="bg-white rounded-lg border border-gray-200 p-6">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">By Category</h2>
-        {progress?.byCategory && progress.byCategory.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {progress.byCategory.map((category) => (
-              <div key={category.slug} className="border border-gray-100 rounded-lg p-4">
-                <div className="flex items-center justify-between mb-2">
-                  <div>
-                    <h3 className="text-sm font-medium text-gray-900">{category.name}</h3>
-                    <p className="text-xs text-gray-500">
-                      {category.correct}/{category.total} correct
-                    </p>
-                  </div>
-                  <div className={`text-lg font-bold ${
-                    category.accuracy >= 70 ? 'text-green-600' :
-                    category.accuracy >= 50 ? 'text-yellow-600' :
-                    'text-red-600'
-                  }`}>
-                    {category.accuracy}%
-                  </div>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div
-                    className={`h-2 rounded-full transition-all ${
-                      category.accuracy >= 70 ? 'bg-green-500' :
-                      category.accuracy >= 50 ? 'bg-yellow-500' :
-                      'bg-red-500'
-                    }`}
-                    style={{ width: `${category.accuracy}%` }}
-                  ></div>
+                  <span className="text-sm font-medium text-gray-900 w-12 text-right">
+                    {area.accuracy}%
+                  </span>
                 </div>
               </div>
             ))}
           </div>
-        ) : (
-          <div className="text-center py-8 text-gray-500">
-            <p>No category data yet. Start practicing to see your progress by category.</p>
-          </div>
-        )}
-      </div>
+        </div>
+      )}
 
       {/* Action Buttons */}
       <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -342,7 +381,13 @@ export default function ProgressPage() {
           href="/dashboard/sba"
           className="pill-btn pill-btn-primary text-center"
         >
-          Continue Practicing
+          Practice SBAs
+        </Link>
+        <Link
+          href="/dashboard/stations"
+          className="pill-btn pill-btn-outline text-center"
+        >
+          Practice Stations
         </Link>
         <Link
           href="/dashboard"
