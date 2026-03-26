@@ -1,27 +1,38 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Try Free MRCP PACES Practice Questions | No Sign-Up Required',
-  description: 'Practice 15 free MRCP PACES exam questions with detailed explanations. 5 calculations + 10 clinical questions. Interactive practice with study tips. No account needed.',
+  title: 'Free MRCP PACES Demo | Try Spot Diagnosis, Stations, Differentials & SBAs',
+  description: 'Try our MRCP PACES exam preparation for free. Access sample Spot Diagnoses, PACES Stations, Differential Diagnosis flashcards, and SBA questions. No account required.',
   keywords: [
-    'free MRCP PACES questions',
+    'free MRCP PACES demo',
     'MRCP PACES practice test',
-    'pharmacy exam demo',
-    'free calculation questions',
+    'MRCP PACES spot diagnosis',
+    'MRCP PACES stations practice',
+    'MRCP differential diagnosis',
+    'MRCP PACES SBA questions',
     'MRCP PACES trial',
-    'pharmacy practice questions free',
-    'pre-registration exam sample'
+    'free medical exam practice',
+    'MRCP clinical examination practice'
   ],
   openGraph: {
-    title: 'Try 15 Free MRCP PACES Practice Questions',
-    description: 'Interactive practice with detailed explanations. No sign-up required.',
+    title: 'Try Free MRCP PACES Demo - Spot Diagnosis, Stations, Differentials & SBAs',
+    description: 'Explore sample content from all MRCP PACES modules. Practice spot diagnoses, stations, differentials, and SBAs. No sign-up required.',
     url: 'https://www.mrcppacesprep.com/try-free',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.mrcppacesprep.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'MRCP PACES Free Demo - Try Before You Subscribe',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Try 15 Free MRCP PACES Practice Questions',
-    description: 'Interactive practice with detailed explanations. No sign-up required.',
+    title: 'Free MRCP PACES Demo | Try Before You Subscribe',
+    description: 'Practice sample Spot Diagnoses, PACES Stations, Differentials & SBAs. No account required.',
+    images: ['https://www.mrcppacesprep.com/og-image.png'],
   },
   alternates: {
     canonical: '/try-free',
