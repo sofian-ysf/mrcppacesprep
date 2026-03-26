@@ -98,17 +98,23 @@ export default function Navigation() {
                 <Link href="/dashboard" className={`pill-nav-item ${pathname === '/dashboard' ? 'active' : ''}`}>
                   Dashboard
                 </Link>
-                <Link href="/dashboard/progress" className={`pill-nav-item ${pathname === '/dashboard/progress' ? 'active' : ''}`}>
-                  Progress
+                <Link href="/dashboard/spot-diagnosis" className={`pill-nav-item ${pathname?.startsWith('/dashboard/spot-diagnosis') ? 'active' : ''}`}>
+                  Spot Dx
+                </Link>
+                <Link href="/dashboard/stations" className={`pill-nav-item ${pathname?.startsWith('/dashboard/stations') ? 'active' : ''}`}>
+                  Stations
                 </Link>
                 <Link href="/dashboard/sba" className={`pill-nav-item ${pathname?.startsWith('/dashboard/sba') ? 'active' : ''}`}>
-                  SBA
+                  SBAs
                 </Link>
-                <Link href="/dashboard/flashcards" className={`pill-nav-item ${pathname?.startsWith('/dashboard/flashcards') ? 'active' : ''}`}>
-                  Flashcards
+                <Link href="/dashboard/differentials" className={`pill-nav-item ${pathname?.startsWith('/dashboard/differentials') ? 'active' : ''}`}>
+                  Differentials
                 </Link>
-                <Link href="/blog" className={`pill-nav-item ${pathname?.startsWith('/blog') ? 'active' : ''}`}>
-                  Blog
+                <Link href="/dashboard/checklists" className={`pill-nav-item ${pathname?.startsWith('/dashboard/checklists') ? 'active' : ''}`}>
+                  Checklists
+                </Link>
+                <Link href="/dashboard/progress" className={`pill-nav-item ${pathname === '/dashboard/progress' ? 'active' : ''}`}>
+                  Progress
                 </Link>
               </>
             ) : (
@@ -198,20 +204,23 @@ export default function Navigation() {
                 <Link href="/dashboard" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
                   Dashboard
                 </Link>
-                <Link href="/dashboard/progress" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
-                  Progress
+                <Link href="/dashboard/spot-diagnosis" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
+                  Spot Dx
+                </Link>
+                <Link href="/dashboard/stations" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
+                  Stations
                 </Link>
                 <Link href="/dashboard/sba" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
-                  SBA
+                  SBAs
                 </Link>
-                <Link href="/dashboard/mock-exams" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
-                  Mock Exams
+                <Link href="/dashboard/differentials" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
+                  Differentials
                 </Link>
-                <Link href="/dashboard/flashcards" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
-                  Flashcards
+                <Link href="/dashboard/checklists" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
+                  Checklists
                 </Link>
-                <Link href="/blog" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
-                  Blog
+                <Link href="/dashboard/progress" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
+                  Progress
                 </Link>
               </>
             ) : (
