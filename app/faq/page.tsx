@@ -61,7 +61,7 @@ export default function FAQPage() {
                 <span className="block text-gray-600 text-3xl mt-2">Everything About the MRCP PACES Exam</span>
               </h1>
               <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
-                Find answers to common questions about the MRCP PACES pre-registration exam, preparation strategies, our platform, and more.
+                Find answers to common questions about the MRCP PACES exam, preparation strategies, our platform, and more.
               </p>
 
               {/* Search Bar */}
@@ -194,9 +194,9 @@ export default function FAQPage() {
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-8 md:grid-cols-4">
               <div>
-                <h3 className="mb-4 font-bold text-gray-900">MRCP PACES Exam Prep</h3>
+                <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
                 <p className="text-sm text-gray-600">
-                  The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
+                  The UK's leading platform for MRCP PACES exam preparation.
                 </p>
               </div>
 
@@ -231,8 +231,8 @@ export default function FAQPage() {
             </div>
 
             <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-              <p>© 2024 MRCP PACES Exam Prep. All rights reserved.</p>
-              <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+              <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
+              <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
             </div>
           </div>
         </footer>

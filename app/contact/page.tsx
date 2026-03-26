@@ -338,7 +338,7 @@ export default function ContactPage() {
             <div>
               <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES exam preparation.
               </p>
             </div>
 
@@ -375,7 +375,7 @@ export default function ContactPage() {
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
             <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
-            <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+            <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
           </div>
         </div>
       </footer>

@@ -30,7 +30,7 @@ export default function PrivacyPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
               <p className="text-gray-700 mb-4">
-                Welcome to MRCPPACESPREP ("we," "our," or "us"). We are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our MRCP PACES pre-registration exam preparation platform.
+                Welcome to MRCPPACESPREP ("we," "our," or "us"). We are committed to protecting your privacy and personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our MRCP PACES exam preparation platform.
               </p>
               <p className="text-gray-700 mb-4">
                 By using our services, you agree to the collection and use of information in accordance with this policy.
@@ -179,7 +179,7 @@ export default function PrivacyPage() {
             <div>
               <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES exam preparation.
               </p>
             </div>
 
@@ -216,7 +216,7 @@ export default function PrivacyPage() {
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
             <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
-            <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+            <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
           </div>
         </div>
       </footer>

@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   title: 'About MRCPPACESPREP | UK MRCP PACES Exam Platform | 94% Pass Rate | 8,500+ Students',
   description: 'MRCPPACESPREP: UK\'s leading MRCP PACES exam prep platform. Created by physicians. 94% pass rate. 8,500+ students helped. Learn our mission and story.',
   keywords: [
-    'about MRCPPACESPREP', 'MRCP PACES exam platform', 'pharmacy exam preparation company',
-    'physician-created content', 'UK pharmacy exam', 'pre-reg exam platform',
-    'trusted exam prep', 'pharmacy student support', 'MRCP PACES success rate'
+    'about MRCPPACESPREP', 'MRCP PACES exam platform', 'clinical exam preparation',
+    'physician-created content', 'UK MRCP exam', 'PACES exam platform',
+    'trusted exam prep', 'medical trainee support', 'MRCP PACES success rate'
   ],
   openGraph: {
     title: 'About MRCPPACESPREP | UK MRCP PACES Exam Platform | 94% Pass Rate',
@@ -37,10 +37,10 @@ export default function AboutPage() {
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
               About MRCPPACESPREP
-              <span className="block text-gray-600 text-3xl mt-2">Empowering Future Pharmacists to Succeed</span>
+              <span className="block text-gray-600 text-3xl mt-2">Empowering Future Physicians to Succeed</span>
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
-              Created by physicians who understand the challenges of the MRCP PACES exam, we're committed to helping every pharmacy graduate achieve their professional registration.
+              Created by physicians who understand the challenges of the MRCP PACES exam, we're committed to helping every medical trainee achieve their MRCP qualification.
             </p>
           </div>
         </div>
@@ -53,10 +53,10 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-lg text-gray-600 mb-6">
-                At MRCPPACESPREP, we believe that every pharmacy graduate deserves the best possible chance to pass their MRCP PACES pre-registration exam on their first attempt. Our mission is to provide comprehensive, high-quality exam preparation resources that are accessible, effective, and tailored to the real exam experience.
+                At MRCPPACESPREP, we believe that every medical trainee deserves the best possible chance to pass their MRCP PACES exam on their first attempt. Our mission is to provide comprehensive, high-quality exam preparation resources that are accessible, effective, and tailored to the real exam experience.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                We understand that failing the MRCP PACES exam means not just a 6-month delay in your career, but also significant financial and emotional stress. That's why we've dedicated ourselves to creating the most effective exam preparation platform in the UK.
+                We understand that failing the MRCP PACES exam can significantly impact your career progression. That's why we've dedicated ourselves to creating the most effective clinical exam preparation platform in the UK.
               </p>
               <div className="flex items-center space-x-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
@@ -142,7 +142,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">The Problem</h3>
-              <p className="text-gray-600">We noticed that despite the wealth of pharmacy knowledge students possess, many struggle with the specific format and time pressure of the MRCP PACES exam. Traditional study methods weren't adequately preparing students for the real exam experience.</p>
+              <p className="text-gray-600">We noticed that despite strong clinical knowledge, many medical trainees struggle with the specific format and station requirements of the MRCP PACES exam. Traditional study methods weren't adequately preparing candidates for the real exam experience.</p>
             </div>
 
             <div className="text-center">
@@ -182,8 +182,8 @@ export default function AboutPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h3 className="mb-2 text-xl font-semibold text-gray-900">Pharmacist-Verified Content</h3>
-              <p className="text-gray-600">All our questions and explanations are created and reviewed by qualified physicians with recent MRCP PACES exam experience</p>
+              <h3 className="mb-2 text-xl font-semibold text-gray-900">Physician-Verified Content</h3>
+              <p className="text-gray-600">All our content and scenarios are created and reviewed by qualified physicians with recent MRCP PACES exam experience</p>
             </div>
 
             <div className="text-center">
@@ -193,7 +193,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">Regular Updates</h3>
-              <p className="text-gray-600">We continuously update our content based on current MRCP PACES guidelines, student feedback, and changes in pharmacy practice</p>
+              <p className="text-gray-600">We continuously update our content based on current MRCP PACES guidelines, candidate feedback, and changes in clinical practice</p>
             </div>
 
             <div className="text-center">
@@ -224,11 +224,11 @@ export default function AboutPage() {
                 ))}
               </div>
               <p className="mb-6 text-gray-600">
-                "MRCPPACESPREP was a game-changer for me. I failed my first attempt scoring only 48%, but after using this platform for 3 months, I passed with 76%! The detailed explanations really helped me understand concepts I was struggling with."
+                "MRCPPACESPREP was a game-changer for me. I failed my first attempt, but after using this platform for 3 months, I passed comfortably! The station-specific practice and detailed feedback really helped me understand where I was going wrong."
               </p>
               <div className="border-t pt-4">
-                <p className="font-semibold text-gray-900">Priya Patel</p>
-                <p className="text-sm text-gray-600">Community Pharmacist, London</p>
+                <p className="font-semibold text-gray-900">Dr Priya Patel</p>
+                <p className="text-sm text-gray-600">Medical Registrar, London</p>
               </div>
             </div>
 
@@ -239,11 +239,11 @@ export default function AboutPage() {
                 ))}
               </div>
               <p className="mb-6 text-gray-600">
-                "The mock exams were incredibly accurate to the real thing. I was scoring around 70% on the mocks and got 72% on the actual exam. The calculation questions were especially helpful - they prepared me for the time pressure."
+                "The mock stations were incredibly accurate to the real thing. The practice scenarios prepared me well for the actual exam format. The communication skills guidance was especially helpful."
               </p>
               <div className="border-t pt-4">
-                <p className="font-semibold text-gray-900">James Wilson</p>
-                <p className="text-sm text-gray-600">Hospital Pharmacist, Manchester</p>
+                <p className="font-semibold text-gray-900">Dr James Wilson</p>
+                <p className="text-sm text-gray-600">Core Medical Trainee, Manchester</p>
               </div>
             </div>
 
@@ -254,11 +254,11 @@ export default function AboutPage() {
                 ))}
               </div>
               <p className="mb-6 text-gray-600">
-                "Worth every penny! The performance tracking helped me identify my weak areas and focus my study time effectively. I went from averaging 55% in practice to passing with 78%. The support team was also incredibly helpful."
+                "Worth every penny! The performance tracking helped me identify my weak stations and focus my study time effectively. The clinical examination techniques guidance was invaluable. The support team was also incredibly helpful."
               </p>
               <div className="border-t pt-4">
-                <p className="font-semibold text-gray-900">Fatima Ali</p>
-                <p className="text-sm text-gray-600">Clinical Pharmacist, Birmingham</p>
+                <p className="font-semibold text-gray-900">Dr Fatima Ali</p>
+                <p className="text-sm text-gray-600">IMT Doctor, Birmingham</p>
               </div>
             </div>
           </div>
@@ -298,7 +298,7 @@ export default function AboutPage() {
             <div>
               <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES exam preparation.
               </p>
             </div>
 
@@ -335,7 +335,7 @@ export default function AboutPage() {
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
             <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
-            <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+            <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
           </div>
         </div>
       </footer>

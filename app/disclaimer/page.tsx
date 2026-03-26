@@ -40,27 +40,27 @@ export default function DisclaimerPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Educational Purpose Only</h2>
               <p className="text-gray-700 mb-4">
-                MRCPPACESPREP is an educational platform designed to assist pharmacy students in preparing for the General Pharmaceutical Council (MRCP PACES) pre-registration examination. Our content is intended for educational purposes only and should not be considered as:
+                MRCPPACESPREP is an educational platform designed to assist medical trainees in preparing for the MRCP PACES (Practical Assessment of Clinical Examination Skills) examination. Our content is intended for educational purposes only and should not be considered as:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>A guarantee of examination success or passing scores</li>
                 <li>Official MRCP PACES examination content or materials</li>
-                <li>Professional medical, pharmaceutical, or legal advice</li>
+                <li>Professional medical or legal advice</li>
                 <li>A substitute for official study materials or guidance</li>
-                <li>A replacement for practical pharmacy training or experience</li>
+                <li>A replacement for practical clinical training or experience</li>
               </ul>
             </section>
 
             <section className="mb-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">3. No Affiliation with MRCP PACES</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">3. No Affiliation with Royal College of Physicians</h2>
               <p className="text-gray-700 mb-4">
-                <strong>Important Notice:</strong> MRCPPACESPREP is not affiliated with, endorsed by, or officially connected to the General Pharmaceutical Council (MRCP PACES) in any way. We are an independent educational platform created to assist students in their exam preparation.
+                <strong>Important Notice:</strong> MRCPPACESPREP is not affiliated with, endorsed by, or officially connected to the Royal College of Physicians (RCP) or MRCP(UK) in any way. We are an independent educational platform created to assist candidates in their exam preparation.
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>We are not an official MRCP PACES training provider</li>
-                <li>Our questions and materials are not official MRCP PACES content</li>
-                <li>We do not represent or speak for the MRCP PACES</li>
-                <li>MRCP PACES has not reviewed or approved our content</li>
+                <li>Our content and materials are not official MRCP PACES content</li>
+                <li>We do not represent or speak for the Royal College of Physicians</li>
+                <li>The RCP has not reviewed or approved our content</li>
                 <li>Any reference to MRCP PACES is for identification purposes only</li>
               </ul>
             </section>
@@ -68,7 +68,7 @@ export default function DisclaimerPage() {
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">4. No Guarantee of Success</h2>
               <p className="text-gray-700 mb-4">
-                While our platform is designed to help students prepare for the MRCP PACES pre-registration examination, we cannot and do not guarantee:
+                While our platform is designed to help candidates prepare for the MRCP PACES examination, we cannot and do not guarantee:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>That you will pass the MRCP PACES examination</li>
@@ -95,7 +95,7 @@ export default function DisclaimerPage() {
                 <li>We reserve the right to modify content without notice</li>
               </ul>
               <p className="text-gray-700 mb-4">
-                Students are encouraged to consult official MRCP PACES resources, current pharmaceutical references, and other authoritative sources in addition to using our platform.
+                Candidates are encouraged to consult official MRCP(UK) resources, current clinical guidelines, and other authoritative sources in addition to using our platform.
               </p>
             </section>
 
@@ -152,7 +152,7 @@ export default function DisclaimerPage() {
                 The content on our platform is not intended to provide:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
-                <li>Professional medical or pharmaceutical advice</li>
+                <li>Professional medical advice for patient care</li>
                 <li>Legal guidance or interpretation of regulations</li>
                 <li>Career counseling or employment advice</li>
                 <li>Financial planning or investment advice</li>
@@ -185,7 +185,7 @@ export default function DisclaimerPage() {
               <ul className="list-disc pl-6 text-gray-700 mb-4">
                 <li>Verifying their eligibility to take the MRCP PACES examination</li>
                 <li>Understanding current examination requirements and procedures</li>
-                <li>Consulting official MRCP PACES resources and guidelines</li>
+                <li>Consulting official MRCP(UK) resources and guidelines</li>
                 <li>Making informed decisions about their study preparation</li>
                 <li>Seeking additional support or resources as needed</li>
                 <li>Maintaining appropriate study habits and time management</li>
@@ -230,8 +230,8 @@ export default function DisclaimerPage() {
                   <h3 className="text-sm font-medium text-yellow-800">Important Reminder</h3>
                   <div className="mt-2 text-sm text-yellow-700">
                     <p>
-                      MRCPPACESPREP is an independent educational platform and is not affiliated with or endorsed by the General Pharmaceutical Council (MRCP PACES).
-                      Always consult official MRCP PACES resources for the most current examination information and requirements.
+                      MRCPPACESPREP is an independent educational platform and is not affiliated with or endorsed by the Royal College of Physicians or MRCP(UK).
+                      Always consult official MRCP(UK) resources for the most current examination information and requirements.
                     </p>
                   </div>
                 </div>
@@ -248,7 +248,7 @@ export default function DisclaimerPage() {
             <div>
               <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES exam preparation.
               </p>
             </div>
 
@@ -285,7 +285,7 @@ export default function DisclaimerPage() {
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
             <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
-            <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+            <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
           </div>
         </div>
       </footer>

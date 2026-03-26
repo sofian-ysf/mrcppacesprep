@@ -33,20 +33,20 @@ export default function TermsPage() {
                 By accessing and using MRCPPACESPREP ("we," "our," or "us"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
               </p>
               <p className="text-gray-700 mb-4">
-                These Terms of Service govern your use of our MRCP PACES pre-registration exam preparation platform, including all content, services, and products available at or through the website.
+                These Terms of Service govern your use of our MRCP PACES exam preparation platform, including all content, services, and products available at or through the website.
               </p>
             </section>
 
             <section className="mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Description of Service</h2>
               <p className="text-gray-700 mb-4">
-                MRCPPACESPREP provides an online educational platform designed to help pharmacy students prepare for the General Pharmaceutical Council (MRCP PACES) pre-registration examination. Our services include:
+                MRCPPACESPREP provides an online educational platform designed to help medical trainees prepare for the MRCP PACES (Practical Assessment of Clinical Examination Skills) examination. Our services include:
               </p>
               <ul className="list-disc pl-6 text-gray-700 mb-4">
-                <li>Practice questions and mock examinations</li>
-                <li>Study materials and resources</li>
+                <li>Clinical examination technique tutorials and videos</li>
+                <li>Communication skills guidance and frameworks</li>
+                <li>Mock station scenarios and case presentations</li>
                 <li>Performance tracking and analytics</li>
-                <li>Educational content and explanations</li>
                 <li>Study planning tools</li>
               </ul>
             </section>
@@ -96,7 +96,7 @@ export default function TermsPage() {
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">5.1 Permitted Use</h3>
               <p className="text-gray-700 mb-4">
-                You may use our platform solely for personal, non-commercial educational purposes to prepare for the MRCP PACES pre-registration examination.
+                You may use our platform solely for personal, non-commercial educational purposes to prepare for the MRCP PACES examination.
               </p>
 
               <h3 className="text-xl font-semibold text-gray-900 mb-3">5.2 Prohibited Activities</h3>
@@ -220,7 +220,7 @@ export default function TermsPage() {
             <div>
               <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES exam preparation.
               </p>
             </div>
 
@@ -257,7 +257,7 @@ export default function TermsPage() {
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
             <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
-            <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+            <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
           </div>
         </div>
       </footer>

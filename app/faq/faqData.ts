@@ -5,32 +5,32 @@ export const faqCategories = [
     name: 'MRCP PACES Exam Basics',
     questions: [
       {
-        question: 'What is the MRCP PACES pre-registration exam?',
-        answer: 'The MRCP PACES (General Pharmaceutical Council) pre-registration exam is a mandatory assessment that pharmacy graduates in the UK must pass to become registered physicians. It tests clinical knowledge, pharmaceutical calculations, and professional practice across all areas of the MRCP PACES framework.'
+        question: 'What is the MRCP PACES exam?',
+        answer: 'The MRCP PACES (Practical Assessment of Clinical Examination Skills) is a clinical examination that forms part of the MRCP(UK) qualification. It tests clinical examination skills, communication abilities, and clinical judgement through five stations with real or simulated patients. Passing PACES is required for physicians seeking to become Members of the Royal College of Physicians.'
       },
       {
         question: 'What is the MRCP PACES exam format?',
-        answer: 'The MRCP PACES exam consists of 110 questions to be completed in 2.5 hours (150 minutes). It includes single best answer (SBA) questions, extended matching questions (EMQs), and calculation questions. All questions are multiple choice and computer-based.'
+        answer: 'MRCP PACES consists of 5 stations, each lasting 20 minutes with additional preparation time. The stations are: Station 1 (Respiratory and Abdominal examination), Station 2 (History Taking), Station 3 (Cardiovascular and Neurological examination), Station 4 (Communication Skills and Ethics), and Station 5 (Brief Clinical Consultations). Each station is assessed by two examiners.'
       },
       {
         question: 'What is the MRCP PACES exam pass rate?',
-        answer: 'The overall MRCP PACES exam pass rate typically ranges from 70-80% for first-time candidates, though this varies between sittings. Students who use comprehensive preparation platforms like ours achieve significantly higher pass rates - our students have a 94% first-time pass rate.'
+        answer: 'The overall MRCP PACES exam pass rate typically ranges from 45-55% for first-time UK candidates, though this varies between diets. International candidates may have different pass rates. Students who use comprehensive preparation platforms like ours achieve significantly higher pass rates through structured practice and feedback.'
       },
       {
-        question: 'When is the MRCP PACES exam 2026?',
-        answer: 'The MRCP PACES exam is held twice per year in 2026, typically in June and September. Exact dates are announced by the MRCP PACES several months in advance. Registration opens approximately 3 months before each sitting. Check the official MRCP PACES website for confirmed dates.'
+        question: 'When is the MRCP PACES exam held?',
+        answer: 'MRCP PACES is held multiple times throughout the year at various UK and international centres. Exam diets typically occur every 2-3 months. Registration opens several months in advance through the MRCP(UK) website. Check the official Royal College of Physicians website for confirmed dates and available centres.'
       },
       {
         question: 'How much does the MRCP PACES exam cost?',
-        answer: 'The MRCP PACES exam sitting fee is approximately £237 per attempt. This is separate from any preparation costs. If you fail, you must wait 6 months before the next attempt and pay the fee again, making proper preparation a worthwhile investment.'
+        answer: 'The MRCP PACES exam fee is approximately £700-900 depending on your location (UK or international centre). This is separate from any preparation costs. If you fail, you must wait for the next available diet and pay the fee again, making thorough preparation a worthwhile investment.'
       },
       {
-        question: 'What questions are on the MRCP PACES exam?',
-        answer: 'The MRCP PACES exam includes Single Best Answer (SBA) questions, Extended Matching Questions (EMQ), and calculation questions. Topics cover pharmaceutical calculations, clinical pharmacy and therapeutics, pharmacy law and ethics, pharmacology, pharmaceutics, and public health - all aligned with the MRCP PACES framework.'
+        question: 'What skills are tested in the MRCP PACES exam?',
+        answer: 'MRCP PACES tests seven clinical skills: Physical Examination, Identifying Physical Signs, Clinical Communication, Differential Diagnosis, Clinical Judgement, Managing Patient Concerns, and Maintaining Patient Welfare. Each station assesses multiple skills, and you must demonstrate competency across all areas to pass.'
       },
       {
-        question: 'How many people pass the MRCP PACES exam first time?',
-        answer: 'The national first-time pass rate typically ranges from 70-80%, varying between sittings. With comprehensive preparation using quality practice questions and mock exams, you can significantly increase your chances. Our students achieve a 94% first-time pass rate.'
+        question: 'What are the passing criteria for MRCP PACES?',
+        answer: 'To pass MRCP PACES, you must achieve a satisfactory standard across all skill domains and stations. The exam uses a competency-based marking system where examiners rate your performance. There are specific pass/fail boundaries for each station, and you need to meet the overall standard as well as not failing too many individual encounters.'
       }
     ]
   },
@@ -39,28 +39,28 @@ export const faqCategories = [
     name: 'Exam Preparation',
     questions: [
       {
-        question: 'How long should I study for the MRCP PACES exam?',
-        answer: 'We recommend starting your preparation at least 12 weeks (3 months) before your exam date. Most successful students study 2-3 hours daily, combining practice questions, mock exams, and content review. Starting earlier gives you more time to identify and address weak areas.'
+        question: 'How long should I prepare for the MRCP PACES exam?',
+        answer: 'We recommend starting your preparation at least 3-6 months before your exam date. Most successful candidates combine clinical practice with structured revision, focusing on examination techniques, communication skills, and common case presentations. Starting earlier gives you more time to refine your approach and build confidence.'
       },
       {
-        question: 'What is the best way to prepare for the MRCP PACES exam?',
-        answer: 'The most effective preparation combines: (1) consistent daily practice with quality questions, (2) realistic mock exams under timed conditions, (3) thorough review of explanations for both correct and incorrect answers, (4) focused work on weak areas identified through analytics, and (5) regular calculation practice. Our platform supports all these activities.'
+        question: 'What is the best way to prepare for MRCP PACES?',
+        answer: 'The most effective preparation combines: (1) regular clinical examination practice with real patients, (2) PACES courses and teaching sessions, (3) practising with colleagues and getting feedback, (4) watching examination technique videos, (5) reviewing common cases and presentations, and (6) mock PACES stations under exam conditions. Our platform supports all these activities.'
       },
       {
-        question: 'How many practice questions should I complete?',
-        answer: 'We recommend completing at least 1,500-2,000 practice questions before your exam, spread over your preparation period. Start with 30-50 questions daily and increase as your exam approaches. Quality matters more than quantity - always review explanations thoroughly.'
+        question: 'How important is clinical examination technique?',
+        answer: 'Clinical examination technique is crucial for MRCP PACES. Examiners assess both your ability to elicit physical signs AND your examination technique. A systematic, fluent approach demonstrates competence and confidence. Practice until your examination routines become automatic so you can focus on clinical findings during the actual exam.'
       },
       {
-        question: 'When should I start taking mock exams?',
-        answer: 'Take your first mock exam after 2-3 weeks of study to establish a baseline. Then take regular mocks every 1-2 weeks to track progress. In the final 2 weeks before your exam, take 2-3 full mock exams under strict exam conditions to build stamina and confidence.'
+        question: 'How can I improve my communication skills for Station 2 and 4?',
+        answer: 'Communication stations require structured practice. Learn frameworks for breaking bad news, discussing sensitive topics, and handling ethics scenarios. Practice with colleagues and get feedback. Record yourself and review your performance. Focus on active listening, empathy, and involving patients in decisions. Our platform includes specific guidance for these challenging stations.'
       },
       {
-        question: 'How can I improve my pharmaceutical calculations?',
-        answer: 'Practice calculations daily, even if just for 15-20 minutes. Learn and memorize common formulas and shortcuts. Work through step-by-step solutions to understand methodology. Time yourself to improve speed. Focus on understanding the concepts rather than memorizing individual problems.'
+        question: 'How do I manage exam anxiety during PACES?',
+        answer: 'Regular practice under timed conditions is the best way to reduce anxiety. Familiarity with the exam format breeds confidence. Also: arrive early to centres, use preparation time effectively, maintain a professional demeanour even if you make mistakes, and remember that examiners want you to pass. Most anxiety comes from uncertainty, which thorough preparation addresses.'
       },
       {
-        question: 'How do I manage exam anxiety?',
-        answer: 'Regular mock exam practice under timed conditions is the best way to reduce anxiety - familiarity breeds confidence. Also: maintain a consistent study schedule, get adequate sleep, practice relaxation techniques, and trust your preparation. Most anxiety comes from uncertainty, which thorough preparation addresses.'
+        question: 'Should I attend a PACES course?',
+        answer: 'PACES courses can be very valuable, especially for practising with real patients and receiving expert feedback. Choose courses run by experienced PACES examiners. However, courses alone are not sufficient - you need sustained practice over months. Consider courses as part of your preparation strategy, not a replacement for regular practice.'
       }
     ]
   },
@@ -70,37 +70,37 @@ export const faqCategories = [
     questions: [
       {
         question: 'What happens if I fail the MRCP PACES exam?',
-        answer: 'If you fail, you must wait at least 6 months before your next attempt and pay the sitting fee again (approximately £237). You can retake the exam multiple times. Use the waiting period productively to address your weak areas with focused, targeted preparation.'
+        answer: 'If you fail, you can reattempt PACES at the next available diet. You will receive feedback on your performance in each station which can guide your preparation. There is no limit to the number of attempts, but you must complete PACES within 7 years of passing MRCP Part 1. Use the feedback constructively to address your weak areas.'
       },
       {
         question: 'How many times can you retake the MRCP PACES exam?',
-        answer: 'There is no limit to the number of times you can retake the MRCP PACES exam. However, each attempt requires a 6-month wait and payment of the sitting fee. Comprehensive preparation for your retake is essential to avoid repeated failures.'
+        answer: 'There is no limit to the number of times you can retake MRCP PACES. However, you must complete the entire MRCP(UK) qualification within 7 years of passing Part 1. Each attempt requires payment of the exam fee. Consider getting additional coaching if you have failed multiple times.'
       },
       {
         question: 'How should I prepare differently for a retake?',
-        answer: 'Analyze what went wrong in your first attempt - was it time management, specific topics, calculations, or exam anxiety? Focus your preparation on these areas. Take more mock exams to build confidence. Consider using a structured preparation platform to ensure comprehensive coverage. Our retake success rate is 96%.'
+        answer: 'Analyse your feedback carefully - identify which stations and skills let you down. Was it examination technique, clinical knowledge, communication, or time management? Get targeted coaching on your weak areas. Consider attending a PACES course if you haven\'t already. Practice more under exam conditions. Our platform provides specific guidance for retake candidates.'
       },
       {
-        question: 'Will I know which questions I got wrong?',
-        answer: 'The MRCP PACES provides your overall score and whether you passed or failed, but does not provide a breakdown of which specific questions you got wrong. However, you may receive general feedback on performance areas. Use this to guide your retake preparation.'
+        question: 'What feedback will I receive after failing?',
+        answer: 'You will receive detailed feedback showing your performance in each station and skill domain. This includes comments from examiners about areas needing improvement. Use this feedback to prioritise your preparation for your retake. The feedback is invaluable for understanding what examiners are looking for.'
       }
     ]
   },
   {
     id: 'international',
-    name: 'International Graduates',
+    name: 'International Candidates',
     questions: [
       {
-        question: 'Can international pharmacy graduates take the MRCP PACES exam?',
-        answer: 'Yes, international pharmacy graduates can take the MRCP PACES exam after completing the Overseas Pharmacist Assessment Programme (OSPAP) or having their qualifications recognised by the MRCP PACES. The process involves assessment of qualifications and may require additional training.'
+        question: 'Can international medical graduates take MRCP PACES?',
+        answer: 'Yes, international medical graduates can take MRCP PACES after passing MRCP Part 1 and Part 2. Your primary medical qualification must be recognised by the General Medical Council or equivalent. PACES can be taken at international centres in many countries, making it accessible worldwide.'
       },
       {
-        question: 'What is OSPAP?',
-        answer: 'OSPAP (Overseas Pharmacist Assessment Programme) is a conversion course for physicians who qualified outside the UK. It typically takes one year and covers UK pharmacy law, practice, and clinical skills. After completing OSPAP, you can sit the MRCP PACES exam.'
+        question: 'Where can I take MRCP PACES outside the UK?',
+        answer: 'MRCP PACES is offered at international centres in countries including India, Malaysia, Singapore, Hong Kong, Middle East, and others. Check the MRCP(UK) website for current centre locations and examination dates. Some centres may have limited availability, so book early.'
       },
       {
-        question: 'Is the MRCP PACES exam different for international graduates?',
-        answer: 'The exam itself is identical for all candidates. However, international graduates may need additional focus on UK-specific content such as pharmacy law, NHS structures, and UK drug naming conventions. Our platform includes content specifically helpful for international graduates.'
+        question: 'Is the MRCP PACES exam different for international candidates?',
+        answer: 'The exam format and standards are identical worldwide. However, international candidates may need to be aware of UK-specific guidelines (NICE, BTS, BSG etc.) and NHS terminology. Our platform includes content specifically helpful for international candidates preparing for UK-based clinical scenarios.'
       }
     ]
   },
@@ -109,16 +109,16 @@ export const faqCategories = [
     name: 'Our Platform',
     questions: [
       {
-        question: 'How similar are your questions to the actual MRCP PACES exam?',
-        answer: 'Our questions are written by registered physicians who have recently taken the exam. We regularly update our question bank based on student feedback and MRCP PACES framework changes. Many students report our questions are slightly harder than the real exam, which helps them feel more prepared.'
+        question: 'How does your platform help with MRCP PACES preparation?',
+        answer: 'Our platform provides comprehensive PACES preparation including: examination technique videos, common case presentations, communication skills frameworks, mock station scenarios, performance tracking, and expert tips from PACES examiners. Many candidates report feeling significantly more prepared after using our resources.'
       },
       {
         question: 'How much does the platform cost?',
-        answer: 'Our platform costs £30 per month with no hidden fees. You get full access to 2000+ practice questions, unlimited mock exams, detailed explanations, and progress analytics. Most students subscribe for 3-4 months, making total preparation cost £90-120.'
+        answer: 'Our platform costs £30 per month with no hidden fees. You get full access to all PACES preparation resources, video tutorials, case presentations, and performance analytics. Most candidates subscribe for 3-6 months, making total preparation cost £90-180.'
       },
       {
         question: 'Can I access the platform on mobile devices?',
-        answer: 'Yes! Our platform is fully responsive and works on smartphones, tablets, and computers. Your progress syncs across all devices. For mock exams, we recommend using a larger screen to simulate exam conditions.'
+        answer: 'Yes! Our platform is fully responsive and works on smartphones, tablets, and computers. Your progress syncs across all devices. This allows you to revise during commutes or between ward rounds.'
       },
       {
         question: 'Can I cancel my subscription?',
