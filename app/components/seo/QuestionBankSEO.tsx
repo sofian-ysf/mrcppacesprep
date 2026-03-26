@@ -93,12 +93,12 @@ const medicalWebPageSchema = {
   "inLanguage": "en-GB",
   "about": {
     "@type": "MedicalSpecialty",
-    "name": "Pharmacy"
+    "name": "Internal Medicine"
   },
   "audience": {
     "@type": "PeopleAudience",
     "suggestedMinAge": 18,
-    "audienceType": "Pharmacy Students, Pre-Registration Pharmacists"
+    "audienceType": "Medical Trainees, MRCP Candidates"
   }
 };
 
@@ -126,7 +126,7 @@ export default function QuestionBankSEO() {
 
       <div className="sr-only" aria-hidden="true">
         <h1>MRCP PACES Question Bank UK | 2000+ Practice Questions | 94% Pass Rate | £30/month</h1>
-        <h2>Expert Pharmacist-Written Questions with Detailed Explanations - Pass Your Pre-Reg First Time</h2>
+        <h2>Expert Physician-Written Questions with Detailed Explanations - Pass Your MRCP PACES First Time</h2>
 
         <p>
           Access the UK's most comprehensive MRCP PACES exam question bank with 2000+ practice questions.
@@ -137,12 +137,12 @@ export default function QuestionBankSEO() {
 
         <h3>MRCP PACES Question Bank Topics</h3>
         <ul>
-          <li>Pharmaceutical Calculations Questions - 350+ Problems</li>
-          <li>Clinical Pharmacy & Therapeutics - 400+ Questions</li>
-          <li>Pharmacy Law & Ethics UK - 300+ Questions</li>
-          <li>Pharmacology Questions - 350+ Questions</li>
-          <li>Pharmaceutics Questions - 250+ Questions</li>
-          <li>Public Health Questions - 200+ Questions</li>
+          <li>Station 1: Respiratory & Abdominal Examination - 300+ Questions</li>
+          <li>Station 2: History Taking - 350+ Questions</li>
+          <li>Station 3: Cardiovascular & Neurological Examination - 400+ Questions</li>
+          <li>Station 4: Communication Skills & Ethics - 300+ Questions</li>
+          <li>Station 5: Integrated Clinical Assessment - 350+ Questions</li>
+          <li>Spot Diagnosis & Brief Clinical Consultations - 300+ Questions</li>
         </ul>
 
         <h3>Question Bank Features</h3>
@@ -157,35 +157,35 @@ export default function QuestionBankSEO() {
 
         <h3>MRCP PACES Practice Questions UK Locations</h3>
         <ul>
-          <li>MRCP PACES Practice Questions London</li>
+          <li>MRCP PACES Practice London</li>
           <li>MRCP PACES Questions Manchester</li>
           <li>MRCP PACES Exam Practice Birmingham</li>
-          <li>Pre-Reg Questions Leeds</li>
+          <li>MRCP PACES Questions Leeds</li>
           <li>MRCP PACES Practice Glasgow</li>
-          <li>Pharmacy Exam Questions Edinburgh</li>
+          <li>MRCP PACES Questions Edinburgh</li>
         </ul>
 
         <h4>Popular Question Bank Searches</h4>
         <ul>
-          <li>gphc exam questions</li>
-          <li>gphc practice questions free</li>
-          <li>pre-reg exam question bank</li>
-          <li>gphc sba questions</li>
-          <li>gphc emq practice</li>
-          <li>pharmacy exam questions uk</li>
-          <li>gphc calculation questions</li>
-          <li>clinical pharmacy questions gphc</li>
-          <li>pharmacy law questions uk</li>
-          <li>gphc pharmacology questions</li>
+          <li>mrcp paces exam questions</li>
+          <li>mrcp paces practice questions free</li>
+          <li>mrcp paces question bank</li>
+          <li>mrcp paces station questions</li>
+          <li>mrcp paces clinical cases</li>
+          <li>mrcp paces questions uk</li>
+          <li>mrcp paces history taking questions</li>
+          <li>mrcp paces examination questions</li>
+          <li>medical ethics questions uk</li>
+          <li>mrcp paces neurology questions</li>
         </ul>
 
         <p>
-          Keywords: MRCP PACES question bank, MRCP PACES practice questions, pre-reg exam questions,
-          pharmacy exam questions UK, MRCP PACES SBA questions, MRCP PACES EMQ practice, clinical pharmacy questions,
-          pharmacy law questions, pharmaceutical calculations practice, pharmacology exam questions,
-          MRCP PACES exam preparation, pre-registration physician questions, pharmacy student revision,
-          BNF questions, drug interaction questions, therapeutics questions, MRCP PACES framework questions,
-          pharmacy MCQ questions, MRCP PACES question bank 2025, best MRCP PACES practice questions
+          Keywords: MRCP PACES question bank, MRCP PACES practice questions, MRCP PACES exam questions,
+          MRCP PACES questions UK, MRCP PACES station questions, MRCP PACES clinical cases, clinical examination questions,
+          medical ethics questions, history taking practice, neurology exam questions,
+          MRCP PACES exam preparation, MRCP candidate questions, medical trainee revision,
+          cardiology questions, respiratory examination questions, communication skills questions, MRCP PACES station questions,
+          MRCP PACES questions, MRCP PACES question bank 2025, best MRCP PACES practice questions
         </p>
       </div>
 

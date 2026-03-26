@@ -13,7 +13,7 @@ const PAGE_RELATIONS: Record<string, RelatedPage[]> = {
   '/gphc-exam-questions': [
     { href: '/question-bank', title: 'Question Bank', description: 'Access 2000+ practice questions' },
     { href: '/mock-exams', title: 'Mock Exams', description: 'Test yourself under exam conditions' },
-    { href: '/calculations', title: 'Calculations', description: 'Practice pharmacy calculations' },
+    { href: '/calculations', title: 'Calculations', description: 'Practice clinical calculations' },
   ],
   '/question-bank': [
     { href: '/gphc-exam-questions', title: 'MRCP PACES Exam Questions', description: 'Learn about question types' },
@@ -22,7 +22,7 @@ const PAGE_RELATIONS: Record<string, RelatedPage[]> = {
   ],
   '/mock-exams': [
     { href: '/question-bank', title: 'Question Bank', description: 'Practice individual questions' },
-    { href: '/calculations', title: 'Calculations', description: 'Master pharmacy calculations' },
+    { href: '/calculations', title: 'Calculations', description: 'Master clinical calculations' },
     { href: '/pricing', title: 'Pricing', description: 'View subscription plans' },
   ],
   '/calculations': [

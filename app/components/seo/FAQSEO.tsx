@@ -35,12 +35,12 @@ export default function FAQSEO() {
 
         <h4>Popular FAQ Searches</h4>
         <ul>
-          <li>gphc exam faq</li>
-          <li>gphc exam questions answered</li>
-          <li>pre-reg exam information</li>
-          <li>gphc exam format explained</li>
-          <li>how to pass gphc exam</li>
-          <li>gphc exam tips</li>
+          <li>mrcp paces exam faq</li>
+          <li>mrcp paces exam questions answered</li>
+          <li>mrcp paces exam information</li>
+          <li>mrcp paces exam format explained</li>
+          <li>how to pass mrcp paces exam</li>
+          <li>mrcp paces exam tips</li>
         </ul>
 
         <p>

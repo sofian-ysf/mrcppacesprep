@@ -94,7 +94,7 @@ export default function ResourcesSEO() {
 
       <div className="sr-only" aria-hidden="true">
         <h1>MRCP PACES Exam Resources UK | Study Guides | Formula Sheets | £30/month</h1>
-        <h2>Comprehensive Study Materials Created by Pharmacists - Pass Your Pre-Reg First Time</h2>
+        <h2>Comprehensive Study Materials Created by MRCP Holders - Pass Your MRCP PACES First Time</h2>
 
         <p>
           Access comprehensive MRCP PACES exam study resources including calculation guides, clinical references,
@@ -104,11 +104,11 @@ export default function ResourcesSEO() {
 
         <h3>Study Resources Available</h3>
         <ul>
-          <li>Pharmaceutical Calculations Guide - Step-by-Step Methods</li>
-          <li>Clinical Pharmacy Reference - Drug Interactions & Therapeutics</li>
-          <li>Pharmacy Law & Ethics Summary - UK Regulations</li>
-          <li>BNF Quick Reference Cards - Essential Drug Information</li>
-          <li>Formula Sheets - Downloadable PDFs</li>
+          <li>Clinical Examination Guide - Step-by-Step Techniques</li>
+          <li>History Taking Reference - Systematic Approach</li>
+          <li>Medical Ethics Summary - UK GMC Guidelines</li>
+          <li>Quick Reference Cards - Essential Clinical Signs</li>
+          <li>Examination Checklists - Downloadable PDFs</li>
           <li>Exam Strategy Guides - Time Management & Technique</li>
         </ul>
 
@@ -125,29 +125,29 @@ export default function ResourcesSEO() {
         <h3>MRCP PACES Resources UK Locations</h3>
         <ul>
           <li>MRCP PACES Resources London</li>
-          <li>Pharmacy Study Materials Manchester</li>
+          <li>MRCP PACES Study Materials Manchester</li>
           <li>MRCP PACES Guides Birmingham</li>
-          <li>Pre-Reg Resources Leeds</li>
-          <li>Pharmacy Resources Glasgow</li>
+          <li>MRCP PACES Resources Leeds</li>
+          <li>MRCP PACES Resources Glasgow</li>
         </ul>
 
         <h4>Popular Resource Searches</h4>
         <ul>
-          <li>gphc exam resources</li>
-          <li>gphc study materials</li>
-          <li>pharmacy calculation guide</li>
-          <li>gphc formula sheet</li>
-          <li>pre-reg exam resources</li>
-          <li>pharmacy revision notes</li>
-          <li>bnf summary guide</li>
-          <li>gphc exam tips</li>
+          <li>mrcp paces exam resources</li>
+          <li>mrcp paces study materials</li>
+          <li>clinical examination guide</li>
+          <li>mrcp paces checklists</li>
+          <li>mrcp paces resources</li>
+          <li>mrcp paces revision notes</li>
+          <li>history taking guide</li>
+          <li>mrcp paces exam tips</li>
         </ul>
 
         <p>
-          Keywords: MRCP PACES exam resources, MRCP PACES study materials, pharmacy calculation guide, MRCP PACES formula sheet,
-          pre-reg exam resources, pharmacy revision notes, BNF summary guide, MRCP PACES exam tips,
-          clinical pharmacy reference, pharmacy law summary, drug interaction guide, MRCP PACES exam strategy,
-          pharmacy study guides UK, pre-registration resources, exam preparation materials
+          Keywords: MRCP PACES exam resources, MRCP PACES study materials, clinical examination guide, MRCP PACES checklists,
+          MRCP PACES resources, MRCP PACES revision notes, history taking guide, MRCP PACES exam tips,
+          clinical examination reference, medical ethics summary, communication skills guide, MRCP PACES exam strategy,
+          MRCP PACES study guides UK, MRCP PACES preparation resources, exam preparation materials
         </p>
       </div>
 

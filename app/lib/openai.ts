@@ -71,7 +71,7 @@ export async function generateSBABatch(
     messages: [
       {
         role: 'system',
-        content: `You are an expert MRCP PACES (General Pharmaceutical Council) exam question writer for UK pharmacy pre-registration exams.
+        content: `You are an expert MRCP PACES (Practical Assessment of Clinical Examination Skills) exam question writer for UK MRCP membership exams.
 
 Your task is to create high-quality Single Best Answer (SBA) questions that:
 - Are clinically relevant and reflect real pharmacy practice in the UK

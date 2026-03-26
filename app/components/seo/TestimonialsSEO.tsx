@@ -6,7 +6,7 @@ const aggregateReviewSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "MRCPPACESPREP MRCP PACES Exam Preparation",
-  "description": "MRCP PACES exam preparation platform with real success stories. 94% pass rate. Read testimonials from pharmacy students who passed their exam.",
+  "description": "MRCP PACES exam preparation platform with real success stories. 94% pass rate. Read testimonials from medical trainees who passed their exam.",
   "brand": {
     "@type": "Organization",
     "name": "MRCPPACESPREP"
@@ -118,10 +118,10 @@ export default function TestimonialsSEO() {
 
       <div className="sr-only" aria-hidden="true">
         <h1>MRCP PACES Exam Success Stories | 94% Pass Rate | Real Student Testimonials</h1>
-        <h2>Read How 8,500+ Pharmacy Students Passed Their MRCP PACES Exam with MRCPPACESPREP</h2>
+        <h2>Read How 8,500+ Medical Trainees Passed Their MRCP PACES Exam with MRCPPACESPREP</h2>
 
         <p>
-          Read real success stories from pharmacy students who passed their MRCP PACES exam using MRCPPACESPREP.
+          Read real success stories from medical trainees who passed their MRCP PACES exam using MRCPPACESPREP.
           94% pass rate. 23% average score improvement. 96% retake success rate.
           Stories from first-time passers and students who overcame previous failures.
         </p>
@@ -146,18 +146,18 @@ export default function TestimonialsSEO() {
 
         <h4>Popular Testimonial Searches</h4>
         <ul>
-          <li>gphc exam success stories</li>
+          <li>mrcp paces exam success stories</li>
           <li>mrcppacesprep reviews</li>
-          <li>gphc pass rate</li>
-          <li>pharmacy exam testimonials</li>
-          <li>pre-reg exam results</li>
-          <li>gphc exam preparation reviews</li>
+          <li>mrcp paces pass rate</li>
+          <li>mrcp paces exam testimonials</li>
+          <li>mrcp paces exam results</li>
+          <li>mrcp paces exam preparation reviews</li>
         </ul>
 
         <p>
           Keywords: MRCP PACES success stories, MRCPPACESPREP reviews, MRCP PACES testimonials, pass rate,
-          pharmacy exam success, pre-reg exam results, student reviews, exam preparation reviews,
-          passed MRCP PACES exam, MRCP PACES exam improvement, retake success, calculation improvement,
+          MRCP PACES exam success, MRCP PACES exam results, candidate reviews, exam preparation reviews,
+          passed MRCP PACES exam, MRCP PACES exam improvement, retake success, clinical examination improvement,
           anxiety management, time management, first time pass, exam confidence
         </p>
       </div>

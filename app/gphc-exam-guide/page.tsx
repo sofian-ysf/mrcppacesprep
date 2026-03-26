@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   keywords: [
     'MRCP PACES exam', 'MRCP PACES exam guide', 'MRCP PACES exam 2026', 'MRCP PACES exam format',
     'MRCP PACES exam dates', 'MRCP PACES exam tips', 'how to pass MRCP PACES exam',
-    'MRCP PACES exam topics', 'MRCP PACES exam pass rate', 'pre-registration exam UK',
-    'pharmacy exam guide', 'MRCP PACES assessment'
+    'MRCP PACES exam topics', 'MRCP PACES exam pass rate', 'MRCP PACES exam UK',
+    'medical exam guide', 'MRCP PACES assessment'
   ],
   openGraph: {
     title: 'MRCP PACES Exam Guide 2026 | Complete Preparation Guide',
@@ -149,10 +149,10 @@ export default function MRCP PACESExamGuidePage() {
             <section className="mb-16">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">What is the MRCP PACES Exam?</h2>
               <p className="text-gray-600 mb-4">
-                The MRCP PACES (General Pharmaceutical Council) pre-registration exam is a mandatory assessment for pharmacy graduates in the UK who want to become registered physicians. It tests your clinical knowledge, pharmaceutical calculations, and understanding of pharmacy law and ethics.
+                The MRCP PACES (Practical Assessment of Clinical Examination Skills) is a mandatory clinical examination for doctors pursuing MRCP membership in the UK. It tests your clinical examination skills, communication abilities, and medical knowledge through a series of patient encounters.
               </p>
               <p className="text-gray-600">
-                The exam is computer-based and typically held twice a year. You must pass this exam to complete your pre-registration training and register with the MRCP PACES as a physician.
+                The exam consists of five clinical stations held at approved examination centres. You must pass this exam to obtain MRCP(UK) membership and progress in your medical career.
               </p>
             </section>
 
@@ -332,7 +332,7 @@ export default function MRCP PACESExamGuidePage() {
         <footer className="border-t border-gray-200 bg-white px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl text-center text-sm text-gray-600">
             <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
-            <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+            <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
           </div>
         </footer>
       </div>

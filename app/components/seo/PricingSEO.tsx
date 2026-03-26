@@ -115,17 +115,17 @@ export default function PricingSEO() {
 
         <h4>Popular Pricing Searches</h4>
         <ul>
-          <li>gphc exam prep cost</li>
-          <li>pre-reg exam preparation price</li>
-          <li>cheap gphc revision</li>
-          <li>affordable pharmacy exam prep</li>
-          <li>gphc subscription</li>
-          <li>pharmacy exam prep monthly</li>
+          <li>mrcp paces exam prep cost</li>
+          <li>mrcp paces preparation price</li>
+          <li>cheap mrcp paces revision</li>
+          <li>affordable mrcp paces prep</li>
+          <li>mrcp paces subscription</li>
+          <li>mrcp paces prep monthly</li>
         </ul>
 
         <p>
-          Keywords: MRCP PACES exam prep cost, pre-reg exam price, MRCP PACES subscription, pharmacy exam preparation cost,
-          cheap MRCP PACES revision, affordable pharmacy prep, MRCP PACES monthly subscription, exam prep pricing,
+          Keywords: MRCP PACES exam prep cost, MRCP PACES exam price, MRCP PACES subscription, MRCP PACES preparation cost,
+          cheap MRCP PACES revision, affordable MRCP PACES prep, MRCP PACES monthly subscription, exam prep pricing,
           £30 MRCP PACES prep, cancel anytime, money-back guarantee,
           complete exam preparation, value for money, pass guarantee
         </p>

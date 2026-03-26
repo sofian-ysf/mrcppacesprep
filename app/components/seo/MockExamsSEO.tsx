@@ -141,22 +141,22 @@ export default function MockExamsSEO() {
 
         <h4>Popular Mock Exam Searches</h4>
         <ul>
-          <li>gphc mock exam online</li>
-          <li>gphc practice test free</li>
-          <li>pre-reg mock exam</li>
-          <li>gphc exam simulation</li>
-          <li>pharmacy mock exam uk</li>
-          <li>gphc timed practice test</li>
-          <li>realistic gphc exam</li>
-          <li>gphc exam practice papers</li>
+          <li>mrcp paces mock exam online</li>
+          <li>mrcp paces practice test free</li>
+          <li>mrcp paces mock exam</li>
+          <li>mrcp paces exam simulation</li>
+          <li>mrcp paces mock exam uk</li>
+          <li>mrcp paces timed practice test</li>
+          <li>realistic mrcp paces exam</li>
+          <li>mrcp paces practice cases</li>
         </ul>
 
         <p>
-          Keywords: MRCP PACES mock exam, MRCP PACES practice test, pre-reg mock exam, pharmacy mock exam UK,
-          MRCP PACES exam simulation, timed practice test, realistic MRCP PACES exam, MRCP PACES practice papers,
-          MRCP PACES exam format, 110 question mock, 2.5 hour exam practice, MRCP PACES exam timing,
-          mock exam feedback, performance analysis, pass prediction, topic mock exams,
-          calculation practice exam, MRCP PACES mini exam, rapid fire practice
+          Keywords: MRCP PACES mock exam, MRCP PACES practice test, MRCP PACES mock, medical mock exam UK,
+          MRCP PACES exam simulation, timed practice test, realistic MRCP PACES exam, MRCP PACES practice cases,
+          MRCP PACES exam format, clinical examination mock, MRCP PACES exam practice, MRCP PACES exam timing,
+          mock exam feedback, performance analysis, pass prediction, station mock exams,
+          history taking practice exam, MRCP PACES mini exam, rapid fire practice
         </p>
       </div>
 

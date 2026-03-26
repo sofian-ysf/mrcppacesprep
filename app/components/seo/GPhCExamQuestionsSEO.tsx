@@ -89,36 +89,36 @@ const medicalWebPageSchema = {
   "@type": "MedicalWebPage",
   "name": "MRCP PACES Exam Questions - 2000+ Practice Questions | MRCPPACESPREP",
   "description": "Practice MRCP PACES exam questions with 2000+ questions covering all topics. 94% pass rate. From £30/month.",
-  "url": "https://www.mrcppacesprep.com/gphc-exam-questions",
+  "url": "https://www.mrcppacesprep.com/mrcp-paces-exam-questions",
   "inLanguage": "en-GB",
   "about": {
     "@type": "MedicalSpecialty",
-    "name": "Pharmacy"
+    "name": "Internal Medicine"
   },
   "audience": {
     "@type": "PeopleAudience",
     "suggestedMinAge": 18,
-    "audienceType": "Pharmacy Students, Pre-Registration Pharmacists"
+    "audienceType": "Medical Trainees, MRCP Candidates"
   }
 };
 
-export default function MRCP PACESExamQuestionsSEO() {
+export default function MRCPPACESExamQuestionsSEO() {
   return (
     <>
       <Script
-        id="gphc-questions-product-schema"
+        id="mrcp-paces-questions-product-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
         strategy="beforeInteractive"
       />
       <Script
-        id="gphc-questions-faq-schema"
+        id="mrcp-paces-questions-faq-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         strategy="beforeInteractive"
       />
       <Script
-        id="gphc-questions-medical-schema"
+        id="mrcp-paces-questions-medical-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageSchema) }}
         strategy="beforeInteractive"
@@ -126,7 +126,7 @@ export default function MRCP PACESExamQuestionsSEO() {
 
       <div className="sr-only" aria-hidden="true">
         <h1>MRCP PACES Exam Questions 2025 | 2000+ Practice Questions | 94% Pass Rate | £30/month</h1>
-        <h2>Expert Pharmacist-Written Questions with Detailed Explanations - Pass Your Pre-Reg First Time</h2>
+        <h2>Expert Physician-Written Questions with Detailed Explanations - Pass Your MRCP PACES First Time</h2>
 
         <p>
           Practice with 2000+ MRCP PACES exam questions written by registered physicians who recently passed.
@@ -136,57 +136,57 @@ export default function MRCP PACESExamQuestionsSEO() {
 
         <h3>MRCP PACES Exam Question Categories</h3>
         <ul>
-          <li>Pharmaceutical Calculations Questions - 350+ Problems</li>
-          <li>Clinical Pharmacy & Therapeutics Questions - 400+ Questions</li>
-          <li>Pharmacy Law & Ethics Questions - 300+ Questions</li>
-          <li>Pharmacology Questions - 350+ Questions</li>
-          <li>Pharmaceutics Questions - 250+ Questions</li>
-          <li>Public Health Questions - 200+ Questions</li>
+          <li>Station 1: Respiratory & Abdominal Examination - 300+ Questions</li>
+          <li>Station 2: History Taking - 350+ Questions</li>
+          <li>Station 3: Cardiovascular & Neurological Examination - 400+ Questions</li>
+          <li>Station 4: Communication Skills & Ethics - 300+ Questions</li>
+          <li>Station 5: Integrated Clinical Assessment - 350+ Questions</li>
+          <li>Spot Diagnosis & Brief Clinical Consultations - 300+ Questions</li>
         </ul>
 
         <h3>Question Features</h3>
         <ul>
-          <li>Written by qualified physicians</li>
-          <li>SBA, EMQ, and calculation formats</li>
+          <li>Written by qualified MRCP holders</li>
+          <li>Clinical examination and history-taking scenarios</li>
           <li>Detailed explanations for every answer</li>
-          <li>Updated for 2025 MRCP PACES framework</li>
+          <li>Updated for 2025 MRCP PACES format</li>
           <li>Progress tracking and analytics</li>
           <li>Mobile-friendly access</li>
         </ul>
 
-        <h3>MRCP PACES Exam Questions UK Locations</h3>
+        <h3>MRCP PACES Exam Centres UK</h3>
         <ul>
-          <li>MRCP PACES Exam Questions London</li>
-          <li>MRCP PACES Practice Questions Manchester</li>
-          <li>Pre-Reg Questions Birmingham</li>
-          <li>Pharmacy Exam Questions Leeds</li>
-          <li>MRCP PACES Questions Glasgow</li>
-          <li>MRCP PACES Practice Edinburgh</li>
+          <li>MRCP PACES Exam London</li>
+          <li>MRCP PACES Practice Manchester</li>
+          <li>MRCP PACES Birmingham</li>
+          <li>MRCP PACES Leeds</li>
+          <li>MRCP PACES Glasgow</li>
+          <li>MRCP PACES Edinburgh</li>
         </ul>
 
         <h4>Popular MRCP PACES Question Searches</h4>
         <ul>
-          <li>gphc exam questions</li>
-          <li>gphc practice questions</li>
-          <li>gphc exam questions 2025</li>
-          <li>gphc past papers</li>
-          <li>gphc mcq questions</li>
-          <li>pre-reg exam questions</li>
-          <li>pharmacy exam questions uk</li>
-          <li>gphc sba questions</li>
-          <li>gphc emq questions</li>
-          <li>gphc calculation questions</li>
-          <li>gphc questions free</li>
-          <li>gphc practice test</li>
+          <li>mrcp paces exam questions</li>
+          <li>mrcp paces practice questions</li>
+          <li>mrcp paces exam questions 2025</li>
+          <li>mrcp paces past cases</li>
+          <li>mrcp paces station questions</li>
+          <li>mrcp paces preparation</li>
+          <li>mrcp paces uk</li>
+          <li>mrcp paces history taking</li>
+          <li>mrcp paces examination</li>
+          <li>mrcp paces communication skills</li>
+          <li>mrcp paces free resources</li>
+          <li>mrcp paces practice test</li>
         </ul>
 
         <p>
-          Keywords: MRCP PACES exam questions, MRCP PACES practice questions, MRCP PACES exam questions 2025, MRCP PACES past papers,
-          MRCP PACES MCQ questions, pre-reg exam questions, pharmacy exam questions UK, MRCP PACES SBA questions,
-          MRCP PACES EMQ questions, MRCP PACES calculation questions, MRCP PACES questions free, MRCP PACES practice test,
-          pharmacy pre-registration questions, MRCP PACES question bank, MRCP PACES exam preparation, MRCP PACES mock questions,
-          clinical pharmacy questions, pharmacy law questions UK, pharmacology exam questions,
-          BNF questions, drug interaction questions, therapeutics questions MRCP PACES
+          Keywords: MRCP PACES exam questions, MRCP PACES practice questions, MRCP PACES exam 2025, MRCP PACES past cases,
+          MRCP PACES station questions, MRCP PACES preparation, MRCP PACES UK, MRCP PACES history taking,
+          MRCP PACES clinical examination, MRCP PACES communication skills, MRCP PACES free resources, MRCP PACES practice test,
+          MRCP PACES question bank, MRCP PACES exam preparation, MRCP PACES mock exam,
+          clinical examination questions, medical ethics questions UK, neurology examination,
+          cardiology examination, respiratory examination, abdominal examination MRCP PACES
         </p>
       </div>
 

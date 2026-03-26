@@ -6,7 +6,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "EducationalOrganization",
   "name": "MRCPPACESPREP",
-  "description": "UK's leading MRCP PACES pre-registration exam preparation platform. Created by physicians for pharmacy students. 94% pass rate. 8,500+ students helped.",
+  "description": "UK's leading MRCP PACES exam preparation platform. Created by MRCP holders for medical trainees. 94% pass rate. 8,500+ candidates helped.",
   "url": "https://www.mrcppacesprep.com",
   "logo": "https://www.mrcppacesprep.com/logo.png",
   "foundingDate": "2020",
@@ -45,10 +45,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      "name": "How many students use MRCPPACESPREP?",
+      "name": "How many candidates use MRCPPACESPREP?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "8,500+ pharmacy students have used our platform. Trusted by students from top UK pharmacy schools."
+        "text": "8,500+ medical trainees have used our platform. Trusted by doctors from NHS trusts across the UK."
       }
     },
     {
@@ -80,17 +80,17 @@ export default function AboutSEO() {
 
       <div className="sr-only" aria-hidden="true">
         <h1>About MRCPPACESPREP | UK's Leading MRCP PACES Exam Preparation Platform</h1>
-        <h2>Created by Pharmacists for Pharmacy Students - 94% Pass Rate - 8,500+ Students Helped</h2>
+        <h2>Created by MRCP Holders for Medical Trainees - 94% Pass Rate - 8,500+ Candidates Helped</h2>
 
         <p>
-          MRCPPACESPREP is the UK's leading MRCP PACES pre-registration exam preparation platform.
-          Created by qualified physicians who recently passed the exam. 94% pass rate vs 70-80% national average.
-          8,500+ pharmacy students helped. Trusted by students from UCL, Manchester, Nottingham, and more.
+          MRCPPACESPREP is the UK's leading MRCP PACES exam preparation platform.
+          Created by qualified physicians who recently passed the exam. 94% pass rate vs national average.
+          8,500+ medical trainees helped. Trusted by doctors from NHS trusts across the UK.
         </p>
 
         <h3>Our Mission</h3>
         <p>
-          We believe every pharmacy graduate deserves the best chance to pass their MRCP PACES exam first time.
+          We believe every medical trainee deserves the best chance to pass their MRCP PACES exam first time.
           Our mission is to provide comprehensive, high-quality exam preparation that's accessible and effective.
         </p>
 
@@ -112,9 +112,9 @@ export default function AboutSEO() {
         </ul>
 
         <p>
-          Keywords: about MRCPPACESPREP, MRCP PACES exam platform, pharmacy exam preparation company,
-          physician-created content, UK pharmacy exam, pre-reg exam platform, trusted exam prep,
-          pharmacy student support, MRCP PACES success rate, pass rate statistics
+          Keywords: about MRCPPACESPREP, MRCP PACES exam platform, medical exam preparation company,
+          MRCP holder-created content, UK MRCP exam, MRCP PACES platform, trusted exam prep,
+          medical trainee support, MRCP PACES success rate, pass rate statistics
         </p>
       </div>
 

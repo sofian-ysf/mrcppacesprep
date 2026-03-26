@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   title: 'MRCP PACES Practice Questions 2026 | 2000+ Questions | 94% Pass Rate',
   description: 'Practice MRCP PACES exam questions online. 2000+ questions with detailed answers. SBA, EMQ & calculations. 94% pass rate. Start preparing today.',
   keywords: [
-    'MRCP PACES practice questions', 'MRCP PACES exam practice', 'pharmacy practice questions UK',
-    'pre-reg practice questions', 'MRCP PACES mock questions', 'pharmacy exam practice',
+    'MRCP PACES practice questions', 'MRCP PACES exam practice', 'MRCP PACES practice questions UK',
+    'MRCP PACES preparation', 'MRCP PACES mock questions', 'medical exam practice',
     'MRCP PACES practice test online', 'MRCP PACES questions 2026', 'MRCP PACES revision questions',
-    'pharmaceutical calculations practice', 'clinical pharmacy questions practice'
+    'clinical examination practice', 'history taking questions practice'
   ],
   openGraph: {
     title: 'MRCP PACES Practice Questions 2026 | 2000+ Questions | 94% Pass Rate',
@@ -274,7 +274,7 @@ export default function MRCP PACESPracticeQuestionsPage() {
         <footer className="border-t border-gray-200 bg-white px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-7xl text-center text-sm text-gray-600">
             <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
-            <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+            <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
           </div>
         </footer>
       </div>

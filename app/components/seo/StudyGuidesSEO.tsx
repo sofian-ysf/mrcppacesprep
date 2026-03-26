@@ -102,7 +102,7 @@ export default function StudyGuidesSEO() {
 
       <div className="sr-only" aria-hidden="true">
         <h1>MRCP PACES Study Guides UK | PDF Downloads | Formula Sheets | Learning Pathways | £30/month</h1>
-        <h2>Comprehensive Study Materials Created by Pharmacists - All MRCP PACES Topics Covered</h2>
+        <h2>Comprehensive Study Materials Created by MRCP Holders - All MRCP PACES Stations Covered</h2>
 
         <p>
           Download comprehensive MRCP PACES study guides covering all exam topics.
@@ -113,12 +113,12 @@ export default function StudyGuidesSEO() {
 
         <h3>Study Guide Topics</h3>
         <ul>
-          <li>Pharmaceutical Calculations Guide</li>
-          <li>Clinical Pharmacy & Therapeutics Guide</li>
-          <li>Pharmacy Law & Ethics UK Guide</li>
-          <li>Pharmacology Guide</li>
-          <li>Pharmaceutics Guide</li>
-          <li>Public Health Guide</li>
+          <li>Station 1: Respiratory & Abdominal Examination Guide</li>
+          <li>Station 2: History Taking Guide</li>
+          <li>Station 3: Cardiovascular & Neurological Examination Guide</li>
+          <li>Station 4: Communication Skills & Ethics Guide</li>
+          <li>Station 5: Integrated Clinical Assessment Guide</li>
+          <li>Spot Diagnosis Guide</li>
         </ul>
 
         <h3>Study Materials Included</h3>
@@ -140,22 +140,22 @@ export default function StudyGuidesSEO() {
 
         <h4>Popular Study Guide Searches</h4>
         <ul>
-          <li>gphc study guide</li>
-          <li>gphc revision notes</li>
-          <li>pre-reg exam study materials</li>
-          <li>pharmacy exam guide pdf</li>
-          <li>gphc formula sheet</li>
-          <li>pharmacy mind maps</li>
-          <li>gphc study schedule</li>
-          <li>pharmacy revision resources</li>
+          <li>mrcp paces study guide</li>
+          <li>mrcp paces revision notes</li>
+          <li>mrcp paces study materials</li>
+          <li>mrcp paces guide pdf</li>
+          <li>mrcp paces examination techniques</li>
+          <li>mrcp paces mind maps</li>
+          <li>mrcp paces study schedule</li>
+          <li>mrcp paces revision resources</li>
         </ul>
 
         <p>
-          Keywords: MRCP PACES study guide, MRCP PACES revision notes, pre-reg study materials, pharmacy exam guide,
-          MRCP PACES formula sheet, pharmacy mind maps, MRCP PACES study schedule, pharmacy revision resources,
-          MRCP PACES study plan, learning pathway, study pathway, exam preparation guide, pharmacy study tips,
-          MRCP PACES topic guides, BNF study guide, clinical pharmacy guide, pharmacy law guide,
-          pharmacology revision, pharmaceutics guide, public health pharmacy
+          Keywords: MRCP PACES study guide, MRCP PACES revision notes, MRCP PACES study materials, MRCP PACES exam guide,
+          MRCP PACES examination techniques, MRCP PACES mind maps, MRCP PACES study schedule, MRCP PACES revision resources,
+          MRCP PACES study plan, learning pathway, study pathway, exam preparation guide, MRCP PACES study tips,
+          MRCP PACES station guides, clinical examination guide, history taking guide, communication skills guide,
+          neurology revision, cardiology guide, respiratory examination
         </p>
       </div>
 

@@ -71,12 +71,12 @@ export default function CalculationsPage() {
           <div className="mx-auto max-w-7xl w-full">
             <div className="text-center">
               <div className="pill-badge mb-5 md:mb-6 inline-block">
-                Used by 8,500+ pharmacy students
+                Used by 8,500+ medical trainees
               </div>
 
               <h1 className="mb-5 md:mb-6 text-[28px] leading-tight font-bold tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
                 Stop Struggling with
-                <span className="block">Pharmacy Calculations</span>
+                <span className="block">Medical Calculations</span>
               </h1>
 
               <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-base leading-relaxed text-gray-600 md:text-lg lg:text-xl">
@@ -490,7 +490,7 @@ export default function CalculationsPage() {
 
             <div className="mt-10 md:mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
               <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
-              <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+              <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
             </div>
           </div>
         </footer>

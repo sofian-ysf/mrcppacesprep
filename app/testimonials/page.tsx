@@ -9,7 +9,7 @@ import FAQSection from '@/app/components/FAQSection'
 const testimonialsFAQs = [
   {
     question: "Do students actually pass using MRCPPACESPREP?",
-    answer: "Yes! 94% of our students pass the MRCP PACES exam on their first attempt. We've helped over 29,000 pharmacy students since 2019, with thousands of verified success stories."
+    answer: "Yes! 94% of our students pass the MRCP PACES exam on their first attempt. We've helped over 29,000 medical trainees since 2019, with thousands of verified success stories."
   },
   {
     question: "How long do successful students study?",
@@ -43,8 +43,8 @@ const successStories = [
     id: 1,
     name: 'Sarah Mitchell',
     location: 'London',
-    background: 'Community Pharmacy Graduate',
-    challenge: 'Failed first attempt with 48% - struggled with pharmaceutical calculations and time management',
+    background: 'Medical Trainee',
+    challenge: 'Failed first attempt with 48% - struggled with clinical examination and time management',
     solution: 'Used MRCPPACESPREP for 3 months, focused on calculation practice and took 8 mock exams',
     results: {
       firstAttempt: '48%',
@@ -66,7 +66,7 @@ const successStories = [
     id: 2,
     name: 'James Chen',
     location: 'Manchester',
-    background: 'Hospital Pharmacy Graduate',
+    background: 'Hospital Doctor',
     challenge: 'Severe exam anxiety led to poor performance despite strong knowledge',
     solution: 'Combined platform study with anxiety management techniques and regular mock exam practice',
     results: {
@@ -89,7 +89,7 @@ const successStories = [
     id: 3,
     name: 'Priya Patel',
     location: 'Birmingham',
-    background: 'Clinical Pharmacy Graduate',
+    background: 'Medical Registrar',
     challenge: 'Strong in theory but struggled with calculation speed and accuracy',
     solution: 'Daily calculation practice with timed sessions and formula memorization',
     results: {
@@ -113,16 +113,16 @@ const successStories = [
     name: 'Ahmed Hassan',
     location: 'Leeds',
     background: 'International Graduate',
-    challenge: 'Language barriers and unfamiliar UK pharmacy law concepts',
-    solution: 'Focused on law & ethics questions with detailed explanation reading',
+    challenge: 'Language barriers and unfamiliar UK medical practice',
+    solution: 'Focused on communication skills & ethics stations with detailed explanation reading',
     results: {
       firstAttempt: '52%',
       finalScore: '71%',
       improvement: '+19%',
       passStatus: 'Passed on second attempt'
     },
-    quote: "The explanations were so detailed that I learned not just the right answer, but the reasoning behind UK pharmacy practice.",
-    advice: "Don't rush through explanations. Take time to understand the 'why' behind each answer, especially for law questions.",
+    quote: "The explanations were so detailed that I learned not just the right answer, but the reasoning behind UK medical practice.",
+    advice: "Don't rush through explanations. Take time to understand the 'why' behind each answer, especially for ethics stations.",
     category: 'retake',
     tags: ['law-ethics', 'international'],
     image: '/testimonials/ahmed-h.jpg',
@@ -135,7 +135,7 @@ const successStories = [
     id: 5,
     name: 'Emma Thompson',
     location: 'Edinburgh',
-    background: 'Hospital Pharmacy Graduate',
+    background: 'Hospital Doctor',
     challenge: 'Poor time management led to incomplete exam attempts',
     solution: 'Systematic timing practice with mock exams and speed challenges',
     results: {
@@ -158,7 +158,7 @@ const successStories = [
     id: 6,
     name: 'David Roberts',
     location: 'Cardiff',
-    background: 'Community Pharmacy Graduate',
+    background: 'Medical Trainee',
     challenge: 'Inconsistent performance across different topics',
     solution: 'Used analytics to identify weak areas and focused study accordingly',
     results: {
@@ -214,7 +214,7 @@ export default function TestimonialsPage() {
               <span className="block text-gray-600 text-3xl mt-2">Stories of MRCP PACES Exam Achievement</span>
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
-              Discover how thousands of pharmacy graduates have transformed their exam preparation and achieved their professional registration using our platform.
+              Discover how thousands of medical trainees have transformed their exam preparation and achieved their MRCP qualification using our platform.
             </p>
           </div>
         </div>
@@ -513,7 +513,7 @@ export default function TestimonialsPage() {
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
             <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
-            <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+            <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
           </div>
         </div>
       </footer>

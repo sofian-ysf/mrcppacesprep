@@ -8,10 +8,10 @@ export const metadata: Metadata = {
   title: 'MRCP PACES Study Guides 2025 | PDF Downloads | Formula Sheets | £30/month',
   description: 'Download comprehensive MRCP PACES study guides. PDF guides, formula sheets, mind maps, learning pathways. Created by physicians. Updated for 2025 MRCP PACES framework. £30/month.',
   keywords: [
-    'MRCP PACES study guide', 'MRCP PACES revision notes', 'pre-reg study materials', 'pharmacy exam guide',
-    'MRCP PACES formula sheet', 'pharmacy mind maps', 'MRCP PACES study schedule', 'pharmacy revision resources',
-    'MRCP PACES study plan', 'learning pathway', 'exam preparation guide', 'pharmacy study tips',
-    'MRCP PACES topic guides', 'BNF study guide', 'clinical pharmacy guide'
+    'MRCP PACES study guide', 'MRCP PACES revision notes', 'MRCP PACES study materials', 'medical exam guide',
+    'MRCP PACES examination techniques', 'MRCP PACES mind maps', 'MRCP PACES study schedule', 'medical revision resources',
+    'MRCP PACES study plan', 'learning pathway', 'exam preparation guide', 'MRCP PACES study tips',
+    'MRCP PACES station guides', 'clinical examination guide', 'history taking guide'
   ],
   openGraph: {
     title: 'MRCP PACES Study Guides | PDF Downloads | Formula Sheets | Learning Pathways',
@@ -39,7 +39,7 @@ export default function StudyGuidesPage() {
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
               Comprehensive Study Guides for Every MRCP PACES Topic
-              <span className="block text-gray-600 text-3xl mt-2">Structured Learning Materials Created by Pharmacists</span>
+              <span className="block text-gray-600 text-3xl mt-2">Structured Learning Materials Created by MRCP Holders</span>
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
               Master every aspect of the MRCP PACES exam with our comprehensive study guides, formula sheets, mind maps, and structured learning pathways designed for efficient exam preparation.
@@ -498,7 +498,7 @@ export default function StudyGuidesPage() {
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
             <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
-            <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+            <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
           </div>
         </div>
       </footer>

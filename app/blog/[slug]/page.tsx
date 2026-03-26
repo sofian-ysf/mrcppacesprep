@@ -180,7 +180,7 @@ export default async function BlogPostPage({ params }: Props) {
     "about": {
       "@type": "Thing",
       "name": "MRCP PACES Pre-Registration Exam",
-      "description": "The General Pharmaceutical Council examination for pharmacy registration in the UK"
+      "description": "The Practical Assessment of Clinical Examination Skills for MRCP membership in the UK"
     },
     ...(post.featured_image && { "image": post.featured_image }),
   }

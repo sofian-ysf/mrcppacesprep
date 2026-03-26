@@ -31,10 +31,10 @@ export const metadata: Metadata = {
   title: 'MRCP PACES Exam Resources 2025 | Study Guides | Formula Sheets | £30/month',
   description: 'Comprehensive MRCP PACES exam resources. Calculation guides, clinical references, BNF summaries, formula sheets. Created by physicians. 94% pass rate. £30/month.',
   keywords: [
-    'MRCP PACES exam resources', 'MRCP PACES study materials', 'pharmacy calculation guide', 'MRCP PACES formula sheet',
-    'pre-reg exam resources', 'pharmacy revision notes', 'BNF summary guide', 'MRCP PACES exam tips',
-    'clinical pharmacy reference', 'pharmacy law summary', 'drug interaction guide', 'MRCP PACES exam strategy',
-    'pharmacy study guides UK', 'pre-registration resources', 'exam preparation materials'
+    'MRCP PACES exam resources', 'MRCP PACES study materials', 'clinical examination guide', 'MRCP PACES checklists',
+    'MRCP PACES exam resources', 'MRCP PACES revision notes', 'history taking guide', 'MRCP PACES exam tips',
+    'clinical examination reference', 'medical ethics summary', 'communication skills guide', 'MRCP PACES exam strategy',
+    'MRCP PACES study guides UK', 'MRCP PACES preparation resources', 'exam preparation materials'
   ],
   openGraph: {
     title: 'MRCP PACES Exam Resources | Study Guides | Formula Sheets | £30/month',
@@ -368,7 +368,7 @@ export default function ResourcesPage() {
 
           <div className="mt-12 border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
             <p>© 2024 MRCPPACESPREP. All rights reserved.</p>
-            <p className="mt-2">Not affiliated with or endorsed by the General Pharmaceutical Council.</p>
+            <p className="mt-2">Not affiliated with or endorsed by the Royal College of Physicians.</p>
           </div>
         </div>
       </footer>
