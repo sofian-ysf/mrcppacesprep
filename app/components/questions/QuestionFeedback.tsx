@@ -30,6 +30,10 @@ interface QuestionFeedbackProps {
   explanation: string
   enhancedExplanation?: string | null
   explanationStructured?: StructuredExplanation | null
+  // SBA-specific props
+  keyPoints?: string[]
+  clinicalPearl?: string | null
+  examTip?: string | null
   questionType?: string
   onNext: () => void
   isLastQuestion: boolean
@@ -45,6 +49,9 @@ export default function QuestionFeedback({
   explanation,
   enhancedExplanation,
   explanationStructured,
+  keyPoints,
+  clinicalPearl,
+  examTip,
   questionType,
   onNext,
   isLastQuestion,
@@ -77,7 +84,7 @@ export default function QuestionFeedback({
   const checkBookmarkStatus = async () => {
     if (!questionId) return
     try {
-      const res = await fetch(`/api/questions/bookmark?question_id=${questionId}`)
+      const res = await fetch(`/api/sba/bookmark?question_id=${questionId}`)
       if (res.ok) {
         const data = await res.json()
         setIsBookmarked(data.isBookmarked)
@@ -108,7 +115,7 @@ export default function QuestionFeedback({
 
     setBookmarkLoading(true)
     try {
-      const res = await fetch('/api/questions/bookmark', {
+      const res = await fetch('/api/sba/bookmark', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question_id: questionId })
@@ -445,6 +452,26 @@ export default function QuestionFeedback({
             <p className="text-gray-700 whitespace-pre-wrap">{formatBoldText(explanation)}</p>
           </div>
         </div>
+      )}
+
+      {/* SBA-specific sections (when not using structured explanation) */}
+      {!hasStructuredExplanation && (
+        <>
+          {/* Key Points */}
+          {keyPoints && keyPoints.length > 0 && (
+            <KeyPointsSection points={keyPoints} />
+          )}
+
+          {/* Clinical Pearl */}
+          {clinicalPearl && (
+            <ClinicalPearlBox pearl={clinicalPearl} />
+          )}
+
+          {/* Exam Tip */}
+          {examTip && (
+            <ExamTipBanner tip={examTip} />
+          )}
+        </>
       )}
 
       {/* Actions */}

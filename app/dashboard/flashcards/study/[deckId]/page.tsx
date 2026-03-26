@@ -333,7 +333,7 @@ export default function StudySessionPage() {
                 <Link href="/dashboard/progress" className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100">
                   Progress
                 </Link>
-                <Link href="/dashboard/question-bank" className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100">
+                <Link href="/dashboard/sba" className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100">
                   Questions
                 </Link>
                 <Link href="/dashboard/flashcards" className="px-3 py-1.5 text-sm font-medium text-gray-900 bg-gray-100 rounded-full">
@@ -390,7 +390,7 @@ export default function StudySessionPage() {
                 Progress
               </Link>
               <Link
-                href="/dashboard/question-bank"
+                href="/dashboard/sba"
                 className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
                 onClick={() => setMobileMenuOpen(false)}
               >

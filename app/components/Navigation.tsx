@@ -101,8 +101,8 @@ export default function Navigation() {
                 <Link href="/dashboard/progress" className={`pill-nav-item ${pathname === '/dashboard/progress' ? 'active' : ''}`}>
                   Progress
                 </Link>
-                <Link href="/dashboard/question-bank" className={`pill-nav-item ${pathname?.startsWith('/dashboard/question-bank') ? 'active' : ''}`}>
-                  Questions
+                <Link href="/dashboard/sba" className={`pill-nav-item ${pathname?.startsWith('/dashboard/sba') ? 'active' : ''}`}>
+                  SBA
                 </Link>
                 <Link href="/dashboard/flashcards" className={`pill-nav-item ${pathname?.startsWith('/dashboard/flashcards') ? 'active' : ''}`}>
                   Flashcards
@@ -201,8 +201,8 @@ export default function Navigation() {
                 <Link href="/dashboard/progress" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
                   Progress
                 </Link>
-                <Link href="/dashboard/question-bank" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
-                  Questions
+                <Link href="/dashboard/sba" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
+                  SBA
                 </Link>
                 <Link href="/dashboard/mock-exams" className="pill-mobile-nav-link" onClick={closeMobileMenu}>
                   Mock Exams

@@ -71,7 +71,7 @@ export default function DashboardLayout({
   const navLinks = [
     { href: '/dashboard', label: 'Dashboard', active: pathname === '/dashboard' },
     { href: '/dashboard/progress', label: 'Progress', active: pathname === '/dashboard/progress' },
-    { href: '/dashboard/question-bank', label: 'Questions', active: pathname?.startsWith('/dashboard/question-bank') },
+    { href: '/dashboard/sba', label: 'SBA', active: pathname?.startsWith('/dashboard/sba') },
     { href: '/dashboard/flashcards', label: 'Flashcards', active: pathname?.startsWith('/dashboard/flashcards') },
     { href: '/blog', label: 'Blog', active: pathname?.startsWith('/blog') }
   ]

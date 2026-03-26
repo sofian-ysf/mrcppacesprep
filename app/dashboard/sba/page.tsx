@@ -3,45 +3,39 @@
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { QuestionCategory } from '@/app/types/questions'
+import { SBACategory } from '@/app/types/sba'
 import { useSubscription } from '@/app/hooks/useSubscription'
 import UpgradePrompt from '@/app/components/UpgradePrompt'
 import { getSmartPracticeRecommendation, getWeakCategories, type CategoryPerformance, type SmartPracticeRecommendation } from '@/app/lib/adaptive/prioritizer'
 import { DashboardLayout } from '@/app/components/dashboard'
 
-type BankType = 'clinical' | 'calculation'
-
-export default function QuestionBankPracticePage() {
+export default function SBAPracticePage() {
   const { hasAccess, loading, isLoggedIn } = useSubscription()
   const router = useRouter()
-  const [categories, setCategories] = useState<QuestionCategory[]>([])
-  const [totals, setTotals] = useState<{ all: number; clinical: number; calculation: number }>({ all: 0, clinical: 0, calculation: 0 })
+  const [categories, setCategories] = useState<SBACategory[]>([])
+  const [totalQuestionCount, setTotalQuestionCount] = useState(0)
   const [loadingCategories, setLoadingCategories] = useState(true)
   const [categoryError, setCategoryError] = useState<string | null>(null)
   const [selectedCategories, setSelectedCategories] = useState<string[]>([])
   const [selectedDifficulties, setSelectedDifficulties] = useState<string[]>([])
-  const [questionType, setQuestionType] = useState<string>('all')
-  const [bankType, setBankType] = useState<BankType>('clinical')
   const [showUpgradePrompt, setShowUpgradePrompt] = useState(false)
   const [showBookmarkedOnly, setShowBookmarkedOnly] = useState(false)
   const [bookmarkCount, setBookmarkCount] = useState(0)
   const [bookmarkedQuestionIds, setBookmarkedQuestionIds] = useState<string[]>([])
   const [smartPracticeRecommendation, setSmartPracticeRecommendation] = useState<SmartPracticeRecommendation | null>(null)
   const [categoryPerformance, setCategoryPerformance] = useState<CategoryPerformance[]>([])
-  const [userOverallAccuracy, setUserOverallAccuracy] = useState(0)
   const [totalQuestionsCompleted, setTotalQuestionsCompleted] = useState(0)
   const [dueForReviewCount, setDueForReviewCount] = useState(0)
-  const [showDueForReview, setShowDueForReview] = useState(false)
 
   // Fetch categories and bookmarks on mount
   useEffect(() => {
     async function fetchCategories() {
       try {
-        const res = await fetch('/api/questions/categories')
+        const res = await fetch('/api/sba/categories')
         if (!res.ok) throw new Error('Failed to fetch categories')
         const data = await res.json()
         setCategories(data.categories || [])
-        setTotals(data.totals || { all: 0, clinical: 0, calculation: 0 })
+        setTotalQuestionCount(data.total || 0)
       } catch (err) {
         console.error('Error fetching categories:', err)
         setCategoryError('Failed to load categories')
@@ -52,7 +46,7 @@ export default function QuestionBankPracticePage() {
 
     async function fetchBookmarks() {
       try {
-        const res = await fetch('/api/questions/bookmark')
+        const res = await fetch('/api/sba/bookmark')
         if (res.ok) {
           const data = await res.json()
           setBookmarkCount(data.count || 0)
@@ -68,7 +62,6 @@ export default function QuestionBankPracticePage() {
         const res = await fetch('/api/user/progress')
         if (res.ok) {
           const data = await res.json()
-          setUserOverallAccuracy(data.overall?.accuracy || 0)
           setTotalQuestionsCompleted(data.overall?.totalAnswered || 0)
 
           // Convert category progress to CategoryPerformance format
@@ -108,7 +101,7 @@ export default function QuestionBankPracticePage() {
 
     async function fetchDueQuestions() {
       try {
-        const res = await fetch('/api/questions/due')
+        const res = await fetch('/api/sba/due')
         if (res.ok) {
           const data = await res.json()
           setDueForReviewCount(data.dueCount || 0)
@@ -124,37 +117,17 @@ export default function QuestionBankPracticePage() {
     fetchDueQuestions()
   }, [])
 
-  // Filter categories based on bank type
-  const clinicalCategories = categories.filter(cat => cat.question_type === 'clinical')
-  const calculationCategories = categories.filter(cat => cat.question_type === 'calculation')
-  const activeCategories = bankType === 'clinical' ? clinicalCategories : calculationCategories
-
-  // Reset selections when switching bank type
-  useEffect(() => {
-    setSelectedCategories([])
-    setSelectedDifficulties([])
-    setQuestionType(bankType === 'calculation' ? 'calculation' : 'all')
-  }, [bankType])
-
-  // Calculate total questions based on filters with actual difficulty counts
+  // Calculate total questions based on filters
   const getFilteredQuestionCount = () => {
     const categoriesToCount = selectedCategories.length > 0
-      ? activeCategories.filter(c => selectedCategories.includes(c.id))
-      : activeCategories
+      ? categories.filter(c => selectedCategories.includes(c.id))
+      : categories
 
     let total = 0
     categoriesToCount.forEach(cat => {
       if (selectedDifficulties.length === 0) {
-        // No difficulty filter - count all questions in category
-        if (questionType === 'all' || bankType === 'calculation') {
-          total += cat.question_count
-        } else if (questionType === 'sba') {
-          total += cat.type_counts?.sba || 0
-        } else if (questionType === 'emq') {
-          total += cat.type_counts?.emq || 0
-        }
+        total += cat.question_count
       } else {
-        // Filter by selected difficulties
         selectedDifficulties.forEach(diff => {
           total += cat.difficulty_counts?.[diff as keyof typeof cat.difficulty_counts] || 0
         })
@@ -187,7 +160,7 @@ export default function QuestionBankPracticePage() {
   }
 
   const handleSelectAllCategories = () => {
-    setSelectedCategories(activeCategories.map(cat => cat.id))
+    setSelectedCategories(categories.map(cat => cat.id))
   }
 
   const handleClearAllCategories = () => {
@@ -195,7 +168,6 @@ export default function QuestionBankPracticePage() {
   }
 
   const handleStartPractice = () => {
-    // Check if user has access
     if (!hasAccess) {
       setShowUpgradePrompt(true)
       return
@@ -209,15 +181,12 @@ export default function QuestionBankPracticePage() {
     if (selectedDifficulties.length > 0) {
       params.set('difficulties', selectedDifficulties.join(','))
     }
-    if (questionType !== 'all') {
-      params.set('type', questionType)
-    }
     if (showBookmarkedOnly && bookmarkedQuestionIds.length > 0) {
       params.set('bookmarked', 'true')
       params.set('question_ids', bookmarkedQuestionIds.join(','))
     }
 
-    router.push(`/dashboard/question-bank/practice?${params.toString()}`)
+    router.push(`/dashboard/sba/practice?${params.toString()}`)
   }
 
   const handleStartSmartPractice = () => {
@@ -230,22 +199,15 @@ export default function QuestionBankPracticePage() {
     params.set('smart', 'true')
     params.set('random', 'true')
 
-    // Get weak categories for the current bank type
-    const relevantPerformance = categoryPerformance.filter(cp => {
-      const category = categories.find(c => c.id === cp.categoryId)
-      return category?.question_type === bankType
-    })
-
-    const weakCats = getWeakCategories(relevantPerformance)
+    const weakCats = getWeakCategories(categoryPerformance)
     if (weakCats.length > 0) {
       params.set('categories', weakCats.slice(0, 3).map(c => c.categoryId).join(','))
     }
 
-    // Set appropriate limit based on recommendation
     const limit = smartPracticeRecommendation?.recommendedQuestionCount || 20
     params.set('limit', limit.toString())
 
-    router.push(`/dashboard/question-bank/practice?${params.toString()}`)
+    router.push(`/dashboard/sba/practice?${params.toString()}`)
   }
 
   const handleStartDueReview = () => {
@@ -258,7 +220,7 @@ export default function QuestionBankPracticePage() {
     params.set('due', 'true')
     params.set('limit', '20')
 
-    router.push(`/dashboard/question-bank/practice?${params.toString()}`)
+    router.push(`/dashboard/sba/practice?${params.toString()}`)
   }
 
   if (loading) {
@@ -280,7 +242,7 @@ export default function QuestionBankPracticePage() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#fbfaf4]">
         <div className="text-center">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Please log in to access question bank</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Please log in to access SBA questions</h2>
           <Link href="/login" className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors">
             Log In
           </Link>
@@ -299,80 +261,14 @@ export default function QuestionBankPracticePage() {
       <DashboardLayout
         breadcrumbs={[
           { label: 'Dashboard', href: '/dashboard' },
-          { label: 'Question Bank' }
+          { label: 'SBA Questions' }
         ]}
-        tabs={[
-          {
-            label: `Clinical Questions`,
-            value: 'clinical',
-            onClick: () => setBankType('clinical'),
-            badge: String(totals.clinical)
-          },
-          {
-            label: `Calculation Questions`,
-            value: 'calculation',
-            onClick: () => setBankType('calculation'),
-            badge: String(totals.calculation)
-          }
-        ]}
-        activeTab={bankType}
       >
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Filter Sidebar - Left Side */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-lg border border-gray-200 p-6">
               <h2 className="text-lg font-semibold text-gray-900 mb-6">Practice Filters</h2>
-
-              {/* Question Type Filter - Only show for clinical */}
-              {bankType === 'clinical' && (
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-gray-900 mb-3">Question Type</h3>
-                  <div className="space-y-2">
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="questionType"
-                        value="all"
-                        checked={questionType === 'all'}
-                        onChange={(e) => setQuestionType(e.target.value)}
-                        className="w-4 h-4 text-black border-gray-300 focus:ring-black"
-                      />
-                      <span className="ml-2 text-sm text-gray-900">All Question Types</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="questionType"
-                        value="sba"
-                        checked={questionType === 'sba'}
-                        onChange={(e) => setQuestionType(e.target.value)}
-                        className="w-4 h-4 text-black border-gray-300 focus:ring-black"
-                      />
-                      <span className="ml-2 text-sm text-gray-900">Single Best Answer (SBA)</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input
-                        type="radio"
-                        name="questionType"
-                        value="emq"
-                        checked={questionType === 'emq'}
-                        onChange={(e) => setQuestionType(e.target.value)}
-                        className="w-4 h-4 text-black border-gray-300 focus:ring-black"
-                      />
-                      <span className="ml-2 text-sm text-gray-900">Extended Matching (EMQ)</span>
-                    </label>
-                  </div>
-                </div>
-              )}
-
-              {/* Calculation type indicator */}
-              {bankType === 'calculation' && (
-                <div className="mb-6 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                  <p className="text-sm text-blue-800">
-                    Calculation questions require you to work out numerical answers. Show your working and include units.
-                  </p>
-                </div>
-              )}
 
               {/* Due for Review Filter */}
               {dueForReviewCount > 0 && (
@@ -446,7 +342,7 @@ export default function QuestionBankPracticePage() {
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-sm font-semibold text-gray-900">Categories</h3>
                   <span className="text-xs text-gray-500">
-                    {selectedCategories.length} of {activeCategories.length} selected
+                    {selectedCategories.length} of {categories.length} selected
                   </span>
                 </div>
 
@@ -458,7 +354,7 @@ export default function QuestionBankPracticePage() {
                   <div className="text-red-500 text-sm py-2">{categoryError}</div>
                 ) : (
                   <div className="space-y-2 mb-4 max-h-64 overflow-y-auto">
-                    {activeCategories.map((category) => (
+                    {categories.map((category) => (
                       <label
                         key={category.id}
                         className="flex items-center p-2 hover:bg-gray-50 cursor-pointer rounded"
@@ -515,20 +411,15 @@ export default function QuestionBankPracticePage() {
                   </div>
                   <div>
                     <span className="text-xs text-gray-400 uppercase">Type</span>
-                    <p className="text-lg font-bold">{bankType === 'calculation' ? 'CALC' : questionType.toUpperCase()}</p>
+                    <p className="text-lg font-bold">SBA</p>
                   </div>
                   <div>
                     <span className="text-xs text-gray-400 uppercase">Categories</span>
-                    <p className="text-lg font-bold">{selectedCategories.length || activeCategories.length}</p>
+                    <p className="text-lg font-bold">{selectedCategories.length || categories.length}</p>
                   </div>
                   <div>
                     <span className="text-xs text-gray-400 uppercase">Est. Time</span>
-                    <p className="text-lg font-bold">
-                      {bankType === 'calculation'
-                        ? `${Math.ceil(totalQuestions * 2.5)}m`
-                        : `${Math.ceil(totalQuestions * 1.5)}m`
-                      }
-                    </p>
+                    <p className="text-lg font-bold">{Math.ceil(totalQuestions * 1.5)}m</p>
                   </div>
                 </div>
                 <button
@@ -552,13 +443,10 @@ export default function QuestionBankPracticePage() {
 
             <div className="bg-white rounded-lg border border-gray-200 p-6">
               <h1 className="text-2xl font-semibold text-gray-900 mb-2">
-                {bankType === 'clinical' ? 'Clinical Knowledge Question Bank' : 'Pharmaceutical Calculations'}
+                MRCP PACES SBA Questions
               </h1>
               <p className="text-gray-600 mb-6">
-                {bankType === 'clinical'
-                  ? 'Practice with comprehensive questions covering all areas of clinical pharmacy and MRCP PACES framework topics.'
-                  : 'Master essential pharmacy calculations including dosage, concentrations, IV flow rates, and more.'
-                }
+                Practice Single Best Answer questions covering all MRCP PACES clinical examination topics.
               </p>
 
               {/* Category Overview */}
@@ -576,14 +464,14 @@ export default function QuestionBankPracticePage() {
                     Try again
                   </button>
                 </div>
-              ) : activeCategories.length === 0 ? (
+              ) : categories.length === 0 ? (
                 <div className="text-center py-12">
                   <p className="text-gray-500">No questions available yet.</p>
                   <p className="text-sm text-gray-400 mt-2">Check back soon for new practice questions.</p>
                 </div>
               ) : (
                 <div className="grid gap-4 md:grid-cols-2 mb-6">
-                  {activeCategories
+                  {categories
                     .filter(cat => {
                       const categoryMatch = selectedCategories.length === 0 || selectedCategories.includes(cat.id)
                       const difficultyMatch = selectedDifficulties.length === 0 || selectedDifficulties.includes(cat.difficulty_default)
@@ -671,95 +559,43 @@ export default function QuestionBankPracticePage() {
               )}
 
               {/* Quick Start Options */}
-              {activeCategories.length > 0 && (
+              {categories.length > 0 && (
                 <div className="border-t border-gray-200 pt-6">
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Start Options</h3>
-                  {bankType === 'clinical' ? (
-                    <div className="grid gap-4 md:grid-cols-3">
-                      <button
-                        onClick={() => {
-                          const coreClinical = clinicalCategories
-                            .filter(cat => ['clinical-pharmacy', 'pharmacology', 'law-ethics'].includes(cat.slug))
-                            .map(cat => cat.id)
-                          setSelectedCategories(coreClinical)
-                          setSelectedDifficulties(['Medium', 'Hard'])
-                          setQuestionType('sba')
-                        }}
-                        className="p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors text-left"
-                      >
-                        <h4 className="font-semibold text-gray-900 mb-1">Core Clinical</h4>
-                        <p className="text-sm text-gray-600">Essential clinical topics (SBA)</p>
-                      </button>
+                  <div className="grid gap-4 md:grid-cols-3">
+                    <button
+                      onClick={() => {
+                        setSelectedCategories([])
+                        setSelectedDifficulties(['Easy'])
+                      }}
+                      className="p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors text-left"
+                    >
+                      <h4 className="font-semibold text-gray-900 mb-1">Easy Practice</h4>
+                      <p className="text-sm text-gray-600">Start with easier questions</p>
+                    </button>
 
-                      <button
-                        onClick={() => {
-                          const systemFocus = clinicalCategories
-                            .filter(cat => ['cardiovascular', 'respiratory', 'endocrine'].includes(cat.slug))
-                            .map(cat => cat.id)
-                          setSelectedCategories(systemFocus)
-                          setSelectedDifficulties(['Easy', 'Medium'])
-                          setQuestionType('all')
-                        }}
-                        className="p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors text-left"
-                      >
-                        <h4 className="font-semibold text-gray-900 mb-1">System Focus</h4>
-                        <p className="text-sm text-gray-600">Body systems practice</p>
-                      </button>
+                    <button
+                      onClick={() => {
+                        setSelectedCategories([])
+                        setSelectedDifficulties(['Medium', 'Hard'])
+                      }}
+                      className="p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors text-left"
+                    >
+                      <h4 className="font-semibold text-gray-900 mb-1">Challenge Mode</h4>
+                      <p className="text-sm text-gray-600">Medium and hard questions</p>
+                    </button>
 
-                      <button
-                        onClick={() => {
-                          setSelectedCategories(clinicalCategories.map(cat => cat.id))
-                          setSelectedDifficulties(['Hard'])
-                          setQuestionType('emq')
-                        }}
-                        className="p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors text-left"
-                      >
-                        <h4 className="font-semibold text-gray-900 mb-1">Challenge EMQs</h4>
-                        <p className="text-sm text-gray-600">Advanced matching questions</p>
-                      </button>
-                    </div>
-                  ) : (
-                    <div className="grid gap-4 md:grid-cols-3">
-                      <button
-                        onClick={() => {
-                          const dosage = calculationCategories
-                            .filter(cat => ['dosage', 'unit-conversions'].includes(cat.slug))
-                            .map(cat => cat.id)
-                          setSelectedCategories(dosage)
-                          setSelectedDifficulties(['Easy', 'Medium'])
-                        }}
-                        className="p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors text-left"
-                      >
-                        <h4 className="font-semibold text-gray-900 mb-1">Dosage Basics</h4>
-                        <p className="text-sm text-gray-600">Dosage & unit conversions</p>
-                      </button>
-
-                      <button
-                        onClick={() => {
-                          const ivCalcs = calculationCategories
-                            .filter(cat => ['iv-flows', 'concentrations'].includes(cat.slug))
-                            .map(cat => cat.id)
-                          setSelectedCategories(ivCalcs)
-                          setSelectedDifficulties(['Medium', 'Hard'])
-                        }}
-                        className="p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors text-left"
-                      >
-                        <h4 className="font-semibold text-gray-900 mb-1">IV & Concentrations</h4>
-                        <p className="text-sm text-gray-600">IV flow rates & dilutions</p>
-                      </button>
-
-                      <button
-                        onClick={() => {
-                          setSelectedCategories(calculationCategories.map(cat => cat.id))
-                          setSelectedDifficulties(['Hard'])
-                        }}
-                        className="p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors text-left"
-                      >
-                        <h4 className="font-semibold text-gray-900 mb-1">Advanced Challenge</h4>
-                        <p className="text-sm text-gray-600">All hard calculation questions</p>
-                      </button>
-                    </div>
-                  )}
+                    <button
+                      onClick={() => {
+                        setSelectedCategories(categories.map(cat => cat.id))
+                        setSelectedDifficulties([])
+                      }}
+                      className="p-4 border border-gray-200 rounded-lg hover:border-gray-300 transition-colors text-left"
+                    >
+                      <h4 className="font-semibold text-gray-900 mb-1">Full Review</h4>
+                      <p className="text-sm text-gray-600">All categories and difficulties</p>
+                    </button>
+                  </div>
                 </div>
               )}
             </div>

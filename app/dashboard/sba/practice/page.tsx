@@ -7,12 +7,9 @@ import { useAuth } from '@/app/contexts/AuthContext'
 import { useSubscription } from '@/app/hooks/useSubscription'
 import { useEffect, useState, Suspense } from 'react'
 import AccessControl from '@/app/components/AccessControl'
-import { Question, UserAnswer } from '@/app/types/questions'
+import { SBAQuestion as SBAQuestionType, SBAUserAnswer } from '@/app/types/sba'
 import SBAQuestion from '@/app/components/questions/SBAQuestion'
-import EMQQuestion from '@/app/components/questions/EMQQuestion'
-import CalculationQuestion from '@/app/components/questions/CalculationQuestion'
 import QuestionFeedback from '@/app/components/questions/QuestionFeedback'
-import { CalculationToolsDrawer } from '@/app/components/calculation-tools'
 import { getStoredGclid } from '@/app/components/GclidCapture'
 
 function PracticeContent() {
@@ -22,7 +19,7 @@ function PracticeContent() {
   const searchParams = useSearchParams()
 
   // State
-  const [questions, setQuestions] = useState<Question[]>([])
+  const [questions, setQuestions] = useState<SBAQuestionType[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -51,23 +48,16 @@ function PracticeContent() {
 
   // Answer state
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null)
-  const [emqAnswers, setEmqAnswers] = useState<string[]>([])
   const [showFeedback, setShowFeedback] = useState(false)
   const [isCorrect, setIsCorrect] = useState(false)
   const [explanation, setExplanation] = useState('')
-  const [enhancedExplanation, setEnhancedExplanation] = useState<string | null>(null)
-  const [explanationStructured, setExplanationStructured] = useState<{
-    summary: string
-    key_points: string[]
-    clinical_pearl: string
-    why_wrong: Record<string, string>
-    exam_tip: string
-    related_topics: string[]
-  } | null>(null)
+  const [keyPoints, setKeyPoints] = useState<string[]>([])
+  const [clinicalPearl, setClinicalPearl] = useState<string | null>(null)
+  const [examTip, setExamTip] = useState<string | null>(null)
   const [submitting, setSubmitting] = useState(false)
 
   // Session tracking
-  const [answers, setAnswers] = useState<UserAnswer[]>([])
+  const [answers, setAnswers] = useState<SBAUserAnswer[]>([])
   const [startTime, setStartTime] = useState<number>(Date.now())
   const [questionStartTime, setQuestionStartTime] = useState<number>(Date.now())
   const [sessionComplete, setSessionComplete] = useState(false)
@@ -118,12 +108,10 @@ function PracticeContent() {
   const confirmExit = () => {
     setShowExitModal(false)
     if (pendingNavigation) {
-      // Clear the session and navigate
       const sessionKey = getSessionKey()
       sessionStorage.removeItem(sessionKey)
       router.push(pendingNavigation)
     } else {
-      // Just end the session (show results)
       setSessionComplete(true)
     }
   }
@@ -150,8 +138,7 @@ function PracticeContent() {
   const getSessionKey = () => {
     const categories = searchParams.get('categories') || ''
     const difficulties = searchParams.get('difficulties') || ''
-    const type = searchParams.get('type') || ''
-    return `practice_session_${categories}_${difficulties}_${type}`
+    return `sba_practice_session_${categories}_${difficulties}`
   }
 
   // Fetch questions on mount or restore from session
@@ -174,14 +161,12 @@ function PracticeContent() {
             setLoading(false)
             return
           } catch {
-            // Invalid session data, fetch fresh
             sessionStorage.removeItem(sessionKey)
           }
         }
 
         const categories = searchParams.get('categories')
         const difficulties = searchParams.get('difficulties')
-        const type = searchParams.get('type')
         const isDue = searchParams.get('due') === 'true'
         const limit = searchParams.get('limit') || '50'
         const questionIds = searchParams.get('question_ids')
@@ -189,18 +174,17 @@ function PracticeContent() {
         let res: Response
 
         if (isDue) {
-          // Fetch questions due for review
-          res = await fetch(`/api/questions/due?details=true&limit=${limit}`)
+          res = await fetch(`/api/sba/due?details=true&limit=${limit}`)
         } else {
           const params = new URLSearchParams()
           if (categories) params.set('categories', categories)
           if (difficulties) params.set('difficulties', difficulties)
-          if (type) params.set('type', type)
           if (questionIds) params.set('question_ids', questionIds)
           params.set('random', 'true')
           params.set('limit', limit)
-          res = await fetch(`/api/questions?${params.toString()}`)
+          res = await fetch(`/api/sba?${params.toString()}`)
         }
+
         if (!res.ok) {
           if (res.status === 401) {
             throw new Error('Please log in to practice questions')
@@ -209,9 +193,8 @@ function PracticeContent() {
         }
 
         const data = await res.json()
-
-        // Handle both regular questions API and due questions API response formats
         const fetchedQuestions = data.questions || []
+
         if (fetchedQuestions.length === 0) {
           throw new Error(isDue
             ? 'No questions due for review'
@@ -224,7 +207,6 @@ function PracticeContent() {
         setStartTime(now)
         setQuestionStartTime(now)
 
-        // Save new session to sessionStorage
         sessionStorage.setItem(sessionKey, JSON.stringify({
           questions: fetchedQuestions,
           answers: [],
@@ -272,30 +254,20 @@ function PracticeContent() {
     const question = questions[currentIndex]
     if (!question) return
 
-    // Check if this question was already answered
     const previousAnswer = answers.find(a => a.question_id === question.id)
 
     if (previousAnswer) {
-      // Restore the previous answer state
       setSelectedAnswer(previousAnswer.selected_answer)
       setIsCorrect(previousAnswer.is_correct)
       setShowFeedback(true)
-      // For EMQ, parse the stored answer
-      if (question.question_type === 'emq') {
-        try {
-          setEmqAnswers(JSON.parse(previousAnswer.selected_answer))
-        } catch {
-          setEmqAnswers([])
-        }
-      }
     } else {
-      // Reset for a new unanswered question
       setSelectedAnswer(null)
-      setEmqAnswers([])
       setShowFeedback(false)
       setIsCorrect(false)
       setExplanation('')
-      setExplanationStructured(null)
+      setKeyPoints([])
+      setClinicalPearl(null)
+      setExamTip(null)
       setQuestionStartTime(Date.now())
     }
   }, [currentIndex, questions, answers])
@@ -304,35 +276,19 @@ function PracticeContent() {
     setSelectedAnswer(answer)
   }
 
-  const handleEMQAnswer = (scenarioIndex: number, answer: string) => {
-    setEmqAnswers(prev => {
-      const newAnswers = [...prev]
-      newAnswers[scenarioIndex] = answer
-      return newAnswers
-    })
-  }
-
   const handleSubmit = async () => {
-    if (!currentQuestion) return
+    if (!currentQuestion || !selectedAnswer) return
 
     const timeTaken = Math.round((Date.now() - questionStartTime) / 1000)
-    let answerToSubmit: string
-
-    if (currentQuestion.question_type === 'emq') {
-      answerToSubmit = JSON.stringify(emqAnswers)
-    } else {
-      answerToSubmit = selectedAnswer || ''
-    }
-
     setSubmitting(true)
 
     try {
-      const res = await fetch('/api/questions/answer', {
+      const res = await fetch('/api/sba/answer', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           question_id: currentQuestion.id,
-          selected_answer: answerToSubmit,
+          selected_answer: selectedAnswer,
           time_taken_seconds: timeTaken
         })
       })
@@ -342,29 +298,27 @@ function PracticeContent() {
       const data = await res.json()
 
       setIsCorrect(data.is_correct)
-      setExplanation(data.explanation)
-      setEnhancedExplanation(data.enhanced_explanation || null)
-      setExplanationStructured(data.explanation_structured || null)
+      setExplanation(data.explanation || '')
+      setKeyPoints(data.key_points || [])
+      setClinicalPearl(data.clinical_pearl || null)
+      setExamTip(data.exam_tip || null)
       setCorrectAnswer(data.correct_answer || '')
       setShowFeedback(true)
 
-      // Update streak
       if (data.is_correct) {
         setCurrentStreak(prev => prev + 1)
       } else {
         setCurrentStreak(0)
       }
 
-      // Track the answer
       setAnswers(prev => [...prev, {
         question_id: currentQuestion.id,
-        selected_answer: answerToSubmit,
+        selected_answer: selectedAnswer,
         is_correct: data.is_correct,
         time_taken_seconds: timeTaken
       }])
     } catch (err) {
       console.error('Error submitting answer:', err)
-      // Still show feedback even if save fails
       setShowFeedback(true)
     } finally {
       setSubmitting(false)
@@ -392,27 +346,6 @@ function PracticeContent() {
     const answer = answers.find(a => a.question_id === questions[index]?.id)
     if (!answer) return 'unanswered'
     return answer.is_correct ? 'correct' : 'incorrect'
-  }
-
-  const canSubmit = () => {
-    if (!currentQuestion) return false
-
-    if (currentQuestion.question_type === 'emq') {
-      // For EMQ, all scenarios must be answered
-      try {
-        const scenarios = JSON.parse(currentQuestion.correct_answer)
-        return emqAnswers.filter(Boolean).length === scenarios.length
-      } catch {
-        return false
-      }
-    }
-
-    if (currentQuestion.question_type === 'calculation') {
-      // For calculation, need a non-empty answer
-      return selectedAnswer !== null && selectedAnswer.trim() !== ''
-    }
-
-    return selectedAnswer !== null
   }
 
   // Loading state
@@ -454,10 +387,10 @@ function PracticeContent() {
           <h2 className="text-xl font-semibold text-gray-900 mb-2">{error}</h2>
           <p className="text-gray-600 mb-6">Try adjusting your filters or check back later.</p>
           <Link
-            href="/dashboard/question-bank"
+            href="/dashboard/sba"
             className="bg-black text-white px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors inline-block"
           >
-            Back to Question Bank
+            Back to SBA Questions
           </Link>
         </div>
       </div>
@@ -474,10 +407,8 @@ function PracticeContent() {
         <div className="min-h-screen bg-[#fbfaf4]">
           {/* Fixed Header with Navbar */}
           <div className="fixed top-0 left-0 right-0 z-40 bg-white border-b border-gray-200">
-            {/* Main Navigation */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between h-14">
-                {/* Left - Logo & Nav */}
                 <div className="flex items-center space-x-8">
                   <Link href="/" className="flex items-center space-x-2">
                     <Image src="/logo.png" alt="MRCPPACESPREP" width={28} height={28} className="rounded" />
@@ -487,23 +418,12 @@ function PracticeContent() {
                     <Link href="/dashboard" className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100">
                       Dashboard
                     </Link>
-                    <Link href="/dashboard/progress" className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100">
-                      Progress
-                    </Link>
-                    <Link href="/dashboard/question-bank" className="px-3 py-1.5 text-sm font-medium text-gray-900 bg-gray-100 rounded-full">
-                      Questions
-                    </Link>
-                    <Link href="/dashboard/flashcards" className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100">
-                      Flashcards
-                    </Link>
-                    <Link href="/blog" className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100">
-                      Blog
+                    <Link href="/dashboard/sba" className="px-3 py-1.5 text-sm font-medium text-gray-900 bg-gray-100 rounded-full">
+                      SBA
                     </Link>
                   </nav>
                 </div>
-                {/* Right - User (Desktop) */}
                 <div className="hidden md:flex items-center space-x-3">
-                  {/* Subscribe button for non-subscribed users */}
                   {!hasAccess && (
                     <button
                       onClick={handleSubscribe}
@@ -521,99 +441,14 @@ function PracticeContent() {
                     Sign Out
                   </button>
                 </div>
-                {/* Mobile Menu Button */}
-                <button
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  className="md:hidden p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg"
-                >
-                  {mobileMenuOpen ? (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  ) : (
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                  )}
-                </button>
               </div>
             </div>
-            {/* Mobile Menu Dropdown */}
-            {mobileMenuOpen && (
-              <div className="md:hidden border-t border-gray-100 bg-white">
-                <div className="max-w-7xl mx-auto px-4 py-3 space-y-1">
-                  <Link
-                    href="/dashboard"
-                    className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Dashboard
-                  </Link>
-                  <Link
-                    href="/dashboard/progress"
-                    className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Progress
-                  </Link>
-                  <Link
-                    href="/dashboard/question-bank"
-                    className="block px-3 py-2 text-sm font-medium text-gray-900 bg-gray-100 rounded-lg"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Questions
-                  </Link>
-                  <Link
-                    href="/dashboard/flashcards"
-                    className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Flashcards
-                  </Link>
-                  <Link
-                    href="/blog"
-                    className="block px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Blog
-                  </Link>
-                  <div className="border-t border-gray-100 pt-3 mt-3">
-                    <div className="px-3 py-2 text-sm text-gray-600">
-                      {user?.user_metadata?.full_name || user?.email?.split('@')[0]}
-                    </div>
-                    {/* Subscribe button for non-subscribed users (mobile) */}
-                    {!hasAccess && (
-                      <button
-                        onClick={() => {
-                          handleSubscribe()
-                          setMobileMenuOpen(false)
-                        }}
-                        disabled={subscribing}
-                        className="w-full text-left px-3 py-2 text-sm font-medium text-white bg-black hover:bg-gray-800 rounded-lg mb-2 disabled:opacity-50"
-                      >
-                        {subscribing ? 'Loading...' : 'Subscribe'}
-                      </button>
-                    )}
-                    <button
-                      onClick={() => {
-                        signOut()
-                        setMobileMenuOpen(false)
-                      }}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
-                    >
-                      Sign Out
-                    </button>
-                  </div>
-                </div>
-              </div>
-            )}
-            {/* Breadcrumb */}
             <div className="border-t border-gray-100">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
                 <div className="flex items-center space-x-2 text-sm text-gray-500">
                   <Link href="/dashboard" className="hover:text-gray-900">Dashboard</Link>
                   <span>/</span>
-                  <Link href="/dashboard/question-bank" className="hover:text-gray-900">Question Bank</Link>
+                  <Link href="/dashboard/sba" className="hover:text-gray-900">SBA</Link>
                   <span>/</span>
                   <span className="text-gray-900">Results</span>
                 </div>
@@ -655,10 +490,10 @@ function PracticeContent() {
 
               <div className="flex gap-4 justify-center">
                 <Link
-                  href="/dashboard/question-bank"
+                  href="/dashboard/sba"
                   className="px-6 py-2.5 border border-gray-300 text-gray-700 rounded-lg font-medium hover:bg-[#fbfaf4] transition-colors"
                 >
-                  Back to Question Bank
+                  Back to SBA Questions
                 </Link>
                 <button
                   onClick={() => window.location.reload()}
@@ -679,7 +514,6 @@ function PracticeContent() {
   const answeredCount = answers.length
   const scorePercentage = answeredCount > 0 ? Math.round((correctCount / answeredCount) * 100) : 0
 
-  // Content padding (no banner, just header + breadcrumb)
   const contentPaddingTop = '96px'
 
   // Exit Confirmation Modal
@@ -688,15 +522,11 @@ function PracticeContent() {
 
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-        {/* Backdrop */}
         <div
           className="absolute inset-0 bg-black/50 transition-opacity"
           onClick={cancelExit}
         />
-
-        {/* Modal */}
         <div className="relative bg-white rounded-2xl p-6 sm:p-8 max-w-md w-full shadow-xl transform transition-all">
-          {/* Warning Icon */}
           <div className="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mx-auto mb-4">
             <svg className="w-6 h-6 text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
@@ -711,7 +541,6 @@ function PracticeContent() {
             Your practice session is still in progress. If you leave now, your current progress will be saved but the session will end.
           </p>
 
-          {/* Progress Summary */}
           <div className="bg-gray-50 rounded-lg p-4 mb-6">
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
@@ -729,7 +558,6 @@ function PracticeContent() {
             </div>
           </div>
 
-          {/* Buttons */}
           <div className="flex gap-3">
             <button
               onClick={cancelExit}
@@ -753,14 +581,11 @@ function PracticeContent() {
   return (
     <AccessControl>
       <div className="min-h-screen bg-[#fbfaf4]">
-        {/* Exit Confirmation Modal */}
         <ExitConfirmationModal />
         {/* Fixed Header with Navbar */}
         <div className="fixed top-0 left-0 right-0 z-40 bg-white border-b border-gray-200">
-          {/* Main Navigation */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-14">
-              {/* Left - Logo & Nav */}
               <div className="flex items-center space-x-8">
                 <button onClick={() => handleNavigationAttempt('/')} className="flex items-center space-x-2">
                   <Image src="/logo.png" alt="MRCPPACESPREP" width={28} height={28} className="rounded" />
@@ -770,20 +595,12 @@ function PracticeContent() {
                   <button onClick={() => handleNavigationAttempt('/dashboard')} className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100">
                     Dashboard
                   </button>
-                  <button onClick={() => handleNavigationAttempt('/dashboard/progress')} className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100">
-                    Progress
-                  </button>
-                  <button onClick={() => handleNavigationAttempt('/dashboard/question-bank')} className="px-3 py-1.5 text-sm font-medium text-gray-900 bg-gray-100 rounded-full">
-                    Questions
-                  </button>
-                  <button onClick={() => handleNavigationAttempt('/blog')} className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 rounded-full hover:bg-gray-100">
-                    Blog
+                  <button onClick={() => handleNavigationAttempt('/dashboard/sba')} className="px-3 py-1.5 text-sm font-medium text-gray-900 bg-gray-100 rounded-full">
+                    SBA
                   </button>
                 </nav>
               </div>
-              {/* Right - User (Desktop) */}
               <div className="hidden md:flex items-center space-x-3">
-                {/* Subscribe button for non-subscribed users */}
                 {!hasAccess && (
                   <button
                     onClick={handleSubscribe}
@@ -801,7 +618,6 @@ function PracticeContent() {
                   Sign Out
                 </button>
               </div>
-              {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="md:hidden p-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg"
@@ -818,7 +634,6 @@ function PracticeContent() {
               </button>
             </div>
           </div>
-          {/* Mobile Menu Dropdown */}
           {mobileMenuOpen && (
             <div className="md:hidden border-t border-gray-100 bg-white">
               <div className="max-w-7xl mx-auto px-4 py-3 space-y-1">
@@ -832,37 +647,18 @@ function PracticeContent() {
                   Dashboard
                 </button>
                 <button
-                  className="block w-full text-left px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
-                  onClick={() => {
-                    setMobileMenuOpen(false)
-                    handleNavigationAttempt('/dashboard/progress')
-                  }}
-                >
-                  Progress
-                </button>
-                <button
                   className="block w-full text-left px-3 py-2 text-sm font-medium text-gray-900 bg-gray-100 rounded-lg"
                   onClick={() => {
                     setMobileMenuOpen(false)
-                    handleNavigationAttempt('/dashboard/question-bank')
+                    handleNavigationAttempt('/dashboard/sba')
                   }}
                 >
-                  Questions
-                </button>
-                <button
-                  className="block w-full text-left px-3 py-2 text-sm text-gray-600 hover:text-gray-900 hover:bg-gray-50 rounded-lg"
-                  onClick={() => {
-                    setMobileMenuOpen(false)
-                    handleNavigationAttempt('/blog')
-                  }}
-                >
-                  Blog
+                  SBA
                 </button>
                 <div className="border-t border-gray-100 pt-3 mt-3">
                   <div className="px-3 py-2 text-sm text-gray-600">
                     {user?.user_metadata?.full_name || user?.email?.split('@')[0]}
                   </div>
-                  {/* Subscribe button for non-subscribed users (mobile) */}
                   {!hasAccess && (
                     <button
                       onClick={() => {
@@ -888,14 +684,13 @@ function PracticeContent() {
               </div>
             </div>
           )}
-          {/* Breadcrumb with Trial Info and End Session */}
           <div className="border-t border-gray-100">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2 text-sm text-gray-500">
                   <button onClick={() => handleNavigationAttempt('/dashboard')} className="hover:text-gray-900">Dashboard</button>
                   <span>/</span>
-                  <button onClick={() => handleNavigationAttempt('/dashboard/question-bank')} className="hover:text-gray-900">Question Bank</button>
+                  <button onClick={() => handleNavigationAttempt('/dashboard/sba')} className="hover:text-gray-900">SBA</button>
                   <span>/</span>
                   <span className="text-gray-900">Practice</span>
                 </div>
@@ -934,49 +729,28 @@ function PracticeContent() {
                     {currentQuestion.difficulty}
                   </span>
                   <span className="text-xs px-2 py-1 rounded-full bg-gray-100 text-gray-800">
-                    {currentQuestion.question_type.toUpperCase()}
+                    SBA
                   </span>
-                  {currentQuestion.question_categories && (
-                    <span className="text-xs text-gray-500">
-                      {currentQuestion.question_categories.name}
-                    </span>
-                  )}
                 </div>
 
-                {/* Question Display */}
-                {currentQuestion.question_type === 'emq' ? (
-                  <EMQQuestion
-                    question={currentQuestion}
-                    selectedAnswers={emqAnswers}
-                    onSelectAnswer={handleEMQAnswer}
-                    showFeedback={showFeedback}
-                  />
-                ) : currentQuestion.question_type === 'calculation' ? (
-                  <CalculationQuestion
-                    question={currentQuestion}
-                    selectedAnswer={selectedAnswer}
-                    onSelectAnswer={handleSelectAnswer}
-                    showFeedback={showFeedback}
-                    isCorrect={isCorrect}
-                  />
-                ) : (
-                  <SBAQuestion
-                    question={currentQuestion}
-                    selectedAnswer={selectedAnswer}
-                    onSelectAnswer={handleSelectAnswer}
-                    showFeedback={showFeedback}
-                    isCorrect={isCorrect}
-                  />
-                )}
+                {/* SBA Question Display */}
+                <SBAQuestion
+                  question={currentQuestion}
+                  selectedAnswer={selectedAnswer}
+                  onSelectAnswer={handleSelectAnswer}
+                  showFeedback={showFeedback}
+                  isCorrect={isCorrect}
+                />
 
                 {/* Feedback */}
                 {showFeedback && (
                   <QuestionFeedback
                     isCorrect={isCorrect}
                     explanation={explanation}
-                    enhancedExplanation={enhancedExplanation}
-                    explanationStructured={explanationStructured}
-                    questionType={currentQuestion.question_type}
+                    keyPoints={keyPoints}
+                    clinicalPearl={clinicalPearl}
+                    examTip={examTip}
+                    questionType="sba"
                     onNext={handleNext}
                     isLastQuestion={currentIndex === questions.length - 1}
                     questionId={currentQuestion.id}
@@ -997,7 +771,7 @@ function PracticeContent() {
                     </button>
                     <button
                       onClick={handleSubmit}
-                      disabled={!canSubmit() || submitting}
+                      disabled={!selectedAnswer || submitting}
                       className="flex-1 py-2.5 bg-black text-white rounded-lg font-medium hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {submitting ? 'Submitting...' : 'Submit Answer'}
@@ -1079,11 +853,6 @@ function PracticeContent() {
                     </div>
                   </div>
                 </div>
-
-                {/* Calculation Tools - only for calculation questions */}
-                {currentQuestion.question_type === 'calculation' && (
-                  <CalculationToolsDrawer />
-                )}
               </div>
             </div>
           </div>

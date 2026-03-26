@@ -301,7 +301,7 @@ export default function DashboardPage() {
             </p>
           </div>
           <Link
-            href="/dashboard/question-bank"
+            href="/dashboard/sba"
             className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors whitespace-nowrap"
           >
             <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -751,7 +751,7 @@ export default function DashboardPage() {
                   )}
 
                   <Link
-                    href="/dashboard/question-bank"
+                    href="/dashboard/sba"
                     className="block w-full pill-btn pill-btn-primary text-sm"
                   >
                     {part2Progress.questionsCompleted > 0 ? 'Continue Clinical Practice' : 'Start Clinical Practice'}
@@ -842,7 +842,7 @@ export default function DashboardPage() {
                     Take Mock Exam
                   </Link>
                   <Link
-                    href="/dashboard/question-bank"
+                    href="/dashboard/sba"
                     className="block w-full pill-btn pill-btn-ghost pill-btn-sm"
                   >
                     Practice Questions

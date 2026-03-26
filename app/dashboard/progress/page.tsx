@@ -126,7 +126,7 @@ export default function ProgressPage() {
           <p className="text-gray-600 mt-1">Track your performance and identify areas for improvement</p>
         </div>
         <Link
-          href="/dashboard/question-bank"
+          href="/dashboard/sba"
           className="inline-flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors whitespace-nowrap"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -339,7 +339,7 @@ export default function ProgressPage() {
       {/* Action Buttons */}
       <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
         <Link
-          href="/dashboard/question-bank"
+          href="/dashboard/sba"
           className="pill-btn pill-btn-primary text-center"
         >
           Continue Practicing

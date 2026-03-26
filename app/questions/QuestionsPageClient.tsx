@@ -11,7 +11,7 @@ export default function QuestionsPageClient() {
 
   useEffect(() => {
     if (!loading && user) {
-      router.replace('/dashboard/question-bank')
+      router.replace('/dashboard/sba')
     }
   }, [user, loading, router])
 
@@ -30,7 +30,7 @@ export default function QuestionsPageClient() {
       <div className="min-h-screen flex items-center justify-center bg-[#fbfaf4]">
         <div className="text-center">
           <div className="animate-spin h-8 w-8 border-2 border-gray-300 border-t-black rounded-full mx-auto mb-4"></div>
-          <p className="text-gray-600">Redirecting to Question Bank...</p>
+          <p className="text-gray-600">Redirecting to SBA Questions...</p>
         </div>
       </div>
     )

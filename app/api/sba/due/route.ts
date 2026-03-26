@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/app/lib/supabase/server'
 
-// GET - Fetch questions due for review
+// GET - Fetch SBA questions due for review
 export async function GET(request: NextRequest) {
   try {
     const supabase = await createClient()
@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
       })
     }
 
-    // Get due questions with full details
+    // Get due SBA questions with full details
     const { data: dueProgress, error: progressError } = await supabase
       .from('user_question_progress')
       .select(`
@@ -49,16 +49,18 @@ export async function GET(request: NextRequest) {
         due_date,
         times_correct,
         times_incorrect,
-        questions (
+        sba_questions (
           id,
           category_id,
-          question_type,
           difficulty,
           question_text,
           options,
           correct_answer,
           explanation,
-          question_categories (name, slug)
+          key_points,
+          clinical_pearl,
+          exam_tip,
+          sba_categories (name, slug)
         )
       `)
       .eq('user_id', user.id)
@@ -73,9 +75,9 @@ export async function GET(request: NextRequest) {
 
     // Transform the data
     const dueQuestions = (dueProgress || [])
-      .filter(p => p.questions) // Filter out any null questions
+      .filter(p => p.sba_questions) // Filter out any null questions
       .map(p => ({
-        ...p.questions,
+        ...p.sba_questions,
         progress: {
           ease_factor: p.ease_factor,
           interval_days: p.interval_days,
@@ -91,7 +93,7 @@ export async function GET(request: NextRequest) {
       questions: dueQuestions
     })
   } catch (error) {
-    console.error('Due questions error:', error)
+    console.error('Due SBA questions error:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }

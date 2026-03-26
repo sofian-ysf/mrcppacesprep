@@ -10,8 +10,8 @@ export default function NavbarWrapper() {
   if (pathname?.startsWith('/admin') ||
       pathname?.startsWith('/try-free') ||
       pathname === '/dashboard' ||
-      pathname === '/dashboard/question-bank/practice' ||
-      pathname === '/dashboard/question-bank' ||
+      pathname === '/dashboard/sba/practice' ||
+      pathname === '/dashboard/sba' ||
       pathname === '/dashboard/progress' ||
       pathname?.startsWith('/dashboard/mock-exams') ||
       pathname?.startsWith('/dashboard/flashcards') ||

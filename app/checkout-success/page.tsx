@@ -77,7 +77,7 @@ function CheckoutSuccessContent() {
     const timer = setInterval(() => {
       setCountdown((prev) => {
         if (prev <= 1) {
-          window.location.href = '/dashboard/question-bank'
+          window.location.href = '/dashboard/sba'
           return 0
         }
         return prev - 1
@@ -135,7 +135,7 @@ function CheckoutSuccessContent() {
           {/* Action Buttons */}
           <div className="space-y-3">
             <Link
-              href="/dashboard/question-bank"
+              href="/dashboard/sba"
               className="block w-full rounded-lg bg-gray-900 px-6 py-3 font-semibold text-white hover:bg-gray-800 transition-colors"
             >
               Start Practicing Now

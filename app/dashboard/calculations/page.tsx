@@ -123,7 +123,7 @@ export default function CalculationsPracticePage() {
       params.set('difficulties', selectedDifficulties.join(','))
     }
 
-    router.push(`/dashboard/question-bank/practice?${params.toString()}`)
+    router.push(`/dashboard/sba/practice?${params.toString()}`)
   }
 
   if (loading) {

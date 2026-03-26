@@ -33,7 +33,7 @@ export async function GET(request: NextRequest) {
         bookmark: bookmark || null
       })
     } else {
-      // Get all bookmarked questions for the user
+      // Get all bookmarked SBA questions for the user
       const { data: bookmarks, error } = await supabase
         .from('user_bookmarks')
         .select(`
@@ -41,13 +41,12 @@ export async function GET(request: NextRequest) {
           question_id,
           note,
           created_at,
-          questions (
+          sba_questions (
             id,
-            question_type,
             difficulty,
             question_text,
             category_id,
-            question_categories (
+            sba_categories (
               name,
               slug
             )

@@ -75,7 +75,7 @@ export function generateRecommendations(context: StudyContext): Recommendation[]
       title: `${context.questionsDue} questions due for review`,
       description: 'Reinforce your learning with spaced repetition',
       actionLabel: 'Review Questions',
-      actionUrl: '/dashboard/question-bank?due=true',
+      actionUrl: '/dashboard/sba?due=true',
       icon: 'clock',
       color: 'orange'
     })
@@ -91,7 +91,7 @@ export function generateRecommendations(context: StudyContext): Recommendation[]
       title: `Focus on ${weakest.name}`,
       description: `Your accuracy is ${Math.round(weakest.accuracy)}% - practice to improve`,
       actionLabel: 'Practice Now',
-      actionUrl: `/dashboard/question-bank`,
+      actionUrl: `/dashboard/sba`,
       icon: 'target',
       color: weakest.accuracy < 50 ? 'red' : 'yellow'
     })
@@ -127,7 +127,7 @@ export function generateRecommendations(context: StudyContext): Recommendation[]
       title: `${context.dailyQuestionsGoal - context.dailyQuestionsCompleted} questions to daily goal`,
       description: 'You\'re almost there! Complete your daily target.',
       actionLabel: 'Continue Practice',
-      actionUrl: '/dashboard/question-bank',
+      actionUrl: '/dashboard/sba',
       icon: 'flag',
       color: 'green'
     })
@@ -157,7 +157,7 @@ export function generateRecommendations(context: StudyContext): Recommendation[]
         title: 'Focus on weak areas',
         description: `${context.daysUntilExam} days until exam - prioritize your weakest topics`,
         actionLabel: 'Smart Practice',
-        actionUrl: '/dashboard/question-bank?smart=true',
+        actionUrl: '/dashboard/sba?smart=true',
         icon: 'alert',
         color: 'red'
       })
