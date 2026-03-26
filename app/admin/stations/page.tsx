@@ -50,7 +50,7 @@ export default function StationsAdmin() {
     model_answer: '',
     marking_criteria: '',
     examiner_questions: '',
-    difficulty: 'Medium' as const
+    difficulty: 'Medium' as 'Easy' | 'Medium' | 'Hard'
   })
 
   useEffect(() => {

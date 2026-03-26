@@ -51,7 +51,7 @@ export default function SBAAdmin() {
     key_points: '',
     clinical_pearl: '',
     exam_tip: '',
-    difficulty: 'Medium' as const
+    difficulty: 'Medium' as 'Easy' | 'Medium' | 'Hard'
   })
 
   useEffect(() => {

@@ -55,7 +55,7 @@ const practiceQuestionsFAQs = [
   }
 ]
 
-export default function MRCP PACESPracticeQuestionsPage() {
+export default function MRCPPACESPracticeQuestionsPage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

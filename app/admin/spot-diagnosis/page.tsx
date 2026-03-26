@@ -32,7 +32,7 @@ export default function SpotDiagnosisAdmin() {
     description: '',
     key_features: '',
     exam_tips: '',
-    difficulty: 'Medium' as const
+    difficulty: 'Medium' as 'Easy' | 'Medium' | 'Hard'
   })
 
   useEffect(() => {

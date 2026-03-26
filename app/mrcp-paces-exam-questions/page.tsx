@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Script from 'next/script'
-import MRCP PACESExamQuestionsSEO from '@/app/components/seo/MRCP PACESExamQuestionsSEO'
+import GPhCExamQuestionsSEO from '@/app/components/seo/GPhCExamQuestionsSEO'
 import { RelatedPages } from '@/app/components/seo/RelatedPages'
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function MRCP PACESExamQuestionsPage() {
+export default function MRCPPACESExamQuestionsPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -77,7 +77,7 @@ export default function MRCP PACESExamQuestionsPage() {
 
   return (
     <>
-      <MRCP PACESExamQuestionsSEO />
+      <GPhCExamQuestionsSEO />
       <Script
         id="gphc-questions-json-ld"
         type="application/ld+json"

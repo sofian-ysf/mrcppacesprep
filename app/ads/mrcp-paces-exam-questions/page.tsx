@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function AdsMRCP PACESExamQuestionsPage() {
+export default function AdsMRCPPACESExamQuestionsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Simplified Hero - No Navigation */}

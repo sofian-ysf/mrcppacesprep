@@ -1,9 +1,16 @@
 'use client'
 
-import { Question, QuestionOption } from '@/app/types/questions'
+import { QuestionOption } from '@/app/types/questions'
+
+// Interface for the minimal question data needed by this component
+interface SBAQuestionData {
+  question_text: string
+  options: QuestionOption[] | { letter: string; text: string }[] | null
+  correct_answer: string
+}
 
 interface SBAQuestionProps {
-  question: Question
+  question: SBAQuestionData
   selectedAnswer: string | null
   onSelectAnswer: (answer: string) => void
   showFeedback: boolean

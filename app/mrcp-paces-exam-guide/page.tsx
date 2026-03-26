@@ -63,7 +63,7 @@ const examGuideFAQs = [
   }
 ];
 
-export default function MRCP PACESExamGuidePage() {
+export default function MRCPPACESExamGuidePage() {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
