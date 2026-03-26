@@ -10,44 +10,24 @@ import FAQSection from '@/app/components/FAQSection'
 
 const homepageFAQs = [
   {
-    question: "What is the MRCP PACES exam?",
-    answer: "The MRCP PACES exam is a high-stakes clinical assessment that all medical trainees must pass to become Members of the Royal College of Physicians. It tests clinical examination skills, communication, and medical knowledge across 5 stations."
+    question: "What is MRCP PACES?",
+    answer: "MRCP PACES (Practical Assessment of Clinical Examination Skills) is a clinical examination that forms part of the MRCP(UK) diploma. It tests clinical examination skills, communication abilities, and professional behaviour across 5 stations with real or simulated patients. Passing PACES is essential for becoming a Member of the Royal College of Physicians."
   },
   {
-    question: "How many stations are on the MRCP PACES exam?",
-    answer: "The MRCP PACES exam contains 5 stations covering respiratory and abdominal examination, history taking, communication skills, and neurology. Each station tests different clinical competencies."
+    question: "How does this platform help me prepare for PACES?",
+    answer: "Our platform provides comprehensive preparation across all PACES competencies. You'll access 500+ spot diagnosis cases for clinical image recognition, realistic station practice scenarios, differential diagnosis training for 200+ clinical signs, 1000+ high-yield SBA questions to test your knowledge, and systematic examination checklists. All content is designed by MRCP-qualified physicians who have recently passed the exam."
   },
   {
-    question: "What is the MRCP PACES exam pass rate?",
-    answer: "The national pass rate varies each sitting, typically ranging from 70-85%. With MRCPPACESPREP, 94% of our students pass on their first attempt, significantly above the national average."
+    question: "What's included in each plan?",
+    answer: "All plans include full access to our complete content library: Spot Diagnosis module with 500+ cases, PACES Stations practice, Differentials training for 200+ signs, 1000+ High Yield SBAs, and Examination Checklists. Plans differ only in duration - 3 months (Standard), 6 months (Plus), or 12 months (Premium) - giving you flexibility based on your exam timeline."
   },
   {
-    question: "How long should I study for the MRCP PACES exam?",
-    answer: "Most successful candidates study for 8-12 weeks, dedicating 20-30 hours per week. We recommend starting with our question bank early and taking mock exams in the final 2-3 weeks."
+    question: "How long should I prepare for PACES?",
+    answer: "Most successful candidates dedicate 8-12 weeks of focused preparation, studying 2-3 hours daily. We recommend starting with spot diagnosis and examination checklists early, then progressing to station practice in the final 4-6 weeks. Our 6-month Plus plan is popular as it covers one exam cycle with buffer time for additional practice if needed."
   },
   {
-    question: "How similar are your questions to the actual MRCP PACES exam?",
-    answer: "Our questions are written by MRCP qualified physicians who have recently taken the exam. We regularly update our question bank based on student feedback to ensure they match the current exam format and difficulty level."
-  },
-  {
-    question: "What if I don't pass after using your platform?",
-    answer: "We provide comprehensive support throughout your exam preparation journey. Our platform includes detailed explanations, performance tracking, and various study resources. We also offer continued access if you need to retake."
-  },
-  {
-    question: "Can I access the platform on mobile devices?",
-    answer: "Yes! Our platform is fully responsive and works on all devices. Your progress syncs across all devices, so you can pick up exactly where you left off."
-  },
-  {
-    question: "Do you cover the new MRCP PACES exam format?",
-    answer: "Absolutely! We've fully updated our platform for the 2026 MRCP PACES exam format, including clinical stations and communication skills. Our content is regularly reviewed to ensure it remains current."
-  },
-  {
-    question: "Is MRCPPACESPREP worth it?",
-    answer: "Our platform has helped over 8,500 medical students pass, with a 94% first-time pass rate. Students get 2,000+ questions, mock exams, and detailed explanations starting at £75."
-  },
-  {
-    question: "Can I try MRCPPACESPREP for free?",
-    answer: "Yes! You can try 15 free practice questions without signing up. This gives you a feel for our question style, explanations, and platform before committing."
+    question: "Is there a free trial?",
+    answer: "Yes! You can try our platform free with 15 practice questions across different modules - no signup required. This lets you experience our question style, detailed explanations, and platform interface before committing to a plan. We also offer a 7-day money-back guarantee on all purchases."
   }
 ];
 
@@ -300,7 +280,7 @@ export default function Home() {
         "hasPart": [
           {"@type": "WebPage", "name": "Question Bank", "url": "https://www.mrcppacesprep.com/question-bank"},
           {"@type": "WebPage", "name": "Mock Exams", "url": "https://www.mrcppacesprep.com/mock-exams"},
-          {"@type": "WebPage", "name": "Calculations", "url": "https://www.mrcppacesprep.com/calculations"},
+          {"@type": "WebPage", "name": "Spot Diagnosis", "url": "https://www.mrcppacesprep.com/spot-diagnosis"},
           {"@type": "WebPage", "name": "Study Guides", "url": "https://www.mrcppacesprep.com/study-guides"},
           {"@type": "WebPage", "name": "Resources", "url": "https://www.mrcppacesprep.com/resources"},
           {"@type": "WebPage", "name": "Blog", "url": "https://www.mrcppacesprep.com/blog"},
@@ -442,26 +422,26 @@ export default function Home() {
             </div>
 
             <h1 className="mb-4 sm:mb-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl xl:text-7xl">
-              MRCP PACES Exam Questions
-              <span className="block text-gray-900">& Practice Tests 2026</span>
+              Pass MRCP PACES
+              <span className="block text-gray-900">First Time</span>
             </h1>
 
             <p className="mx-auto mb-6 sm:mb-10 max-w-2xl text-base sm:text-lg lg:text-xl text-gray-600 px-2">
-              A thoughtfully designed preparation experience trusted by medical graduates across the UK. Expert-crafted questions, detailed guidance, and the confidence to succeed.
+              Master clinical examination skills, communication, and practical assessment with our comprehensive PACES preparation platform. Expert-designed content trusted by 8,500+ candidates.
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row sm:justify-center sm:gap-4">
               <Link
-                href="/pricing"
+                href="/try-free"
                 className="pill-btn pill-btn-primary text-sm sm:text-base px-6 py-2.5 sm:px-8 sm:py-3"
               >
-                Get Started
+                Try Free Demo
               </Link>
               <Link
-                href="/try-free"
+                href="/pricing"
                 className="pill-btn pill-btn-secondary text-sm sm:text-base px-6 py-2.5 sm:px-8 sm:py-3"
               >
-                Take Demo
+                View Pricing
               </Link>
             </div>
 
@@ -540,16 +520,16 @@ export default function Home() {
           <div className="mt-8 sm:mt-12 text-center">
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link
-                href="/pricing"
+                href="/try-free"
                 className="pill-btn pill-btn-primary text-sm sm:text-base px-6 py-2.5 sm:px-8 sm:py-3"
               >
-                Start Preparing Now
+                Try Free Demo
               </Link>
               <Link
-                href="/try-free"
+                href="/pricing"
                 className="pill-btn pill-btn-secondary text-sm sm:text-base px-6 py-2.5 sm:px-8 sm:py-3"
               >
-                Take Demo
+                View Pricing
               </Link>
             </div>
           </div>
@@ -561,42 +541,79 @@ export default function Home() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-8 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900">
-              A Complete Preparation Experience
+              5 Modules to Master PACES
             </h2>
             <p className="mt-3 sm:mt-4 text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2">
-              Every element designed to support your journey to MRCP.
+              Comprehensive preparation covering every aspect of the PACES examination.
             </p>
           </div>
 
-          <div className="grid gap-6 sm:gap-12 lg:grid-cols-3 mb-12 sm:mb-24">
-            <div className="text-center">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 mb-12 sm:mb-24">
+            {/* Spot Diagnosis */}
+            <div className="pill-card p-6 text-center">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 rounded-full bg-[#fbfaf4] flex items-center justify-center">
+                <svg className="h-5 w-5 sm:h-7 sm:w-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">Spot Diagnosis</h3>
+              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Master clinical image recognition with 500+ cases covering dermatology, radiology, and clinical photography.</p>
+            </div>
+
+            {/* PACES Stations */}
+            <div className="pill-card p-6 text-center">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 rounded-full bg-[#fbfaf4] flex items-center justify-center">
+                <svg className="h-5 w-5 sm:h-7 sm:w-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">PACES Stations</h3>
+              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Practice with realistic exam scenarios covering all 5 stations including history taking and communication skills.</p>
+            </div>
+
+            {/* Differentials */}
+            <div className="pill-card p-6 text-center">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 rounded-full bg-[#fbfaf4] flex items-center justify-center">
+                <svg className="h-5 w-5 sm:h-7 sm:w-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                </svg>
+              </div>
+              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">Differentials</h3>
+              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Learn differential diagnoses for 200+ clinical signs with structured approaches for each presentation.</p>
+            </div>
+
+            {/* High Yield SBAs */}
+            <div className="pill-card p-6 text-center">
               <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 rounded-full bg-[#fbfaf4] flex items-center justify-center">
                 <svg className="h-5 w-5 sm:h-7 sm:w-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">Expert-Crafted Questions</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed px-2">Over 2,000 questions developed by practising physicians, aligned with the MRCP PACES framework and accompanied by comprehensive explanations.</p>
+              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">High Yield SBAs</h3>
+              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Test your knowledge with 1000+ single best answer questions covering core clinical medicine topics.</p>
             </div>
 
-            <div className="text-center">
+            {/* Examination Checklists */}
+            <div className="pill-card p-6 text-center">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 rounded-full bg-[#fbfaf4] flex items-center justify-center">
+                <svg className="h-5 w-5 sm:h-7 sm:w-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">Examination Checklists</h3>
+              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Perfect your systematic approach with comprehensive checklists for cardiovascular, respiratory, abdominal, and neurological examinations.</p>
+            </div>
+
+            {/* Progress Tracking - 6th card for grid balance */}
+            <div className="pill-card p-6 text-center">
               <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 rounded-full bg-[#fbfaf4] flex items-center justify-center">
                 <svg className="h-5 w-5 sm:h-7 sm:w-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">Intelligent Progress Tracking</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed px-2">Understand your strengths and areas for growth with detailed analytics, allowing you to focus your time where it matters most.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-4 sm:mb-6 rounded-full bg-[#fbfaf4] flex items-center justify-center">
-                <svg className="h-5 w-5 sm:h-7 sm:w-7 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
-              </div>
-              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">Comprehensive Resources</h3>
-              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed px-2">Calculation guides, clinical references, and study materials thoughtfully assembled to complement your learning.</p>
+              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2 sm:mb-3">Progress Tracking</h3>
+              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">Monitor your performance with detailed analytics to identify strengths and focus on areas needing improvement.</p>
             </div>
           </div>
 
@@ -604,16 +621,16 @@ export default function Home() {
           <div className="mt-8 sm:mt-12 text-center">
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Link
-                href="/pricing"
+                href="/try-free"
                 className="pill-btn pill-btn-primary text-sm sm:text-base px-6 py-2.5 sm:px-8 sm:py-3"
               >
-                Get Full Access
+                Try Free Demo
               </Link>
               <Link
-                href="/try-free"
+                href="/pricing"
                 className="pill-btn pill-btn-secondary text-sm sm:text-base px-6 py-2.5 sm:px-8 sm:py-3"
               >
-                Take Demo
+                View Pricing
               </Link>
             </div>
           </div>
@@ -862,16 +879,16 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12">
             <Link
-              href="/pricing"
+              href="/try-free"
               className="pill-btn pill-btn-primary text-sm sm:text-base px-6 py-2.5 sm:px-8 sm:py-3"
             >
-              Get Started
+              Try Free Demo
             </Link>
             <Link
-              href="/try-free"
+              href="/pricing"
               className="pill-btn pill-btn-secondary text-sm sm:text-base px-6 py-2.5 sm:px-8 sm:py-3"
             >
-              Take Demo
+              View Pricing
             </Link>
           </div>
 
@@ -915,7 +932,7 @@ export default function Home() {
                 <li><Link href="/question-bank" className="hover:text-gray-900">Question Bank</Link></li>
                 <li><Link href="/mock-exams" className="hover:text-gray-900">Mock Exams</Link></li>
                 <li><Link href="/study-guides" className="hover:text-gray-900">Study Guides</Link></li>
-                <li><Link href="/calculations" className="hover:text-gray-900">Calculations</Link></li>
+                <li><Link href="/spot-diagnosis" className="hover:text-gray-900">Spot Diagnosis</Link></li>
               </ul>
             </div>
 
