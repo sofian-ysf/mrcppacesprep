@@ -5,12 +5,12 @@ import ArticleSVG from './ArticleSVG'
 import './blog-styles.css'
 
 export const metadata: Metadata = {
-  title: 'Pharmacy Blog | Study Tips & Career Advice | MRCP PACES Exam Prep',
-  description: 'Expert pharmacy insights, study tips, and career guidance for MRCP PACES pre-registration exam preparation. Stay updated with the latest exam strategies and pharmacy updates.',
-  keywords: 'MRCP PACES exam blog, pharmacy study tips, pre-registration advice, pharmacy career guidance, exam strategies',
+  title: 'MRCP PACES Blog | Study Tips & Exam Advice | MRCPPACESPREP',
+  description: 'Expert clinical insights, study tips, and exam guidance for MRCP PACES preparation. Stay updated with the latest exam strategies and clinical updates.',
+  keywords: 'MRCP PACES exam blog, clinical study tips, MRCP PACES advice, exam preparation guidance, exam strategies',
   openGraph: {
-    title: 'Pharmacy Blog | Study Tips & Career Advice | MRCP PACES Exam Prep',
-    description: 'Expert pharmacy insights, study tips, and career guidance for MRCP PACES pre-registration exam preparation.',
+    title: 'MRCP PACES Blog | Study Tips & Exam Advice | MRCPPACESPREP',
+    description: 'Expert clinical insights, study tips, and exam guidance for MRCP PACES preparation.',
     type: 'website',
   },
   alternates: {
@@ -95,7 +95,7 @@ export default async function BlogPage() {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "MRCP PACES Exam Preparation Blog",
-    "description": "Expert pharmacy insights, study tips, and career guidance for MRCP PACES pre-registration exam preparation.",
+    "description": "Expert clinical insights, study tips, and career guidance for MRCP PACES exam preparation.",
     "url": "https://www.mrcppacesprep.com/blog",
     "mainEntity": {
       "@type": "ItemList",
@@ -147,7 +147,7 @@ export default async function BlogPage() {
         {posts.length === 0 ? (
           <div className="empty-state">
             <h3>No Articles Found</h3>
-            <p>Check back soon for new pharmacy insights and study tips.</p>
+            <p>Check back soon for new clinical insights and study tips.</p>
             <Link href="/try-free" className="empty-state-cta">
               Start Practicing Instead
             </Link>

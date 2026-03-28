@@ -35,7 +35,7 @@ const practiceQuestionsFAQs = [
   },
   {
     question: "How many practice questions do you have?",
-    answer: "Over 2,000 questions across all MRCP PACES topics: calculations (350+), clinical pharmacy (400+), therapeutics (400+), law & ethics (300+), pharmacology (350+), and more."
+    answer: "Over 2,000 questions across all MRCP PACES topics: calculations (350+), clinical medicine (400+), therapeutics (400+), law & ethics (300+), pharmacology (350+), and more."
   },
   {
     question: "What difficulty levels are the questions?",
@@ -65,7 +65,7 @@ export default function MRCPPACESPracticeQuestionsPage() {
         "name": "How many MRCP PACES practice questions do you have?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We have over 2000 MRCP PACES practice questions covering all exam topics including calculations, clinical pharmacy, law and ethics, pharmaceutics, and pharmacology."
+          "text": "We have over 2000 MRCP PACES practice questions covering all exam topics including calculations, clinical medicine, law and ethics, clinical practice, and pharmacology."
         }
       },
       {
@@ -187,7 +187,7 @@ export default function MRCPPACESPracticeQuestionsPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Calculations</h3>
-                <p className="text-gray-600 mb-4">Solve pharmaceutical calculations with step-by-step solutions.</p>
+                <p className="text-gray-600 mb-4">Solve clinical skills with step-by-step solutions.</p>
                 <span className="text-sm text-gray-800 font-semibold">350+ questions available</span>
               </div>
             </div>
@@ -203,17 +203,17 @@ export default function MRCPPACESPracticeQuestionsPage() {
 
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               <div className="bg-white rounded-xl p-6">
-                <h3 className="font-bold text-gray-900 mb-2">Pharmaceutical Calculations</h3>
+                <h3 className="font-bold text-gray-900 mb-2">Clinical Skills</h3>
                 <p className="text-sm text-gray-600 mb-3">Dosage, dilutions, concentrations, infusion rates</p>
                 <span className="text-sm text-blue-600">350+ questions</span>
               </div>
               <div className="bg-white rounded-xl p-6">
-                <h3 className="font-bold text-gray-900 mb-2">Clinical Pharmacy</h3>
+                <h3 className="font-bold text-gray-900 mb-2">Clinical Medicine</h3>
                 <p className="text-sm text-gray-600 mb-3">Drug interactions, therapeutics, patient care</p>
                 <span className="text-sm text-blue-600">400+ questions</span>
               </div>
               <div className="bg-white rounded-xl p-6">
-                <h3 className="font-bold text-gray-900 mb-2">Pharmacy Law & Ethics</h3>
+                <h3 className="font-bold text-gray-900 mb-2">Medical Ethics</h3>
                 <p className="text-sm text-gray-600 mb-3">Legal requirements, controlled drugs, standards</p>
                 <span className="text-sm text-blue-600">300+ questions</span>
               </div>
@@ -223,7 +223,7 @@ export default function MRCPPACESPracticeQuestionsPage() {
                 <span className="text-sm text-blue-600">350+ questions</span>
               </div>
               <div className="bg-white rounded-xl p-6">
-                <h3 className="font-bold text-gray-900 mb-2">Pharmaceutics</h3>
+                <h3 className="font-bold text-gray-900 mb-2">Clinical Practice</h3>
                 <p className="text-sm text-gray-600 mb-3">Formulation, stability, quality assurance</p>
                 <span className="text-sm text-blue-600">250+ questions</span>
               </div>

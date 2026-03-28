@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
 
-export const alt = 'MRCP PACES Exam Prep - Pass Your Pre-Reg Exam First Time'
+export const alt = 'MRCP PACES Exam Prep - Pass Your MRCP PACES Exam First Time'
 export const size = {
   width: 1200,
   height: 630,
@@ -45,7 +45,7 @@ export default async function Image() {
               marginRight: '20px',
             }}
           >
-            <span style={{ fontSize: '48px', color: 'white', fontWeight: 'bold' }}>G</span>
+            <span style={{ fontSize: '48px', color: 'white', fontWeight: 'bold' }}>M</span>
           </div>
           <span
             style={{
@@ -69,7 +69,7 @@ export default async function Image() {
             marginBottom: '30px',
           }}
         >
-          Pass Your Pre-Reg Exam
+          Pass Your MRCP PACES Exam
           <br />
           First Time
         </div>
@@ -110,7 +110,7 @@ export default async function Image() {
             }}
           >
             <span style={{ fontSize: '56px', fontWeight: 'bold', color: '#4ade80' }}>8,500+</span>
-            <span style={{ fontSize: '20px', color: '#94a3b8' }}>Students</span>
+            <span style={{ fontSize: '20px', color: '#94a3b8' }}>Candidates</span>
           </div>
         </div>
 

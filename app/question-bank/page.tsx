@@ -24,10 +24,10 @@ export const metadata: Metadata = {
   title: 'MRCP PACES Question Bank 2025 | 2000+ Practice Questions | 94% Pass Rate',
   description: 'Master your 2025 MRCP PACES exam with 2000+ practice questions. SBA & EMQ formats. Detailed explanations, progress tracking. 94% pass rate.',
   keywords: [
-    'MRCP PACES question bank', 'MRCP PACES practice questions', 'pre-reg exam questions', 'pharmacy exam questions UK',
-    'MRCP PACES SBA questions', 'MRCP PACES EMQ practice', 'clinical pharmacy questions', 'pharmacy law questions',
-    'pharmaceutical calculations practice', 'pharmacology exam questions', 'MRCP PACES exam preparation',
-    'pre-registration physician questions', 'BNF questions', 'MRCP PACES question bank 2025'
+    'MRCP PACES question bank', 'MRCP PACES practice questions', 'MRCP PACES exam questions', 'pharmacy exam questions UK',
+    'MRCP PACES SBA questions', 'MRCP PACES EMQ practice', 'clinical medicine questions', 'medical ethics questions',
+    'clinical skills practice', 'pharmacology exam questions', 'MRCP PACES exam preparation',
+    'MRCP PACES physician questions', 'BNF questions', 'MRCP PACES question bank 2025'
   ],
   openGraph: {
     title: 'MRCP PACES Question Bank | 2000+ Questions | 94% Pass Rate | £25',
@@ -240,7 +240,7 @@ export default function QuestionBankPage() {
 
             <div className="pill-card p-5 md:p-8">
               <div className="mb-6">
-                <span className="inline-block bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded mb-3">Clinical Pharmacy</span>
+                <span className="inline-block bg-gray-100 text-gray-700 text-xs font-medium px-2 py-1 rounded mb-3">Clinical Medicine</span>
                 <p className="text-base md:text-lg text-gray-900 leading-relaxed">
                   A 72-year-old patient taking atorvastatin reports persistent muscle pain. Which of the following is the most appropriate initial action?
                 </p>
@@ -426,7 +426,7 @@ export default function QuestionBankPage() {
               <div className="col-span-2 md:col-span-1">
                 <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  The UK&apos;s leading platform for MRCP PACES Pre-Registration exam preparation.
+                  The UK&apos;s leading platform for MRCP PACES exam preparation.
                 </p>
               </div>
 

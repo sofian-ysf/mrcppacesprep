@@ -19,7 +19,7 @@ const resourcesFAQs = [
   },
   {
     question: "What topics do study guides cover?",
-    answer: "We have guides for calculations, clinical pharmacy, therapeutics, law & ethics, pharmacology, and pharmaceutics. Each topic has dedicated revision materials."
+    answer: "We have guides for calculations, clinical medicine, therapeutics, law & ethics, pharmacology, and clinical practice. Each topic has dedicated revision materials."
   },
   {
     question: "Can I print the study resources?",
@@ -93,7 +93,7 @@ export default function ResourcesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Pharmaceutical Calculations</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Clinical Skills</h3>
               <p className="text-gray-600 mb-4">Master dosage calculations, dilutions, concentrations, and unit conversions with step-by-step guides and practice problems.</p>
               <Link href="/signup" className="text-gray-900 font-semibold hover:underline">
                 Download Guide →
@@ -106,7 +106,7 @@ export default function ResourcesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Clinical Pharmacy & Therapeutics</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Clinical Medicine & Therapeutics</h3>
               <p className="text-gray-600 mb-4">Comprehensive guides on drug interactions, patient counseling, evidence-based practice, and therapeutic monitoring.</p>
               <Link href="/signup" className="text-gray-900 font-semibold hover:underline">
                 Download Guide →
@@ -119,7 +119,7 @@ export default function ResourcesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Pharmacy Law & Ethics</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Medical Ethics</h3>
               <p className="text-gray-600 mb-4">Essential legal requirements, controlled drugs regulations, professional standards, and ethical decision-making frameworks.</p>
               <Link href="/signup" className="text-gray-900 font-semibold hover:underline">
                 Download Guide →
@@ -132,7 +132,7 @@ export default function ResourcesPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Pharmaceutics & Formulation</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Clinical Practice & Formulation</h3>
               <p className="text-gray-600 mb-4">Drug formulation principles, stability testing, pharmaceutical technology, and quality assurance processes.</p>
               <Link href="/signup" className="text-gray-900 font-semibold hover:underline">
                 Download Guide →
@@ -247,7 +247,7 @@ export default function ResourcesPage() {
                 </div>
                 <div>
                   <h3 className="mb-2 text-xl font-semibold text-gray-900">Quick Calculation Methods</h3>
-                  <p className="text-gray-600">Master shortcut techniques for pharmaceutical calculations to save time and reduce errors.</p>
+                  <p className="text-gray-600">Master shortcut techniques for clinical skills to save time and reduce errors.</p>
                 </div>
               </div>
 
@@ -331,7 +331,7 @@ export default function ResourcesPage() {
             <div>
               <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES exam preparation.
               </p>
             </div>
 

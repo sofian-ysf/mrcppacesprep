@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: 'MRCP PACES Mock Exams 2025 | Realistic Practice Tests | 94% Pass Rate | £30/month',
   description: 'Take realistic MRCP PACES mock exams. 110 questions, 2.5 hours, exact exam format. Detailed performance analysis. ±3% accuracy vs real exam. Unlimited attempts. £30/month.',
   keywords: [
-    'MRCP PACES mock exams', 'MRCP PACES practice test', 'pre-reg mock exam', 'pharmacy mock exam UK',
+    'MRCP PACES mock exams', 'MRCP PACES practice test', 'MRCP PACES mock exam', 'pharmacy mock exam UK',
     'MRCP PACES exam simulation', 'timed practice test', 'realistic MRCP PACES exam', 'MRCP PACES practice papers',
     'MRCP PACES exam format', '110 question mock', '2.5 hour exam practice', 'MRCP PACES exam timing',
     'mock exam feedback', 'performance analysis', 'pass prediction', 'topic mock exams'
@@ -370,9 +370,9 @@ export default function MockExamsPage() {
             {/* Testimonial cards - horizontal scroll on mobile */}
             <div className="flex gap-5 overflow-x-auto pb-4 md:pb-0 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible scrollbar-hide -mx-5 px-5 md:mx-0 md:px-0">
               {[
-                { initials: 'AK', name: 'Aisha K.', role: 'Hospital Pharmacist, Leeds', first: 52, final: 78, real: 76, quote: 'My final mock was almost identical to my actual result. Felt properly prepared.' },
-                { initials: 'TR', name: 'Tom R.', role: 'Community Pharmacist, Bristol', first: 48, final: 82, real: 79, quote: 'Failed first time round. The mocks showed me exactly where I was going wrong.' },
-                { initials: 'FN', name: 'Fatima N.', role: 'Clinical Pharmacist, Glasgow', first: 67, final: 84, real: 81, quote: 'The time pressure practice was key. Finished the real thing with time to spare.' },
+                { initials: 'AK', name: 'Aisha K.', role: 'Hospital Physician, Leeds', first: 52, final: 78, real: 76, quote: 'My final mock was almost identical to my actual result. Felt properly prepared.' },
+                { initials: 'TR', name: 'Tom R.', role: 'Community Physician, Bristol', first: 48, final: 82, real: 79, quote: 'Failed first time round. The mocks showed me exactly where I was going wrong.' },
+                { initials: 'FN', name: 'Fatima N.', role: 'Clinical Physician, Glasgow', first: 67, final: 84, real: 81, quote: 'The time pressure practice was key. Finished the real thing with time to spare.' },
               ].map((student, i) => (
                 <div key={i} className="flex-shrink-0 w-[280px] md:w-auto pill-card p-5 md:p-6">
                   <div className="text-center mb-4">
@@ -468,7 +468,7 @@ export default function MockExamsPage() {
               <div className="col-span-2 md:col-span-1">
                 <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">
-                  The UK&apos;s leading platform for MRCP PACES Pre-Registration exam preparation.
+                  The UK&apos;s leading platform for MRCP PACES exam preparation.
                 </p>
               </div>
 

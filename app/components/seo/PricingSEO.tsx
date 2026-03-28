@@ -90,7 +90,7 @@ export default function PricingSEO() {
 
         <p>
           Affordable MRCP PACES exam preparation at just £30/month. Complete access to 2000+ practice questions,
-          unlimited mock exams, pharmaceutical calculations practice, study guides, and progress tracking.
+          unlimited mock exams, clinical skills practice, study guides, and progress tracking.
           94% pass rate. 7-day money-back guarantee. Cancel anytime. No hidden fees.
         </p>
 
@@ -98,7 +98,7 @@ export default function PricingSEO() {
         <ul>
           <li>2000+ Practice Questions - All Topics</li>
           <li>Unlimited Mock Exams - Full-Length and Mini</li>
-          <li>350+ Calculation Problems - Step-by-Step Solutions</li>
+          <li>350+ Clinical Scenarios - Detailed Explanations</li>
           <li>Study Guides & Formula Sheets - PDF Downloads</li>
           <li>Progress Analytics - Track Improvement</li>
           <li>Mobile Access - Study Anywhere</li>

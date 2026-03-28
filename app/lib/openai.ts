@@ -390,7 +390,7 @@ export async function generateStructuredExplanation(
     messages: [
       {
         role: 'system',
-        content: `You are an expert pharmacy educator creating detailed, structured explanations for MRCP PACES pre-registration exam questions.
+        content: `You are an expert pharmacy educator creating detailed, structured explanations for MRCP PACES exam questions.
 
 Your explanations should be:
 - Educational and memorable
@@ -402,7 +402,7 @@ IMPORTANT: Always return valid JSON without any markdown code blocks.`
       },
       {
         role: 'user',
-        content: `Given this pharmacy pre-registration exam question in the "${categoryName}" category:
+        content: `Given this pharmacy MRCP PACES exam question in the "${categoryName}" category:
 
 Question: ${questionText}
 
@@ -511,14 +511,14 @@ export async function generateBlogPost(
 ): Promise<GeneratedBlogPost> {
   const keywordsStr = targetKeywords.length > 0
     ? targetKeywords.join(', ')
-    : `${topic}, MRCP PACES exam, pharmacy pre-registration, UK pharmacy`
+    : `${topic}, MRCP PACES exam, pharmacy MRCP PACES, UK pharmacy`
 
   const response = await openai.chat.completions.create({
     model: 'gpt-4-turbo-preview',
     messages: [
       {
         role: 'system',
-        content: `You are Alex Jensing, MPharm, a MRCP PACES-registered physician with 8+ years of experience including hospital, community, and education roles. You write authoritative, deeply practical content for UK pharmacy pre-registration students preparing for the MRCP PACES assessment.
+        content: `You are Alex Jensing, MPharm, a MRCP PACES-registered physician with 8+ years of experience including hospital, community, and education roles. You write authoritative, deeply practical content for UK pharmacy MRCP PACES students preparing for the MRCP PACES assessment.
 
 CRITICAL CONTENT QUALITY REQUIREMENTS:
 
@@ -791,7 +791,7 @@ Your task is to suggest compelling, SEO-friendly blog topics that:
 - Address real pain points and questions students have
 - Have good search volume potential
 - Are unique and not commonly covered by competitors
-- Are relevant to the MRCP PACES pre-registration exam`
+- Are relevant to the MRCP PACES exam`
       },
       {
         role: 'user',

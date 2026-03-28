@@ -41,12 +41,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = `${category.name} | MRCP PACES Exam Prep Blog`
   const description = category.description ||
-    `Browse our ${category.name.toLowerCase()} articles for MRCP PACES pre-registration exam preparation tips, strategies, and insights.`
+    `Browse our ${category.name.toLowerCase()} articles for MRCP PACES exam preparation tips, strategies, and insights.`
 
   return {
     title,
     description,
-    keywords: `${category.name}, MRCP PACES exam, pharmacy blog, pre-registration, ${slug.replace(/-/g, ' ')}`,
+    keywords: `${category.name}, MRCP PACES exam, MRCP PACES blog, MRCP PACES, ${slug.replace(/-/g, ' ')}`,
     openGraph: {
       title,
       description,

@@ -39,11 +39,11 @@ const examGuideFAQs = [
   },
   {
     question: "What question types are on the MRCP PACES exam?",
-    answer: "The exam has 90 Single Best Answer (SBA) questions and 20 Extended Matching Questions (EMQs). Topics include calculations, therapeutics, clinical pharmacy, law, and pharmaceutics."
+    answer: "The exam has 90 Single Best Answer (SBA) questions and 20 Extended Matching Questions (EMQs). Topics include calculations, therapeutics, clinical medicine, law, and clinical practice."
   },
   {
     question: "How do I register for the MRCP PACES exam?",
-    answer: "Register through the MRCP PACES online portal during the registration window. You'll need to pay the £253 exam fee and provide proof of pre-registration training completion."
+    answer: "Register through the MRCP PACES online portal during the registration window. You'll need to pay the £253 exam fee and provide proof of MRCP PACES training completion."
   },
   {
     question: "Can I use a calculator in the MRCP PACES exam?",
@@ -55,7 +55,7 @@ const examGuideFAQs = [
   },
   {
     question: "How long are MRCP PACES exam results valid?",
-    answer: "Once you pass, your result doesn't expire. However, you must complete your pre-registration training and apply for registration within a reasonable timeframe."
+    answer: "Once you pass, your result doesn't expire. However, you must complete your MRCP PACES training and apply for registration within a reasonable timeframe."
   },
   {
     question: "What ID do I need for the MRCP PACES exam?",
@@ -68,7 +68,7 @@ export default function MRCPPACESExamGuidePage() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "Complete MRCP PACES Exam Guide 2026: Format, Dates & How to Pass",
-    "description": "Everything you need to know about the MRCP PACES pre-registration exam in 2026. Expert tips, preparation strategies, and resources to help you pass first time.",
+    "description": "Everything you need to know about the MRCP PACES exam in 2026. Expert tips, preparation strategies, and resources to help you pass first time.",
     "author": {
       "@type": "Organization",
       "name": "MRCPPACESPREP"
@@ -103,7 +103,7 @@ export default function MRCPPACESExamGuidePage() {
                 Complete MRCP PACES Exam Guide 2026
               </h1>
               <p className="mt-6 text-xl text-gray-600">
-                Everything you need to know about the MRCP PACES pre-registration exam. Format, dates, topics, and expert strategies to help you pass first time.
+                Everything you need to know about the MRCP PACES exam. Format, dates, topics, and expert strategies to help you pass first time.
               </p>
               <div className="mt-8 flex justify-center gap-4 flex-wrap">
                 <Link href="#format" className="text-blue-600 hover:underline">Exam Format</Link>
@@ -174,7 +174,7 @@ export default function MRCPPACESExamGuidePage() {
                 </div>
                 <div className="bg-[#fbfaf4] rounded-lg p-4">
                   <h3 className="font-bold text-gray-900">Calculation Questions</h3>
-                  <p className="text-sm text-gray-600">Solve pharmaceutical calculations and enter numerical answers directly.</p>
+                  <p className="text-sm text-gray-600">Solve clinical skills and enter numerical answers directly.</p>
                 </div>
               </div>
             </section>
@@ -205,15 +205,15 @@ export default function MRCPPACESExamGuidePage() {
 
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-bold text-gray-900 mb-2">Pharmaceutical Calculations</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">Clinical Skills</h3>
                   <p className="text-sm text-gray-600">Dosage calculations, dilutions, concentrations, IV flow rates</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-bold text-gray-900 mb-2">Clinical Pharmacy & Therapeutics</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">Clinical Medicine & Therapeutics</h3>
                   <p className="text-sm text-gray-600">Drug interactions, patient counseling, evidence-based practice</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-bold text-gray-900 mb-2">Pharmacy Law & Ethics</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">Medical Ethics</h3>
                   <p className="text-sm text-gray-600">Legal requirements, controlled drugs, professional standards</p>
                 </div>
                 <div className="border rounded-lg p-4">
@@ -221,7 +221,7 @@ export default function MRCPPACESExamGuidePage() {
                   <p className="text-sm text-gray-600">Drug mechanisms, pharmacokinetics, adverse effects</p>
                 </div>
                 <div className="border rounded-lg p-4">
-                  <h3 className="font-bold text-gray-900 mb-2">Pharmaceutics</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">Clinical Practice</h3>
                   <p className="text-sm text-gray-600">Drug formulation, stability, pharmaceutical technology</p>
                 </div>
                 <div className="border rounded-lg p-4">
@@ -252,7 +252,7 @@ export default function MRCPPACESExamGuidePage() {
 
               <h3 className="font-bold text-gray-900 mb-3">4. Focus on Calculations</h3>
               <p className="text-gray-600 mb-4">
-                Practice pharmaceutical calculations daily. Learn common formulas, shortcuts, and avoid common mistakes. Calculations questions can make or break your result.
+                Practice clinical skills daily. Learn common formulas, shortcuts, and avoid common mistakes. Calculations questions can make or break your result.
               </p>
 
               <h3 className="font-bold text-gray-900 mb-3">5. Review Weak Areas</h3>

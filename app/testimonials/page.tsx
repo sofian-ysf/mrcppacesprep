@@ -476,7 +476,7 @@ export default function TestimonialsPage() {
             <div>
               <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
               <p className="text-sm text-gray-600">
-                The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
+                The UK's leading platform for MRCP PACES exam preparation.
               </p>
             </div>
 

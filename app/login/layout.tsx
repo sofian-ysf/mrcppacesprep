@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Login | MRCP PACES Exam Prep',
-  description: 'Sign in to your MRCP PACES Exam Prep account to access practice questions, mock exams, and study resources for your pre-registration pharmacy exam.',
+  description: 'Sign in to your MRCP PACES Exam Prep account to access practice questions, mock exams, and study resources for your MRCP PACES pharmacy exam.',
   robots: {
     index: false,
     follow: true,

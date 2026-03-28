@@ -39,11 +39,11 @@ const allFeatures = [
   },
   {
     name: 'Clinical Question Bank',
-    description: '400+ clinical pharmacy and therapeutics questions with detailed rationales',
+    description: '400+ clinical medicine and therapeutics questions with detailed rationales',
   },
   {
     name: 'Law & Ethics Questions',
-    description: '300+ pharmacy law and ethics questions covering UK regulations',
+    description: '300+ medical ethics and ethics questions covering UK regulations',
   },
   {
     name: 'Mobile Access',
@@ -149,7 +149,7 @@ export default function PricingPage() {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "MRCP PACES Exam Prep Access",
-    "description": "Complete access to MRCP PACES pre-registration exam preparation platform including 2000+ practice questions, unlimited mock exams, detailed explanations, and progress tracking",
+    "description": "Complete access to MRCP PACES exam preparation platform including 2000+ practice questions, unlimited mock exams, detailed explanations, and progress tracking",
     "brand": {
       "@type": "Organization",
       "name": "MRCPPACESPREP"
@@ -390,7 +390,7 @@ export default function PricingPage() {
         <section className="bg-gray-900 px-4 py-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="text-3xl font-bold text-white mb-8">
-              Trusted by 8,500+ Pharmacy Graduates
+              Trusted by 8,500+ Medical Trainees
             </h2>
             <div className="grid grid-cols-2 gap-8 md:grid-cols-4 text-white">
               <div>
@@ -428,7 +428,7 @@ export default function PricingPage() {
               <div>
                 <h3 className="mb-4 font-bold text-gray-900">MRCPPACESPREP</h3>
                 <p className="text-sm text-gray-600">
-                  The UK's leading platform for MRCP PACES Pre-Registration exam preparation.
+                  The UK's leading platform for MRCP PACES exam preparation.
                 </p>
               </div>
 

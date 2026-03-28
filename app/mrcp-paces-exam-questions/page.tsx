@@ -44,25 +44,25 @@ export default function MRCPPACESExamQuestionsPage() {
         {
           "@type": "ListItem",
           "position": 1,
-          "name": "Pharmaceutical Calculations",
+          "name": "Clinical Skills",
           "description": "Master dosage calculations, dilutions, and formulations"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Clinical Pharmacy",
+          "name": "Clinical Medicine",
           "description": "Drug interactions, therapeutics, and patient care"
         },
         {
           "@type": "ListItem",
           "position": 3,
-          "name": "Pharmacy Law & Ethics",
+          "name": "Medical Ethics",
           "description": "Legal requirements and professional standards"
         },
         {
           "@type": "ListItem",
           "position": 4,
-          "name": "Pharmaceutics",
+          "name": "Clinical Practice",
           "description": "Drug formulation, stability, and delivery systems"
         },
         {
@@ -149,7 +149,7 @@ export default function MRCPPACESExamQuestionsPage() {
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {/* Category Cards */}
               <div className="pill-card">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Pharmaceutical Calculations</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Clinical Skills</h3>
                 <p className="text-gray-600 mb-4">350+ questions covering dosage calculations, dilutions, concentrations, and formulations</p>
                 <div className="flex items-center justify-between">
                   <span className="pill-badge">Difficulty: High</span>
@@ -160,7 +160,7 @@ export default function MRCPPACESExamQuestionsPage() {
               </div>
 
               <div className="pill-card">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Clinical Pharmacy & Therapeutics</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Clinical Medicine & Therapeutics</h3>
                 <p className="text-gray-600 mb-4">400+ questions on drug interactions, patient counseling, and evidence-based practice</p>
                 <div className="flex items-center justify-between">
                   <span className="pill-badge">Difficulty: Medium</span>
@@ -171,7 +171,7 @@ export default function MRCPPACESExamQuestionsPage() {
               </div>
 
               <div className="pill-card">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Pharmacy Law & Ethics</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Medical Ethics</h3>
                 <p className="text-gray-600 mb-4">300+ questions on legal requirements, controlled drugs, and professional standards</p>
                 <div className="flex items-center justify-between">
                   <span className="pill-badge">Difficulty: Medium</span>
@@ -182,7 +182,7 @@ export default function MRCPPACESExamQuestionsPage() {
               </div>
 
               <div className="pill-card">
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Pharmaceutics</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Clinical Practice</h3>
                 <p className="text-gray-600 mb-4">250+ questions on drug formulation, stability, and pharmaceutical technology</p>
                 <div className="flex items-center justify-between">
                   <span className="pill-badge">Difficulty: Medium</span>

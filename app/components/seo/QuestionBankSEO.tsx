@@ -46,7 +46,7 @@ const faqSchema = {
       "name": "What topics do the MRCP PACES questions cover?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Calculations, clinical pharmacy, therapeutics, law & ethics, pharmacology, pharmaceutics, and public health."
+        "text": "Cardiovascular, respiratory, neurology, gastroenterology, communication skills, medical ethics, and history taking."
       }
     },
     {
@@ -54,7 +54,7 @@ const faqSchema = {
       "name": "Are the questions similar to the real MRCP PACES exam?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Written by physicians who recently passed. SBA, EMQ, and calculation formats. Students say slightly harder."
+        "text": "Yes. Written by physicians who recently passed. Covers all 5 PACES stations. Candidates say slightly harder than real exam."
       }
     },
     {
