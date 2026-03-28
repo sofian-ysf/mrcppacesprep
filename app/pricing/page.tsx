@@ -399,7 +399,7 @@ export default function PricingPage() {
               </div>
               <div>
                 <div className="text-3xl font-bold mb-1">8,500+</div>
-                <div className="text-gray-400 text-sm">Students Passed</div>
+                <div className="text-gray-400 text-sm">Candidates Passed</div>
               </div>
               <div>
                 <div className="text-3xl font-bold mb-1">2,000+</div>
@@ -407,7 +407,7 @@ export default function PricingPage() {
               </div>
               <div>
                 <div className="text-3xl font-bold mb-1">4.8/5</div>
-                <div className="text-gray-400 text-sm">Student Rating</div>
+                <div className="text-gray-400 text-sm">User Rating</div>
               </div>
             </div>
             <div className="mt-10">
@@ -415,7 +415,7 @@ export default function PricingPage() {
                 href="/testimonials"
                 className="text-white underline hover:no-underline"
               >
-                Read success stories from our students →
+                Read success stories from our candidates →
               </Link>
             </div>
           </div>

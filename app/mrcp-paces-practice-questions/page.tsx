@@ -140,11 +140,11 @@ export default function MRCPPACESPracticeQuestionsPage() {
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-gray-900">8,500+</div>
-                <div className="text-sm text-gray-600">Students Helped</div>
+                <div className="text-sm text-gray-600">Candidates Helped</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-gray-900">4.8/5</div>
-                <div className="text-sm text-gray-600">Student Rating</div>
+                <div className="text-sm text-gray-600">User Rating</div>
               </div>
             </div>
           </div>
@@ -258,7 +258,7 @@ export default function MRCPPACESPracticeQuestionsPage() {
               Start Practicing MRCP PACES Questions Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join 8,500+ students who passed their exam
+              Join 8,500+ candidates who passed their exam
             </p>
             <Link
               href="/signup"

@@ -6,30 +6,30 @@ export default function FAQSEO() {
 
       <div className="sr-only" aria-hidden="true">
         <h1>MRCP PACES Exam FAQ | Frequently Asked Questions | MRCPPACESPREP</h1>
-        <h2>Everything You Need to Know About the MRCP PACES Pre-Registration Exam</h2>
+        <h2>Everything You Need to Know About the MRCP PACES Clinical Examination</h2>
 
         <p>
-          Find answers to common questions about the MRCP PACES pre-registration exam.
-          Learn about exam format, pass rates, preparation tips, costs, and more.
+          Find answers to common questions about the MRCP PACES clinical examination.
+          Learn about exam format, stations, pass rates, preparation tips, costs, and more.
           Expert advice from physicians who recently passed.
         </p>
 
         <h3>FAQ Categories</h3>
         <ul>
-          <li>MRCP PACES Exam Basics - Format, Timing, Topics</li>
+          <li>MRCP PACES Exam Basics - Format, Stations, Topics</li>
           <li>Preparation Strategies - Study Tips, Timelines</li>
           <li>Retake Information - Rules, Wait Times, Success</li>
-          <li>International Graduates - OSPAP, Requirements</li>
+          <li>International Medical Graduates - IMG Requirements</li>
           <li>Platform Questions - Features, Pricing, Support</li>
         </ul>
 
         <h3>Common MRCP PACES Questions</h3>
         <ul>
           <li>What is the MRCP PACES exam pass mark?</li>
-          <li>How many questions are in the MRCP PACES exam?</li>
+          <li>How many stations are in the MRCP PACES exam?</li>
           <li>What is the MRCP PACES exam format?</li>
           <li>How long is the MRCP PACES exam?</li>
-          <li>What topics are tested?</li>
+          <li>What clinical skills are tested?</li>
           <li>How do I register for the MRCP PACES exam?</li>
         </ul>
 
@@ -45,9 +45,9 @@ export default function FAQSEO() {
 
         <p>
           Keywords: MRCP PACES exam FAQ, frequently asked questions, MRCP PACES exam format, MRCP PACES pass rate,
-          MRCP PACES exam topics, how to prepare for MRCP PACES, MRCP PACES retake rules, MRCP PACES exam cost,
-          international graduate MRCP PACES, OSPAP exam, MRCP PACES exam timing, 110 questions,
-          2.5 hours, SBA questions, EMQ questions, calculation questions
+          MRCP PACES exam stations, how to prepare for MRCP PACES, MRCP PACES retake rules, MRCP PACES exam cost,
+          international medical graduate MRCP PACES, IMG exam, MRCP PACES exam timing, 5 stations,
+          90 minutes, clinical examination, communication skills, history taking
         </p>
       </div>
 

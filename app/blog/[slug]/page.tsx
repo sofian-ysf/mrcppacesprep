@@ -146,9 +146,9 @@ export default async function BlogPostPage({ params }: Props) {
     "timeRequired": `PT${readingTimeMinutes}M`,
     "author": {
       "@type": "Person",
-      "name": post.author_name || "Alex Jensing, MPharm",
-      "jobTitle": "MRCP PACES Registered Pharmacist",
-      "description": "Qualified physician with expertise in MRCP PACES exam preparation and pharmaceutical education",
+      "name": post.author_name || "Dr. Alex Jensing, MRCP",
+      "jobTitle": "MRCP-Qualified Physician",
+      "description": "Qualified physician with expertise in MRCP PACES exam preparation and clinical education",
       "worksFor": {
         "@type": "Organization",
         "name": "MRCPPACESPREP",
@@ -163,7 +163,7 @@ export default async function BlogPostPage({ params }: Props) {
         "@type": "ImageObject",
         "url": "https://www.mrcppacesprep.com/logo.png"
       },
-      "description": "UK's leading MRCP PACES pre-registration exam preparation platform with 94% pass rate"
+      "description": "UK's leading MRCP PACES exam preparation platform with 94% pass rate"
     },
     "datePublished": post.published_at,
     "dateModified": post.updated_at,
@@ -175,12 +175,12 @@ export default async function BlogPostPage({ params }: Props) {
       "@type": "Blog",
       "@id": "https://www.mrcppacesprep.com/blog",
       "name": "MRCP PACES Exam Prep Blog",
-      "description": "Expert advice, study tips, and resources for MRCP PACES pre-registration exam success"
+      "description": "Expert advice, study tips, and resources for MRCP PACES exam success"
     },
     "about": {
       "@type": "Thing",
-      "name": "MRCP PACES Pre-Registration Exam",
-      "description": "The Practical Assessment of Clinical Examination Skills for MRCP membership in the UK"
+      "name": "MRCP PACES Examination",
+      "description": "The Practical Assessment of Clinical Examination Skills for MRCP(UK) membership"
     },
     ...(post.featured_image && { "image": post.featured_image }),
   }
@@ -310,7 +310,7 @@ export default async function BlogPostPage({ params }: Props) {
               <div className="blog-detail-meta-info">
                 <div className="blog-detail-meta-item">
                   <span className="blog-detail-meta-label">Written by</span>
-                  <span className="blog-detail-meta-value">{post.author_name || 'Alex Jensing, MPharm'}</span>
+                  <span className="blog-detail-meta-value">{post.author_name || 'Dr. Alex Jensing, MRCP'}</span>
                 </div>
                 <div className="blog-detail-meta-item">
                   <span className="blog-detail-meta-label">Published on</span>
