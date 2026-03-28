@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: 'MRCP PACES Question Bank 2025 | 2000+ Practice Questions | 94% Pass Rate',
   description: 'Master your 2025 MRCP PACES exam with 2000+ practice questions. SBA & EMQ formats. Detailed explanations, progress tracking. 94% pass rate.',
   keywords: [
-    'MRCP PACES question bank', 'MRCP PACES practice questions', 'MRCP PACES exam questions', 'pharmacy exam questions UK',
+    'MRCP PACES question bank', 'MRCP PACES practice questions', 'MRCP PACES exam questions', 'MRCP PACES exam questions UK',
     'MRCP PACES SBA questions', 'MRCP PACES EMQ practice', 'clinical medicine questions', 'medical ethics questions',
     'clinical skills practice', 'pharmacology exam questions', 'MRCP PACES exam preparation',
     'MRCP PACES physician questions', 'BNF questions', 'MRCP PACES question bank 2025'

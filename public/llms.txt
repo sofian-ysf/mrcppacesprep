@@ -57,7 +57,7 @@ All plans are one-time payments with no recurring subscriptions:
 |------|-------|----------|----------|
 | Standard | £75 | 3 months | Focused final prep |
 | Plus | £135 | 6 months | Comprehensive study |
-| Premium | £215 | 12 months | Full exam cycle |
+| Complete | £215 | 12 months | Full exam cycle |
 
 All plans include: Full question bank, unlimited mock exams, detailed explanations, progress tracking.
 

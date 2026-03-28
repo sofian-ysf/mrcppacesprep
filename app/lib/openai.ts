@@ -74,7 +74,7 @@ export async function generateSBABatch(
         content: `You are an expert MRCP PACES (Practical Assessment of Clinical Examination Skills) exam question writer for UK MRCP membership exams.
 
 Your task is to create high-quality Single Best Answer (SBA) questions that:
-- Are clinically relevant and reflect real pharmacy practice in the UK
+- Are clinically relevant and reflect real clinical practice in the UK
 - Have exactly 5 options (A-E) with one clearly correct answer
 - Include plausible distractors that test genuine understanding
 - Have detailed explanations that teach the concept
@@ -179,7 +179,7 @@ export async function generateCalculationBatch(
     messages: [
       {
         role: 'system',
-        content: `You are an expert MRCP PACES exam question writer specializing in pharmaceutical calculations.
+        content: `You are an expert MRCP PACES exam question writer specializing in clinical calculations.
 
 Your task is to create realistic calculation questions that:
 - Use clinically relevant scenarios (real drug names, realistic doses)
@@ -390,11 +390,11 @@ export async function generateStructuredExplanation(
     messages: [
       {
         role: 'system',
-        content: `You are an expert pharmacy educator creating detailed, structured explanations for MRCP PACES exam questions.
+        content: `You are an expert medical educator creating detailed, structured explanations for MRCP PACES exam questions.
 
 Your explanations should be:
 - Educational and memorable
-- Include practical clinical insights that help with real pharmacy practice
+- Include practical clinical insights that help with real clinical practice
 - Focused on exam success with specific tips
 - Clear about why each incorrect option is wrong
 
@@ -402,7 +402,7 @@ IMPORTANT: Always return valid JSON without any markdown code blocks.`
       },
       {
         role: 'user',
-        content: `Given this pharmacy MRCP PACES exam question in the "${categoryName}" category:
+        content: `Given this MRCP PACES exam question in the "${categoryName}" category:
 
 Question: ${questionText}
 
@@ -416,10 +416,10 @@ Current Explanation: ${currentExplanation}
 Generate a structured educational explanation with:
 1. summary: 1-2 sentence direct answer explanation that clearly states why the correct answer is correct
 2. key_points: 3-4 bullet points of critical learning concepts related to this question
-3. clinical_pearl: One memorable clinical insight for real pharmacy practice (something they'll remember)
+3. clinical_pearl: One memorable clinical insight for real clinical practice (something they'll remember)
 4. why_wrong: For each incorrect option (${options ? options.filter(o => o.letter !== correctAnswer).map(o => o.letter).join(', ') : 'N/A'}), explain why it's wrong (2-3 sentences each). Use the option letters as keys.
 5. exam_tip: A specific tip for remembering or approaching this type of question in the exam
-6. related_topics: 2-3 related pharmacy topic slugs to study (use lowercase-with-hyphens format like "drug-interactions", "renal-impairment", etc.)
+6. related_topics: 2-3 related clinical topic slugs to study (use lowercase-with-hyphens format like "drug-interactions", "renal-impairment", etc.)
 
 Return ONLY a valid JSON object in this exact format, no markdown:
 {
@@ -511,21 +511,21 @@ export async function generateBlogPost(
 ): Promise<GeneratedBlogPost> {
   const keywordsStr = targetKeywords.length > 0
     ? targetKeywords.join(', ')
-    : `${topic}, MRCP PACES exam, pharmacy MRCP PACES, UK pharmacy`
+    : `${topic}, MRCP PACES exam, MRCP PACES, UK clinical`
 
   const response = await openai.chat.completions.create({
     model: 'gpt-4-turbo-preview',
     messages: [
       {
         role: 'system',
-        content: `You are Alex Jensing, MPharm, a MRCP PACES-registered physician with 8+ years of experience including hospital, community, and education roles. You write authoritative, deeply practical content for UK pharmacy MRCP PACES students preparing for the MRCP PACES assessment.
+        content: `You are Dr. Alex Jensing, MRCP, a MRCP-qualified physician with 8+ years of experience including hospital, community, and education roles. You write authoritative, deeply practical content for UK MRCP PACES students preparing for the MRCP PACES assessment.
 
 CRITICAL CONTENT QUALITY REQUIREMENTS:
 
 1. DEMONSTRATE REAL EXPERTISE:
    - Include SPECIFIC drug names, dosages, and clinical scenarios (e.g., "When dispensing methotrexate 2.5mg tablets, always verify...")
    - Reference EXACT BNF sections, NICE guidelines by code (e.g., "NICE NG28"), MRCP PACES standards
-   - Share realistic pharmacy scenarios you'd encounter in practice
+   - Share realistic clinical scenarios you'd encounter in practice
    - Include common student mistakes and how to avoid them
 
 2. PROVIDE UNIQUE, ORIGINAL VALUE:
@@ -600,8 +600,8 @@ Return a JSON object in this EXACT format:
     "description": "Same as meta_description",
     "author": {
       "@type": "Person",
-      "name": "Alex Jensing, MPharm",
-      "jobTitle": "MRCP PACES Registered Pharmacist"
+      "name": "Dr. Alex Jensing, MRCP",
+      "jobTitle": "MRCP-Qualified Physician"
     },
     "publisher": {
       "@type": "Organization",
@@ -649,7 +649,7 @@ export async function enhanceBlogSection(
     messages: [
       {
         role: 'system',
-        content: `You are an expert content enhancer for pharmacy education articles. Your task is to expand and enrich content sections while maintaining accuracy and SEO optimization.
+        content: `You are an expert content enhancer for medical education articles. Your task is to expand and enrich content sections while maintaining accuracy and SEO optimization.
 
 Guidelines:
 - Add more detailed explanations, examples, and practical tips
@@ -659,7 +659,7 @@ Guidelines:
 - Keep the markdown formatting (headings, lists, bold text)
 - Naturally incorporate keywords without stuffing
 - Add bullet points or numbered lists where they improve readability
-- Include actionable advice pharmacy students can use`
+- Include actionable advice medical trainees can use`
       },
       {
         role: 'user',
@@ -784,10 +784,10 @@ export async function suggestBlogTopics(
     messages: [
       {
         role: 'system',
-        content: `You are an SEO content strategist specializing in pharmacy education and MRCP PACES exam preparation for UK pharmacy students.
+        content: `You are an SEO content strategist specializing in medical education and MRCP PACES exam preparation for UK medical trainees.
 
 Your task is to suggest compelling, SEO-friendly blog topics that:
-- Target long-tail keywords pharmacy students search for
+- Target long-tail keywords medical trainees search for
 - Address real pain points and questions students have
 - Have good search volume potential
 - Are unique and not commonly covered by competitors

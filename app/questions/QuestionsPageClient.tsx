@@ -237,7 +237,7 @@ export default function QuestionsPageClient() {
             Ready to Begin?
           </h2>
           <p className="text-lg text-gray-600 mb-10">
-            Join thousands of pharmacy graduates who&apos;ve prepared with confidence.
+            Join thousands of medical graduates who&apos;ve prepared with confidence.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
             <Link href="/signup" className="pill-btn pill-btn-primary pill-btn-lg">

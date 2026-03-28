@@ -46,11 +46,11 @@ Or manually run the SQL in the Supabase SQL editor.
 - Type: One-time
 - Copy the Price ID → Add to `.env.local` as `STRIPE_STANDARD_PRICE_ID`
 
-**Premium Package:**
-- Name: Premium Package
-- Price: £149 GBP
+**Plus Package:**
+- Name: Plus Package
+- Price: £135 GBP
 - Type: One-time
-- Copy the Price ID → Add to `.env.local` as `STRIPE_PREMIUM_PRICE_ID`
+- Copy the Price ID → Add to `.env.local` as `STRIPE_PRICE_6MONTH`
 
 **Ultimate Package:**
 - Name: Ultimate Package
@@ -114,8 +114,8 @@ When a payment succeeds:
 3. Creates record in `user_subscriptions` table
 4. Calculates expiry date based on package:
    - Standard: +3 months
-   - Premium: +6 months
-   - Ultimate: NULL (lifetime)
+   - Plus: +6 months
+   - Complete: +12 months
 5. Sends Discord notification (optional)
 
 ## API Endpoints

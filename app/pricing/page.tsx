@@ -80,7 +80,7 @@ const plans = [
   },
   {
     id: '12month' as PlanType,
-    name: 'Premium',
+    name: 'Complete',
     price: 215,
     period: '12 months',
     description: 'Full year access with retake coverage',
@@ -91,7 +91,7 @@ const plans = [
 const faqs = [
   {
     question: 'How long do I have access after purchase?',
-    answer: 'Your access depends on your plan: 3 months (Standard), 6 months (Plus), or 12 months (Premium). All plans are one-time payments with no recurring charges.',
+    answer: 'Your access depends on your plan: 3 months (Standard), 6 months (Plus), or 12 months (Complete). All plans are one-time payments with no recurring charges.',
   },
   {
     question: 'What payment methods do you accept?',

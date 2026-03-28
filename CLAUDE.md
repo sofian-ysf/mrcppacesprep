@@ -212,7 +212,7 @@ blog_posts (
 |------|-------|----------|
 | Standard | £75 | 3 months |
 | Plus | £135 | 6 months |
-| Premium | £215 | 12 months |
+| Complete | £215 | 12 months |
 
 **No free trial** - Free demo page at `/try-free` with sample content only.
 

@@ -59,7 +59,7 @@ export const PLANS: Record<PlanType, {
     ]
   },
   '12month': {
-    name: 'Premium',
+    name: 'Complete',
     price: 215,
     duration_months: 12,
     stripe_price_id: process.env.STRIPE_PRICE_12MONTH || '',

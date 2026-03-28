@@ -18,7 +18,7 @@ interface VerificationResult {
   lastVerified: string
 }
 
-// Verify a question against UK pharmacy guidelines
+// Verify a question against UK medical guidelines
 async function verifyAgainstUKGuidelines(
   questionText: string,
   options: { letter: string; text: string }[] | null,
@@ -42,7 +42,7 @@ async function verifyAgainstUKGuidelines(
     messages: [
       {
         role: 'system',
-        content: `You are a UK pharmacy expert with comprehensive knowledge of:
+        content: `You are a UK medical expert with comprehensive knowledge of:
 - British National Formulary (BNF) - current edition
 - NICE guidelines and technology appraisals
 - MRCP PACES standards and requirements
@@ -50,7 +50,7 @@ async function verifyAgainstUKGuidelines(
 - NHS England prescribing guidelines
 - UK-specific drug formulations and brand names
 
-Your task is to verify pharmacy exam questions for accuracy against current UK guidelines (as of 2024-2025).
+Your task is to verify MRCP PACES exam questions for accuracy against current UK guidelines (as of 2024-2025).
 
 Be STRICT about:
 1. Drug doses and frequencies matching BNF recommendations
@@ -70,7 +70,7 @@ Flag as INACCURATE if:
       },
       {
         role: 'user',
-        content: `Verify this UK pharmacy exam question for accuracy:
+        content: `Verify this UK MRCP PACES exam question for accuracy:
 
 CATEGORY: ${categoryName}
 QUESTION TYPE: ${questionType}
@@ -84,7 +84,7 @@ STATED CORRECT ANSWER: ${correctAnswer}
 EXPLANATION PROVIDED:
 ${explanation}
 
-Analyze this question against current UK pharmacy guidelines and return a JSON object:
+Analyze this question against current UK medical guidelines and return a JSON object:
 {
   "isAccurate": true/false,
   "confidenceScore": 0.0-1.0,
@@ -163,7 +163,7 @@ async function processVerificationBatch(
       const categoryData = question.question_categories
       const categoryName = Array.isArray(categoryData)
         ? categoryData[0]?.name
-        : (categoryData as { name: string } | null)?.name || 'General Pharmacy'
+        : (categoryData as { name: string } | null)?.name || 'General Medicine'
 
       console.log(`[UKVerify ${requestId}] Verifying question ${questionId}...`)
 

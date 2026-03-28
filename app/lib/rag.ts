@@ -139,7 +139,7 @@ export async function buildGenerationContext(
 
   if (!content) {
     // If no content, try semantic search with a general query
-    const searchQuery = `${categoryName} ${questionType} pharmacy exam questions`
+    const searchQuery = `${categoryName} ${questionType} MRCP PACES exam questions`
     const chunks = await searchRelevantChunks(supabase, categoryId, searchQuery, 10)
     content = chunks.map(c => c.content).join('\n\n---\n\n')
   }

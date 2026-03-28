@@ -151,7 +151,7 @@ function SignupForm() {
   const planNames: Record<string, string> = {
     '3month': 'Standard (3 Months)',
     '6month': 'Plus (6 Months)',
-    '12month': 'Premium (12 Months)',
+    '12month': 'Complete (12 Months)',
   }
 
   const planPrices: Record<string, string> = {

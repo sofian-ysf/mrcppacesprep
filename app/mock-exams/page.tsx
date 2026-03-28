@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: 'MRCP PACES Mock Exams 2025 | Realistic Practice Tests | 94% Pass Rate | £30/month',
   description: 'Take realistic MRCP PACES mock exams. 110 questions, 2.5 hours, exact exam format. Detailed performance analysis. ±3% accuracy vs real exam. Unlimited attempts. £30/month.',
   keywords: [
-    'MRCP PACES mock exams', 'MRCP PACES practice test', 'MRCP PACES mock exam', 'pharmacy mock exam UK',
+    'MRCP PACES mock exams', 'MRCP PACES practice test', 'MRCP PACES mock exam', 'medical mock exam UK',
     'MRCP PACES exam simulation', 'timed practice test', 'realistic MRCP PACES exam', 'MRCP PACES practice papers',
     'MRCP PACES exam format', '110 question mock', '2.5 hour exam practice', 'MRCP PACES exam timing',
     'mock exam feedback', 'performance analysis', 'pass prediction', 'topic mock exams'
@@ -272,7 +272,7 @@ export default function MockExamsPage() {
                     <div className="space-y-3">
                       {[
                         { topic: 'Calculations', score: 85, color: 'bg-blue-500' },
-                        { topic: 'Clinical Pharmacy', score: 82, color: 'bg-green-500' },
+                        { topic: 'Clinical Medical', score: 82, color: 'bg-green-500' },
                         { topic: 'Law & Ethics', score: 68, color: 'bg-yellow-500' },
                         { topic: 'Pharmacology', score: 65, color: 'bg-red-500' },
                       ].map((item, i) => (

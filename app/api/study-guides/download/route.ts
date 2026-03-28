@@ -2,12 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/app/lib/supabase/server'
 
 const VALID_GUIDES = [
-  'pharmaceutical-calculations',
-  'clinical-pharmacy-therapeutics',
-  'pharmacy-law-ethics',
-  'pharmaceutics-formulation',
-  'pharmacology-drug-mechanisms',
-  'public-health-prevention',
+  'cardiovascular-examination',
+  'respiratory-examination',
+  'neurological-examination',
+  'history-taking',
+  'communication-skills',
+  'abdominal-examination',
 ] as const
 
 type GuideSlug = typeof VALID_GUIDES[number]

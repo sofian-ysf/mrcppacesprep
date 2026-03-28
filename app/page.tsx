@@ -18,7 +18,7 @@ const homepageFAQs = [
   },
   {
     question: "What's included in each plan?",
-    answer: "All plans include full access to our complete content library: Spot Diagnosis module with 500+ cases, PACES Stations practice, Differentials training for 200+ signs, 1000+ High Yield SBAs, and Examination Checklists. Plans differ only in duration - 3 months (Standard), 6 months (Plus), or 12 months (Premium) - giving you flexibility based on your exam timeline."
+    answer: "All plans include full access to our complete content library: Spot Diagnosis module with 500+ cases, PACES Stations practice, Differentials training for 200+ signs, 1000+ High Yield SBAs, and Examination Checklists. Plans differ only in duration - 3 months (Standard), 6 months (Plus), or 12 months (Complete) - giving you flexibility based on your exam timeline."
   },
   {
     question: "How long should I prepare for PACES?",
@@ -800,10 +800,10 @@ export default function Home() {
               </button>
             </div>
 
-            {/* Premium Plan - 12 Months */}
+            {/* Complete Plan - 12 Months */}
             <div className="pill-card transition-all p-4 sm:p-6">
               <div className="text-center pb-4 sm:pb-6 border-b border-gray-100">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">Premium</h3>
+                <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">Complete</h3>
                 <div className="flex items-baseline justify-center gap-1">
                   <span className="text-3xl sm:text-4xl font-light text-gray-900">£215</span>
                 </div>
@@ -836,7 +836,7 @@ export default function Home() {
                 disabled={isLoading}
                 className="w-full py-2.5 sm:py-3 border-2 border-gray-900 text-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-colors text-center text-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {loadingPlan === '12month' ? 'Processing...' : 'Get Premium'}
+                {loadingPlan === '12month' ? 'Processing...' : 'Get Complete'}
               </button>
             </div>
           </div>

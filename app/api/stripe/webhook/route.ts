@@ -240,7 +240,7 @@ async function sendDiscordNotification(userEmail: string, planType?: string, pri
 
     const planName = planType === '3month' ? 'Standard (3 Months)'
       : planType === '6month' ? 'Plus (6 Months)'
-      : planType === '12month' ? 'Premium (12 Months)'
+      : planType === '12month' ? 'Complete (12 Months)'
       : 'Unknown'
 
     await fetch(`${baseUrl}/api/discord/notify`, {

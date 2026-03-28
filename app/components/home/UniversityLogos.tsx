@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 const universities = [
-  { name: 'UCL School of Pharmacy', src: '/universities/ucl.png' },
+  { name: 'UCL Medical School', src: '/universities/ucl.png' },
   { name: 'University of Manchester', src: '/universities/manchester.png' },
   { name: 'University of Nottingham', src: '/universities/nottingham.png' },
   { name: 'King\'s College London', src: '/universities/kcl.png' },

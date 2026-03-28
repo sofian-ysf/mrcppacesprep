@@ -147,7 +147,7 @@ export default function StudyGuidesPage() {
                 </div>
                 <div className="border-l-4 border-blue-500 pl-4">
                   <h4 className="font-semibold text-gray-900">Week 5-6: Clinical Practice</h4>
-                  <p className="text-sm text-gray-600">Study Clinical Pharmacy and therapeutic principles</p>
+                  <p className="text-sm text-gray-600">Study Clinical Medical and therapeutic principles</p>
                 </div>
                 <div className="border-l-4 border-blue-500 pl-4">
                   <h4 className="font-semibold text-gray-900">Week 7-8: Law & Ethics</h4>
@@ -335,7 +335,7 @@ export default function StudyGuidesPage() {
                     <span className="text-sm text-green-600">25 hours/week</span>
                   </div>
                   <ul className="text-sm text-gray-600 space-y-1">
-                    <li>• Study Clinical Pharmacy guide</li>
+                    <li>• Study Clinical Medical guide</li>
                     <li>• Practice 40 questions daily</li>
                     <li>• Focus on calculation problems</li>
                   </ul>

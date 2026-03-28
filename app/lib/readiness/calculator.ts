@@ -42,7 +42,7 @@ export interface ReadinessOutput {
 
 // Category weights for MRCP PACES exam (approximate importance)
 const CATEGORY_WEIGHTS: Record<string, number> = {
-  'clinical-pharmacy': 1.2,
+  'clinical-clinical': 1.2,
   'pharmacology': 1.2,
   'law-ethics': 1.1,
   'dosage': 1.3,

@@ -56,7 +56,7 @@ async function processEnhancementBatch(
       const categoryData = question.question_categories
       const categoryName = Array.isArray(categoryData)
         ? categoryData[0]?.name
-        : (categoryData as { name: string } | null)?.name || 'General Pharmacy'
+        : (categoryData as { name: string } | null)?.name || 'General Medicine'
 
       // Generate structured explanation
       console.log(`[Enhancement ${requestId}] Processing question ${questionId}...`)

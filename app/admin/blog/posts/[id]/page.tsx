@@ -474,7 +474,7 @@ export default function BlogPostEditorPage({ params }: { params: Promise<{ id: s
                 name="author_title"
                 value={formData.author_title}
                 onChange={handleChange}
-                placeholder="e.g., Pharmacy Educator"
+                placeholder="e.g., Clinical Educator"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
               />
             </div>

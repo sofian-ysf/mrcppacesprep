@@ -36,7 +36,7 @@ When displaying events:
 - When creating events, confirm the details before creating
 
 ## Context
-You're helping manage the MRCPPACESPREP team inbox. This is a pharmacy exam preparation platform, so emails might be about:
+You're helping manage the MRCPPACESPREP team inbox. This is a MRCP PACES exam preparation platform, so emails might be about:
 - Customer support inquiries
 - Subscription/billing questions
 - Partnership or collaboration requests

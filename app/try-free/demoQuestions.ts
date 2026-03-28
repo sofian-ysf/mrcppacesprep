@@ -430,7 +430,7 @@ export const demoQuestions: DemoQuestion[] = [
       ],
       clinical_pearl: 'While technically legal, prescriptions with quantity in only one format are more prone to errors. As a professional, you may wish to suggest to prescribers they use both formats as best practice.',
       why_wrong: {
-        'B': 'Pharmacists cannot add figures themselves - this would be altering a prescription, which is not permitted.',
+        'B': 'Physicians cannot add figures themselves - this would be altering a prescription, which is not permitted.',
         'C': 'There is no legal requirement to contact the prescriber as the prescription meets minimum legal requirements.',
         'D': 'Returning the prescription is unnecessary as it is legally valid.'
       },

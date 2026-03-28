@@ -288,7 +288,7 @@ export default function BlogGeneratePage() {
               type="text"
               value={targetKeywords}
               onChange={(e) => setTargetKeywords(e.target.value)}
-              placeholder="e.g., MRCP PACES exam tips, pharmacy revision, MRCP PACES exam"
+              placeholder="e.g., MRCP PACES exam tips, clinical revision, MRCP PACES exam"
               className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-900 focus:border-transparent"
             />
             <p className="text-xs text-gray-500 mt-1">

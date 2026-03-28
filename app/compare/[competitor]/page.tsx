@@ -19,7 +19,7 @@ const competitors: Record<string, {
     fullName: 'PassMedicine MRCP PACES Prep',
     description: 'PassMedicine offers question banks for various medical exams including MRCP PACES preparation.',
     features: {
-      'MRCP PACES-Specific Questions': { us: '2,000+ questions written by UK physicians', them: 'Mixed medical/pharmacy content' },
+      'MRCP PACES-Specific Questions': { us: '2,000+ questions written by UK physicians', them: 'General medical content' },
       'Mock Exams': { us: 'Unlimited full-length mock exams', them: 'Limited mock exam functionality' },
       'Calculations Practice': { us: '350+ calculation questions with step-by-step solutions', them: 'Basic calculation coverage' },
       'Progress Tracking': { us: 'Detailed analytics and weak area identification', them: 'Basic progress tracking' },
@@ -33,10 +33,10 @@ const competitors: Record<string, {
       { question: 'Do both platforms offer mock exams?', answer: 'Yes, both offer mock exams. MRCPPACESPREP provides unlimited full-length mock exams that simulate the real exam environment with 110 questions in 2.5 hours.' },
     ]
   },
-  'pharmatutor': {
-    name: 'PharmaTutor',
-    fullName: 'PharmaTutor Pharmacy Revision',
-    description: 'PharmaTutor provides pharmacy study materials and revision resources.',
+  'passtest': {
+    name: 'PassTest',
+    fullName: 'PassTest Medical Revision',
+    description: 'PassTest provides clinical study materials and revision resources.',
     features: {
       'Question Bank Size': { us: '2,000+ MRCP PACES questions', them: 'Smaller question bank' },
       'Exam Simulation': { us: 'Full mock exam experience', them: 'Question practice only' },
@@ -47,7 +47,7 @@ const competitors: Record<string, {
     },
     pricing: { us: 'From 25 GBP one-time payment', them: 'Varies by package' },
     faqs: [
-      { question: 'How does MRCPPACESPREP compare to PharmaTutor?', answer: 'MRCPPACESPREP focuses exclusively on MRCP PACES exam preparation with 2,000+ questions, unlimited mock exams, and a 94% pass rate. Our content is written by physicians who recently passed the exam.' },
+      { question: 'How does MRCPPACESPREP compare to PassTest?', answer: 'MRCPPACESPREP focuses exclusively on MRCP PACES exam preparation with 2,000+ questions, unlimited mock exams, and a 94% pass rate. Our content is written by physicians who recently passed the exam.' },
       { question: 'Which platform has better MRCP PACES pass rates?', answer: 'MRCPPACESPREP has a documented 94% first-time pass rate, significantly above the national average of 70-85%.' },
       { question: 'Is MRCPPACESPREP worth the investment over free resources?', answer: 'Free resources can supplement your study, but MRCPPACESPREP provides structured exam-style practice, realistic mock exams, and detailed explanations that significantly improve pass rates.' },
     ]
@@ -55,7 +55,7 @@ const competitors: Record<string, {
   'gphc-vs-naplex': {
     name: 'NAPLEX',
     fullName: 'MRCP PACES vs NAPLEX Exam Comparison',
-    description: 'Comparing the UK MRCP PACES exam with the US NAPLEX pharmacy licensing exam.',
+    description: 'Comparing the UK MRCP PACES exam with the US NAPLEX medical licensing exam.',
     features: {
       'Location': { us: 'United Kingdom', them: 'United States' },
       'Question Count': { us: '110 questions', them: '180 questions' },
@@ -67,8 +67,8 @@ const competitors: Record<string, {
     pricing: { us: '253 GBP exam fee', them: '545 USD exam fee (approx)' },
     faqs: [
       { question: 'Can I practice in the UK with a NAPLEX qualification?', answer: 'No, you need to pass the MRCP PACES exam to practice in the UK. US physicians must complete the OSPAP programme and pass the MRCP PACES assessment.' },
-      { question: 'Which exam is harder - MRCP PACES or NAPLEX?', answer: 'Both exams are rigorous. The MRCP PACES focuses on UK-specific practice including NHS guidelines, while NAPLEX tests US pharmacy law and practice. Difficulty is subjective based on your training.' },
-      { question: 'How do I prepare for the MRCP PACES as an international graduate?', answer: 'International graduates should complete OSPAP, then use MRCPPACESPREP to practice with UK-specific questions covering BNF, NHS, and UK pharmacy law.' },
+      { question: 'Which exam is harder - MRCP PACES or NAPLEX?', answer: 'Both exams are rigorous. The MRCP PACES focuses on UK-specific practice including NHS guidelines, while NAPLEX tests US medical guidelines and practice. Difficulty is subjective based on your training.' },
+      { question: 'How do I prepare for the MRCP PACES as an international graduate?', answer: 'International graduates should complete OSPAP, then use MRCPPACESPREP to practice with UK-specific questions covering BNF, NHS, and UK medical guidelines.' },
     ]
   }
 }
@@ -93,7 +93,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     : 'MRCPPACESPREP vs ' + data.name + ': MRCP PACES Exam Prep Comparison 2026'
 
   const description = isExamComparison
-    ? 'Compare the UK MRCP PACES exam with the US NAPLEX. See differences in format, questions, duration, and pass rates for both pharmacy licensing exams.'
+    ? 'Compare the UK MRCP PACES exam with the US NAPLEX. See differences in format, questions, duration, and pass rates for both medical licensing exams.'
     : 'Compare MRCPPACESPREP with ' + data.name + ' for MRCP PACES exam preparation. See features, pricing, and student success rates side by side.'
 
   return {
@@ -105,7 +105,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       data.name + ' alternative',
       'best MRCP PACES exam prep',
       'MRCP PACES question bank comparison',
-      'pharmacy exam prep UK'
+      'medical exam prep UK'
     ],
     openGraph: {
       title,
@@ -134,7 +134,7 @@ export default async function ComparePage({ params }: Props) {
 
   const isExamComparison = competitor === 'gphc-vs-naplex'
   const title = isExamComparison
-    ? 'MRCP PACES vs NAPLEX: UK vs US Pharmacy Exam Comparison'
+    ? 'MRCP PACES vs NAPLEX: UK vs US Clinical Exam Comparison'
     : 'MRCPPACESPREP vs ' + data.name
 
   // Generate comparison schema

@@ -3,11 +3,11 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Paediatric Practice Questions | MRCPPACESPREP',
-  description: 'Practice paediatric pharmacy questions representing 20% of the MRCP PACES exam. Master child-specific dosing, safety, and clinical considerations.',
-  keywords: 'paediatric pharmacy, children questions, MRCP PACES paediatric, child dosing, pediatric clinical',
+  description: 'Practice paediatric medicine questions representing 20% of the MRCP PACES exam. Master child-specific dosing, safety, and clinical considerations.',
+  keywords: 'paediatric medicine, children questions, MRCP PACES paediatric, child dosing, pediatric clinical',
   openGraph: {
     title: 'Paediatric Practice Questions | MRCPPACESPREP',
-    description: 'Master paediatric pharmacy with dedicated practice questions covering 20% of the MRCP PACES exam.',
+    description: 'Master paediatric medicine with dedicated practice questions covering 20% of the MRCP PACES exam.',
     url: 'https://mrcppacesprep.com/questions/paediatric',
   },
   alternates: {
@@ -54,7 +54,7 @@ export default function PaediatricPage() {
             20% of MRCP PACES Exam
           </p>
           <h1 className="text-4xl font-semibold text-gray-900 sm:text-5xl mb-6">
-            Paediatric Pharmacy
+            Paediatric Medicine
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10">
             Approximately 20% of MRCP PACES questions involve paediatric patients.
@@ -165,7 +165,7 @@ export default function PaediatricPage() {
                 Communication Matters
               </h2>
               <p className="text-gray-600 mb-6">
-                Paediatric pharmacy involves counselling both the child (age-appropriately)
+                Paediatric medicine involves counselling both the child (age-appropriately)
                 and their parents or carers. Questions often test your ability to:
               </p>
               <ul className="space-y-3">
@@ -222,7 +222,7 @@ export default function PaediatricPage() {
       <section className="px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-semibold text-gray-900 mb-6">
-            Ready to Master Paediatric Pharmacy?
+            Ready to Master Paediatric Medicine?
           </h2>
           <p className="text-lg text-gray-600 mb-10">
             Practice with dedicated paediatric questions across all age groups and clinical areas.

@@ -196,7 +196,7 @@ export default function SupportPage() {
                   </svg>
                 </summary>
                 <p className="mt-4 text-gray-600">
-                  While we can't guarantee exam success, we provide comprehensive support for retakes. Premium and Ultimate subscribers get extended access to help prepare for their next attempt, plus additional study resources and personalized guidance.
+                  While we can't guarantee exam success, we provide comprehensive support for retakes. Our Complete plan (12 months) includes retake coverage, giving you extended access to help prepare for your next attempt if needed.
                 </p>
               </details>
 
