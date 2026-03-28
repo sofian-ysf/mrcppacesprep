@@ -180,6 +180,75 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="MRCPPACESPREP Blog RSS" href="/feed.xml" />
         <link rel="alternate" hrefLang="en-GB" href="https://www.mrcppacesprep.com" />
         <link rel="alternate" hrefLang="x-default" href="https://www.mrcppacesprep.com" />
+
+        {/* Organization Schema - Static JSON-LD for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "EducationalOrganization",
+              "@id": "https://www.mrcppacesprep.com/#organization",
+              "name": "MRCPPACESPREP",
+              "url": "https://www.mrcppacesprep.com",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.mrcppacesprep.com/logo.png",
+                "width": 512,
+                "height": 512
+              },
+              "description": "UK's leading MRCP PACES exam preparation platform. 2000+ practice questions, clinical skills training, and mock exams with a 94% pass rate.",
+              "foundingDate": "2024",
+              "areaServed": {
+                "@type": "Country",
+                "name": "United Kingdom"
+              },
+              "sameAs": [
+                "https://twitter.com/mrcppacesprep"
+              ],
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "email": "team@mrcppacesprep.com",
+                "availableLanguage": "English"
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "reviewCount": "847",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
+            })
+          }}
+        />
+
+        {/* WebSite Schema with SearchAction - Static JSON-LD for SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "@id": "https://www.mrcppacesprep.com/#website",
+              "url": "https://www.mrcppacesprep.com",
+              "name": "MRCPPACESPREP",
+              "description": "MRCP PACES Exam Preparation Platform",
+              "publisher": {
+                "@id": "https://www.mrcppacesprep.com/#organization"
+              },
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://www.mrcppacesprep.com/blog?search={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              },
+              "inLanguage": "en-GB"
+            })
+          }}
+        />
       </head>
       <body
         className={`${poppins.variable} antialiased font-sans`}
