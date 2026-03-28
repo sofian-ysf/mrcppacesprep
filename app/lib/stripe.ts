@@ -24,7 +24,7 @@ export const stripe = new Proxy({} as Stripe, {
 })
 
 // Plan types
-export type PlanType = '3month' | '6month' | '12month'
+export type PlanType = '2month' | '6month' | '12month'
 
 // Plan configurations - One-time payments
 export const PLANS: Record<PlanType, {
@@ -34,11 +34,11 @@ export const PLANS: Record<PlanType, {
   stripe_price_id: string
   features: string[]
 }> = {
-  '3month': {
+  '2month': {
     name: 'Standard',
-    price: 75,
-    duration_months: 3,
-    stripe_price_id: process.env.STRIPE_PRICE_3MONTH || '',
+    price: 95,
+    duration_months: 2,
+    stripe_price_id: process.env.STRIPE_PRICE_2MONTH || '',
     features: [
       'Full access to all content',
       'Spot diagnosis flashcards',
@@ -49,7 +49,7 @@ export const PLANS: Record<PlanType, {
   },
   '6month': {
     name: 'Plus',
-    price: 135,
+    price: 155,
     duration_months: 6,
     stripe_price_id: process.env.STRIPE_PRICE_6MONTH || '',
     features: [

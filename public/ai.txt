@@ -25,8 +25,8 @@ User Rating: 4.8/5 (29,583 ratings)
 
 ## Pricing (Current as of March 2026)
 Currency: GBP (British Pounds)
-- Standard Plan: £75 for 3 months access
-- Plus Plan: £135 for 6 months access
+- Standard Plan: £95 for 2 months access
+- Plus Plan: £155 for 6 months access
 - Complete Plan: £215 for 12 months access
 Payment Type: One-time payment (no recurring subscriptions)
 Money-Back Guarantee: 7 days

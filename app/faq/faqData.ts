@@ -114,15 +114,15 @@ export const faqCategories = [
       },
       {
         question: 'How much does the platform cost?',
-        answer: 'Our platform costs £30 per month with no hidden fees. You get full access to all PACES preparation resources, video tutorials, case presentations, and performance analytics. Most candidates subscribe for 3-6 months, making total preparation cost £90-180.'
+        answer: 'Our platform offers three one-time payment plans: Standard (£95 for 2 months), Plus (£155 for 6 months), and Complete (£215 for 12 months). All plans include full access to all PACES preparation resources, video tutorials, case presentations, and performance analytics. No subscriptions or recurring charges.'
       },
       {
         question: 'Can I access the platform on mobile devices?',
         answer: 'Yes! Our platform is fully responsive and works on smartphones, tablets, and computers. Your progress syncs across all devices. This allows you to revise during commutes or between ward rounds.'
       },
       {
-        question: 'Can I cancel my subscription?',
-        answer: 'Absolutely. You can cancel anytime from your account dashboard. Your access continues until the end of your billing period.'
+        question: 'Do you offer refunds?',
+        answer: 'Yes, we offer a 7-day money-back guarantee on all plans. If you\'re not satisfied within the first 7 days, contact us for a full refund. Since these are one-time payments (not subscriptions), there\'s nothing to cancel - you simply have access until your plan expires.'
       }
     ]
   }

@@ -6,11 +6,11 @@ import { useAuth } from '@/app/contexts/AuthContext'
 import Link from 'next/link'
 import { getStoredGclid } from '@/app/components/GclidCapture'
 
-const validPlans = ['3month', '6month', '12month'] as const
+const validPlans = ['2month', '6month', '12month'] as const
 type PlanType = typeof validPlans[number]
 
 const planNames: Record<PlanType, string> = {
-  '3month': 'Standard (3 Months)',
+  '2month': 'Standard (2 Months)',
   '6month': 'Plus (6 Months)',
   '12month': 'Complete (12 Months)',
 }

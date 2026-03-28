@@ -116,7 +116,7 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
       stripe_customer_id: session.customer as string || null,
       stripe_subscription_id: session.payment_intent as string || null, // Use payment_intent for one-time
       stripe_subscription_status: 'active',
-      package_type: planType || '3month',
+      package_type: planType || '2month',
       amount_paid: planPrice ? parseInt(planPrice) : (plan?.price || 0),
       access_granted_at: new Date().toISOString(),
       access_expires_at: accessExpiresAt ? accessExpiresAt.toISOString() : null,
@@ -238,7 +238,7 @@ async function sendDiscordNotification(userEmail: string, planType?: string, pri
       ? 'https://www.mrcppacesprep.com'
       : process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
 
-    const planName = planType === '3month' ? 'Standard (3 Months)'
+    const planName = planType === '2month' ? 'Standard (2 Months)'
       : planType === '6month' ? 'Plus (6 Months)'
       : planType === '12month' ? 'Complete (12 Months)'
       : 'Unknown'

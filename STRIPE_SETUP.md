@@ -12,9 +12,9 @@ Add these to your `.env.local` file:
 SUPABASE_SERVICE_ROLE_KEY=your_service_role_key_here
 
 # Stripe Price IDs (create these in Stripe Dashboard)
-STRIPE_STANDARD_PRICE_ID=price_xxx  # £99 / 3 months
-STRIPE_PREMIUM_PRICE_ID=price_xxx   # £149 / 6 months
-STRIPE_ULTIMATE_PRICE_ID=price_xxx  # £249 / lifetime
+STRIPE_PRICE_2MONTH=price_xxx   # £95 / 2 months
+STRIPE_PRICE_6MONTH=price_xxx   # £155 / 6 months
+STRIPE_PRICE_12MONTH=price_xxx  # £215 / 12 months
 ```
 
 ## Setup Steps
@@ -40,23 +40,23 @@ Or manually run the SQL in the Supabase SQL editor.
 1. Go to Stripe Dashboard → Products
 2. Create 3 products with one-time prices:
 
-**Standard Package:**
-- Name: Standard Package
-- Price: £99 GBP
+**Standard Package (2 months):**
+- Name: Standard - 2 Months Access
+- Price: £95 GBP
 - Type: One-time
-- Copy the Price ID → Add to `.env.local` as `STRIPE_STANDARD_PRICE_ID`
+- Copy the Price ID → Add to `.env.local` as `STRIPE_PRICE_2MONTH`
 
-**Plus Package:**
-- Name: Plus Package
-- Price: £135 GBP
+**Plus Package (6 months):**
+- Name: Plus - 6 Months Access
+- Price: £155 GBP
 - Type: One-time
 - Copy the Price ID → Add to `.env.local` as `STRIPE_PRICE_6MONTH`
 
-**Ultimate Package:**
-- Name: Ultimate Package
-- Price: £249 GBP
+**Complete Package (12 months):**
+- Name: Complete - 12 Months Access
+- Price: £215 GBP
 - Type: One-time
-- Copy the Price ID → Add to `.env.local` as `STRIPE_ULTIMATE_PRICE_ID`
+- Copy the Price ID → Add to `.env.local` as `STRIPE_PRICE_12MONTH`
 
 ### 4. Configure Webhook
 
@@ -113,7 +113,7 @@ When a payment succeeds:
 2. `/api/stripe/webhook` receives the event
 3. Creates record in `user_subscriptions` table
 4. Calculates expiry date based on package:
-   - Standard: +3 months
+   - Standard: +2 months
    - Plus: +6 months
    - Complete: +12 months
 5. Sends Discord notification (optional)

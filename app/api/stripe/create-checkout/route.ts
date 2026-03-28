@@ -22,7 +22,7 @@ export async function POST(request: NextRequest) {
     // Validate plan type
     if (!planType || !PLANS[planType]) {
       return NextResponse.json(
-        { error: 'Invalid plan type. Must be one of: 3month, 6month, 12month' },
+        { error: 'Invalid plan type. Must be one of: 2month, 6month, 12month' },
         { status: 400 }
       )
     }

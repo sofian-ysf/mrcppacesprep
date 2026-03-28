@@ -210,8 +210,8 @@ blog_posts (
 
 | Plan | Price | Duration |
 |------|-------|----------|
-| Standard | £75 | 3 months |
-| Plus | £135 | 6 months |
+| Standard | £95 | 2 months |
+| Plus | £155 | 6 months |
 | Complete | £215 | 12 months |
 
 **No free trial** - Free demo page at `/try-free` with sample content only.

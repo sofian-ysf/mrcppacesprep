@@ -545,7 +545,7 @@ export default function CRMUsersPage() {
                       <>
                         <td className="py-3 px-4">
                           <span className="inline-flex px-2 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-700">
-                            {user.package_type === '3month' ? 'Standard (3 Mo)' : user.package_type === '6month' ? 'Plus (6 Mo)' : user.package_type === '12month' ? 'Complete (12 Mo)' : user.package_type}
+                            {user.package_type === '2month' ? 'Standard (2 Mo)' : user.package_type === '6month' ? 'Plus (6 Mo)' : user.package_type === '12month' ? 'Complete (12 Mo)' : user.package_type}
                           </span>
                         </td>
                         <td className="py-3 px-4 text-sm text-gray-600">

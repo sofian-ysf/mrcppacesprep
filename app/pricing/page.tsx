@@ -59,21 +59,21 @@ const allFeatures = [
   },
 ]
 
-type PlanType = '3month' | '6month' | '12month'
+type PlanType = '2month' | '6month' | '12month'
 
 const plans = [
   {
-    id: '3month' as PlanType,
+    id: '2month' as PlanType,
     name: 'Standard',
-    price: 75,
-    period: '3 months',
+    price: 95,
+    period: '2 months',
     description: 'Great for focused exam prep',
     popular: false,
   },
   {
     id: '6month' as PlanType,
     name: 'Plus',
-    price: 135,
+    price: 155,
     period: '6 months',
     description: 'Best value for exam prep',
     popular: true,
@@ -91,7 +91,7 @@ const plans = [
 const faqs = [
   {
     question: 'How long do I have access after purchase?',
-    answer: 'Your access depends on your plan: 3 months (Standard), 6 months (Plus), or 12 months (Complete). All plans are one-time payments with no recurring charges.',
+    answer: 'Your access depends on your plan: 2 months (Standard), 6 months (Plus), or 12 months (Complete). All plans are one-time payments with no recurring charges.',
   },
   {
     question: 'What payment methods do you accept?',
@@ -344,7 +344,7 @@ export default function PricingPage() {
                 <p className="text-sm text-gray-500">Per attempt, plus 6-month wait if you fail</p>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-green-600 mb-2">£75-215</div>
+                <div className="text-4xl font-bold text-green-600 mb-2">£95-215</div>
                 <div className="text-gray-600 mb-2">Our Prep Cost</div>
                 <p className="text-sm text-gray-500">One-time payment for comprehensive preparation</p>
               </div>

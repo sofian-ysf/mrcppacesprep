@@ -18,7 +18,7 @@ const homepageFAQs = [
   },
   {
     question: "What's included in each plan?",
-    answer: "All plans include full access to our complete content library: Spot Diagnosis module with 500+ cases, PACES Stations practice, Differentials training for 200+ signs, 1000+ High Yield SBAs, and Examination Checklists. Plans differ only in duration - 3 months (Standard), 6 months (Plus), or 12 months (Complete) - giving you flexibility based on your exam timeline."
+    answer: "All plans include full access to our complete content library: Spot Diagnosis module with 500+ cases, PACES Stations practice, Differentials training for 200+ signs, 1000+ High Yield SBAs, and Examination Checklists. Plans differ only in duration - 2 months (Standard), 6 months (Plus), or 12 months (Complete) - giving you flexibility based on your exam timeline."
   },
   {
     question: "How long should I prepare for PACES?",
@@ -30,7 +30,7 @@ const homepageFAQs = [
   }
 ];
 
-type PlanType = '3month' | '6month' | '12month';
+type PlanType = '2month' | '6month' | '12month';
 
 const testimonials = [
   { initials: "SM", name: "Sarah M.", role: "Medical Registrar, London", quote: "The question bank mirrors the actual exam remarkably well. I felt genuinely prepared walking into the assessment centre." },
@@ -309,17 +309,17 @@ export default function Home() {
           Prepare for your MRCP PACES exam with the UK's leading medical exam preparation platform.
           MRCPPACESPREP offers 2000+ practice questions, unlimited mock exams, clinical examination practice,
           and detailed explanations. Trusted by 8,500+ medical trainees from UCL, Manchester, Nottingham,
-          King's College London, Oxford, Cambridge, Cardiff, Edinburgh, and Belfast. 94% pass rate. From £75/3 months.
+          King's College London, Oxford, Cambridge, Cardiff, Edinburgh, and Belfast. 94% pass rate. From £95/2 months.
         </p>
 
         <h3>MRCP PACES Exam Preparation Services</h3>
         <ul>
-          <li>MRCP PACES Practice Questions - 2000+ Questions - From £75/3 months</li>
-          <li>MRCP PACES Mock Exams - Unlimited Full-Length Exams - From £75/3 months</li>
-          <li>Clinical Examination Practice - 350+ Questions - From £75/3 months</li>
-          <li>Clinical Medicine Questions - 400+ Questions - From £75/3 months</li>
-          <li>Medical Ethics Questions - 300+ Questions - From £75/3 months</li>
-          <li>MRCP PACES Study Guides and Resources - Included - From £75/3 months</li>
+          <li>MRCP PACES Practice Questions - 2000+ Questions - From £95/2 months</li>
+          <li>MRCP PACES Mock Exams - Unlimited Full-Length Exams - From £95/2 months</li>
+          <li>Clinical Examination Practice - 350+ Questions - From £95/2 months</li>
+          <li>Clinical Medicine Questions - 400+ Questions - From £95/2 months</li>
+          <li>Medical Ethics Questions - 300+ Questions - From £95/2 months</li>
+          <li>MRCP PACES Study Guides and Resources - Included - From £95/2 months</li>
         </ul>
 
         <h3>Why Choose MRCPPACESPREP?</h3>
@@ -714,14 +714,14 @@ export default function Home() {
           </div>
 
           <div className="grid gap-4 sm:gap-6 md:grid-cols-3 max-w-4xl mx-auto">
-            {/* Standard Plan - 3 Months */}
+            {/* Standard Plan - 2 Months */}
             <div className="pill-card transition-all p-4 sm:p-6">
               <div className="text-center pb-4 sm:pb-6 border-b border-gray-100">
                 <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">Standard</h3>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-3xl sm:text-4xl font-light text-gray-900">£75</span>
+                  <span className="text-3xl sm:text-4xl font-light text-gray-900">£95</span>
                 </div>
-                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-500">3 months access</p>
+                <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-500">2 months access</p>
               </div>
 
               <div className="py-4 sm:py-6 space-y-2 sm:space-y-3">
@@ -746,11 +746,11 @@ export default function Home() {
               </div>
 
               <button
-                onClick={() => handleCheckout('3month')}
+                onClick={() => handleCheckout('2month')}
                 disabled={isLoading}
                 className="w-full py-2.5 sm:py-3 border-2 border-gray-900 text-gray-900 rounded-lg font-medium hover:bg-gray-50 transition-colors text-center text-sm disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {loadingPlan === '3month' ? 'Processing...' : 'Get Standard'}
+                {loadingPlan === '2month' ? 'Processing...' : 'Get Standard'}
               </button>
             </div>
 
@@ -765,7 +765,7 @@ export default function Home() {
               <div className="text-center pb-4 sm:pb-6 border-b border-gray-100">
                 <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-1 sm:mb-2">Plus</h3>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-3xl sm:text-4xl font-light text-gray-900">£135</span>
+                  <span className="text-3xl sm:text-4xl font-light text-gray-900">£155</span>
                 </div>
                 <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-gray-500">6 months access</p>
               </div>

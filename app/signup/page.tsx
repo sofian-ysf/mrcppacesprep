@@ -149,14 +149,14 @@ function SignupForm() {
   }
 
   const planNames: Record<string, string> = {
-    '3month': 'Standard (3 Months)',
+    '2month': 'Standard (2 Months)',
     '6month': 'Plus (6 Months)',
     '12month': 'Complete (12 Months)',
   }
 
   const planPrices: Record<string, string> = {
-    '3month': '£75',
-    '6month': '£135',
+    '2month': '£95',
+    '6month': '£155',
     '12month': '£215',
   }
 
