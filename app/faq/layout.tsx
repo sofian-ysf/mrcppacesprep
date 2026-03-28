@@ -3,7 +3,7 @@ import { generateFAQSchema } from './faqData'
 
 export const metadata: Metadata = {
   title: 'MRCP PACES Exam FAQ 2026 | Pass Rates, Exam Format & Study Tips',
-  description: 'Get answers to 25+ MRCP PACES exam questions. Learn about exam dates, fees (£237), pass rates (70-80%), format (110 questions), and preparation tips from our 94% pass rate experts.',
+  description: 'Get answers to 25+ MRCP PACES exam questions. Learn about exam dates, fees (£700-900), pass rates (45-55%), 5 clinical stations, and preparation tips from our 94% pass rate platform.',
   keywords: 'MRCP PACES exam FAQ, MRCP PACES exam questions, MRCP PACES exam pass rate, MRCP PACES exam format, MRCP PACES retake, how to prepare for MRCP PACES exam, MRCP PACES exam topics, MRCP PACES exam 2026',
   openGraph: {
     title: 'MRCP PACES Exam FAQ 2026 | Pass Rates, Exam Format & Study Tips',
