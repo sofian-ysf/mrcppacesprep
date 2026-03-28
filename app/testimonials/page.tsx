@@ -9,7 +9,7 @@ import FAQSection from '@/app/components/FAQSection'
 const testimonialsFAQs = [
   {
     question: "Do students actually pass using MRCPPACESPREP?",
-    answer: "Yes! 94% of our students pass the MRCP PACES exam on their first attempt. We've helped over 29,000 medical trainees since 2019, with thousands of verified success stories."
+    answer: "Yes! 94% of our candidates pass the MRCP PACES exam on their first attempt. We've helped over 29,000 medical trainees since 2019, with thousands of verified success stories."
   },
   {
     question: "How long do successful students study?",
@@ -17,7 +17,7 @@ const testimonialsFAQs = [
   },
   {
     question: "Is MRCPPACESPREP worth the money?",
-    answer: "Our students think so - we have a 4.8/5 rating from over 29,000 users. At £30/month, it's significantly cheaper than retaking the £253 MRCP PACES exam."
+    answer: "Our candidates think so - we have a 4.8/5 rating from over 29,000 users. At £30/month, it's significantly cheaper than retaking the £253 MRCP PACES exam."
   },
   {
     question: "What do students say about the questions?",
@@ -210,7 +210,7 @@ export default function TestimonialsPage() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-              Real Students, Real Success
+              Real Candidates, Real Success
               <span className="block text-gray-600 text-3xl mt-2">Stories of MRCP PACES Exam Achievement</span>
             </h1>
             <p className="mt-6 mx-auto max-w-2xl text-xl text-gray-600">
@@ -445,7 +445,7 @@ export default function TestimonialsPage() {
       {/* FAQ Section */}
       <FAQSection
         faqs={testimonialsFAQs}
-        title="Student Success Stories - FAQ"
+        title="Candidate Success Stories - FAQ"
         className="py-16 px-4 sm:px-6 lg:px-8 bg-[#fbfaf4]"
         disableSchema={true}
       />

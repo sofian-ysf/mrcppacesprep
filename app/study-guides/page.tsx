@@ -59,7 +59,7 @@ export default function StudyGuidesPage() {
               </Link>
             </div>
             <p className="mt-4 text-sm text-gray-500">
-              Join 8,500+ students • 94% pass rate
+              Join 8,500+ candidates • 94% pass rate
             </p>
           </div>
         </div>
@@ -421,7 +421,7 @@ export default function StudyGuidesPage() {
             Access All Study Guides and Materials Today
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join 8,500+ students who passed with our comprehensive study materials.
+            Join 8,500+ candidates who passed with our comprehensive study materials.
           </p>
           <Link
             href="/pricing"

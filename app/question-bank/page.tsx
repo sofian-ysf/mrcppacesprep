@@ -72,7 +72,7 @@ export default function QuestionBankPage() {
               </h1>
 
               <p className="mx-auto mb-8 md:mb-10 max-w-2xl text-base leading-relaxed text-gray-600 md:text-lg lg:text-xl">
-                Exam-style questions with detailed explanations. Written by qualified physicians. 94% of our students pass on their first attempt.
+                Exam-style questions with detailed explanations. Written by qualified physicians. 94% of our candidates pass on their first attempt.
               </p>
 
               <div className="flex flex-col gap-3 md:flex-row md:gap-4 md:justify-center">
@@ -91,7 +91,7 @@ export default function QuestionBankPage() {
               </div>
 
               <p className="mt-4 text-sm text-gray-500">
-                Join 8,500+ students • 94% pass rate
+                Join 8,500+ candidates • 94% pass rate
               </p>
 
               {/* Stats */}
@@ -379,7 +379,7 @@ export default function QuestionBankPage() {
               Ready to Start Practicing?
             </h2>
             <p className="text-base md:text-lg text-gray-600 mb-8">
-              Try 15 free questions right now. See why 94% of our students pass.
+              Try 15 free questions right now. See why 94% of our candidates pass.
             </p>
 
             <div className="flex flex-col gap-3 md:flex-row md:gap-4 md:justify-center">

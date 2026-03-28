@@ -80,7 +80,7 @@ export default function MockExamsPage() {
               </div>
 
               <p className="mt-4 text-sm text-gray-500">
-                Join 8,500+ students • 94% pass rate
+                Join 8,500+ candidates • 94% pass rate
               </p>
 
               {/* Stats - 2x2 grid on mobile, 4 columns on tablet+ */}
@@ -437,7 +437,7 @@ export default function MockExamsPage() {
               Ready to See Where You Stand?
             </h2>
             <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-10 max-w-xl mx-auto leading-relaxed">
-              Join 8,500+ students who passed with our mock exams.
+              Join 8,500+ candidates who passed with our mock exams.
             </p>
 
             <div className="flex flex-col gap-3 md:flex-row md:gap-4 md:justify-center">

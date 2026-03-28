@@ -189,7 +189,7 @@ export default async function BlogPage() {
             <section className="blog-inline-cta">
               <div className="blog-inline-cta-content">
                 <h3>Ready to Start Practicing?</h3>
-                <p>2,000+ exam-style questions with detailed explanations. 94% of our students pass on their first attempt.</p>
+                <p>2,000+ exam-style questions with detailed explanations. 94% of our candidates pass on their first attempt.</p>
                 <div className="blog-inline-cta-buttons">
                   <Link href="/try-free" className="blog-cta-primary">
                     Try 15 Free Questions

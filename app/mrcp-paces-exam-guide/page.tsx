@@ -299,7 +299,7 @@ export default function MRCPPACESExamGuidePage() {
               Ready to Start Your MRCP PACES Exam Preparation?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join 8,500+ students who passed their exam with our platform
+              Join 8,500+ candidates who passed their exam with our platform
             </p>
             <Link
               href="/signup"

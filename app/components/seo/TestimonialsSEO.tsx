@@ -117,7 +117,7 @@ export default function TestimonialsSEO() {
       />
 
       <div className="sr-only" aria-hidden="true">
-        <h1>MRCP PACES Exam Success Stories | 94% Pass Rate | Real Student Testimonials</h1>
+        <h1>MRCP PACES Exam Success Stories | 94% Pass Rate | Real Candidate Testimonials</h1>
         <h2>Read How 8,500+ Medical Trainees Passed Their MRCP PACES Exam with MRCPPACESPREP</h2>
 
         <p>
@@ -132,7 +132,7 @@ export default function TestimonialsSEO() {
           <li>89% First-Time Pass Rate</li>
           <li>96% Retake Success Rate</li>
           <li>23% Average Score Improvement</li>
-          <li>8,500+ Students Helped</li>
+          <li>8,500+ Candidates Helped</li>
         </ul>
 
         <h3>Success Story Categories</h3>

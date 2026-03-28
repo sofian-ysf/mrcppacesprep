@@ -70,7 +70,7 @@ const faqSchema = {
       "name": "What is the pass rate with these questions?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "94% of students using our questions pass their MRCP PACES exam vs 70-80% national average. 8,500+ students helped."
+        "text": "94% of students using our questions pass their MRCP PACES exam vs 70-80% national average. 8,500+ candidates helped."
       }
     },
     {
@@ -131,7 +131,7 @@ export default function MRCPPACESExamQuestionsSEO() {
         <p>
           Practice with 2000+ MRCP PACES exam questions written by registered physicians who recently passed.
           Single Best Answer (SBA), Extended Matching Questions (EMQ), and calculation questions.
-          Detailed explanations for every answer. 94% pass rate. 8,500+ students helped. From £30/month.
+          Detailed explanations for every answer. 94% pass rate. 8,500+ candidates helped. From £30/month.
         </p>
 
         <h3>MRCP PACES Exam Question Categories</h3>

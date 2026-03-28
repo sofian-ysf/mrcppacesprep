@@ -42,7 +42,7 @@ const competitors: Record<string, {
       'Exam Simulation': { us: 'Full mock exam experience', them: 'Question practice only' },
       'Expert Authors': { us: 'Written by recently passed physicians', them: 'Various contributors' },
       'Detailed Explanations': { us: 'Every question has detailed rationale', them: 'Basic explanations' },
-      'Student Success Rate': { us: '94% first-time pass rate', them: 'Not published' },
+      'Candidate Success Rate': { us: '94% first-time pass rate', them: 'Not published' },
       'Support': { us: 'Email support included', them: 'Limited support' },
     },
     pricing: { us: 'From 25 GBP one-time payment', them: 'Varies by package' },

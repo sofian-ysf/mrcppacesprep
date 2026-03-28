@@ -20,7 +20,7 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: "MRCP PACES Exam Questions 2026 | 2000+ Practice Questions | 94% Pass Rate",
-  description: "Pass your MRCP PACES exam first time in 2026. 2000+ practice questions, unlimited mock exams, clinical skills practice. 94% pass rate. 8,500+ students.",
+  description: "Pass your MRCP PACES exam first time in 2026. 2000+ practice questions, unlimited mock exams, clinical skills practice. 94% pass rate. 8,500+ candidates.",
   keywords: [
     // Primary keywords
     "MRCP PACES exam",
@@ -139,7 +139,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "MRCP PACES Exam Questions 2026 | 2000+ Practice Questions | 94% Pass Rate",
-    description: "2000+ MRCP PACES practice questions for 2026. 94% pass rate. 8,500+ students. Start preparing today!",
+    description: "2000+ MRCP PACES practice questions for 2026. 94% pass rate. 8,500+ candidates. Start preparing today!",
     creator: "@mrcppacesprep",
     site: "@mrcppacesprep",
     images: ["https://www.mrcppacesprep.com/og-image.png"],

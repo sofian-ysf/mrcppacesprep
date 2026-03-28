@@ -400,7 +400,7 @@ export default async function BlogPostPage({ params }: Props) {
             <h2 className="blog-cta-title">Ready to Pass Your MRCP PACES Exam?</h2>
             <p className="blog-cta-description">
               Put this knowledge into practice with 2,000+ exam-style questions.
-              94% of our students pass on their first attempt.
+              94% of our candidates pass on their first attempt.
             </p>
             <div className="blog-cta-buttons">
               <Link href="/try-free" className="blog-cta-primary">

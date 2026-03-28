@@ -40,7 +40,7 @@ const faqSchema = {
       "name": "What is MRCPPACESPREP's pass rate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "94% of our students pass their MRCP PACES exam, compared to 70-80% national average. 96% retake success rate."
+        "text": "94% of our candidates pass their MRCP PACES exam, compared to 70-80% national average. 96% retake success rate."
       }
     },
     {
@@ -96,7 +96,7 @@ export default function AboutSEO() {
 
         <h3>Our Impact</h3>
         <ul>
-          <li>8,500+ Students Helped</li>
+          <li>8,500+ Candidates Helped</li>
           <li>94% First-Time Pass Rate</li>
           <li>96% Retake Success Rate</li>
           <li>2000+ Practice Questions</li>

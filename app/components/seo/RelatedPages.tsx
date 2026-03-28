@@ -46,7 +46,7 @@ const PAGE_RELATIONS: Record<string, RelatedPage[]> = {
     { href: '/question-bank', title: 'Question Bank', description: 'Practice questions' },
   ],
   '/pricing': [
-    { href: '/testimonials', title: 'Testimonials', description: 'What our students say' },
+    { href: '/testimonials', title: 'Testimonials', description: 'What our candidates say' },
     { href: '/faq', title: 'FAQ', description: 'Common questions' },
     { href: '/question-bank', title: 'Question Bank', description: 'See what you get' },
   ],

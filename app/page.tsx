@@ -5,7 +5,6 @@ import Script from "next/script";
 import { useRef, useState } from "react";
 import { useAuth } from "@/app/contexts/AuthContext";
 import { getStoredGclid } from "@/app/components/GclidCapture";
-import UniversityLogos from '@/app/components/home/UniversityLogos'
 import FAQSection from '@/app/components/FAQSection'
 
 const homepageFAQs = [
@@ -201,7 +200,7 @@ export default function Home() {
         "@type": "Course",
         "@id": "https://www.mrcppacesprep.com/#course",
         "name": "MRCP PACES Exam Preparation Course",
-        "description": "Complete preparation course for the MRCP PACES exam featuring 2000+ practice questions, realistic mock exams, detailed explanations, and comprehensive study resources. 94% of students pass their exam.",
+        "description": "Complete preparation course for the MRCP PACES exam featuring 2000+ practice questions, realistic mock exams, detailed explanations, and comprehensive study resources. 94% of candidates pass their exam.",
         "provider": {
           "@id": "https://www.mrcppacesprep.com/#organization"
         },
@@ -326,7 +325,7 @@ export default function Home() {
         <h3>Why Choose MRCPPACESPREP?</h3>
         <ul>
           <li>94% Pass Rate - Higher Than National Average of 70-80%</li>
-          <li>8,500+ Students Helped Pass Their MRCP PACES Exam</li>
+          <li>8,500+ Candidates Helped Pass Their MRCP PACES Exam</li>
           <li>Questions Written by Recently Qualified Physicians</li>
           <li>Content Updated for 2026 MRCP PACES Framework</li>
           <li>Detailed Explanations for Every Question</li>
@@ -384,7 +383,7 @@ export default function Home() {
           MRCP clinical exam, MRCP PACES station questions, MRCP PACES revision, MRCP exam questions,
           medical exam preparation, MRCP PACES mock exam, clinical examination, clinical medicine questions,
           medical ethics UK, MRCP PACES pass rate 2026, MRCP candidate exam, MRCP PACES exam 2026,
-          medical student revision, clinical examination questions, therapeutics test, medicine exam,
+          medical trainee revision, clinical examination questions, therapeutics test, medicine exam,
           MRCP PACES assessment 2026, MRCP training, foundation physician exam, MBBS exam prep,
           medical graduate exam, MRCP registration exam, IMG exam, international medical graduate UK,
           clinical examination practice, history taking practice, communication skills,
@@ -455,7 +454,7 @@ export default function Home() {
                     </svg>
                   ))}
                 </div>
-                <div className="text-xs sm:text-sm text-gray-600">Student Rating</div>
+                <div className="text-xs sm:text-sm text-gray-600">User Rating</div>
               </div>
               <div className="text-center">
                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">94%</div>
@@ -467,22 +466,13 @@ export default function Home() {
               </div>
               <div className="text-center">
                 <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900">8,500+</div>
-                <div className="text-xs sm:text-sm text-gray-600">Students</div>
+                <div className="text-xs sm:text-sm text-gray-600">Candidates</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Institutions Section */}
-      <section className="bg-[#fbfaf4] px-4 py-10 sm:py-16 sm:px-6 lg:px-8 border-y border-gray-100">
-        <div className="mx-auto max-w-5xl">
-          <p className="text-center text-xs sm:text-sm uppercase tracking-widest text-gray-500 mb-6 sm:mb-12">
-            Trusted by graduates from institutions across the UK
-          </p>
-          <UniversityLogos />
-        </div>
-      </section>
 
       {/* Why Preparation Matters */}
       <section className="bg-[#fbfaf4] px-4 py-12 sm:py-24 sm:px-6 lg:px-8">
@@ -871,7 +861,7 @@ export default function Home() {
             Start Today
           </p>
           <h2 className="mb-4 sm:mb-6 text-2xl sm:text-3xl lg:text-4xl font-semibold text-gray-900">
-            Join 8,500+ Students Who Passed
+            Join 8,500+ Candidates Who Passed
           </h2>
           <p className="mb-6 sm:mb-10 text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2">
             Begin your preparation journey today. Thoughtful practice, detailed explanations, and the confidence to succeed.

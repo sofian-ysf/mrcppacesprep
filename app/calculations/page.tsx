@@ -100,7 +100,7 @@ export default function CalculationsPage() {
               </div>
 
               <p className="mt-4 text-sm text-gray-500">
-                Join 8,500+ students • 72% score improvement
+                Join 8,500+ candidates • 72% score improvement
               </p>
 
               {/* Social proof stats */}
@@ -115,7 +115,7 @@ export default function CalculationsPage() {
                 </div>
                 <div className="text-center">
                   <div className="text-2xl md:text-3xl font-bold text-gray-900">4.8</div>
-                  <div className="text-xs md:text-sm text-gray-600 mt-1">Student Rating</div>
+                  <div className="text-xs md:text-sm text-gray-600 mt-1">User Rating</div>
                 </div>
               </div>
             </div>
@@ -255,7 +255,7 @@ export default function CalculationsPage() {
           <div className="mx-auto max-w-7xl">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-900">
-                Real Results from Real Students
+                Real Results from Real Candidates
               </h2>
             </div>
 

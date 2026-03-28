@@ -21,7 +21,7 @@ export default function AdsMRCPPACESExamQuestionsPage() {
             <svg className="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
             </svg>
-            94% Pass Rate | 8,500+ Students
+            94% Pass Rate | 8,500+ Candidates
           </div>
 
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
@@ -129,7 +129,7 @@ export default function AdsMRCPPACESExamQuestionsPage() {
             Start Practicing Today
           </h2>
           <p className="text-gray-300 mb-8">
-            Join 8,500+ students who passed their MRCP PACES exam
+            Join 8,500+ candidates who passed their MRCP PACES exam
           </p>
           <Link
             href="/signup"

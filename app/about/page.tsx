@@ -4,8 +4,8 @@ import AboutSEO from '@/app/components/seo/AboutSEO'
 import { RelatedPages } from '@/app/components/seo/RelatedPages'
 
 export const metadata: Metadata = {
-  title: 'About MRCPPACESPREP | UK MRCP PACES Exam Platform | 94% Pass Rate | 8,500+ Students',
-  description: 'MRCPPACESPREP: UK\'s leading MRCP PACES exam prep platform. Created by physicians. 94% pass rate. 8,500+ students helped. Learn our mission and story.',
+  title: 'About MRCPPACESPREP | UK MRCP PACES Exam Platform | 94% Pass Rate | 8,500+ Candidates',
+  description: 'MRCPPACESPREP: UK\'s leading MRCP PACES exam prep platform. Created by physicians. 94% pass rate. 8,500+ candidates helped. Learn our mission and story.',
   keywords: [
     'about MRCPPACESPREP', 'MRCP PACES exam platform', 'clinical exam preparation',
     'physician-created content', 'UK MRCP exam', 'PACES exam platform',
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'About MRCPPACESPREP | UK MRCP PACES Exam Platform | 94% Pass Rate',
-    description: 'UK\'s leading MRCP PACES exam preparation platform. Created by physicians. 94% pass rate. 8,500+ students.',
+    description: 'UK\'s leading MRCP PACES exam preparation platform. Created by physicians. 94% pass rate. 8,500+ candidates.',
     url: 'https://www.mrcppacesprep.com/about',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About MRCPPACESPREP | UK MRCP PACES Exam Platform',
-    description: 'Learn about MRCPPACESPREP - Created by physicians, trusted by 8,500+ students.'
+    description: 'Learn about MRCPPACESPREP - Created by physicians, trusted by 8,500+ candidates.'
   },
   alternates: {
     canonical: '/about',
@@ -64,7 +64,7 @@ export default function AboutPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <span className="text-lg font-semibold text-gray-900">94% of our students pass on their first attempt</span>
+                <span className="text-lg font-semibold text-gray-900">94% of our candidates pass on their first attempt</span>
               </div>
             </div>
 
@@ -111,7 +111,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-8 text-center text-white lg:grid-cols-4">
             <div>
               <div className="text-4xl font-bold mb-2">8,500+</div>
-              <div className="text-gray-400">Students Helped</div>
+              <div className="text-gray-400">Candidates Helped</div>
             </div>
             <div>
               <div className="text-4xl font-bold mb-2">94%</div>
@@ -162,7 +162,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="mb-2 text-xl font-semibold text-gray-900">The Results</h3>
-              <p className="text-gray-600">Since launching, we've helped over 8,500 students pass their MRCP PACES exam, with a 94% first-time pass rate. Our students consistently report feeling more confident and better prepared than their peers.</p>
+              <p className="text-gray-600">Since launching, we've helped over 8,500 candidates pass their MRCP PACES exam, with a 94% first-time pass rate. Our candidates consistently report feeling more confident and better prepared than their peers.</p>
             </div>
           </div>
         </div>

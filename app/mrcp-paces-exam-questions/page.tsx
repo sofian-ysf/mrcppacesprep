@@ -6,7 +6,7 @@ import { RelatedPages } from '@/app/components/seo/RelatedPages'
 
 export const metadata: Metadata = {
   title: 'MRCP PACES Exam Questions 2026 | 2000+ Practice Questions | 94% Pass Rate',
-  description: '2000+ MRCP PACES exam practice questions for 2026 with detailed explanations. SBA, EMQ & calculations. 94% pass rate. 8,500+ students. Start preparing today.',
+  description: '2000+ MRCP PACES exam practice questions for 2026 with detailed explanations. SBA, EMQ & calculations. 94% pass rate. 8,500+ candidates. Start preparing today.',
   keywords: [
     'MRCP PACES exam questions', 'MRCP PACES practice questions', 'MRCP PACES exam questions 2026', 'MRCP PACES past cases',
     'MRCP PACES station questions', 'MRCP PACES exam questions', 'medical exam questions UK', 'MRCP PACES clinical cases',
