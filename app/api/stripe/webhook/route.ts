@@ -147,7 +147,12 @@ async function handleCheckoutCompleted(session: Stripe.Checkout.Session) {
   // Send confirmation email to user
   if (userEmail) {
     try {
-      await sendSubscriptionActiveEmail(userEmail)
+      const planDetails = plan ? {
+        name: plan.name,
+        duration: `${plan.duration_months} month${plan.duration_months > 1 ? 's' : ''}`,
+        price: plan.price
+      } : undefined
+      await sendSubscriptionActiveEmail(userEmail, planDetails)
       console.log('Purchase confirmation email sent to:', userEmail)
     } catch (emailError) {
       console.error('Failed to send purchase email:', emailError)

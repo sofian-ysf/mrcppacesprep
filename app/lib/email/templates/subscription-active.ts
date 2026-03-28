@@ -1,4 +1,14 @@
-export function getSubscriptionActiveEmail(userEmail: string): string {
+export interface PlanDetails {
+  name: string
+  duration: string
+  price: number
+}
+
+export function getSubscriptionActiveEmail(userEmail: string, plan?: PlanDetails): string {
+  const planName = plan?.name || 'Standard'
+  const planDuration = plan?.duration || '2 months'
+  const planPrice = plan?.price || 95
+
   return `<!DOCTYPE html>
 <html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" lang="en">
 
@@ -115,11 +125,12 @@ export function getSubscriptionActiveEmail(userEmail: string): string {
                                                                             What's included in your subscription
                                                                         </p>
                                                                         <ul style="margin: 0; padding-left: 20px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #555555; line-height: 1.8;">
-                                                                            <li>2000+ practice questions with detailed explanations</li>
-                                                                            <li>Full mock exams simulating the real MRCP PACES assessment</li>
-                                                                            <li>Pharmaceutical calculations practice</li>
-                                                                            <li>Performance tracking and analytics</li>
-                                                                            <li>Study guides and resources</li>
+                                                                            <li>500+ Spot Diagnosis cases with detailed explanations</li>
+                                                                            <li>PACES Station practice scenarios with model answers</li>
+                                                                            <li>200+ Differentials flashcards</li>
+                                                                            <li>1000+ High Yield SBA questions</li>
+                                                                            <li>Examination checklists for all systems</li>
+                                                                            <li>Performance tracking and progress analytics</li>
                                                                         </ul>
                                                                     </div>
 
@@ -128,12 +139,12 @@ export function getSubscriptionActiveEmail(userEmail: string): string {
                                                                         <tr>
                                                                             <td style="text-align: left; padding: 10px 0;">
                                                                                 <!--[if mso]>
-                                                                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.mrcppacesprep.com/questions" style="height:44px;width:180px;v-text-anchor:middle;" arcsize="9%" stroke="false" fillcolor="#000000">
+                                                                                <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://www.mrcppacesprep.com/dashboard" style="height:44px;width:180px;v-text-anchor:middle;" arcsize="9%" stroke="false" fillcolor="#000000">
                                                                                     <w:anchorlock/>
                                                                                     <v:textbox inset="0px,0px,0px,0px">
                                                                                         <center style="color:#ffffff; font-family:Arial, sans-serif; font-size:16px">
                                                                                 <![endif]-->
-                                                                                <a href="https://www.mrcppacesprep.com/questions" target="_blank" style="text-decoration: none; display: inline-block; color: #ffffff; background-color: #000000; border-radius: 4px; width: auto; border: 0; padding: 12px 24px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; text-align: center; mso-border-alt: none; word-break: keep-all;">
+                                                                                <a href="https://www.mrcppacesprep.com/dashboard" target="_blank" style="text-decoration: none; display: inline-block; color: #ffffff; background-color: #000000; border-radius: 4px; width: auto; border: 0; padding: 12px 24px; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 600; text-align: center; mso-border-alt: none; word-break: keep-all;">
                                                                                     Start Practising
                                                                                 </a>
                                                                                 <!--[if mso]>
@@ -148,7 +159,7 @@ export function getSubscriptionActiveEmail(userEmail: string): string {
                                                                     <!-- Subscription details -->
                                                                     <div style="border-top: 1px solid #d1d3d6; margin-top: 25px; padding-top: 20px;">
                                                                         <p style="margin: 0 0 10px 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #666666;">
-                                                                            <strong>Subscription:</strong> Monthly (£30/month)
+                                                                            <strong>Plan:</strong> ${planName} (£${planPrice} - ${planDuration} access)
                                                                         </p>
                                                                         <p style="margin: 0; font-family: 'Archivo', Arial, Helvetica, sans-serif; font-size: 14px; color: #666666;">
                                                                             <strong>Account:</strong> ${userEmail}
