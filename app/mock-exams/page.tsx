@@ -478,7 +478,7 @@ export default function MockExamsPage() {
                   <li><Link href="/question-bank" className="hover:text-gray-900 py-1 inline-block">Question Bank</Link></li>
                   <li><Link href="/mock-exams" className="hover:text-gray-900 py-1 inline-block">Mock Exams</Link></li>
                   <li><Link href="/study-guides" className="hover:text-gray-900 py-1 inline-block">Study Guides</Link></li>
-                  <li><Link href="/calculations" className="hover:text-gray-900 py-1 inline-block">Calculations</Link></li>
+                  <li><Link href="/study-guides" className="hover:text-gray-900 py-1 inline-block">Study Guides</Link></li>
                 </ul>
               </div>
 

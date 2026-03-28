@@ -427,7 +427,7 @@ export default function HelpPage() {
                 <li><Link href="/question-bank" className="hover:text-gray-900">Question Bank</Link></li>
                 <li><Link href="/mock-exams" className="hover:text-gray-900">Mock Exams</Link></li>
                 <li><Link href="/study-guides" className="hover:text-gray-900">Study Guides</Link></li>
-                <li><Link href="/calculations" className="hover:text-gray-900">Calculations Practice</Link></li>
+                <li><Link href="/study-guides" className="hover:text-gray-900">Study Guides</Link></li>
               </ul>
             </div>
 

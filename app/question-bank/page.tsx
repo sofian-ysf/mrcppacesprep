@@ -22,7 +22,7 @@ import {
 
 export const metadata: Metadata = {
   title: 'MRCP PACES Question Bank 2025 | 2000+ Practice Questions | 94% Pass Rate',
-  description: 'Master your 2025 MRCP PACES exam with 2000+ practice questions. SBA, EMQ & calculations. Detailed explanations, progress tracking. 94% pass rate.',
+  description: 'Master your 2025 MRCP PACES exam with 2000+ practice questions. SBA & EMQ formats. Detailed explanations, progress tracking. 94% pass rate.',
   keywords: [
     'MRCP PACES question bank', 'MRCP PACES practice questions', 'pre-reg exam questions', 'pharmacy exam questions UK',
     'MRCP PACES SBA questions', 'MRCP PACES EMQ practice', 'clinical pharmacy questions', 'pharmacy law questions',
@@ -45,12 +45,12 @@ export const metadata: Metadata = {
 }
 
 const questionCategories = [
-  { icon: Calculator, title: 'Calculations', count: '350+', desc: 'Dosage, dilutions, IV rates' },
-  { icon: Flask, title: 'Clinical Pharmacy', count: '400+', desc: 'Drug interactions, therapeutics' },
-  { icon: Scales, title: 'Law & Ethics', count: '300+', desc: 'Regulations, professional standards' },
-  { icon: Pill, title: 'Pharmaceutics', count: '250+', desc: 'Formulation, stability' },
-  { icon: Heart, title: 'Pharmacology', count: '350+', desc: 'Mechanisms, adverse effects' },
-  { icon: Users, title: 'Public Health', count: '200+', desc: 'Prevention, health promotion' },
+  { icon: Heart, title: 'Cardiovascular', count: '350+', desc: 'Examination, ECG, murmurs' },
+  { icon: Flask, title: 'Respiratory', count: '400+', desc: 'Chest examination, spirometry' },
+  { icon: Scales, title: 'Neurology', count: '300+', desc: 'Cranial nerves, reflexes' },
+  { icon: Pill, title: 'Gastroenterology', count: '250+', desc: 'Abdominal examination, liver' },
+  { icon: Users, title: 'Communication', count: '350+', desc: 'History taking, ethics' },
+  { icon: Calculator, title: 'Clinical Skills', count: '200+', desc: 'Examination checklists' },
 ]
 
 export default function QuestionBankPage() {
@@ -436,7 +436,7 @@ export default function QuestionBankPage() {
                   <li><Link href="/question-bank" className="hover:text-gray-900 py-1 inline-block">Question Bank</Link></li>
                   <li><Link href="/mock-exams" className="hover:text-gray-900 py-1 inline-block">Mock Exams</Link></li>
                   <li><Link href="/study-guides" className="hover:text-gray-900 py-1 inline-block">Study Guides</Link></li>
-                  <li><Link href="/calculations" className="hover:text-gray-900 py-1 inline-block">Calculations</Link></li>
+                  <li><Link href="/study-guides" className="hover:text-gray-900 py-1 inline-block">Study Guides</Link></li>
                 </ul>
               </div>
 

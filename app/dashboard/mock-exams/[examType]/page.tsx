@@ -10,7 +10,6 @@ import AccessControl from '@/app/components/AccessControl'
 import { Question } from '@/app/types/questions'
 import SBAQuestion from '@/app/components/questions/SBAQuestion'
 import EMQQuestion from '@/app/components/questions/EMQQuestion'
-import CalculationQuestion from '@/app/components/questions/CalculationQuestion'
 import { getStoredGclid } from '@/app/components/GclidCapture'
 
 interface ExamAnswer {
@@ -734,14 +733,6 @@ export default function MockExamSession() {
                     selectedAnswers={emqAnswers}
                     onSelectAnswer={handleEMQAnswer}
                     showFeedback={false}
-                  />
-                ) : currentQuestion.question_type === 'calculation' ? (
-                  <CalculationQuestion
-                    question={currentQuestion}
-                    selectedAnswer={selectedAnswer}
-                    onSelectAnswer={handleSelectAnswer}
-                    showFeedback={false}
-                    isCorrect={false}
                   />
                 ) : (
                   <SBAQuestion

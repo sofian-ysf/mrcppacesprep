@@ -65,10 +65,9 @@ export async function submitBlogPostToIndexNow(slug: string): Promise<boolean> {
 export function getAllStaticUrls(): string[] {
   return [
     '/',
-    '/gphc-exam-questions',
+    '/mrcp-paces-exam-questions',
     '/question-bank',
     '/mock-exams',
-    '/calculations',
     '/study-guides',
     '/resources',
     '/blog',

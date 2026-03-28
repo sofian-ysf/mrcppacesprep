@@ -10,25 +10,20 @@ interface RelatedPage {
 
 // Pre-defined related page mappings for better internal linking
 const PAGE_RELATIONS: Record<string, RelatedPage[]> = {
-  '/gphc-exam-questions': [
+  '/mrcp-paces-exam-questions': [
     { href: '/question-bank', title: 'Question Bank', description: 'Access 2000+ practice questions' },
     { href: '/mock-exams', title: 'Mock Exams', description: 'Test yourself under exam conditions' },
-    { href: '/calculations', title: 'Calculations', description: 'Practice clinical calculations' },
+    { href: '/study-guides', title: 'Study Guides', description: 'Download revision materials' },
   ],
   '/question-bank': [
-    { href: '/gphc-exam-questions', title: 'MRCP PACES Exam Questions', description: 'Learn about question types' },
+    { href: '/mrcp-paces-exam-questions', title: 'MRCP PACES Exam Questions', description: 'Learn about question types' },
     { href: '/mock-exams', title: 'Mock Exams', description: 'Take full-length practice tests' },
     { href: '/study-guides', title: 'Study Guides', description: 'Download revision materials' },
   ],
   '/mock-exams': [
     { href: '/question-bank', title: 'Question Bank', description: 'Practice individual questions' },
-    { href: '/calculations', title: 'Calculations', description: 'Master clinical calculations' },
+    { href: '/study-guides', title: 'Study Guides', description: 'Comprehensive revision guides' },
     { href: '/pricing', title: 'Pricing', description: 'View subscription plans' },
-  ],
-  '/calculations': [
-    { href: '/question-bank', title: 'Question Bank', description: 'Practice SBA and EMQ questions' },
-    { href: '/mock-exams', title: 'Mock Exams', description: 'Full exam simulations' },
-    { href: '/study-guides', title: 'Study Guides', description: 'Download calculation guides' },
   ],
   '/study-guides': [
     { href: '/resources', title: 'Free Resources', description: 'Access more revision materials' },
@@ -38,7 +33,7 @@ const PAGE_RELATIONS: Record<string, RelatedPage[]> = {
   '/blog': [
     { href: '/resources', title: 'Resources', description: 'Free study materials' },
     { href: '/faq', title: 'FAQ', description: 'Common questions answered' },
-    { href: '/gphc-exam-questions', title: 'MRCP PACES Exam Questions', description: 'Start practicing' },
+    { href: '/mrcp-paces-exam-questions', title: 'MRCP PACES Exam Questions', description: 'Start practicing' },
   ],
   '/resources': [
     { href: '/study-guides', title: 'Study Guides', description: 'Comprehensive revision guides' },
@@ -56,7 +51,7 @@ const PAGE_RELATIONS: Record<string, RelatedPage[]> = {
     { href: '/about', title: 'About', description: 'Learn about us' },
   ],
   '/about': [
-    { href: '/testimonials', title: 'Testimonials', description: 'Student success stories' },
+    { href: '/testimonials', title: 'Testimonials', description: 'Candidate success stories' },
     { href: '/contact', title: 'Contact', description: 'Get in touch with us' },
     { href: '/pricing', title: 'Pricing', description: 'View subscription plans' },
   ],
@@ -69,7 +64,7 @@ const PAGE_RELATIONS: Record<string, RelatedPage[]> = {
 
 // Default related pages for any page
 const DEFAULT_RELATED: RelatedPage[] = [
-  { href: '/gphc-exam-questions', title: 'MRCP PACES Exam Questions', description: 'Start your exam preparation' },
+  { href: '/mrcp-paces-exam-questions', title: 'MRCP PACES Exam Questions', description: 'Start your exam preparation' },
   { href: '/pricing', title: 'Pricing', description: 'View subscription plans' },
   { href: '/blog', title: 'Blog', description: 'Tips and strategies' },
 ]

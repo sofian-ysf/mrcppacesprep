@@ -12,7 +12,6 @@ const PRODUCT_LINKS: InternalLink[] = [
   { href: '/mrcp-paces-exam-questions', label: 'MRCP PACES Exam Questions', description: 'Practice with 2000+ exam questions' },
   { href: '/question-bank', label: 'Question Bank', description: 'Access our complete question database' },
   { href: '/mock-exams', label: 'Mock Exams', description: 'Simulate real exam conditions' },
-  { href: '/calculations', label: 'Calculations', description: 'Practice clinical calculations' },
   { href: '/study-guides', label: 'Study Guides', description: 'Download comprehensive guides' },
 ]
 
@@ -23,7 +22,7 @@ const RESOURCE_LINKS: InternalLink[] = [
 ]
 
 const TRUST_LINKS: InternalLink[] = [
-  { href: '/testimonials', label: 'Student Reviews', description: 'Read success stories' },
+  { href: '/testimonials', label: 'Candidate Reviews', description: 'Read success stories' },
   { href: '/about', label: 'About Us', description: 'Learn about our team' },
   { href: '/pricing', label: 'Pricing', description: 'View subscription plans' },
 ]

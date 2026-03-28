@@ -386,10 +386,10 @@ export default async function BlogPostPage({ params }: Props) {
                 <span className="internal-link-text">Mock Exams</span>
                 <span className="internal-link-desc">Full-length timed assessments</span>
               </Link>
-              <Link href="/calculations" className="internal-link-card">
-                <span className="internal-link-icon">🔢</span>
-                <span className="internal-link-text">Calculations</span>
-                <span className="internal-link-desc">Master pharmacy maths</span>
+              <Link href="/study-guides" className="internal-link-card">
+                <span className="internal-link-icon">📚</span>
+                <span className="internal-link-text">Study Guides</span>
+                <span className="internal-link-desc">Comprehensive revision materials</span>
               </Link>
             </div>
           </div>

@@ -30,7 +30,13 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/gphc-calculation-questions',
-        destination: '/calculations',
+        destination: '/question-bank',
+        permanent: true,
+      },
+      // Redirect removed calculations page
+      {
+        source: '/calculations',
+        destination: '/question-bank',
         permanent: true,
       },
       {
