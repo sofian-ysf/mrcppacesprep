@@ -67,15 +67,14 @@ export default function SpotDiagnosisAdmin() {
   // Keyboard navigation
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
-      // Don't capture when typing in inputs
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
         return
       }
 
       if (e.key === 'a' || e.key === 'A') {
-        setCurrentIndex(i => Math.max(0, i - 1))
+        navigatePrev()
       } else if (e.key === 'd' || e.key === 'D') {
-        setCurrentIndex(i => Math.min(filteredCards.length - 1, i + 1))
+        navigateNext()
       } else if (e.key === 'Escape') {
         router.push('/admin')
       }
@@ -83,7 +82,7 @@ export default function SpotDiagnosisAdmin() {
 
     document.addEventListener('keydown', handleKeyDown)
     return () => document.removeEventListener('keydown', handleKeyDown)
-  }, [filteredCards.length, router])
+  }, [currentIndex, filteredCards.length, isDirty, router])
 
   // Paste handler for images
   useEffect(() => {
@@ -106,6 +105,70 @@ export default function SpotDiagnosisAdmin() {
     document.addEventListener('paste', handlePaste)
     return () => document.removeEventListener('paste', handlePaste)
   }, [])
+
+  // Save current card
+  async function saveCurrentCard(): Promise<boolean> {
+    if (!currentCard || !isDirty) return true
+
+    try {
+      const payload: Record<string, unknown> = {
+        id: currentCard.id,
+        media_type: mediaType,
+      }
+
+      if (mediaType === 'image') {
+        payload.image_url = imageUrl || null
+        payload.youtube_id = null
+      } else {
+        payload.youtube_id = extractYouTubeId(youtubeUrl)
+        payload.image_url = null
+      }
+
+      const response = await fetch('/api/admin/spot-diagnosis', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+
+      if (response.ok) {
+        // Update local state
+        setAllCards(cards => cards.map(c =>
+          c.id === currentCard.id
+            ? { ...c, media_type: mediaType, image_url: payload.image_url as string | null, youtube_id: payload.youtube_id as string | null }
+            : c
+        ))
+        setIsDirty(false)
+        return true
+      } else {
+        const error = await response.json()
+        alert(error.error || 'Failed to save')
+        return false
+      }
+    } catch (error) {
+      console.error('Save failed:', error)
+      alert('Failed to save')
+      return false
+    }
+  }
+
+  // Navigation functions that save first
+  async function navigateNext() {
+    if (currentIndex >= filteredCards.length - 1) return
+    if (isDirty) {
+      const saved = await saveCurrentCard()
+      if (!saved) return
+    }
+    setCurrentIndex(i => i + 1)
+  }
+
+  async function navigatePrev() {
+    if (currentIndex <= 0) return
+    if (isDirty) {
+      const saved = await saveCurrentCard()
+      if (!saved) return
+    }
+    setCurrentIndex(i => i - 1)
+  }
 
   // Sync current card to form state
   useEffect(() => {
@@ -409,18 +472,18 @@ export default function SpotDiagnosisAdmin() {
       {/* Navigation buttons */}
       <div className="flex justify-between">
         <button
-          onClick={() => setCurrentIndex(i => Math.max(0, i - 1))}
+          onClick={navigatePrev}
           disabled={currentIndex === 0}
-          className="px-4 py-2 bg-gray-100 rounded-lg disabled:opacity-50"
+          className="px-4 py-2 bg-gray-100 rounded-lg disabled:opacity-50 hover:bg-gray-200 transition-colors"
         >
-          ← Prev (A)
+          ← Prev <kbd className="ml-1 px-1.5 py-0.5 bg-gray-200 rounded text-xs">A</kbd>
         </button>
         <button
-          onClick={() => setCurrentIndex(i => Math.min(totalCards - 1, i + 1))}
+          onClick={navigateNext}
           disabled={currentIndex === totalCards - 1}
-          className="px-4 py-2 bg-blue-600 text-white rounded-lg disabled:opacity-50"
+          className="px-4 py-2 bg-blue-600 text-white rounded-lg disabled:opacity-50 hover:bg-blue-700 transition-colors"
         >
-          Next (D) →
+          <kbd className="mr-1 px-1.5 py-0.5 bg-blue-500 rounded text-xs">D</kbd> Next →
         </button>
       </div>
 
