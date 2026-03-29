@@ -26,6 +26,11 @@ export default function SpotDiagnosisAdmin() {
   const [loading, setLoading] = useState(true)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [filter, setFilter] = useState<FilterType>('all')
+  const [mediaType, setMediaType] = useState<'image' | 'video'>('image')
+  const [imageUrl, setImageUrl] = useState('')
+  const [youtubeUrl, setYoutubeUrl] = useState('')
+  const [uploading, setUploading] = useState(false)
+  const [isDirty, setIsDirty] = useState(false)
 
   // Fetch all cards on mount
   useEffect(() => {
@@ -79,6 +84,16 @@ export default function SpotDiagnosisAdmin() {
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [filteredCards.length, router])
 
+  // Sync current card to form state
+  useEffect(() => {
+    if (currentCard) {
+      setMediaType(currentCard.media_type || 'image')
+      setImageUrl(currentCard.image_url || '')
+      setYoutubeUrl(currentCard.youtube_id ? `https://youtube.com/watch?v=${currentCard.youtube_id}` : '')
+      setIsDirty(false)
+    }
+  }, [currentCard?.id])
+
   const currentCard = filteredCards[currentIndex]
   const totalCards = filteredCards.length
   const missingCount = allCards.filter(c => !c.image_url && !c.youtube_id).length
@@ -103,6 +118,18 @@ export default function SpotDiagnosisAdmin() {
         </button>
       </div>
     )
+  }
+
+  function extractYouTubeId(url: string): string | null {
+    const patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
+      /^([a-zA-Z0-9_-]{11})$/
+    ]
+    for (const pattern of patterns) {
+      const match = url.match(pattern)
+      if (match) return match[1]
+    }
+    return null
   }
 
   return (
@@ -182,11 +209,104 @@ export default function SpotDiagnosisAdmin() {
             )}
           </div>
 
-          {/* Right: Media upload area (placeholder for now) */}
-          <div className="w-80 flex-shrink-0">
-            <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
-              <p className="text-gray-400">Media upload area</p>
-              <p className="text-sm text-gray-400 mt-2">Coming in next task</p>
+          {/* Right: Media upload */}
+          <div className="w-80 flex-shrink-0 space-y-4">
+            {/* Image/Video toggle */}
+            <div className="flex gap-2">
+              <button
+                onClick={() => { setMediaType('image'); setIsDirty(true) }}
+                className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
+                  mediaType === 'image'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                📷 Image
+              </button>
+              <button
+                onClick={() => { setMediaType('video'); setIsDirty(true) }}
+                className={`flex-1 py-2 px-4 rounded-lg text-sm font-medium transition-colors ${
+                  mediaType === 'video'
+                    ? 'bg-red-600 text-white'
+                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                }`}
+              >
+                ▶️ Video
+              </button>
+            </div>
+
+            {mediaType === 'image' ? (
+              <>
+                {/* Drop zone */}
+                <div className="border-2 border-dashed border-blue-300 rounded-xl p-6 text-center bg-blue-50/50">
+                  {imageUrl ? (
+                    <img
+                      src={imageUrl}
+                      alt="Preview"
+                      className="max-h-40 mx-auto rounded-lg"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = 'https://via.placeholder.com/200?text=Invalid+URL'
+                      }}
+                    />
+                  ) : (
+                    <>
+                      <div className="text-4xl mb-2">📷</div>
+                      <p className="text-blue-600 font-medium">Drop image here</p>
+                      <p className="text-sm text-gray-500 mt-1">
+                        or paste with <kbd className="px-1 bg-gray-200 rounded">⌘V</kbd>
+                      </p>
+                    </>
+                  )}
+                </div>
+
+                {/* URL input */}
+                <div>
+                  <label className="block text-xs text-gray-500 mb-1">Or enter URL:</label>
+                  <div className="flex gap-2">
+                    <input
+                      type="url"
+                      value={imageUrl}
+                      onChange={(e) => { setImageUrl(e.target.value); setIsDirty(true) }}
+                      placeholder="https://example.com/image.jpg"
+                      className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                    />
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                {/* YouTube URL input */}
+                <div>
+                  <label className="block text-xs text-gray-500 mb-1">YouTube URL:</label>
+                  <input
+                    type="url"
+                    value={youtubeUrl}
+                    onChange={(e) => { setYoutubeUrl(e.target.value); setIsDirty(true) }}
+                    placeholder="https://youtube.com/watch?v=..."
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm"
+                  />
+                </div>
+
+                {/* YouTube preview */}
+                {youtubeUrl && extractYouTubeId(youtubeUrl) && (
+                  <div className="aspect-video rounded-lg overflow-hidden border border-gray-200">
+                    <iframe
+                      src={`https://www.youtube.com/embed/${extractYouTubeId(youtubeUrl)}`}
+                      className="w-full h-full"
+                      allowFullScreen
+                    />
+                  </div>
+                )}
+              </>
+            )}
+
+            {/* Save status */}
+            <div className="text-center text-xs text-gray-400">
+              {isDirty ? (
+                <span className="text-amber-600">● Unsaved changes</span>
+              ) : (
+                <span className="text-green-600">✓ Saved</span>
+              )}
             </div>
           </div>
         </div>
