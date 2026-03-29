@@ -175,6 +175,10 @@ export default function SpotDiagnosisAdmin() {
     setCurrentIndex(i => i - 1)
   }
 
+  const currentCard = filteredCards[currentIndex]
+  const totalCards = filteredCards.length
+  const missingCount = allCards.filter(c => !c.image_url && !c.youtube_id).length
+
   // Sync current card to form state
   useEffect(() => {
     if (currentCard) {
@@ -184,10 +188,6 @@ export default function SpotDiagnosisAdmin() {
       setIsDirty(false)
     }
   }, [currentCard?.id])
-
-  const currentCard = filteredCards[currentIndex]
-  const totalCards = filteredCards.length
-  const missingCount = allCards.filter(c => !c.image_url && !c.youtube_id).length
 
   if (loading) {
     return (
