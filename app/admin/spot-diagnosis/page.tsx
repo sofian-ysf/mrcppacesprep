@@ -32,6 +32,7 @@ export default function SpotDiagnosisAdmin() {
   const [uploading, setUploading] = useState(false)
   const [isDirty, setIsDirty] = useState(false)
   const [isDragging, setIsDragging] = useState(false)
+  const [saving, setSaving] = useState(false)
 
   // Fetch all cards on mount
   useEffect(() => {
@@ -109,7 +110,9 @@ export default function SpotDiagnosisAdmin() {
   // Save current card
   async function saveCurrentCard(): Promise<boolean> {
     if (!currentCard || !isDirty) return true
+    if (saving) return false
 
+    setSaving(true)
     try {
       const payload: Record<string, unknown> = {
         id: currentCard.id,
@@ -148,12 +151,14 @@ export default function SpotDiagnosisAdmin() {
       console.error('Save failed:', error)
       alert('Failed to save')
       return false
+    } finally {
+      setSaving(false)
     }
   }
 
   // Navigation functions that save first
   async function navigateNext() {
-    if (currentIndex >= filteredCards.length - 1) return
+    if (saving || currentIndex >= filteredCards.length - 1) return
     if (isDirty) {
       const saved = await saveCurrentCard()
       if (!saved) return
@@ -162,7 +167,7 @@ export default function SpotDiagnosisAdmin() {
   }
 
   async function navigatePrev() {
-    if (currentIndex <= 0) return
+    if (saving || currentIndex <= 0) return
     if (isDirty) {
       const saved = await saveCurrentCard()
       if (!saved) return
@@ -458,11 +463,13 @@ export default function SpotDiagnosisAdmin() {
             )}
 
             {/* Save status */}
-            <div className="text-center text-xs text-gray-400">
-              {isDirty ? (
+            <div className="text-center text-xs">
+              {saving ? (
+                <span className="text-blue-600">Saving...</span>
+              ) : isDirty ? (
                 <span className="text-amber-600">● Unsaved changes</span>
               ) : (
-                <span className="text-green-600">✓ Saved</span>
+                <span className="text-green-600">✓ Auto-saves on navigate</span>
               )}
             </div>
           </div>
