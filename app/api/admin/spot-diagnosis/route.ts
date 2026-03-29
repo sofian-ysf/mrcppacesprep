@@ -143,13 +143,16 @@ export async function PUT(request: NextRequest) {
       .update(updateData)
       .eq('id', id)
       .select()
-      .single()
 
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 500 })
     }
 
-    return NextResponse.json({ spotDiagnosis: data })
+    if (!data || data.length === 0) {
+      return NextResponse.json({ error: 'Card not found' }, { status: 404 })
+    }
+
+    return NextResponse.json({ spotDiagnosis: data[0] })
   } catch (error) {
     console.error('Error updating spot diagnosis:', error)
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
