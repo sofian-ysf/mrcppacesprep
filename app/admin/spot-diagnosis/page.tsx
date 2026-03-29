@@ -455,6 +455,8 @@ export default function SpotDiagnosisAdmin() {
                     <iframe
                       src={`https://www.youtube.com/embed/${extractYouTubeId(youtubeUrl)}`}
                       className="w-full h-full"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
                     />
                   </div>
