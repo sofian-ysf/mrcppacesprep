@@ -135,10 +135,61 @@ export default function SpotDiagnosisAdmin() {
         )}
       </div>
 
-      {/* Current card placeholder */}
+      {/* Main card area */}
       <div className="bg-white rounded-xl border border-gray-200 p-6">
-        <h2 className="text-xl font-semibold">{currentCard?.diagnosis}</h2>
-        <p className="text-gray-500 mt-2">{currentCard?.description || 'No description'}</p>
+        <div className="flex gap-8">
+          {/* Left: Card details */}
+          <div className="flex-1 min-w-0">
+            {/* Difficulty badge */}
+            <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full mb-3 ${
+              currentCard.difficulty === 'Easy' ? 'bg-green-100 text-green-700' :
+              currentCard.difficulty === 'Medium' ? 'bg-amber-100 text-amber-700' :
+              'bg-red-100 text-red-700'
+            }`}>
+              {currentCard.difficulty}
+            </span>
+
+            {/* Diagnosis title */}
+            <h2 className="text-2xl font-semibold text-gray-900 mb-3">
+              {currentCard.diagnosis}
+            </h2>
+
+            {/* Description */}
+            {currentCard.description && (
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                {currentCard.description}
+              </p>
+            )}
+
+            {/* Key features */}
+            {currentCard.key_features && currentCard.key_features.length > 0 && (
+              <div className="bg-gray-50 rounded-lg p-4 mb-4">
+                <h3 className="font-medium text-gray-700 mb-2">Key Features</h3>
+                <ul className="list-disc list-inside text-gray-600 space-y-1">
+                  {currentCard.key_features.map((feature, i) => (
+                    <li key={i}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Exam tips */}
+            {currentCard.exam_tips && (
+              <div className="bg-blue-50 rounded-lg p-4">
+                <h3 className="font-medium text-blue-700 mb-2">💡 Exam Tips</h3>
+                <p className="text-blue-600">{currentCard.exam_tips}</p>
+              </div>
+            )}
+          </div>
+
+          {/* Right: Media upload area (placeholder for now) */}
+          <div className="w-80 flex-shrink-0">
+            <div className="border-2 border-dashed border-gray-300 rounded-xl p-8 text-center">
+              <p className="text-gray-400">Media upload area</p>
+              <p className="text-sm text-gray-400 mt-2">Coming in next task</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Navigation buttons */}
