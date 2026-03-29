@@ -31,6 +31,7 @@ export default function SpotDiagnosisAdmin() {
   const [youtubeUrl, setYoutubeUrl] = useState('')
   const [uploading, setUploading] = useState(false)
   const [isDirty, setIsDirty] = useState(false)
+  const [isDragging, setIsDragging] = useState(false)
 
   // Fetch all cards on mount
   useEffect(() => {
@@ -130,6 +131,63 @@ export default function SpotDiagnosisAdmin() {
       if (match) return match[1]
     }
     return null
+  }
+
+  async function uploadFile(file: File) {
+    if (!file.type.startsWith('image/')) {
+      alert('Please upload an image file')
+      return
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      alert('File too large. Maximum size is 5MB')
+      return
+    }
+
+    setUploading(true)
+    try {
+      const formData = new FormData()
+      formData.append('file', file)
+      formData.append('folder', 'spot-diagnosis')
+
+      const response = await fetch('/api/admin/upload', {
+        method: 'POST',
+        body: formData
+      })
+
+      if (response.ok) {
+        const data = await response.json()
+        setImageUrl(data.url)
+        setMediaType('image')
+        setIsDirty(true)
+      } else {
+        const error = await response.json()
+        alert(error.error || 'Upload failed')
+      }
+    } catch (error) {
+      console.error('Upload failed:', error)
+      alert('Upload failed')
+    } finally {
+      setUploading(false)
+    }
+  }
+
+  function handleDragOver(e: React.DragEvent) {
+    e.preventDefault()
+    setIsDragging(true)
+  }
+
+  function handleDragLeave(e: React.DragEvent) {
+    e.preventDefault()
+    setIsDragging(false)
+  }
+
+  function handleDrop(e: React.DragEvent) {
+    e.preventDefault()
+    setIsDragging(false)
+    const file = e.dataTransfer.files[0]
+    if (file) {
+      uploadFile(file)
+    }
   }
 
   return (
@@ -238,8 +296,22 @@ export default function SpotDiagnosisAdmin() {
             {mediaType === 'image' ? (
               <>
                 {/* Drop zone */}
-                <div className="border-2 border-dashed border-blue-300 rounded-xl p-6 text-center bg-blue-50/50">
-                  {imageUrl ? (
+                <div
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDrop}
+                  className={`border-2 border-dashed rounded-xl p-6 text-center transition-colors ${
+                    isDragging
+                      ? 'border-blue-500 bg-blue-100'
+                      : 'border-blue-300 bg-blue-50/50'
+                  } ${uploading ? 'opacity-50 pointer-events-none' : ''}`}
+                >
+                  {uploading ? (
+                    <div className="flex flex-col items-center">
+                      <div className="animate-spin h-8 w-8 border-4 border-blue-600 border-t-transparent rounded-full"></div>
+                      <p className="text-blue-600 mt-2">Uploading...</p>
+                    </div>
+                  ) : imageUrl ? (
                     <img
                       src={imageUrl}
                       alt="Preview"
