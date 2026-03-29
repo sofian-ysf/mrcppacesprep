@@ -85,6 +85,28 @@ export default function SpotDiagnosisAdmin() {
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [filteredCards.length, router])
 
+  // Paste handler for images
+  useEffect(() => {
+    async function handlePaste(e: ClipboardEvent) {
+      const items = e.clipboardData?.items
+      if (!items) return
+
+      for (const item of items) {
+        if (item.type.startsWith('image/')) {
+          e.preventDefault()
+          const file = item.getAsFile()
+          if (file) {
+            await uploadFile(file)
+          }
+          return
+        }
+      }
+    }
+
+    document.addEventListener('paste', handlePaste)
+    return () => document.removeEventListener('paste', handlePaste)
+  }, [])
+
   // Sync current card to form state
   useEffect(() => {
     if (currentCard) {
