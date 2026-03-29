@@ -58,6 +58,27 @@ export default function SpotDiagnosisAdmin() {
     }
   })
 
+  // Keyboard navigation
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      // Don't capture when typing in inputs
+      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        return
+      }
+
+      if (e.key === 'a' || e.key === 'A') {
+        setCurrentIndex(i => Math.max(0, i - 1))
+      } else if (e.key === 'd' || e.key === 'D') {
+        setCurrentIndex(i => Math.min(filteredCards.length - 1, i + 1))
+      } else if (e.key === 'Escape') {
+        router.push('/admin')
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [filteredCards.length, router])
+
   const currentCard = filteredCards[currentIndex]
   const totalCards = filteredCards.length
   const missingCount = allCards.filter(c => !c.image_url && !c.youtube_id).length
@@ -136,6 +157,17 @@ export default function SpotDiagnosisAdmin() {
         >
           Next (D) →
         </button>
+      </div>
+
+      {/* Keyboard shortcuts */}
+      <div className="text-center text-xs text-gray-400 pt-4">
+        <kbd className="px-2 py-1 bg-gray-100 rounded">A</kbd> Prev
+        <span className="mx-3">·</span>
+        <kbd className="px-2 py-1 bg-gray-100 rounded">D</kbd> Next
+        <span className="mx-3">·</span>
+        <kbd className="px-2 py-1 bg-gray-100 rounded">⌘V</kbd> Paste
+        <span className="mx-3">·</span>
+        <kbd className="px-2 py-1 bg-gray-100 rounded">Esc</kbd> Back
       </div>
     </div>
   )
