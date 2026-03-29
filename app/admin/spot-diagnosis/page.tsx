@@ -1,11 +1,13 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import Link from 'next/link'
 
 interface SpotDiagnosis {
   id: string
-  image_url: string
+  image_url: string | null
+  youtube_id: string | null
+  media_type: 'image' | 'video'
   diagnosis: string
   description: string | null
   key_features: string[]
@@ -24,10 +26,14 @@ export default function SpotDiagnosisAdmin() {
   const [totalPages, setTotalPages] = useState(1)
   const [total, setTotal] = useState(0)
   const [saving, setSaving] = useState(false)
+  const [uploading, setUploading] = useState(false)
+  const fileInputRef = useRef<HTMLInputElement>(null)
 
   // Form state
   const [formData, setFormData] = useState({
+    media_type: 'image' as 'image' | 'video',
     image_url: '',
+    youtube_url: '',
     diagnosis: '',
     description: '',
     key_features: '',
@@ -56,7 +62,9 @@ export default function SpotDiagnosisAdmin() {
 
   function resetForm() {
     setFormData({
+      media_type: 'image',
       image_url: '',
+      youtube_url: '',
       diagnosis: '',
       description: '',
       key_features: '',
@@ -67,9 +75,23 @@ export default function SpotDiagnosisAdmin() {
     setShowForm(false)
   }
 
+  function extractYouTubeId(url: string): string | null {
+    const patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/,
+      /^([a-zA-Z0-9_-]{11})$/
+    ]
+    for (const pattern of patterns) {
+      const match = url.match(pattern)
+      if (match) return match[1]
+    }
+    return null
+  }
+
   function handleEdit(item: SpotDiagnosis) {
     setFormData({
-      image_url: item.image_url,
+      media_type: item.media_type || 'image',
+      image_url: item.image_url || '',
+      youtube_url: item.youtube_id ? `https://youtube.com/watch?v=${item.youtube_id}` : '',
       diagnosis: item.diagnosis,
       description: item.description || '',
       key_features: item.key_features?.join('\n') || '',
@@ -80,14 +102,68 @@ export default function SpotDiagnosisAdmin() {
     setShowForm(true)
   }
 
+  async function handleFileUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    if (!file) return
+
+    setUploading(true)
+    try {
+      const formDataUpload = new FormData()
+      formDataUpload.append('file', file)
+      formDataUpload.append('folder', 'spot-diagnosis')
+
+      const response = await fetch('/api/admin/upload', {
+        method: 'POST',
+        body: formDataUpload
+      })
+
+      if (response.ok) {
+        const data = await response.json()
+        setFormData(prev => ({ ...prev, image_url: data.url }))
+      } else {
+        const error = await response.json()
+        alert(error.error || 'Failed to upload image')
+      }
+    } catch (error) {
+      console.error('Upload failed:', error)
+      alert('Failed to upload image')
+    } finally {
+      setUploading(false)
+      if (fileInputRef.current) {
+        fileInputRef.current.value = ''
+      }
+    }
+  }
+
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setSaving(true)
 
     try {
+      let youtube_id: string | null = null
+      let image_url: string | null = null
+
+      if (formData.media_type === 'video') {
+        youtube_id = extractYouTubeId(formData.youtube_url)
+        if (!youtube_id) {
+          alert('Invalid YouTube URL')
+          setSaving(false)
+          return
+        }
+      } else {
+        if (!formData.image_url) {
+          alert('Please upload an image or provide an image URL')
+          setSaving(false)
+          return
+        }
+        image_url = formData.image_url
+      }
+
       const payload = {
         ...(editingItem && { id: editingItem.id }),
-        image_url: formData.image_url,
+        media_type: formData.media_type,
+        image_url,
+        youtube_id,
         diagnosis: formData.diagnosis,
         description: formData.description || null,
         key_features: formData.key_features.split('\n').filter(f => f.trim()),
@@ -164,17 +240,112 @@ export default function SpotDiagnosisAdmin() {
               {editingItem ? 'Edit Spot Diagnosis' : 'Add Spot Diagnosis'}
             </h2>
             <form onSubmit={handleSubmit} className="space-y-4">
+              {/* Media Type Selection */}
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Image URL *</label>
-                <input
-                  type="url"
-                  value={formData.image_url}
-                  onChange={(e) => setFormData({ ...formData, image_url: e.target.value })}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  required
-                  placeholder="https://example.com/image.jpg"
-                />
+                <label className="block text-sm font-medium text-gray-700 mb-2">Media Type *</label>
+                <div className="flex gap-4">
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="media_type"
+                      value="image"
+                      checked={formData.media_type === 'image'}
+                      onChange={(e) => setFormData({ ...formData, media_type: e.target.value as 'image' | 'video' })}
+                      className="w-4 h-4 text-blue-600"
+                    />
+                    <span className="text-gray-700">Image</span>
+                  </label>
+                  <label className="flex items-center gap-2 cursor-pointer">
+                    <input
+                      type="radio"
+                      name="media_type"
+                      value="video"
+                      checked={formData.media_type === 'video'}
+                      onChange={(e) => setFormData({ ...formData, media_type: e.target.value as 'image' | 'video' })}
+                      className="w-4 h-4 text-blue-600"
+                    />
+                    <span className="text-gray-700">YouTube Video</span>
+                  </label>
+                </div>
               </div>
+
+              {/* Image Upload Section */}
+              {formData.media_type === 'image' && (
+                <div className="space-y-3">
+                  <label className="block text-sm font-medium text-gray-700">Image *</label>
+
+                  {/* File Upload */}
+                  <div className="flex items-center gap-3">
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      accept="image/jpeg,image/png,image/gif,image/webp"
+                      onChange={handleFileUpload}
+                      className="hidden"
+                      id="image-upload"
+                    />
+                    <label
+                      htmlFor="image-upload"
+                      className={`px-4 py-2 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50 transition-colors ${uploading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    >
+                      {uploading ? 'Uploading...' : 'Upload Image'}
+                    </label>
+                    <span className="text-sm text-gray-500">or</span>
+                  </div>
+
+                  {/* URL Input */}
+                  <input
+                    type="url"
+                    value={formData.image_url}
+                    onChange={(e) => setFormData({ ...formData, image_url: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="Or paste image URL: https://example.com/image.jpg"
+                  />
+
+                  {/* Image Preview */}
+                  {formData.image_url && (
+                    <div className="mt-2">
+                      <p className="text-sm text-gray-500 mb-1">Preview:</p>
+                      <img
+                        src={formData.image_url}
+                        alt="Preview"
+                        className="max-h-48 rounded-lg border border-gray-200"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).style.display = 'none'
+                        }}
+                      />
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* YouTube URL Section */}
+              {formData.media_type === 'video' && (
+                <div className="space-y-3">
+                  <label className="block text-sm font-medium text-gray-700">YouTube URL *</label>
+                  <input
+                    type="url"
+                    value={formData.youtube_url}
+                    onChange={(e) => setFormData({ ...formData, youtube_url: e.target.value })}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    placeholder="https://youtube.com/watch?v=xxxxx or https://youtu.be/xxxxx"
+                  />
+
+                  {/* YouTube Preview */}
+                  {formData.youtube_url && extractYouTubeId(formData.youtube_url) && (
+                    <div className="mt-2">
+                      <p className="text-sm text-gray-500 mb-1">Preview:</p>
+                      <div className="aspect-video max-w-md rounded-lg overflow-hidden border border-gray-200">
+                        <iframe
+                          src={`https://www.youtube.com/embed/${extractYouTubeId(formData.youtube_url)}`}
+                          className="w-full h-full"
+                          allowFullScreen
+                        />
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Diagnosis *</label>
@@ -244,7 +415,7 @@ export default function SpotDiagnosisAdmin() {
                 </button>
                 <button
                   type="submit"
-                  disabled={saving}
+                  disabled={saving || uploading}
                   className="flex-1 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 disabled:opacity-50"
                 >
                   {saving ? 'Saving...' : (editingItem ? 'Update' : 'Create')}
@@ -266,9 +437,9 @@ export default function SpotDiagnosisAdmin() {
             <table className="w-full">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Image</th>
+                  <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Media</th>
                   <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Diagnosis</th>
-                  <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Key Features</th>
+                  <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Type</th>
                   <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Difficulty</th>
                   <th className="text-left py-3 px-4 text-sm font-medium text-gray-500">Actions</th>
                 </tr>
@@ -277,14 +448,22 @@ export default function SpotDiagnosisAdmin() {
                 {items.map((item) => (
                   <tr key={item.id} className="border-t border-gray-100 hover:bg-gray-50">
                     <td className="py-3 px-4">
-                      <img
-                        src={item.image_url}
-                        alt={item.diagnosis}
-                        className="h-12 w-12 object-cover rounded-lg"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).src = 'https://via.placeholder.com/48?text=No+Image'
-                        }}
-                      />
+                      {item.media_type === 'video' && item.youtube_id ? (
+                        <div className="h-12 w-16 bg-red-100 rounded-lg flex items-center justify-center">
+                          <svg className="h-6 w-6 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                          </svg>
+                        </div>
+                      ) : (
+                        <img
+                          src={item.image_url || 'https://via.placeholder.com/48?text=No+Image'}
+                          alt={item.diagnosis}
+                          className="h-12 w-12 object-cover rounded-lg"
+                          onError={(e) => {
+                            (e.target as HTMLImageElement).src = 'https://via.placeholder.com/48?text=No+Image'
+                          }}
+                        />
+                      )}
                     </td>
                     <td className="py-3 px-4">
                       <p className="font-medium text-gray-900">{item.diagnosis}</p>
@@ -293,9 +472,11 @@ export default function SpotDiagnosisAdmin() {
                       )}
                     </td>
                     <td className="py-3 px-4">
-                      <p className="text-sm text-gray-600">
-                        {item.key_features?.length || 0} features
-                      </p>
+                      <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${
+                        item.media_type === 'video' ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'
+                      }`}>
+                        {item.media_type === 'video' ? 'Video' : 'Image'}
+                      </span>
                     </td>
                     <td className="py-3 px-4">
                       <span className={`inline-flex px-2 py-1 text-xs font-medium rounded-full ${

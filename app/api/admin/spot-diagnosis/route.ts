@@ -59,16 +59,28 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { image_url, diagnosis, description, key_features, exam_tips, difficulty, category_id } = body
+    const { image_url, youtube_id, media_type, diagnosis, description, key_features, exam_tips, difficulty, category_id } = body
 
-    if (!image_url || !diagnosis) {
-      return NextResponse.json({ error: 'Image URL and diagnosis are required' }, { status: 400 })
+    if (!diagnosis) {
+      return NextResponse.json({ error: 'Diagnosis is required' }, { status: 400 })
+    }
+
+    const effectiveMediaType = media_type || 'image'
+
+    // Validate media based on type
+    if (effectiveMediaType === 'image' && !image_url) {
+      return NextResponse.json({ error: 'Image URL is required for image type' }, { status: 400 })
+    }
+    if (effectiveMediaType === 'video' && !youtube_id) {
+      return NextResponse.json({ error: 'YouTube ID is required for video type' }, { status: 400 })
     }
 
     const { data, error } = await supabase
       .from('spot_diagnoses')
       .insert({
-        image_url,
+        image_url: effectiveMediaType === 'image' ? image_url : null,
+        youtube_id: effectiveMediaType === 'video' ? youtube_id : null,
+        media_type: effectiveMediaType,
         diagnosis,
         description: description || null,
         key_features: key_features || [],
@@ -98,14 +110,27 @@ export async function PUT(request: NextRequest) {
     }
 
     const body = await request.json()
-    const { id, image_url, diagnosis, description, key_features, exam_tips, difficulty, category_id } = body
+    const { id, image_url, youtube_id, media_type, diagnosis, description, key_features, exam_tips, difficulty, category_id } = body
 
     if (!id) {
       return NextResponse.json({ error: 'ID is required' }, { status: 400 })
     }
 
     const updateData: Record<string, unknown> = {}
-    if (image_url !== undefined) updateData.image_url = image_url
+    if (media_type !== undefined) {
+      updateData.media_type = media_type
+      // When switching media type, clear the other field
+      if (media_type === 'image') {
+        updateData.youtube_id = null
+        if (image_url !== undefined) updateData.image_url = image_url
+      } else if (media_type === 'video') {
+        updateData.image_url = null
+        if (youtube_id !== undefined) updateData.youtube_id = youtube_id
+      }
+    } else {
+      if (image_url !== undefined) updateData.image_url = image_url
+      if (youtube_id !== undefined) updateData.youtube_id = youtube_id
+    }
     if (diagnosis !== undefined) updateData.diagnosis = diagnosis
     if (description !== undefined) updateData.description = description
     if (key_features !== undefined) updateData.key_features = key_features
